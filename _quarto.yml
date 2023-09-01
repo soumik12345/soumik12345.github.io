@@ -9,7 +9,7 @@ website:
       - about.qmd
       - posts.qmd
       - icon: github
-        href: ttps://github.com/soumik12345
+        href: https://github.com/soumik12345
       - icon: twitter
         href: https://twitter.com/soumikRakshit96
       - icon: linkedin
