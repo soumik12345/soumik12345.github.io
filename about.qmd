@@ -23,4 +23,4 @@ I work on developing tools for Machine Learning parctioners at [Weights & Biases
 
 * developing and maintaining integrations with open-source libraries such as keras, ultralytics, super-gradients, kaolin-wisp, etc.
 * prototyping experimental tools in the Weights & Biases ecosystem as part of [wandb-addons](https://github.com/soumik12345/wandb-addons).
-* writing exciting and beautiful blog posts using [W&B Reports](https://docs.wandb.ai/guides/reports).
+* writing exciting and beautiful blog posts on machine learning using [W&B Reports](https://docs.wandb.ai/guides/reports).
