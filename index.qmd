@@ -1,0 +1,22 @@
+---
+title: "Geekyrakshit"
+image: assets/soumik_rakshit.png
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/soumikRakshit96
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/soumikrakshit/
+    - icon: github
+      text: Github
+      href: https://github.com/soumik12345
+---
+
+Hi there 👋. I am Soumik Rakshit (সৌমিক রক্ষিত).
+
+I develop machine learning tools at [Weights & Biases](https://wandb.ai/site).
+
+You can learn more about me [here](./about).

@@ -1,0 +1,22 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Geekyrakshit"
+  navbar:
+    right:
+      - about.qmd
+      - posts.qmd
+      - icon: github
+        href: ttps://github.com/soumik12345
+      - icon: twitter
+        href: https://twitter.com/soumikRakshit96
+      - icon: linkedin
+        href: https://linkedin.com/in/soumikrakshit/
+format:
+  html:
+    theme:
+      light: simplex
+      dark: darkly
+    css: styles.css

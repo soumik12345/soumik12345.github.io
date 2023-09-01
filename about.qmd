@@ -1,0 +1,26 @@
+---
+title: "About Me"
+image: assets/soumik_rakshit.png
+about:
+  template: trestles
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/soumikRakshit96
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/soumikrakshit/
+    - icon: github
+      text: Github
+      href: https://github.com/soumik12345
+---
+
+# About Me
+
+I am generally interested in the field of computer vision, particularly in foundation models for computer vision, generative models for images, implicit representation and representation learning.
+
+I work on developing tools for Machine Learning parctioners at [Weights & Biases](https://wandb.ai/site). My day-to-day tasks include
+
+* developing and maintaining integrations with open-source libraries such as keras, ultralytics, super-gradients, kaolin-wisp, etc.
+* prototyping experimental tools in the Weights & Biases ecosystem as part of [wandb-addons](https://github.com/soumik12345/wandb-addons).
+* writing exciting and beautiful blog posts using [W&B Reports](https://docs.wandb.ai/guides/reports).
