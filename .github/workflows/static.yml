@@ -1,13 +1,5 @@
 name: Render and Publish
 
-on:
-  push:
-    branches:
-      - master
-permissions:
-  contents: write
-  id-token: write
-
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
