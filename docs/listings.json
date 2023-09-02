@@ -2,6 +2,14 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/posts/efficient-graph-based-image-segmentation/index.html",
+      "/posts/depthwise-separable-convolution/index.html",
+      "/posts/nearest-celebrity-face/index.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
       "/posts/depthwise-separable-convolution/index.html",
       "/posts/nearest-celebrity-face/index.html"
     ]
