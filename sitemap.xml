@@ -2,22 +2,66 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://geekyrakshit.dev/posts.html</loc>
-    <lastmod>2023-09-01T10:46:55.603Z</lastmod>
+    <lastmod>2023-09-02T04:11:56.439Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/index.html</loc>
-    <lastmod>2023-09-01T10:46:54.777Z</lastmod>
+    <lastmod>2023-09-02T04:11:55.053Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/relativistic-anime-gan.html</loc>
+    <lastmod>2023-09-02T04:11:53.880Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/index.html</loc>
+    <lastmod>2023-09-02T04:11:52.966Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/conditional-dcgan.html</loc>
+    <lastmod>2023-09-02T04:11:50.724Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0.html</loc>
+    <lastmod>2023-09-02T04:11:49.905Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/dcgan-mnist.html</loc>
+    <lastmod>2023-09-02T04:11:48.769Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/detectron-mask-rcnn.html</loc>
+    <lastmod>2023-09-02T04:11:47.959Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/detectron-fast-rcnn.html</loc>
+    <lastmod>2023-09-02T04:11:47.466Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/posts/depthwise-separable-convolution/index.html</loc>
-    <lastmod>2023-09-01T10:46:53.988Z</lastmod>
+    <lastmod>2023-09-02T04:11:48.401Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/anpr.html</loc>
+    <lastmod>2023-09-02T04:11:49.222Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/animegan.html</loc>
+    <lastmod>2023-09-02T04:11:50.351Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/mlp-gan.html</loc>
+    <lastmod>2023-09-02T04:11:51.103Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/posts/nearest-celebrity-face/index.html</loc>
-    <lastmod>2023-09-01T10:46:54.495Z</lastmod>
+    <lastmod>2023-09-02T04:11:53.451Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/enet-camvid.html</loc>
+    <lastmod>2023-09-02T04:11:54.789Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/about.html</loc>
-    <lastmod>2023-09-01T10:46:55.095Z</lastmod>
+    <lastmod>2023-09-02T04:11:55.326Z</lastmod>
   </url>
 </urlset>
