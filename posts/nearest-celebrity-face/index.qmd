@@ -1,6 +1,6 @@
 ---
 title: "Nearest Celebrity Face using Deep Learning"
-author: "GeekyRakshit"
+author: "[GeekyRakshit](../../)"
 date: "2019-08-07"
 categories: [computervision, deeplearning, keras]
 image: "assets/img_0.png"

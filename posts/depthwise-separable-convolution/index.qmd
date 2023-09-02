@@ -1,6 +1,6 @@
 ---
 title: "Depthwise Separable Convolutions in Deep Learning"
-author: "GeekyRakshit"
+author: "[GeekyRakshit](../../)"
 date: "2019-10-19"
 categories: [computervision, deeplearning, keras]
 image: "assets/chart-preview.png"
