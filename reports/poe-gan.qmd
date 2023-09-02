@@ -1,0 +1,23 @@
+---
+title: "PoE-GAN: Generating Images from Multi-Modal Inputs"
+author: "[GeekyRakshit](../../)"
+date: "2022-02-25"
+categories: [computervision, deeplearning, generative, 2-minute-papers]
+image: "assets/poe-gan-banner.png"
+description: PoE-GAN is a recent, fascinating paper where the authors generate images from multiple inputs like text, style, segmentation, and sketch. We dig into the architecture, the underlying math, and of course, generate some images along the way.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/eaSTGOgO-ss?si=BokCt8OKvPcyqMPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/poegan/reports/PoE-GAN-Generating-Images-from-Multi-Modal-Inputs--VmlldzoxNTA5MzUx" style="border:none;height:1024px;width:100%"></iframe>

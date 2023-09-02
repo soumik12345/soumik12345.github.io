@@ -1,0 +1,23 @@
+---
+title: "Extracting Triangular 3D Models, Materials, and Lighting From Images"
+author: "[GeekyRakshit](../../)"
+date: "2022-04-26"
+categories: [computervision, deeplearning, graphics, 2-minute-papers]
+image: "assets/extracting-triangular-models.png"
+description: In this article, we'll explore a novel and efficient approach for joint optimization of topology, materials, and lighting from multi-view image observations.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/yl1jkmF7Xug?si=NUPd2T7bJqJFo0cU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/Extracting%20Triangular%203D%20Models/reports/Extracting-Triangular-3D-Models-Materials-and-Lighting-From-Images--VmlldzoxOTQ2MDEy" style="border:none;height:1024px;width:100%"></iframe>

@@ -1,0 +1,15 @@
+---
+title: "WandB Reports"
+about:
+  template: marquee
+listing:
+  feed: true
+  sort: "date desc"
+  date-format: "long"
+  contents:
+    - "reports/*.qmd"
+---
+
+## Reports published on [Fully Connected](https://wandb.ai/fully-connected)
+
+<br>

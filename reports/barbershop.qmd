@@ -1,0 +1,23 @@
+---
+title: "Barbershop: Hair Transfer with GAN-Based Image Compositing Using Segmentation Masks"
+author: "[GeekyRakshit](../../)"
+date: "2022-04-18"
+categories: [computervision, deeplearning, generative, 2-minute-papers]
+image: "assets/barbershop.png"
+description: A novel GAN-based optimization method for photo-realistic hairstyle transfer.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/YNY_ZEuDncM?si=yCmERafJmazBNaYm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/barbershop/reports/Barbershop-Hair-Transfer-with-GAN-Based-Image-Compositing-Using-Segmentation-Masks--VmlldzoxNzk0OTY3" style="border:none;height:1024px;width:100%"></iframe>

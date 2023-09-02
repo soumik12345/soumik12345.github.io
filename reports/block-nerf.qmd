@@ -1,0 +1,23 @@
+---
+title: "Block-NeRF: Scalable Large Scene Neural View Synthesis"
+author: "[GeekyRakshit](../../)"
+date: "2022-03-14"
+categories: [computervision, deeplearning, nerf, 2-minute-papers]
+image: "assets/block-nerf.png"
+description: Representing large city-scale environments spanning multiple blocks using Neural Radiance Fields.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/8AZhcnWOK7M?si=71EcyK15MsnwdS2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/block-nerf/reports/Block-NeRF-Scalable-Large-Scene-Neural-View-Synthesis--VmlldzoxNjIyMzI4?galleryTag=tmp" style="border:none;height:1024px;width:100%"></iframe>

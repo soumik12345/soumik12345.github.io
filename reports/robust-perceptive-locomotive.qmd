@@ -1,0 +1,23 @@
+---
+title: "Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild"
+author: "[GeekyRakshit](../../)"
+date: "2022-03-11"
+categories: [computervision, deeplearning, reinforcement-learning, 2-minute-papers]
+image: "assets/robust-perceptive-locomotive.png"
+description: Or, teaching four-legged robots to walk in the real world.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XM-rKTOyD_k?si=U4Lh9e3Fzzhm-gIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/robust-perception-locomotion/reports/Learning-Robust-Perceptive-Locomotion-for-Quadrupedal-Robots-in-the-Wild--VmlldzoxNjI0NjUy" style="border:none;height:1024px;width:100%"></iframe>

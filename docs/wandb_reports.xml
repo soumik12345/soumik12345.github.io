@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss  xmlns:atom="http://www.w3.org/2005/Atom" 
+      xmlns:media="http://search.yahoo.com/mrss/" 
+      xmlns:content="http://purl.org/rss/1.0/modules/content/" 
+      xmlns:dc="http://purl.org/dc/elements/1.1/" 
+      version="2.0">
+<channel>
+<title>Geekyrakshit</title>
+<link>https://geekyrakshit.dev/wandb_reports.html</link>
+<atom:link href="https://geekyrakshit.dev/wandb_reports.xml" rel="self" type="application/rss+xml"/>
+<description></description>
+<generator>quarto-1.3.450</generator>
+<lastBuildDate>Fri, 29 Apr 2022 18:30:00 GMT</lastBuildDate>
+<item>
+  <title>Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/mip-nerf-360.html</link>
+  <description><![CDATA[ 
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/mip-nerf-360/reports/Mip-NeRF-360-Unbounded-Anti-Aliased-Neural-Radiance-Fields--VmlldzoxOTc4Mjk4" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>graphics</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/mip-nerf-360.html</guid>
+  <pubDate>Fri, 29 Apr 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/mip-nerf-360.png" medium="image" type="image/png" height="88" width="144"/>
+</item>
+<item>
+  <title>Extracting Triangular 3D Models, Materials, and Lighting From Images</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/extracting-triangular-models.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/yl1jkmF7Xug?si=NUPd2T7bJqJFo0cU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/Extracting%20Triangular%203D%20Models/reports/Extracting-Triangular-3D-Models-Materials-and-Lighting-From-Images--VmlldzoxOTQ2MDEy" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>graphics</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/extracting-triangular-models.html</guid>
+  <pubDate>Mon, 25 Apr 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/extracting-triangular-models.png" medium="image" type="image/png" height="143" width="144"/>
+</item>
+<item>
+  <title>Barbershop: Hair Transfer with GAN-Based Image Compositing Using Segmentation Masks</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/barbershop.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/YNY_ZEuDncM?si=yCmERafJmazBNaYm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/barbershop/reports/Barbershop-Hair-Transfer-with-GAN-Based-Image-Compositing-Using-Segmentation-Masks--VmlldzoxNzk0OTY3" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>generative</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/barbershop.html</guid>
+  <pubDate>Sun, 17 Apr 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/barbershop.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Block-NeRF: Scalable Large Scene Neural View Synthesis</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/block-nerf.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/8AZhcnWOK7M?si=71EcyK15MsnwdS2w" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/block-nerf/reports/Block-NeRF-Scalable-Large-Scene-Neural-View-Synthesis--VmlldzoxNjIyMzI4?galleryTag=tmp" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>nerf</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/block-nerf.html</guid>
+  <pubDate>Sun, 13 Mar 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/block-nerf.png" medium="image" type="image/png" height="108" width="144"/>
+</item>
+<item>
+  <title>Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/robust-perceptive-locomotive.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/XM-rKTOyD_k?si=U4Lh9e3Fzzhm-gIW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/robust-perception-locomotion/reports/Learning-Robust-Perceptive-Locomotion-for-Quadrupedal-Robots-in-the-Wild--VmlldzoxNjI0NjUy" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>reinforcement-learning</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/robust-perceptive-locomotive.html</guid>
+  <pubDate>Thu, 10 Mar 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/robust-perceptive-locomotive.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>PoE-GAN: Generating Images from Multi-Modal Inputs</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/poe-gan.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/eaSTGOgO-ss?si=BokCt8OKvPcyqMPS" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/poegan/reports/PoE-GAN-Generating-Images-from-Multi-Modal-Inputs--VmlldzoxNTA5MzUx" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>generative</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/poe-gan.html</guid>
+  <pubDate>Thu, 24 Feb 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/poe-gan-banner.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+</channel>
+</rss>

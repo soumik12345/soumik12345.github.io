@@ -16,5 +16,16 @@
       "/posts/dcgan-mnist.html",
       "/posts/mlp-gan.html"
     ]
+  },
+  {
+    "listing": "/wandb_reports.html",
+    "items": [
+      "/reports/mip-nerf-360.html",
+      "/reports/extracting-triangular-models.html",
+      "/reports/barbershop.html",
+      "/reports/block-nerf.html",
+      "/reports/robust-perceptive-locomotive.html",
+      "/reports/poe-gan.html"
+    ]
   }
 ]
