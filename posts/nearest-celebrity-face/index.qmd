@@ -2,7 +2,7 @@
 title: "Nearest Celebrity Face using Deep Learning"
 author: "GeekyRakshit"
 date: "2019-08-07"
-categories: [computervision, deeplearning, facenet, inception, keras, nearestcelebrityface, python, tensorflow]
+categories: [computervision, deeplearning, keras]
 image: "assets/img_0.png"
 description: Deep Learning Techniques used to verify and recognize faces can also be extended to replicate Facebook apps saying which celebrity do you look like
 ---
