@@ -1,6 +1,6 @@
 ---
 title: "Efficient Graph-Based Image Segmentation"
-author: "GeekyRakshit"
+author: "[GeekyRakshit](../../)"
 date: "2020-09-17"
 categories: [computervision, algebra, python]
 image: "assets/felzenszwalb_logo.png"
