@@ -4,10 +4,15 @@ project:
 
 website:
   title: "Geekyrakshit"
+  twitter-card: true
+  favicon: assets/soumik_rakshit.png
+  site-url: https://geekyrakshit.dev
+  open-graph: true
   navbar:
     right:
       - about.qmd
       - posts.qmd
+      - wandb_reports.qmd
       - icon: github
         href: https://github.com/soumik12345
       - icon: twitter
