@@ -4,10 +4,10 @@
     "items": [
       "/feeds/posts/efficient-graph-based-image-segmentation/index.html",
       "/feeds/posts/enet-camvid.html",
-      "/feeds/posts/detectron-fast-rcnn.html",
       "/feeds/posts/detectron-mask-rcnn.html",
       "/feeds/posts/anpr.html",
       "/feeds/posts/yolo-v3-using-tensorflow-2-0.html",
+      "/feeds/posts/detectron-fast-rcnn.html",
       "/feeds/posts/depthwise-separable-convolution/index.html",
       "/feeds/posts/nearest-celebrity-face/index.html",
       "/feeds/posts/relativistic-anime-gan.html",
