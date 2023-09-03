@@ -25,6 +25,7 @@ I work on developing tools for Machine Learning parctioners at [Weights & Biases
 * developing and maintaining integrations with open-source libraries such as keras, ultralytics, super-gradients, kaolin-wisp, etc.
 * prototyping experimental tools in the Weights & Biases ecosystem as part of [wandb-addons](https://github.com/soumik12345/wandb-addons).
 * writing exciting and beautiful blog posts on machine learning using [W&B Reports](https://docs.wandb.ai/guides/reports).
+* talk about my work at different webinars.
 
 I'm fairly active in terms of open-source contributions. Besides [wandb](https://github.com/wandb/wandb), I regularly contribute to
 [Keras](https://github.com/keras-team/keras-core), [KerasCV](https://github.com/keras-team/keras-cv), and
@@ -35,15 +36,14 @@ and many more. I have also developed and am maintaining the integrations of Weig
 I am also actively working on [wandb-addons](https://github.com/soumik12345/wandb-addons) which hosts a set of experimental utilities
 and integrations for Weights & Biases.
 
-<details>
-<summary>My Career Timeline</summary>
+My Career Timeline:
+
 * Machine Learning Engineer at [Weights & Biases](https://wandb.ai/site) (Jan 2022 - Present)
 * [Google Developer Expert for Machine Learning (JAX)](https://g.dev/geekyrakshit) (Jun 2022 - Present)
 * Staff Machine Learning Engineer at [Ignitarium](https://ignitarium.com/) (Jul 2021 - Dec 2021)
 * Software Development Engineer at [IBM](https://www.ibm.com/in-en) (Jan 2020 - Jul 2021)
 * Software Development Engineer at [HighRadius](https://www.highradius.com/) (Jun 2019 - Dec 2019)
 * Failed entrepreneur and Machine Learning Researcher at [DeepWrex Technologies](https://www.linkedin.com/company/14586161/)
-</details>
 
 In my free time, I watch anime, read books and manga, play video games, write poetry, sketch on ProCreate, and ocassionally dabble in the
 dark arts of computational graphics.

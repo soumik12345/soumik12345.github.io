@@ -19,6 +19,8 @@ website:
         href: https://twitter.com/soumikRakshit96
       - icon: linkedin
         href: https://linkedin.com/in/soumikrakshit/
+      - text: "{{< fa brands kaggle >}} "
+        href: https://www.kaggle.com/soumikrakshit
       - icon: steam
         href: https://steamcommunity.com/id/geekyRakshit/
 format:
