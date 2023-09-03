@@ -70,7 +70,7 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/wandb_reports.html</loc>
-    <lastmod>2023-09-03T06:10:08.246Z</lastmod>
+    <lastmod>2023-09-03T06:21:50.925Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/posts/relativistic-anime-gan.html</loc>
@@ -134,7 +134,7 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/posts.html</loc>
-    <lastmod>2023-09-03T06:10:26.994Z</lastmod>
+    <lastmod>2023-09-03T06:21:22.129Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/modern-evolution-strategies.html</loc>
@@ -371,5 +371,9 @@
   <url>
     <loc>https://geekyrakshit.dev/feeds/reports/functorch.html</loc>
     <lastmod>2023-09-03T06:10:25.860Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/projects.html</loc>
+    <lastmod>2023-09-03T07:00:13.907Z</lastmod>
   </url>
 </urlset>

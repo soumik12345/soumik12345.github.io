@@ -1,0 +1,39 @@
+---
+title: "Projects"
+about:
+  template: marquee
+---
+
+I write about almost all of my projects, which you can find either among my [blog posts](posts.html) or in my [WandB reports](wandb_reports.html).
+You can also follow me on Github to stay up-to-date with the numerous open-source projects I'm continuously working on. That said, I want to
+mention some specific projects I've undertaken in the past or ones that I'm still working on.
+
+### Deep Learning examples published on [keras.io](https://keras.io/)
+
+* [Multiclass semantic segmentation using DeepLabV3+](https://keras.io/examples/vision/deeplabv3_plus/)
+* [Low-light image enhancement using MIRNet](https://keras.io/examples/vision/mirnet/)
+* [Zero-DCE for low-light image enhancement](https://keras.io/examples/vision/zero_dce/)
+* [Large-scale multi-label text classification](https://keras.io/examples/nlp/multi_label_classification/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
+* [Point cloud segmentation with PointNet](https://keras.io/examples/vision/pointnet_segmentation/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
+* [GauGAN for conditional image generation](https://keras.io/examples/generative/gaugan/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
+
+### Weights & Biases Addons
+
+[Weights & Biases Addons]((https://github.com/soumik12345/wandb-addons)) is a repository that provides of integrations and utilities that will supercharge your Weights & Biases workflows.
+Its a repositpry built and maintained by WandB users for WandB users. The library hosts experimental utilities and integrations built using 
+[Weights & Biases](https://wandb.ai/site). I am currently actively working on this project.
+
+### Restorers
+
+[Restorers]((https://github.com/TrystAI/restorers)) is a library provide out-of-the-box TensorFlow implementations of SoTA image and video restoration
+models for tasks such as low-light enhancement, denoising, deblurring, super-resolution, etc. You can read more about it in
+[this WandB report](wandb.me/low-light).
+
+### Other Interesting Projects
+
+* [**Radium**](https://github.com/soumik12345/radium): A small and lightweight Ray Tracing Engine written in C++ that runs on the CPU using shared-memory multiprocessing.
+* [**Colorization using Optimization**](https://github.com/soumik12345/colorization-using-optimization): Python and C++ implementations of a user-guided image/video colorization technique as proposed by the paper [Colorization Using Optimization](https://dl.acm.org/doi/10.1145/1015706.1015780). The algorithm is based on a simple premise; neighboring pixels in space-time that have similar intensities should have similar colors. This premise is formalized using a quadratic cost function that obtains an optimization problem that can be solved efficiently using standard techniques. While using this alogorithm, an artist only needs to annotate the image with a few color scribbles or visual clues, and the indicated colors are automatically propagated in both space and time to produce a fully colorized image or sequence. The annotation can be done using any drawing tool such as [JSPaint](https://jspaint.app/) or [Gimp](https://www.gimp.org/).
+* [**Deep Deterministic Policy Gradients**](https://github.com/soumik12345/DDPG): Pytorch implementation of the [Deep Deterministic Policy Gradients](https://arxiv.org/abs/1509.02971) Algorithm for Continuous Control as described by the paper Continuous control with deep reinforcement learning.
+* [**Twin Delayed DDGP**](https://github.com/soumik12345/Twin-Delayed-DDPG): Pytorch Implementation of Twin Delayed Deep Deterministic Policy Gradients Algorithm for Continuous Control as described by the paper [Addressing Function Approximation Error in Actor-Critic Methods](https://arxiv.org/abs/1802.09477).
+* [**Arxiv2Kindle**](https://github.com/soumik12345/Arxiv2Kindle): Arxiv2Kindle is a simple script written in python that converts LaTeX source downloaded from Arxiv and recompiles it to better fit a reading device (such as a Kindle).
+* [**Manga Scraper**](https://github.com/soumik12345/Manga-Scraper): A a python package that downloads Manga into chapterwise PDF files or a single PDF file from various sources. It basically adds a post-processing layer on top of the basic functionality by [`mangadl-bash`](https://github.com/Akianonymus/mangadl-bash) created by [Akianonymus](https://github.com/Akianonymus) in order to convert the downloaded manga into chapter-wise PDF files or a single giant PDF file.
