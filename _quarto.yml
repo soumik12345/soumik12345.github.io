@@ -21,3 +21,5 @@ format:
       light: simplex
       dark: darkly
     css: styles.css
+execute:
+  freeze: auto
