@@ -14,7 +14,7 @@
 <item>
   <title>A Guide to Using Stable Diffusion XL with HuggingFace Diffusers and W&amp;B</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/sdxl.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/sdxl.html</link>
   <description><![CDATA[ 
 
 
@@ -31,14 +31,14 @@
   <category>diffusion</category>
   <category>huggingface</category>
   <category>stable-diffusion</category>
-  <guid>https://geekyrakshit.dev/reports/sdxl.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/sdxl.html</guid>
   <pubDate>Sun, 20 Aug 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/sdxl.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/sdxl.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Supercharging Ultralytics with Weights &amp; Biases</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/ultralytics.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/ultralytics.html</link>
   <description><![CDATA[ 
 
 
@@ -53,14 +53,14 @@
   <category>pytorch</category>
   <category>computervision</category>
   <category>object-detection</category>
-  <guid>https://geekyrakshit.dev/reports/ultralytics.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/ultralytics.html</guid>
   <pubDate>Tue, 01 Aug 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/ultralytics.png" medium="image" type="image/png" height="91" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/ultralytics.png" medium="image" type="image/png" height="91" width="144"/>
 </item>
 <item>
   <title>XLA Compatibility of Vision Models in Keras</title>
   <dc:creator>[Sayak Paul](https://twitter.com/RisingSayak), [GeekyRakshit](../../), [Ayush Thakur](https://twitter.com/ayushthakur0)</dc:creator>
-  <link>https://geekyrakshit.dev/reports/keras-xla-benchmark.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/keras-xla-benchmark.html</link>
   <description><![CDATA[ 
 
 
@@ -76,14 +76,14 @@
   <category>keras</category>
   <category>computervision</category>
   <category>xla</category>
-  <guid>https://geekyrakshit.dev/reports/keras-xla-benchmark.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/keras-xla-benchmark.html</guid>
   <pubDate>Thu, 13 Jul 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/weave-xla.png" medium="image" type="image/png" height="71" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/weave-xla.png" medium="image" type="image/png" height="71" width="144"/>
 </item>
 <item>
   <title>Multi-Task Learning as a Bargaining Game</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/multi-task-learning.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/multi-task-learning.html</link>
   <description><![CDATA[ 
 
 
@@ -97,14 +97,14 @@
   <category>multi-task-learning</category>
   <category>deeplearning</category>
   <category>pytorch</category>
-  <guid>https://geekyrakshit.dev/reports/multi-task-learning.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/multi-task-learning.html</guid>
   <pubDate>Thu, 11 May 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/bargain.webp" medium="image" type="image/webp"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/bargain.webp" medium="image" type="image/webp"/>
 </item>
 <item>
   <title>DeepFloydAI: A New Breakthrough in Text-Guided Image Generation</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/if.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/if.html</link>
   <description><![CDATA[ 
 
 
@@ -120,14 +120,14 @@
   <category>generative</category>
   <category>diffusion</category>
   <category>huggingface</category>
-  <guid>https://geekyrakshit.dev/reports/if.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/if.html</guid>
   <pubDate>Mon, 01 May 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/if.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/if.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Paella: Fast Text-Conditional Image Generation</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/paella.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/paella.html</link>
   <description><![CDATA[ 
 
 
@@ -141,14 +141,14 @@
   <category>computervision</category>
   <category>deeplearning</category>
   <category>generative</category>
-  <guid>https://geekyrakshit.dev/reports/paella.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/paella.html</guid>
   <pubDate>Wed, 12 Apr 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/paella.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/paella.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Fine-Tuning Stable Diffusion Using Dreambooth in Keras</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/dreambooth-keras.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/dreambooth-keras.html</link>
   <description><![CDATA[ 
 
 
@@ -167,14 +167,14 @@
   <category>stable-diffusion</category>
   <category>keras</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/reports/dreambooth-keras.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/dreambooth-keras.html</guid>
   <pubDate>Thu, 16 Mar 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/dreambooth-keras.jpeg" medium="image" type="image/jpeg"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/dreambooth-keras.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Low-Light Image Enhancement: Lighting up Images in the Deep Learning Era</title>
   <dc:creator>[GeekyRakshit](../../), [Saurav Maheshkar](https://twitter.com/MaheshkarSaurav), [Samarendra Dash](https://twitter.com/samarendra109), [Aritra Roy Gosthipaty](https://twitter.com/ariG23498)</dc:creator>
-  <link>https://geekyrakshit.dev/reports/lighting-up-images.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/lighting-up-images.html</link>
   <description><![CDATA[ 
 
 
@@ -189,14 +189,14 @@
   <category>tensorflow</category>
   <category>keras</category>
   <category>computervision</category>
-  <guid>https://geekyrakshit.dev/reports/lighting-up-images.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/lighting-up-images.html</guid>
   <pubDate>Thu, 09 Mar 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/lighting.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/lighting.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Digging Into the ShapeNetCore Dataset</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/shapenetcore.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/shapenetcore.html</link>
   <description><![CDATA[ 
 
 
@@ -212,14 +212,14 @@
   <category>pytorch</category>
   <category>geometric-deeplearning</category>
   <category>point-cloud</category>
-  <guid>https://geekyrakshit.dev/reports/shapenetcore.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/shapenetcore.html</guid>
   <pubDate>Thu, 19 Jan 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/dgcnn.png" medium="image" type="image/png" height="105" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/dgcnn.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
   <title>Point Cloud Segmentation Using Dynamic Graph CNNs</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/point-cloud-segmentation.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/point-cloud-segmentation.html</link>
   <description><![CDATA[ 
 
 
@@ -235,14 +235,14 @@
   <category>pytorch</category>
   <category>geometric-deeplearning</category>
   <category>point-cloud</category>
-  <guid>https://geekyrakshit.dev/reports/point-cloud-segmentation.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/point-cloud-segmentation.html</guid>
   <pubDate>Tue, 17 Jan 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/dgcnn.png" medium="image" type="image/png" height="105" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/dgcnn.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
   <title>Point Cloud Classification Using PyTorch Geometric</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/point-cloud-classification.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/point-cloud-classification.html</link>
   <description><![CDATA[ 
 
 
@@ -258,14 +258,14 @@
   <category>pytorch</category>
   <category>geometric-deeplearning</category>
   <category>point-cloud</category>
-  <guid>https://geekyrakshit.dev/reports/point-cloud-classification.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/point-cloud-classification.html</guid>
   <pubDate>Mon, 16 Jan 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/point-cloud-classification.png" medium="image" type="image/png" height="105" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/point-cloud-classification.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
   <title>Unconditional Image Generation Using HuggingFace Diffusers</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/unconditional-diffusion.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/unconditional-diffusion.html</link>
   <description><![CDATA[ 
 
 
@@ -280,14 +280,14 @@
   <category>deeplearning</category>
   <category>diffusion</category>
   <category>huggingface</category>
-  <guid>https://geekyrakshit.dev/reports/unconditional-diffusion.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/unconditional-diffusion.html</guid>
   <pubDate>Mon, 16 Jan 2023 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/unconditional-diffusion.jpg" medium="image" type="image/jpeg"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/unconditional-diffusion.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
   <title>Variable Bitrate Neural Fields: Create Fast Approximations of 3D Scenes</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/vqad.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/vqad.html</link>
   <description><![CDATA[ 
 
 
@@ -308,14 +308,14 @@
   <category>deeplearning</category>
   <category>nerf</category>
   <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/reports/vqad.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/vqad.html</guid>
   <pubDate>Fri, 02 Dec 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/vqad.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/vqad.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Hazy Image Restoration Using Keras</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/hazy-image-restoration.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/hazy-image-restoration.html</link>
   <description><![CDATA[ 
 
 
@@ -330,14 +330,14 @@
   <category>tensorflow</category>
   <category>keras</category>
   <category>computervision</category>
-  <guid>https://geekyrakshit.dev/reports/hazy-image-restoration.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/hazy-image-restoration.html</guid>
   <pubDate>Thu, 17 Nov 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/hazy.png" medium="image" type="image/png" height="145" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/hazy.png" medium="image" type="image/png" height="145" width="144"/>
 </item>
 <item>
   <title>Advanced Tensorboard Features: Tensorflow Debugger</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/tensorboard-debugger.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/tensorboard-debugger.html</link>
   <description><![CDATA[ 
 
 
@@ -352,14 +352,14 @@
   <category>tensorboard</category>
   <category>tensorflow</category>
   <category>keras</category>
-  <guid>https://geekyrakshit.dev/reports/tensorboard-debugger.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/tensorboard-debugger.html</guid>
   <pubDate>Thu, 10 Nov 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/tensorboard-debugger.png" medium="image" type="image/png" height="88" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/tensorboard-debugger.png" medium="image" type="image/png" height="88" width="144"/>
 </item>
 <item>
   <title>Advanced Tensorboard Features: Graph Dashboard</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/tensorboard-graph-dashboard.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/tensorboard-graph-dashboard.html</link>
   <description><![CDATA[ 
 
 
@@ -372,14 +372,14 @@
  ]]></description>
   <category>deeplearning</category>
   <category>tensorboard</category>
-  <guid>https://geekyrakshit.dev/reports/tensorboard-graph-dashboard.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/tensorboard-graph-dashboard.html</guid>
   <pubDate>Thu, 10 Nov 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/tensorboard-graph-dashboard.png" medium="image" type="image/png" height="77" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/tensorboard-graph-dashboard.png" medium="image" type="image/png" height="77" width="144"/>
 </item>
 <item>
   <title>Object Detection for Autonomous Vehicles (A Step-by-Step Guide)</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/object-detection.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/object-detection.html</link>
   <description><![CDATA[ 
 
 
@@ -394,14 +394,14 @@
   <category>deeplearning</category>
   <category>object-detection</category>
   <category>yolo</category>
-  <guid>https://geekyrakshit.dev/reports/object-detection.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/object-detection.html</guid>
   <pubDate>Thu, 29 Sep 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/object-detection.png" medium="image" type="image/png" height="128" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/object-detection.png" medium="image" type="image/png" height="128" width="144"/>
 </item>
 <item>
   <title>Training Semantic Segmentation Models for Autonomous Vehicles (A Step-by-Step Guide)</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/semnantic-segmentation.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/semnantic-segmentation.html</link>
   <description><![CDATA[ 
 
 
@@ -416,14 +416,14 @@
   <category>deeplearning</category>
   <category>fastai</category>
   <category>segmentation</category>
-  <guid>https://geekyrakshit.dev/reports/semnantic-segmentation.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/semnantic-segmentation.html</guid>
   <pubDate>Thu, 29 Sep 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/semantic-segmentation.png" medium="image" type="image/png" height="93" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/semantic-segmentation.png" medium="image" type="image/png" height="93" width="144"/>
 </item>
 <item>
   <title>Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/cross-attention-control.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/cross-attention-control.html</link>
   <description><![CDATA[ 
 
 
@@ -447,14 +447,14 @@
   <category>diffusion</category>
   <category>stable-diffusion</category>
   <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/reports/cross-attention-control.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/cross-attention-control.html</guid>
   <pubDate>Wed, 28 Sep 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/cross-attention-control.png" medium="image" type="image/png" height="96" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/cross-attention-control.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
   <title>Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/game-characters.html</link>
+  <link>https://geekyrakshit.dev/feeds/reports/game-characters.html</link>
   <description><![CDATA[ 
 
 
@@ -474,9 +474,9 @@
   <category>deeplearning</category>
   <category>reinforcement-learning</category>
   <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/reports/game-characters.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/reports/game-characters.html</guid>
   <pubDate>Mon, 18 Jul 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/game-characters.png" medium="image" type="image/png" height="121" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/game-characters.png" medium="image" type="image/png" height="121" width="144"/>
 </item>
 </channel>
 </rss>
