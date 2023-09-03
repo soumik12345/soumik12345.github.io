@@ -1,0 +1,13 @@
+---
+title: "Advanced Tensorboard Features: Graph Dashboard"
+author: "[GeekyRakshit](../../)"
+date: "2022-11-11"
+categories: [deeplearning, tensorboard]
+image: "assets/tensorboard-graph-dashboard.png"
+description: An introduction to exploring Computation Graphs of our Machine Learning workflows with Tensorboard. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/tensorboard-demo/reports/Advanced-Tensorboard-Features-Graph-Dashboard--VmlldzoxNjk0MTA1" style="border:none;height:1024px;width:100%"></iframe>

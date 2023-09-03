@@ -1,0 +1,13 @@
+---
+title: "Advanced Tensorboard Features: Tensorflow Debugger"
+author: "[GeekyRakshit](../../)"
+date: "2022-11-11"
+categories: [deeplearning, tensorboard, tensorflow, keras]
+image: "assets/tensorboard-debugger.png"
+description: An introduction to Machine Learning workflows written in Tensorflow using the Tensorboard Debugger. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/tensorboard-demo/reports/Advanced-Tensorboard-Features-Tensorflow-Debugger--VmlldzoxNjk2Mjk1?galleryTag=keras" style="border:none;height:1024px;width:100%"></iframe>

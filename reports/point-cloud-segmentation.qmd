@@ -1,0 +1,13 @@
+---
+title: "Point Cloud Segmentation Using Dynamic Graph CNNs"
+author: "[GeekyRakshit](../../)"
+date: "2023-01-18"
+categories: [computervision, deeplearning, pytorch, geometric-deeplearning, point-cloud]
+image: "assets/dgcnn.png"
+description: In this article, we explore a simple point cloud segmentation pipeline using Dynamic Graph CNNs, implemented using PyTorch Geometric along with Weights & Biases. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/wandb/point-cloud-segmentation/reports/Point-Cloud-Segmentation-Using-Dynamic-Graph-CNNs--VmlldzozMTk5MDcy?galleryTag=pyg" style="border:none;height:1024px;width:100%"></iframe>

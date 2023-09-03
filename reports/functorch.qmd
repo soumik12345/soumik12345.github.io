@@ -1,0 +1,13 @@
+---
+title: "Working with FuncTorch: An Introduction"
+author: "[GeekyRakshit](../../)"
+date: "2022-04-01"
+categories: [deeplearning, pytorch, jax]
+image: "assets/functorch.png"
+description: Working with JAX-like composable function transforms in PyTorch. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/functorch-examples/functorch-examples/reports/Working-with-FuncTorch-An-Introduction--VmlldzoxNzMxNDI1" style="border:none;height:1024px;width:100%"></iframe>

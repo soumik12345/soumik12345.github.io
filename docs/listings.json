@@ -20,6 +20,17 @@
   {
     "listing": "/wandb_reports.html",
     "items": [
+      "/reports/multi-task-learning.html",
+      "/reports/paella.html",
+      "/reports/point-cloud-segmentation.html",
+      "/reports/point-cloud-classification.html",
+      "/reports/unconditional-diffusion.html",
+      "/reports/vqad.html",
+      "/reports/hazy-image-restoration.html",
+      "/reports/tensorboard-debugger.html",
+      "/reports/tensorboard-graph-dashboard.html",
+      "/reports/object-detection.html",
+      "/reports/semnantic-segmentation.html",
       "/reports/cross-attention-control.html",
       "/reports/game-characters.html",
       "/reports/robotic-telekinesis.html",
@@ -28,6 +39,8 @@
       "/reports/mip-nerf-360.html",
       "/reports/extracting-triangular-models.html",
       "/reports/barbershop.html",
+      "/reports/functorch.html",
+      "/reports/nerf-jax.html",
       "/reports/block-nerf.html",
       "/reports/robust-perceptive-locomotive.html",
       "/reports/poe-gan.html"

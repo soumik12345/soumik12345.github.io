@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://geekyrakshit.dev/posts.html</loc>
-    <lastmod>2023-09-03T00:49:27.034Z</lastmod>
+    <lastmod>2023-09-03T01:04:36.424Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/index.html</loc>
@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/wandb_reports.html</loc>
-    <lastmod>2023-09-03T00:49:54.564Z</lastmod>
+    <lastmod>2023-09-03T01:58:51.338Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/poe-gan.html</loc>
@@ -86,7 +86,7 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/extracting-triangular-models.html</loc>
-    <lastmod>2023-09-02T18:38:46.507Z</lastmod>
+    <lastmod>2023-09-03T01:12:12.086Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/mip-nerf-360.html</loc>
@@ -106,10 +106,62 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/game-characters.html</loc>
-    <lastmod>2023-09-03T00:41:19.919Z</lastmod>
+    <lastmod>2023-09-03T01:12:22.202Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/cross-attention-control.html</loc>
-    <lastmod>2023-09-03T00:46:41.179Z</lastmod>
+    <lastmod>2023-09-03T01:50:06.988Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/vqad.html</loc>
+    <lastmod>2023-09-03T00:56:49.971Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/paella.html</loc>
+    <lastmod>2023-09-03T01:00:40.029Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/nerf-jax.html</loc>
+    <lastmod>2023-09-03T01:09:35.174Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/semnantic-segmentation.html</loc>
+    <lastmod>2023-09-03T01:11:31.390Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/object-detection.html</loc>
+    <lastmod>2023-09-03T01:16:45.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/multi-task-learning.html</loc>
+    <lastmod>2023-09-03T01:21:29.674Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/functorch.html</loc>
+    <lastmod>2023-09-03T01:26:08.568Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/tensorboard-graph-dashboard.html</loc>
+    <lastmod>2023-09-03T01:31:09.684Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/tensorboard-debugger.html</loc>
+    <lastmod>2023-09-03T01:41:09.694Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/hazy-image-restoration.html</loc>
+    <lastmod>2023-09-03T01:45:16.670Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/unconditional-diffusion.html</loc>
+    <lastmod>2023-09-03T01:50:26.240Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/point-cloud-classification.html</loc>
+    <lastmod>2023-09-03T01:56:59.922Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/point-cloud-segmentation.html</loc>
+    <lastmod>2023-09-03T01:58:46.768Z</lastmod>
   </url>
 </urlset>

@@ -1,0 +1,13 @@
+---
+title: "Unconditional Image Generation Using HuggingFace Diffusers"
+author: "[GeekyRakshit](../../)"
+date: "2023-01-17"
+categories: [computervision, deeplearning, diffusion, huggingface]
+image: "assets/unconditional-diffusion.jpg"
+description: In this article, we explore how to train unconditional image generation models using HuggingFace Diffusers and we will track these experiments and compare the results usingWeights & Biases. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/diffusers-image-generation/reports/Unconditional-Image-Generation-Using-HuggingFace-Diffusers--VmlldzoyOTM5NjA1" style="border:none;height:1024px;width:100%"></iframe>

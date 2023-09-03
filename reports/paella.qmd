@@ -1,0 +1,13 @@
+---
+title: "Paella: Fast Text-Conditional Image Generation"
+author: "[GeekyRakshit](../../)"
+date: "2023-04-13"
+categories: [computervision, deeplearning, generative]
+image: "assets/paella.png"
+description: In this article, we explore the paper "Fast Text-Conditional Discrete Denoising on Vector-Quantized Latent Spaces" which introduces Paella, a novel text-to-image model. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/paella/reports/Paella-Fast-Text-Conditional-Image-Generation--VmlldzozMDAyNjg2" style="border:none;height:1024px;width:100%"></iframe>

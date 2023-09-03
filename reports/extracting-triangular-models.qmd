@@ -2,7 +2,7 @@
 title: "Extracting Triangular 3D Models, Materials, and Lighting From Images"
 author: "[GeekyRakshit](../../)"
 date: "2022-04-26"
-categories: [computervision, deeplearning, graphics, 2-minute-papers]
+categories: [deeplearning, graphics, 2-minute-papers]
 image: "assets/extracting-triangular-models.png"
 description: In this article, we'll explore a novel and efficient approach for joint optimization of topology, materials, and lighting from multi-view image observations.
 format: 

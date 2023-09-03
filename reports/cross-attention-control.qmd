@@ -2,7 +2,7 @@
 title: "Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control"
 author: "[GeekyRakshit](../../)"
 date: "2022-09-29"
-categories: [computervision, deeplearning, generative, stable-diffusion, 2-minute-papers]
+categories: [computervision, deeplearning, generative, diffusion, stable-diffusion, 2-minute-papers]
 image: "assets/cross-attention-control.png"
 description: A primer on text-driven image editing for large-scale text-based image synthesis models like Stable Diffusion & Imagen.
 format: 

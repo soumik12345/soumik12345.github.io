@@ -1,0 +1,13 @@
+---
+title: "Multi-Task Learning as a Bargaining Game"
+author: "[GeekyRakshit](../../)"
+date: "2023-05-12"
+categories: [multi-task-learning, deeplearning, pytorch]
+image: "assets/bargain.webp"
+description: In this article, we explore gradient combination in multi-task learning (MTL) as a cooperative bargaining game, and discuss Nash MTL — a novel approach — in detail. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/multi-task-learning/reports/Multi-Task-Learning-as-a-Bargaining-Game--VmlldzoyMDgzNjI2" style="border:none;height:1024px;width:100%"></iframe>

@@ -2,7 +2,7 @@
 title: "Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings"
 author: "[GeekyRakshit](../../)"
 date: "2022-07-19"
-categories: [computervision, deeplearning, reinforcement-learning, 2-minute-papers]
+categories: [deeplearning, reinforcement-learning, 2-minute-papers]
 image: "assets/game-characters.png"
 description: In this article, we explore using large-scale reusable adversarial skill embeddings for physically simulated characters. 
 format: 

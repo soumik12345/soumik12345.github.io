@@ -1,0 +1,13 @@
+---
+title: "Object Detection for Autonomous Vehicles (A Step-by-Step Guide)"
+author: "[GeekyRakshit](../../)"
+date: "2022-09-30"
+categories: [computervision, deeplearning, object-detection, yolo]
+image: "assets/object-detection.png"
+description: Digging into object detection and perception for autonomous vehicles using YOLOv5 and Weights & Biases.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/av-team/bdd100k-perception/reports/Object-Detection-for-Autonomous-Vehicles-A-Step-by-Step-Guide---VmlldzoyNjA3MTY0" style="border:none;height:1024px;width:100%"></iframe>

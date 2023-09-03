@@ -7,10 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="GeekyRakshit">
-<meta name="dcterms.date" content="2022-09-29">
-<meta name="description" content="A primer on text-driven image editing for large-scale text-based image synthesis models like Stable Diffusion &amp; Imagen.">
+<meta name="dcterms.date" content="2022-09-30">
+<meta name="description" content="A short tutorial on leveraging Weights &amp; Biases to train a semantic segmentation model for autonomous vehicles.">
 
-<title>Geekyrakshit - Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control</title>
+<title>Geekyrakshit - Training Semantic Segmentation Models for Autonomous Vehicles (A Step-by-Step Guide)</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -70,17 +70,17 @@ ul.task-list li input[type="checkbox"] {
 
 
 <link rel="stylesheet" href="../styles.css">
-<meta property="og:title" content="Geekyrakshit - Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control">
-<meta property="og:description" content="A primer on text-driven image editing for large-scale text-based image synthesis models like Stable Diffusion &amp; Imagen.">
-<meta property="og:image" content="https://geekyrakshit.dev/reports/assets/cross-attention-control.png">
+<meta property="og:title" content="Geekyrakshit - Training Semantic Segmentation Models for Autonomous Vehicles (A Step-by-Step Guide)">
+<meta property="og:description" content="A short tutorial on leveraging Weights &amp; Biases to train a semantic segmentation model for autonomous vehicles.">
+<meta property="og:image" content="https://geekyrakshit.dev/reports/assets/semantic-segmentation.png">
 <meta property="og:site-name" content="Geekyrakshit">
-<meta property="og:image:height" content="512">
-<meta property="og:image:width" content="768">
-<meta name="twitter:title" content="Geekyrakshit - Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control">
-<meta name="twitter:description" content="A primer on text-driven image editing for large-scale text-based image synthesis models like Stable Diffusion &amp; Imagen.">
-<meta name="twitter:image" content="https://geekyrakshit.dev/reports/assets/cross-attention-control.png">
-<meta name="twitter:image-height" content="512">
-<meta name="twitter:image-width" content="768">
+<meta property="og:image:height" content="590">
+<meta property="og:image:width" content="910">
+<meta name="twitter:title" content="Geekyrakshit - Training Semantic Segmentation Models for Autonomous Vehicles (A Step-by-Step Guide)">
+<meta name="twitter:description" content="A short tutorial on leveraging Weights &amp; Biases to train a semantic segmentation model for autonomous vehicles.">
+<meta name="twitter:image" content="https://geekyrakshit.dev/reports/assets/semantic-segmentation.png">
+<meta name="twitter:image-height" content="590">
+<meta name="twitter:image-width" content="910">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -155,20 +155,18 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control</h1>
+<h1 class="title">Training Semantic Segmentation Models for Autonomous Vehicles (A Step-by-Step Guide)</h1>
   <div class="quarto-categories">
     <div class="quarto-category">computervision</div>
     <div class="quarto-category">deeplearning</div>
-    <div class="quarto-category">generative</div>
-    <div class="quarto-category">diffusion</div>
-    <div class="quarto-category">stable-diffusion</div>
-    <div class="quarto-category">2-minute-papers</div>
+    <div class="quarto-category">fastai</div>
+    <div class="quarto-category">segmentation</div>
   </div>
   </div>
 
 <div>
   <div class="description">
-    A primer on text-driven image editing for large-scale text-based image synthesis models like Stable Diffusion &amp; Imagen.
+    A short tutorial on leveraging Weights &amp; Biases to train a semantic segmentation model for autonomous vehicles.
   </div>
 </div>
 
@@ -185,7 +183,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 29, 2022</p>
+      <p class="date">September 30, 2022</p>
     </div>
   </div>
   
@@ -195,14 +193,7 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<details>
-<summary>
-<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
-</summary>
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/XW_nO2NMH_g?si=OAaFHjcpu2jHIdU-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</details>
-
-<iframe src="https://wandb.ai/wandb/cross-attention-control/reports/Improving-Generative-Images-with-Instructions-Prompt-to-Prompt-Image-Editing-with-Cross-Attention-Control--VmlldzoyNjk2MDAy?galleryTag=stable-diffusion" style="border:none;height:1024px;width:100%">
+<iframe src="https://wandb.ai/av-demo/CamVid/reports/Training-Semantic-Segmentation-Models-for-Autonomous-Vehicles-A-Step-by-Step-Guide---VmlldzoyNTMyMjc4" style="border:none;height:1024px;width:100%">
 </iframe>
 
 

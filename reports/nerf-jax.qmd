@@ -1,0 +1,13 @@
+---
+title: "Implementing NeRF in JAX"
+author: "[GeekyRakshit](../../)"
+date: "2022-03-20"
+categories: [computervision, deeplearning, nerf, jax]
+image: "assets/nerf-jax.png"
+description: This article uses JAX to create a minimal implementation of 3D volumetric rendering of scenes represented by Neural Radiance Fields, using W&B to track all metrics. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/wandb/nerf-jax/reports/Implementing-NeRF-in-JAX--VmlldzoxODA2NDk2?galleryTag=jax" style="border:none;height:1024px;width:100%"></iframe>

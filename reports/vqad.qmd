@@ -1,0 +1,23 @@
+---
+title: "Variable Bitrate Neural Fields: Create Fast Approximations of 3D Scenes"
+author: "[GeekyRakshit](../../)"
+date: "2022-12-03"
+categories: [computervision, deeplearning, nerf, 2-minute-papers]
+image: "assets/vqad.png"
+description: This article explores creating accurate, fast approximations of complex 3D scenes with a low memory footprint, as outlined in Variable Bitrate Neural Fields.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/shy51E-MU8Y?si=jBi_B1iNBZc08-pK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/kaolin-wisp-integration/reports/Variable-Bitrate-Neural-Fields-Create-Fast-Approximations-of-3D-Scenes--VmlldzozMDE0MDY0?galleryTag=tmp" style="border:none;height:1024px;width:100%"></iframe>
