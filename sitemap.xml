@@ -1,67 +1,195 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://geekyrakshit.dev/posts.html</loc>
-    <lastmod>2023-09-02T05:02:52.900Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/functorch.html</loc>
+    <lastmod>2023-09-03T02:47:19.614Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/index.html</loc>
-    <lastmod>2023-09-02T05:02:51.459Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/robust-perceptive-locomotive.html</loc>
+    <lastmod>2023-09-03T02:47:19.020Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/relativistic-anime-gan.html</loc>
-    <lastmod>2023-09-02T05:02:50.259Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/ultralytics.html</loc>
+    <lastmod>2023-09-03T02:47:18.394Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/index.html</loc>
-    <lastmod>2023-09-02T05:02:49.300Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/if.html</loc>
+    <lastmod>2023-09-03T02:47:17.801Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/conditional-dcgan.html</loc>
-    <lastmod>2023-09-02T05:02:47.058Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/poe-gan.html</loc>
+    <lastmod>2023-09-03T02:47:17.192Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0.html</loc>
-    <lastmod>2023-09-02T05:02:46.268Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/point-cloud-segmentation.html</loc>
+    <lastmod>2023-09-03T02:47:16.555Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/dcgan-mnist.html</loc>
-    <lastmod>2023-09-02T05:02:45.182Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/block-nerf.html</loc>
+    <lastmod>2023-09-03T02:47:15.954Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/detectron-mask-rcnn.html</loc>
-    <lastmod>2023-09-02T05:02:44.370Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/tensorboard-debugger.html</loc>
+    <lastmod>2023-09-03T02:47:15.342Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/detectron-fast-rcnn.html</loc>
-    <lastmod>2023-09-02T05:02:43.869Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/tensorboard-graph-dashboard.html</loc>
+    <lastmod>2023-09-03T02:47:14.754Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/depthwise-separable-convolution/index.html</loc>
-    <lastmod>2023-09-02T05:02:44.826Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/shapenetcore.html</loc>
+    <lastmod>2023-09-03T02:47:14.133Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/anpr.html</loc>
-    <lastmod>2023-09-02T05:02:45.636Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/extracting-triangular-models.html</loc>
+    <lastmod>2023-09-03T02:47:13.513Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/animegan.html</loc>
-    <lastmod>2023-09-02T05:02:46.694Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/cross-attention-control.html</loc>
+    <lastmod>2023-09-03T02:47:12.897Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/mlp-gan.html</loc>
-    <lastmod>2023-09-02T05:02:47.425Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/stylegan-nada.html</loc>
+    <lastmod>2023-09-03T02:47:12.286Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/nearest-celebrity-face/index.html</loc>
-    <lastmod>2023-09-02T05:02:49.829Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/vqad.html</loc>
+    <lastmod>2023-09-03T02:47:11.673Z</lastmod>
   </url>
   <url>
-    <loc>https://geekyrakshit.dev/posts/enet-camvid.html</loc>
-    <lastmod>2023-09-02T05:02:51.185Z</lastmod>
+    <loc>https://geekyrakshit.dev/reports/game-characters.html</loc>
+    <lastmod>2023-09-03T02:47:11.079Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/object-detection.html</loc>
+    <lastmod>2023-09-03T02:47:10.479Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/about.html</loc>
-    <lastmod>2023-09-02T05:02:51.785Z</lastmod>
+    <lastmod>2023-09-03T02:47:08.976Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/wandb_reports.html</loc>
+    <lastmod>2023-09-03T02:47:08.280Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/relativistic-anime-gan.html</loc>
+    <lastmod>2023-09-03T02:47:04.858Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/index.html</loc>
+    <lastmod>2023-09-03T02:47:03.955Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/conditional-dcgan.html</loc>
+    <lastmod>2023-09-03T02:47:01.785Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0.html</loc>
+    <lastmod>2023-09-03T02:47:00.971Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/dcgan-mnist.html</loc>
+    <lastmod>2023-09-03T02:46:59.857Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/detectron-mask-rcnn.html</loc>
+    <lastmod>2023-09-03T02:46:59.031Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/detectron-fast-rcnn.html</loc>
+    <lastmod>2023-09-03T02:46:58.513Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/depthwise-separable-convolution/index.html</loc>
+    <lastmod>2023-09-03T02:46:59.473Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/anpr.html</loc>
+    <lastmod>2023-09-03T02:47:00.323Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/animegan.html</loc>
+    <lastmod>2023-09-03T02:47:01.407Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/mlp-gan.html</loc>
+    <lastmod>2023-09-03T02:47:02.162Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/nearest-celebrity-face/index.html</loc>
+    <lastmod>2023-09-03T02:47:04.425Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts/enet-camvid.html</loc>
+    <lastmod>2023-09-03T02:47:05.787Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/index.html</loc>
+    <lastmod>2023-09-03T02:47:08.569Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/posts.html</loc>
+    <lastmod>2023-09-03T02:47:10.157Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/modern-evolution-strategies.html</loc>
+    <lastmod>2023-09-03T02:47:10.785Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/dreambooth-keras.html</loc>
+    <lastmod>2023-09-03T02:47:11.369Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/barbershop.html</loc>
+    <lastmod>2023-09-03T02:47:11.978Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/multi-task-learning.html</loc>
+    <lastmod>2023-09-03T02:47:12.593Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/robotic-telekinesis.html</loc>
+    <lastmod>2023-09-03T02:47:13.205Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/mip-nerf-360.html</loc>
+    <lastmod>2023-09-03T02:47:13.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/lighting-up-images.html</loc>
+    <lastmod>2023-09-03T02:47:14.464Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/paella.html</loc>
+    <lastmod>2023-09-03T02:47:15.064Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/hazy-image-restoration.html</loc>
+    <lastmod>2023-09-03T02:47:15.638Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/unconditional-diffusion.html</loc>
+    <lastmod>2023-09-03T02:47:16.248Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/keras-xla-benchmark.html</loc>
+    <lastmod>2023-09-03T02:47:16.865Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/point-cloud-classification.html</loc>
+    <lastmod>2023-09-03T02:47:17.506Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/semnantic-segmentation.html</loc>
+    <lastmod>2023-09-03T02:47:18.097Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/sdxl.html</loc>
+    <lastmod>2023-09-03T02:47:18.710Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/nerf-jax.html</loc>
+    <lastmod>2023-09-03T02:47:19.320Z</lastmod>
   </url>
 </urlset>

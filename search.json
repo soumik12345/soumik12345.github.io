@@ -1,17 +1,66 @@
 [
   {
-    "objectID": "posts.html",
-    "href": "posts.html",
-    "title": "Posts",
+    "objectID": "reports/robust-perceptive-locomotive.html",
+    "href": "reports/robust-perceptive-locomotive.html",
+    "title": "Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild",
     "section": "",
-    "text": "About this blog\n\n\n\n\n\n\n\n\n  \n\n\n\n\nEfficient Graph-Based Image Segmentation\n\n\n\n\n\n\n\ncomputervision\n\n\nalgebra\n\n\npython\n\n\n\n\nImplementation of “Efficient Graph-Based Image Segmentation” paper written by P. Felzenszwalb and D. Huttenlocher.\n\n\n\n\n\n\nSeptember 17, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nEnet-Camvid\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nPytorch Implementation of ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation trained on the CamVid Dataset\n\n\n\n\n\n\nMay 5, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nHand Detection using Faster RCNN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nHand Detection with Faster RCNN written in Detectron2 and Pytorch\n\n\n\n\n\n\nApril 13, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nBalloon Detection using Mask RCNN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nInstance Segmentation with Mask RCNN using Detectron2 and Pytorch\n\n\n\n\n\n\nApril 13, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nAutomatic Number Plate Recognition\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nAutomatic Number Plate Recognition in Hangul using Convolutional Recurrent Neural Network\n\n\n\n\n\n\nApril 13, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nYOLOv3 using Tensorflow 2.0\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nImplementation of YOLOv3 using Tensorflow 2.0\n\n\n\n\n\n\nApril 13, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nDepthwise Separable Convolutions in Deep Learning\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\n\n\nMany modern CNN architectures such as Xception and Mobilenet make use of Depthwise Seperable Convolution to make them fast enough to run on mobile devices\n\n\n\n\n\n\nOctober 19, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nNearest Celebrity Face using Deep Learning\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\n\n\nDeep Learning Techniques used to verify and recognize faces can also be extended to replicate Facebook apps saying which celebrity do you look like\n\n\n\n\n\n\nAugust 7, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nRelativistic AnimeGAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nGenerating Anime Faces using Relativistic GAN\n\n\n\n\n\n\nJuly 22, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nDeep Convolutional AnimeGAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nGenerating Anime Faces using Deep Convolutional GAN\n\n\n\n\n\n\nJuly 21, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nConditional DCGAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nImplementation of Conditional DCGAN using Keras and Tensorflow\n\n\n\n\n\n\nJuly 21, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nDCGAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nImplementation of Deep Convolutional GAN using Keras and Tensorflow\n\n\n\n\n\n\nJuly 20, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nMLP-GAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nImplementation of Vanilla GAN with Multilayered Perceptron using Keras and Tensorflow\n\n\n\n\n\n\nJuly 19, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\nNo matching items"
+    "text": "Featured on Two Minute Papers"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Geekyrakshit",
+    "objectID": "reports/poe-gan.html",
+    "href": "reports/poe-gan.html",
+    "title": "PoE-GAN: Generating Images from Multi-Modal Inputs",
     "section": "",
-    "text": "Hi there 👋. I am Soumik Rakshit (সৌমিক রক্ষিত).\nI develop machine learning tools at Weights & Biases.\nYou can learn more about me here."
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/block-nerf.html",
+    "href": "reports/block-nerf.html",
+    "title": "Block-NeRF: Scalable Large Scene Neural View Synthesis",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/extracting-triangular-models.html",
+    "href": "reports/extracting-triangular-models.html",
+    "title": "Extracting Triangular 3D Models, Materials, and Lighting From Images",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/cross-attention-control.html",
+    "href": "reports/cross-attention-control.html",
+    "title": "Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/stylegan-nada.html",
+    "href": "reports/stylegan-nada.html",
+    "title": "Digging Into StyleGAN-NADA for CLIP-Guided Domain Adaptation",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/vqad.html",
+    "href": "reports/vqad.html",
+    "title": "Variable Bitrate Neural Fields: Create Fast Approximations of 3D Scenes",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/game-characters.html",
+    "href": "reports/game-characters.html",
+    "title": "Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I am generally interested in the field of computer vision, particularly in foundation models for computer vision, generative models for images, implicit representation and representation learning.\nI work on developing tools for Machine Learning parctioners at Weights & Biases. My day-to-day tasks include\n\ndeveloping and maintaining integrations with open-source libraries such as keras, ultralytics, super-gradients, kaolin-wisp, etc.\nprototyping experimental tools in the Weights & Biases ecosystem as part of wandb-addons.\nwriting exciting and beautiful blog posts on machine learning using W&B Reports.\ntalk about my work at different webinars.\n\nI’m fairly active in terms of open-source contributions. Besides wandb, I regularly contribute to Keras, KerasCV, and Keras Examples. Thanks to my job, I get to contribute to a lot of other open-source repositories including Ultralytics, Super-Gradients, Kaolin-Wisp, PyTorch Geometric, and many more. I have also developed and am maintaining the integrations of Weights & Biases with many of these repositories. I am also actively working on wandb-addons which hosts a set of experimental utilities and integrations for Weights & Biases.\nMy Career Timeline:\n\nMachine Learning Engineer at Weights & Biases (Jan 2022 - Present)\nGoogle Developer Expert for Machine Learning (JAX) (Jun 2022 - Present)\nStaff Machine Learning Engineer at Ignitarium (Jul 2021 - Dec 2021)\nSoftware Development Engineer at IBM (Jan 2020 - Jul 2021)\nSoftware Development Engineer at HighRadius (Jun 2019 - Dec 2019)\nFailed entrepreneur and Machine Learning Researcher at DeepWrex Technologies\n\nIn my free time, I watch anime, read books and manga, play video games, write poetry, sketch on ProCreate, and ocassionally dabble in the dark arts of computational graphics."
   },
   {
     "objectID": "posts/relativistic-anime-gan.html",
@@ -392,10 +441,31 @@
     "text": "Prediction\nWe will be predicting with the weights at epoch 65 where both training and validation loss seems to be stable. This is done in order to avoid overfitting.\n\nstate_dict = torch.load('./checkpoints/enet-model-65-14.726004391908646--3.9436190128326416.pth')['state_dict']\nenet.load_state_dict(state_dict)\n\n&lt;All keys matched successfully&gt;\n\n\nPrediction on Training Data\n\nx_batch, y_batch = next(iter(train_loader))\nfig, axes = plt.subplots(nrows = 4, ncols = 3, figsize = (16, 16))\nplt.setp(axes.flat, xticks = [], yticks = [])\nc = 1\nfor i, ax in enumerate(axes.flat):\n    if i % 3 == 0:\n        ax.imshow(ToPILImage()(x_batch[c]))\n        ax.set_xlabel('Image_' + str(c))\n    elif i % 3 == 1:\n        ax.imshow(decode_segmap(y_batch[c], color_dict))\n        ax.set_xlabel('Ground_Truth_' + str(c))\n    elif i % 3 == 2:\n        ax.imshow(predict_rgb(enet, x_batch[c].unsqueeze(0).to(device), color_dict))\n        ax.set_xlabel('Predicted_Mask_' + str(c))\n        c += 1\nplt.show()\n\n\n\n\nPrediction on Validation Data\n\nx_batch, y_batch = next(iter(val_loader))\nfig, axes = plt.subplots(nrows = 4, ncols = 3, figsize = (16, 16))\nplt.setp(axes.flat, xticks = [], yticks = [])\nc = 1\nfor i, ax in enumerate(axes.flat):\n    if i % 3 == 0:\n        ax.imshow(ToPILImage()(x_batch[c]))\n        ax.set_xlabel('Image_' + str(c))\n    elif i % 3 == 1:\n        ax.imshow(decode_segmap(y_batch[c], color_dict))\n        ax.set_xlabel('Ground_Truth_' + str(c))\n    elif i % 3 == 2:\n        ax.imshow(predict_rgb(enet, x_batch[c].unsqueeze(0).to(device), color_dict))\n        ax.set_xlabel('Predicted_Mask_' + str(c))\n        c += 1\nplt.show()"
   },
   {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Geekyrakshit",
     "section": "",
-    "text": "I am generally interested in the field of computer vision, particularly in foundation models for computer vision, generative models for images, implicit representation and representation learning.\nI work on developing tools for Machine Learning parctioners at Weights & Biases. My day-to-day tasks include\n\ndeveloping and maintaining integrations with open-source libraries such as keras, ultralytics, super-gradients, kaolin-wisp, etc.\nprototyping experimental tools in the Weights & Biases ecosystem as part of wandb-addons.\nwriting exciting and beautiful blog posts on machine learning using W&B Reports.\n\nI’m fairly active in terms of open-source contributions. Besides wandb, I regularly contribute to Keras, KerasCV, and Keras Examples. Thanks to my job, I get to contribute to a lot of other open-source repositories including Ultralytics, Super-Gradients, Kaolin-Wisp, PyTorch Geometric, and many more. I have also developed and am maintaining the integrations of Weights & Biases with many of these repositories. I am also actively working on wandb-addons which hosts a set of experimental utilities and integrations for Weights & Biases.\n\n\nMy Career Timeline\n\n\nMachine Learning Engineer at Weights & Biases (Jan 2022 - Present)\nGoogle Developer Expert for Machine Learning (JAX) (Jun 2022 - Present)\nStaff Machine Learning Engineer at Ignitarium (Jul 2021 - Dec 2021)\nSoftware Development Engineer at IBM (Jan 2020 - Jul 2021)\nSoftware Development Engineer at HighRadius (Jun 2019 - Dec 2019)\nFailed entrepreneur and Machine Learning Researcher at DeepWrex Technologies\n\n\nIn my free time, I watch anime, read books and manga, play video games, write poetry, sketch on ProCreate, and ocassionally dabble in the dark arts of computational graphics."
+    "text": "Hi there 👋. I am Soumik Rakshit (সৌমিক রক্ষিত).\nI develop machine learning tools at Weights & Biases.\nYou can learn more about me here."
+  },
+  {
+    "objectID": "posts.html",
+    "href": "posts.html",
+    "title": "Posts",
+    "section": "",
+    "text": "Efficient Graph-Based Image Segmentation\n\n\n\n\n\n\n\ncomputervision\n\n\nalgebra\n\n\npython\n\n\n\n\nImplementation of “Efficient Graph-Based Image Segmentation” paper written by P. Felzenszwalb and D. Huttenlocher.\n\n\n\n\n\n\nSeptember 17, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nEnet-Camvid\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nPytorch Implementation of ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation trained on the CamVid Dataset\n\n\n\n\n\n\nMay 5, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nHand Detection using Faster RCNN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nHand Detection with Faster RCNN written in Detectron2 and Pytorch\n\n\n\n\n\n\nApril 13, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nBalloon Detection using Mask RCNN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nInstance Segmentation with Mask RCNN using Detectron2 and Pytorch\n\n\n\n\n\n\nApril 13, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nAutomatic Number Plate Recognition\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nAutomatic Number Plate Recognition in Hangul using Convolutional Recurrent Neural Network\n\n\n\n\n\n\nApril 13, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nYOLOv3 using Tensorflow 2.0\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nImplementation of YOLOv3 using Tensorflow 2.0\n\n\n\n\n\n\nApril 13, 2020\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nDepthwise Separable Convolutions in Deep Learning\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\n\n\nMany modern CNN architectures such as Xception and Mobilenet make use of Depthwise Seperable Convolution to make them fast enough to run on mobile devices\n\n\n\n\n\n\nOctober 19, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nNearest Celebrity Face using Deep Learning\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\n\n\nDeep Learning Techniques used to verify and recognize faces can also be extended to replicate Facebook apps saying which celebrity do you look like\n\n\n\n\n\n\nAugust 7, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nRelativistic AnimeGAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nGenerating Anime Faces using Relativistic GAN\n\n\n\n\n\n\nJuly 22, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nDeep Convolutional AnimeGAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nGenerating Anime Faces using Deep Convolutional GAN\n\n\n\n\n\n\nJuly 21, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nConditional DCGAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nImplementation of Conditional DCGAN using Keras and Tensorflow\n\n\n\n\n\n\nJuly 21, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nDCGAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nImplementation of Deep Convolutional GAN using Keras and Tensorflow\n\n\n\n\n\n\nJuly 20, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\n  \n\n\n\n\nMLP-GAN\n\n\n\n\n\n\n\ncomputervision\n\n\ndeeplearning\n\n\nkeras\n\n\npython\n\n\ntensorflow\n\n\n\n\nImplementation of Vanilla GAN with Multilayered Perceptron using Keras and Tensorflow\n\n\n\n\n\n\nJuly 19, 2019\n\n\nGeekyRakshit\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "reports/barbershop.html",
+    "href": "reports/barbershop.html",
+    "title": "Barbershop: Hair Transfer with GAN-Based Image Compositing Using Segmentation Masks",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/robotic-telekinesis.html",
+    "href": "reports/robotic-telekinesis.html",
+    "title": "Robotic Telekinesis in the Wild",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
   }
 ]
