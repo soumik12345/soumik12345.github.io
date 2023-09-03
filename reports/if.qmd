@@ -1,0 +1,13 @@
+---
+title: "DeepFloydAI: A New Breakthrough in Text-Guided Image Generation"
+author: "[GeekyRakshit](../../)"
+date: "2023-05-02"
+categories: [computervision, deeplearning, generative, diffusion, huggingface]
+image: "assets/if.jpeg"
+description: In this article, we explore DeepFloydAI — an AI Research Band which is working with StabilityAI to make AI open again. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/deepfloyd/reports/DeepFloydAI-A-New-Breakthrough-in-Text-Guided-Image-Generation--VmlldzozNTYzMjY1" style="border:none;height:1024px;width:100%"></iframe>

@@ -20,8 +20,15 @@
   {
     "listing": "/wandb_reports.html",
     "items": [
+      "/reports/sdxl.html",
+      "/reports/ultralytics.html",
+      "/reports/keras-xla-benchmark.html",
       "/reports/multi-task-learning.html",
+      "/reports/if.html",
       "/reports/paella.html",
+      "/reports/dreambooth-keras.html",
+      "/reports/lighting-up-images.html",
+      "/reports/shapenetcore.html",
       "/reports/point-cloud-segmentation.html",
       "/reports/point-cloud-classification.html",
       "/reports/unconditional-diffusion.html",

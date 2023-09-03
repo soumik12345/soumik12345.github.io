@@ -1,0 +1,13 @@
+---
+title: "Digging Into the ShapeNetCore Dataset"
+author: "[GeekyRakshit](../../)"
+date: "2023-01-20"
+categories: [computervision, deeplearning, pytorch, geometric-deeplearning, point-cloud]
+image: "assets/dgcnn.png"
+description: In this article, we dive into the ShapeNetCore Dataset for the classification and segmentation of point cloud data and explore how to use it using Weights & Biases. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/wandb/point-cloud-segmentation/reports/Digging-Into-the-ShapeNetCore-Dataset--VmlldzozMTY1ODA2" style="border:none;height:1024px;width:100%"></iframe>

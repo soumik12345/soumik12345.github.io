@@ -1,0 +1,13 @@
+---
+title: "XLA Compatibility of Vision Models in Keras"
+author: "[Sayak Paul](https://twitter.com/RisingSayak), [GeekyRakshit](../../), [Ayush Thakur](https://twitter.com/ayushthakur0)"
+date: "2023-07-14"
+categories: [deeplearning, tensorflow, keras, computervision, xla]
+image: "assets/weave-xla.png"
+description: A set of comprehensive benchmarks around XLA compatibility of computer vision models implemented in Keras.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/sayakpaul/keras-xla-benchmarks/reports/XLA-Compatibility-of-Vision-Models-in-Keras--Vmlldzo0NzQzNDYx" style="border:none;height:1024px;width:100%"></iframe>

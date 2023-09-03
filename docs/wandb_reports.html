@@ -76,7 +76,8 @@ ul.task-list li input[type="checkbox"] {
 
     const options = {
       valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
+      page: 25,
+    pagination: { item: "<li class='page-item'><a class='page page-link' href='#'></a></li>" },
       searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
     };
 
@@ -100,10 +101,14 @@ ul.task-list li input[type="checkbox"] {
 
 <link rel="stylesheet" href="styles.css">
 <link rel="alternate" type="application/rss+xml" title="Geekyrakshit" href="wandb_reports.xml"><meta property="og:title" content="Geekyrakshit - WandB Reports">
-<meta property="og:image" content="https://geekyrakshit.dev/reports/assets/bargain.webp">
+<meta property="og:image" content="https://geekyrakshit.dev/reports/assets/sdxl.png">
 <meta property="og:site-name" content="Geekyrakshit">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:width" content="1024">
 <meta name="twitter:title" content="Geekyrakshit - WandB Reports">
-<meta name="twitter:image" content="https://geekyrakshit.dev/reports/assets/bargain.webp">
+<meta name="twitter:image" content="https://geekyrakshit.dev/reports/assets/sdxl.png">
+<meta name="twitter:image-height" content="1024">
+<meta name="twitter:image-width" content="1024">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -174,7 +179,7 @@ ul.task-list li input[type="checkbox"] {
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(24)</span></div><div class="category" data-category="2-minute-papers">2-minute-papers <span class="quarto-category-count">(10)</span></div><div class="category" data-category="computervision">computervision <span class="quarto-category-count">(18)</span></div><div class="category" data-category="deeplearning">deeplearning <span class="quarto-category-count">(24)</span></div><div class="category" data-category="diffusion">diffusion <span class="quarto-category-count">(2)</span></div><div class="category" data-category="fastai">fastai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="generative">generative <span class="quarto-category-count">(6)</span></div><div class="category" data-category="geometric-deeplearning">geometric-deeplearning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="graphics">graphics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="huggingface">huggingface <span class="quarto-category-count">(1)</span></div><div class="category" data-category="jax">jax <span class="quarto-category-count">(3)</span></div><div class="category" data-category="keras">keras <span class="quarto-category-count">(2)</span></div><div class="category" data-category="multi-task-learning">multi-task-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="nerf">nerf <span class="quarto-category-count">(4)</span></div><div class="category" data-category="object-detection">object-detection <span class="quarto-category-count">(1)</span></div><div class="category" data-category="point-cloud">point-cloud <span class="quarto-category-count">(2)</span></div><div class="category" data-category="pytorch">pytorch <span class="quarto-category-count">(4)</span></div><div class="category" data-category="reinforcement-learning">reinforcement-learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="robotics">robotics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="segmentation">segmentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="stable-diffusion">stable-diffusion <span class="quarto-category-count">(1)</span></div><div class="category" data-category="tensorboard">tensorboard <span class="quarto-category-count">(2)</span></div><div class="category" data-category="tensorflow">tensorflow <span class="quarto-category-count">(2)</span></div><div class="category" data-category="yolo">yolo <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(31)</span></div><div class="category" data-category="2-minute-papers">2-minute-papers <span class="quarto-category-count">(10)</span></div><div class="category" data-category="computervision">computervision <span class="quarto-category-count">(25)</span></div><div class="category" data-category="deeplearning">deeplearning <span class="quarto-category-count">(31)</span></div><div class="category" data-category="diffusion">diffusion <span class="quarto-category-count">(5)</span></div><div class="category" data-category="fastai">fastai <span class="quarto-category-count">(1)</span></div><div class="category" data-category="generative">generative <span class="quarto-category-count">(8)</span></div><div class="category" data-category="geometric-deeplearning">geometric-deeplearning <span class="quarto-category-count">(3)</span></div><div class="category" data-category="graphics">graphics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="huggingface">huggingface <span class="quarto-category-count">(3)</span></div><div class="category" data-category="jax">jax <span class="quarto-category-count">(3)</span></div><div class="category" data-category="keras">keras <span class="quarto-category-count">(5)</span></div><div class="category" data-category="multi-task-learning">multi-task-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="nerf">nerf <span class="quarto-category-count">(4)</span></div><div class="category" data-category="object-detection">object-detection <span class="quarto-category-count">(2)</span></div><div class="category" data-category="point-cloud">point-cloud <span class="quarto-category-count">(3)</span></div><div class="category" data-category="pytorch">pytorch <span class="quarto-category-count">(6)</span></div><div class="category" data-category="reinforcement-learning">reinforcement-learning <span class="quarto-category-count">(2)</span></div><div class="category" data-category="robotics">robotics <span class="quarto-category-count">(2)</span></div><div class="category" data-category="segmentation">segmentation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="stable-diffusion">stable-diffusion <span class="quarto-category-count">(3)</span></div><div class="category" data-category="tensorboard">tensorboard <span class="quarto-category-count">(2)</span></div><div class="category" data-category="tensorflow">tensorflow <span class="quarto-category-count">(5)</span></div><div class="category" data-category="xla">xla <span class="quarto-category-count">(1)</span></div><div class="category" data-category="yolo">yolo <span class="quarto-category-count">(1)</span></div></div></div>
 <!-- main -->
 <div class="quarto-about-marquee">
   <div class="about-image-container">
@@ -195,7 +200,139 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="multi-task-learning,deeplearning,pytorch" data-listing-date-sort="1683829800000" data-listing-file-modified-sort="1693704088925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="computervision,deeplearning,diffusion,huggingface,stable-diffusion" data-listing-date-sort="1692556200000" data-listing-file-modified-sort="1693708340374" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./reports/sdxl.html"> <img src="./reports/assets/sdxl.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./reports/sdxl.html">
+<h3 class="no-anchor listing-title">
+A Guide to Using Stable Diffusion XL with HuggingFace Diffusers and W&amp;B
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
+computervision
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
+deeplearning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('diffusion'); return false;">
+diffusion
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('huggingface'); return false;">
+huggingface
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('stable-diffusion'); return false;">
+stable-diffusion
+</div>
+</div>
+<a href="./reports/sdxl.html">
+<div class="listing-description">
+<p>A comprehensive guide to using Stable Diffusion XL (SDXL) for generating high-quality images using HuggingFace Diffusers and managing experiments with Weights &amp; Biases.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./reports/sdxl.html">
+<div class="listing-date">
+August 21, 2023
+</div>
+</a><div class="listing-author"><a href="./reports/sdxl.html">
+</a><a href="../../">GeekyRakshit</a>
+</div>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="1" data-categories="deeplearning,pytorch,computervision,object-detection" data-listing-date-sort="1690914600000" data-listing-file-modified-sort="1693708173946" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./reports/ultralytics.html"> <img src="./reports/assets/ultralytics.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./reports/ultralytics.html">
+<h3 class="no-anchor listing-title">
+Supercharging Ultralytics with Weights &amp; Biases
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
+deeplearning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('pytorch'); return false;">
+pytorch
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
+computervision
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('object-detection'); return false;">
+object-detection
+</div>
+</div>
+<a href="./reports/ultralytics.html">
+<div class="listing-description">
+<p>A guide on using Weights &amp; Biases with Ultralytics workflows for computer vision models.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./reports/ultralytics.html">
+<div class="listing-date">
+August 2, 2023
+</div>
+</a><div class="listing-author"><a href="./reports/ultralytics.html">
+</a><a href="../../">GeekyRakshit</a>
+</div>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="2" data-categories="deeplearning,tensorflow,keras,computervision,xla" data-listing-date-sort="1689273000000" data-listing-file-modified-sort="1693707884742" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./reports/keras-xla-benchmark.html"> <img src="./reports/assets/weave-xla.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./reports/keras-xla-benchmark.html">
+<h3 class="no-anchor listing-title">
+XLA Compatibility of Vision Models in Keras
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
+deeplearning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('tensorflow'); return false;">
+tensorflow
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('keras'); return false;">
+keras
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
+computervision
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('xla'); return false;">
+xla
+</div>
+</div>
+<a href="./reports/keras-xla-benchmark.html">
+<div class="listing-description">
+<p>A set of comprehensive benchmarks around XLA compatibility of computer vision models implemented in Keras.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./reports/keras-xla-benchmark.html">
+<div class="listing-date">
+July 14, 2023
+</div>
+</a><div class="listing-author"><a href="./reports/keras-xla-benchmark.html">
+</a><a href="https://twitter.com/RisingSayak">Sayak Paul</a>, <a href="../../">GeekyRakshit</a>, <a href="https://twitter.com/ayushthakur0">Ayush Thakur</a>
+</div>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="3" data-categories="multi-task-learning,deeplearning,pytorch" data-listing-date-sort="1683829800000" data-listing-file-modified-sort="1693704088925" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/multi-task-learning.html"> <img src="./reports/assets/bargain.webp" class="thumbnail-image"> </a></p>
 </div>
@@ -234,7 +371,52 @@ May 12, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="computervision,deeplearning,generative" data-listing-date-sort="1681324200000" data-listing-file-modified-sort="1693702839293" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-categories="computervision,deeplearning,generative,diffusion,huggingface" data-listing-date-sort="1682965800000" data-listing-file-modified-sort="1693707003837" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./reports/if.html"> <img src="./reports/assets/if.jpeg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./reports/if.html">
+<h3 class="no-anchor listing-title">
+DeepFloydAI: A New Breakthrough in Text-Guided Image Generation
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
+computervision
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
+deeplearning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('generative'); return false;">
+generative
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('diffusion'); return false;">
+diffusion
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('huggingface'); return false;">
+huggingface
+</div>
+</div>
+<a href="./reports/if.html">
+<div class="listing-description">
+<p>In this article, we explore DeepFloydAI — an AI Research Band which is working with StabilityAI to make AI open again.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./reports/if.html">
+<div class="listing-date">
+May 2, 2023
+</div>
+</a><div class="listing-author"><a href="./reports/if.html">
+</a><a href="../../">GeekyRakshit</a>
+</div>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="5" data-categories="computervision,deeplearning,generative" data-listing-date-sort="1681324200000" data-listing-file-modified-sort="1693702839293" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/paella.html"> <img src="./reports/assets/paella.png" class="thumbnail-image"> </a></p>
 </div>
@@ -273,7 +455,145 @@ April 13, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1673980200000" data-listing-file-modified-sort="1693706325981" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="6" data-categories="computervision,deeplearning,generative,diffusion,stable-diffusion,keras,tensorflow" data-listing-date-sort="1678991400000" data-listing-file-modified-sort="1693706835392" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./reports/dreambooth-keras.html"> <img src="./reports/assets/dreambooth-keras.jpeg" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./reports/dreambooth-keras.html">
+<h3 class="no-anchor listing-title">
+Fine-Tuning Stable Diffusion Using Dreambooth in Keras
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
+computervision
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
+deeplearning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('generative'); return false;">
+generative
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('diffusion'); return false;">
+diffusion
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('stable-diffusion'); return false;">
+stable-diffusion
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('keras'); return false;">
+keras
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('tensorflow'); return false;">
+tensorflow
+</div>
+</div>
+<a href="./reports/dreambooth-keras.html">
+<div class="listing-description">
+<p>In this article, we quickly teach Stable Diffusion new visual concepts using Dreambooth in Keras, to produce fully-novel photorealistic images of a given subject.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./reports/dreambooth-keras.html">
+<div class="listing-date">
+March 17, 2023
+</div>
+</a><div class="listing-author"><a href="./reports/dreambooth-keras.html">
+</a><a href="../../">GeekyRakshit</a>
+</div>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="deeplearning,tensorflow,keras,computervision" data-listing-date-sort="1678386600000" data-listing-file-modified-sort="1693707387622" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./reports/lighting-up-images.html"> <img src="./reports/assets/lighting.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./reports/lighting-up-images.html">
+<h3 class="no-anchor listing-title">
+Low-Light Image Enhancement: Lighting up Images in the Deep Learning Era
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
+deeplearning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('tensorflow'); return false;">
+tensorflow
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('keras'); return false;">
+keras
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
+computervision
+</div>
+</div>
+<a href="./reports/lighting-up-images.html">
+<div class="listing-description">
+<p>In this article, we explore some deep learning techniques for low-light image enhancement, so that you can enhance images taken under sub-optimal conditions.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./reports/lighting-up-images.html">
+<div class="listing-date">
+March 10, 2023
+</div>
+</a><div class="listing-author"><a href="./reports/lighting-up-images.html">
+</a><a href="../../">GeekyRakshit</a>, <a href="https://twitter.com/MaheshkarSaurav">Saurav Maheshkar</a>, <a href="https://twitter.com/samarendra109">Samarendra Dash</a>, <a href="https://twitter.com/ariG23498">Aritra Roy Gosthipaty</a>
+</div>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="8" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1674153000000" data-listing-file-modified-sort="1693706635671" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="thumbnail">
+<p><a href="./reports/shapenetcore.html"> <img src="./reports/assets/dgcnn.png" class="thumbnail-image"> </a></p>
+</div>
+<div class="body">
+<a href="./reports/shapenetcore.html">
+<h3 class="no-anchor listing-title">
+Digging Into the ShapeNetCore Dataset
+</h3>
+<div class="listing-subtitle">
+</div>
+</a>
+<div class="listing-categories">
+<div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
+computervision
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
+deeplearning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('pytorch'); return false;">
+pytorch
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('geometric-deeplearning'); return false;">
+geometric-deeplearning
+</div>
+<div class="listing-category" onclick="window.quartoListingCategory('point-cloud'); return false;">
+point-cloud
+</div>
+</div>
+<a href="./reports/shapenetcore.html">
+<div class="listing-description">
+<p>In this article, we dive into the ShapeNetCore Dataset for the classification and segmentation of point cloud data and explore how to use it using Weights &amp; Biases.</p>
+</div>
+</a>
+</div>
+<div class="metadata">
+<a href="./reports/shapenetcore.html">
+<div class="listing-date">
+January 20, 2023
+</div>
+</a><div class="listing-author"><a href="./reports/shapenetcore.html">
+</a><a href="../../">GeekyRakshit</a>
+</div>
+</div>
+</div>
+<div class="quarto-post image-right" data-index="9" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1673980200000" data-listing-file-modified-sort="1693706325981" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/point-cloud-segmentation.html"> <img src="./reports/assets/dgcnn.png" class="thumbnail-image"> </a></p>
 </div>
@@ -318,7 +638,7 @@ January 18, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1673893800000" data-listing-file-modified-sort="1693706219217" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="10" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1673893800000" data-listing-file-modified-sort="1693706219217" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/point-cloud-classification.html"> <img src="./reports/assets/point-cloud-classification.png" class="thumbnail-image"> </a></p>
 </div>
@@ -363,7 +683,7 @@ January 17, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="computervision,deeplearning,diffusion,huggingface" data-listing-date-sort="1673893800000" data-listing-file-modified-sort="1693705825577" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="11" data-categories="computervision,deeplearning,diffusion,huggingface" data-listing-date-sort="1673893800000" data-listing-file-modified-sort="1693705825577" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/unconditional-diffusion.html"> <img src="./reports/assets/unconditional-diffusion.jpg" class="thumbnail-image"> </a></p>
 </div>
@@ -405,7 +725,7 @@ January 17, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="computervision,deeplearning,nerf,2-minute-papers" data-listing-date-sort="1670005800000" data-listing-file-modified-sort="1693702598845" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="12" data-categories="computervision,deeplearning,nerf,2-minute-papers" data-listing-date-sort="1670005800000" data-listing-file-modified-sort="1693702598845" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/vqad.html"> <img src="./reports/assets/vqad.png" class="thumbnail-image"> </a></p>
 </div>
@@ -447,7 +767,7 @@ December 3, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="deeplearning,tensorflow,keras,computervision" data-listing-date-sort="1668709800000" data-listing-file-modified-sort="1693705509249" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="13" data-categories="deeplearning,tensorflow,keras,computervision" data-listing-date-sort="1668709800000" data-listing-file-modified-sort="1693705509249" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/hazy-image-restoration.html"> <img src="./reports/assets/hazy.png" class="thumbnail-image"> </a></p>
 </div>
@@ -489,7 +809,7 @@ November 18, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="deeplearning,tensorboard,tensorflow,keras" data-listing-date-sort="1668105000000" data-listing-file-modified-sort="1693705268911" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="14" data-categories="deeplearning,tensorboard,tensorflow,keras" data-listing-date-sort="1668105000000" data-listing-file-modified-sort="1693705268911" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/tensorboard-debugger.html"> <img src="./reports/assets/tensorboard-debugger.png" class="thumbnail-image"> </a></p>
 </div>
@@ -531,7 +851,7 @@ November 11, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="deeplearning,tensorboard" data-listing-date-sort="1668105000000" data-listing-file-modified-sort="1693704668913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="15" data-categories="deeplearning,tensorboard" data-listing-date-sort="1668105000000" data-listing-file-modified-sort="1693704668913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/tensorboard-graph-dashboard.html"> <img src="./reports/assets/tensorboard-graph-dashboard.png" class="thumbnail-image"> </a></p>
 </div>
@@ -567,7 +887,7 @@ November 11, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="computervision,deeplearning,object-detection,yolo" data-listing-date-sort="1664476200000" data-listing-file-modified-sort="1693703805214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="16" data-categories="computervision,deeplearning,object-detection,yolo" data-listing-date-sort="1664476200000" data-listing-file-modified-sort="1693703805214" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/object-detection.html"> <img src="./reports/assets/object-detection.png" class="thumbnail-image"> </a></p>
 </div>
@@ -609,7 +929,7 @@ September 30, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="computervision,deeplearning,fastai,segmentation" data-listing-date-sort="1664476200000" data-listing-file-modified-sort="1693703478404" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="17" data-categories="computervision,deeplearning,fastai,segmentation" data-listing-date-sort="1664476200000" data-listing-file-modified-sort="1693703478404" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/semnantic-segmentation.html"> <img src="./reports/assets/semantic-segmentation.png" class="thumbnail-image"> </a></p>
 </div>
@@ -651,7 +971,7 @@ September 30, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="computervision,deeplearning,generative,diffusion,stable-diffusion,2-minute-papers" data-listing-date-sort="1664389800000" data-listing-file-modified-sort="1693705576192" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="18" data-categories="computervision,deeplearning,generative,diffusion,stable-diffusion,2-minute-papers" data-listing-date-sort="1664389800000" data-listing-file-modified-sort="1693705576192" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/cross-attention-control.html"> <img src="./reports/assets/cross-attention-control.png" class="thumbnail-image"> </a></p>
 </div>
@@ -699,7 +1019,7 @@ September 29, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="deeplearning,reinforcement-learning,2-minute-papers" data-listing-date-sort="1658169000000" data-listing-file-modified-sort="1693703541802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="19" data-categories="deeplearning,reinforcement-learning,2-minute-papers" data-listing-date-sort="1658169000000" data-listing-file-modified-sort="1693703541802" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/game-characters.html"> <img src="./reports/assets/game-characters.png" class="thumbnail-image"> </a></p>
 </div>
@@ -738,7 +1058,7 @@ July 19, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="computervision,deeplearning,robotics,2-minute-papers" data-listing-date-sort="1657564200000" data-listing-file-modified-sort="1693701772700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="20" data-categories="computervision,deeplearning,robotics,2-minute-papers" data-listing-date-sort="1657564200000" data-listing-file-modified-sort="1693701772700" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/robotic-telekinesis.html"> <img src="./reports/assets/robotic-telekinesis.png" class="thumbnail-image"> </a></p>
 </div>
@@ -780,7 +1100,7 @@ July 12, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1657218600000" data-listing-file-modified-sort="1693701008490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="21" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1657218600000" data-listing-file-modified-sort="1693701008490" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/stylegan-nada.html"> <img src="./reports/assets/nada.png" class="thumbnail-image"> </a></p>
 </div>
@@ -822,7 +1142,7 @@ July 8, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="computervision,deeplearning,generative,jax" data-listing-date-sort="1651343400000" data-listing-file-modified-sort="1693701376016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="22" data-categories="computervision,deeplearning,generative,jax" data-listing-date-sort="1651343400000" data-listing-file-modified-sort="1693701376016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/modern-evolution-strategies.html"> <img src="./reports/assets/modern-evolution-startegies.png" class="thumbnail-image"> </a></p>
 </div>
@@ -864,7 +1184,7 @@ May 1, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="computervision,deeplearning,nerf" data-listing-date-sort="1651257000000" data-listing-file-modified-sort="1693701370077" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="23" data-categories="computervision,deeplearning,nerf" data-listing-date-sort="1651257000000" data-listing-file-modified-sort="1693701370077" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/mip-nerf-360.html"> <img src="./reports/assets/mip-nerf-360.png" class="thumbnail-image"> </a></p>
 </div>
@@ -903,7 +1223,7 @@ April 30, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="deeplearning,graphics,2-minute-papers" data-listing-date-sort="1650911400000" data-listing-file-modified-sort="1693703531369" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="24" data-categories="deeplearning,graphics,2-minute-papers" data-listing-date-sort="1650911400000" data-listing-file-modified-sort="1693703531369" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
 <p><a href="./reports/extracting-triangular-models.html"> <img src="./reports/assets/extracting-triangular-models.png" class="thumbnail-image"> </a></p>
 </div>
@@ -942,9 +1262,9 @@ April 26, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1650220200000" data-listing-file-modified-sort="1693679602038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="25" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1650220200000" data-listing-file-modified-sort="1693679602038" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="./reports/barbershop.html"> <img src="./reports/assets/barbershop.png" class="thumbnail-image"> </a></p>
+<p><a href="./reports/barbershop.html"> <img data-src="./reports/assets/barbershop.png" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./reports/barbershop.html">
@@ -984,9 +1304,9 @@ April 18, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="deeplearning,pytorch,jax" data-listing-date-sort="1648751400000" data-listing-file-modified-sort="1693704361199" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="26" data-categories="deeplearning,pytorch,jax" data-listing-date-sort="1648751400000" data-listing-file-modified-sort="1693704361199" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="./reports/functorch.html"> <img src="./reports/assets/functorch.png" class="thumbnail-image"> </a></p>
+<p><a href="./reports/functorch.html"> <img data-src="./reports/assets/functorch.png" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./reports/functorch.html">
@@ -1023,9 +1343,9 @@ April 1, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="computervision,deeplearning,nerf,jax" data-listing-date-sort="1647714600000" data-listing-file-modified-sort="1693703280358" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="27" data-categories="computervision,deeplearning,nerf,jax" data-listing-date-sort="1647714600000" data-listing-file-modified-sort="1693703280358" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="./reports/nerf-jax.html"> <img src="./reports/assets/nerf-jax.png" class="thumbnail-image"> </a></p>
+<p><a href="./reports/nerf-jax.html"> <img data-src="./reports/assets/nerf-jax.png" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./reports/nerf-jax.html">
@@ -1065,9 +1385,9 @@ March 20, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="computervision,deeplearning,nerf,2-minute-papers" data-listing-date-sort="1647196200000" data-listing-file-modified-sort="1693679152885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="28" data-categories="computervision,deeplearning,nerf,2-minute-papers" data-listing-date-sort="1647196200000" data-listing-file-modified-sort="1693679152885" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="./reports/block-nerf.html"> <img src="./reports/assets/block-nerf.png" class="thumbnail-image"> </a></p>
+<p><a href="./reports/block-nerf.html"> <img data-src="./reports/assets/block-nerf.png" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./reports/block-nerf.html">
@@ -1107,9 +1427,9 @@ March 14, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="computervision,deeplearning,reinforcement-learning,robotics,2-minute-papers" data-listing-date-sort="1646937000000" data-listing-file-modified-sort="1693701348051" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="29" data-categories="computervision,deeplearning,reinforcement-learning,robotics,2-minute-papers" data-listing-date-sort="1646937000000" data-listing-file-modified-sort="1693701348051" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="./reports/robust-perceptive-locomotive.html"> <img src="./reports/assets/robust-perceptive-locomotive.png" class="thumbnail-image"> </a></p>
+<p><a href="./reports/robust-perceptive-locomotive.html"> <img data-src="./reports/assets/robust-perceptive-locomotive.png" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./reports/robust-perceptive-locomotive.html">
@@ -1152,9 +1472,9 @@ March 11, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1645727400000" data-listing-file-modified-sort="1693678911891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="30" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1645727400000" data-listing-file-modified-sort="1693678911891" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
 <div class="thumbnail">
-<p><a href="./reports/poe-gan.html"> <img src="./reports/assets/poe-gan-banner.png" class="thumbnail-image"> </a></p>
+<p><a href="./reports/poe-gan.html"> <img data-src="./reports/assets/poe-gan-banner.png" class="thumbnail-image"> </a></p>
 </div>
 <div class="body">
 <a href="./reports/poe-gan.html">
@@ -1198,6 +1518,9 @@ February 25, 2022
 <div class="listing-no-matching d-none">
 No matching items
 </div>
+<nav id="listing-pagination" class="listing-pagination" aria-label="Page Navigation">
+  <ul class="pagination"></ul>
+</nav>
 </div></main> 
   </div>
 </div>

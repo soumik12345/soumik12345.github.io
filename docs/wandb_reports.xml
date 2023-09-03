@@ -10,7 +10,76 @@
 <atom:link href="https://geekyrakshit.dev/wandb_reports.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Thu, 11 May 2023 18:30:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 20 Aug 2023 18:30:00 GMT</lastBuildDate>
+<item>
+  <title>A Guide to Using Stable Diffusion XL with HuggingFace Diffusers and W&amp;B</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/sdxl.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/stable-diffusion-xl/reports/A-Guide-to-Using-Stable-Diffusion-XL-with-HuggingFace-Diffusers-and-W-B--Vmlldzo1MDMxMDU4" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>diffusion</category>
+  <category>huggingface</category>
+  <category>stable-diffusion</category>
+  <guid>https://geekyrakshit.dev/reports/sdxl.html</guid>
+  <pubDate>Sun, 20 Aug 2023 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/sdxl.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Supercharging Ultralytics with Weights &amp; Biases</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/ultralytics.html</link>
+  <description><![CDATA[ 
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/ultralytics/reports/Supercharging-Ultralytics-with-Weights-Biases--Vmlldzo0OTMyMDI4" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>deeplearning</category>
+  <category>pytorch</category>
+  <category>computervision</category>
+  <category>object-detection</category>
+  <guid>https://geekyrakshit.dev/reports/ultralytics.html</guid>
+  <pubDate>Tue, 01 Aug 2023 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/ultralytics.png" medium="image" type="image/png" height="91" width="144"/>
+</item>
+<item>
+  <title>XLA Compatibility of Vision Models in Keras</title>
+  <dc:creator>[Sayak Paul](https://twitter.com/RisingSayak), [GeekyRakshit](../../), [Ayush Thakur](https://twitter.com/ayushthakur0)</dc:creator>
+  <link>https://geekyrakshit.dev/reports/keras-xla-benchmark.html</link>
+  <description><![CDATA[ 
+
+
+
+<iframe src="https://wandb.ai/sayakpaul/keras-xla-benchmarks/reports/XLA-Compatibility-of-Vision-Models-in-Keras--Vmlldzo0NzQzNDYx" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>deeplearning</category>
+  <category>tensorflow</category>
+  <category>keras</category>
+  <category>computervision</category>
+  <category>xla</category>
+  <guid>https://geekyrakshit.dev/reports/keras-xla-benchmark.html</guid>
+  <pubDate>Thu, 13 Jul 2023 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/weave-xla.png" medium="image" type="image/png" height="71" width="144"/>
+</item>
 <item>
   <title>Multi-Task Learning as a Bargaining Game</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
@@ -33,6 +102,29 @@
   <media:content url="https://geekyrakshit.dev/reports/assets/bargain.webp" medium="image" type="image/webp"/>
 </item>
 <item>
+  <title>DeepFloydAI: A New Breakthrough in Text-Guided Image Generation</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/if.html</link>
+  <description><![CDATA[ 
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/deepfloyd/reports/DeepFloydAI-A-New-Breakthrough-in-Text-Guided-Image-Generation--VmlldzozNTYzMjY1" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>generative</category>
+  <category>diffusion</category>
+  <category>huggingface</category>
+  <guid>https://geekyrakshit.dev/reports/if.html</guid>
+  <pubDate>Mon, 01 May 2023 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/if.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
   <title>Paella: Fast Text-Conditional Image Generation</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/reports/paella.html</link>
@@ -52,6 +144,77 @@
   <guid>https://geekyrakshit.dev/reports/paella.html</guid>
   <pubDate>Wed, 12 Apr 2023 18:30:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/reports/assets/paella.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Fine-Tuning Stable Diffusion Using Dreambooth in Keras</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/dreambooth-keras.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/dreambooth-keras/reports/Fine-Tuning-Stable-Diffusion-Using-Dreambooth-in-Keras--VmlldzozNjMzMzQ4?galleryTag=keras" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>generative</category>
+  <category>diffusion</category>
+  <category>stable-diffusion</category>
+  <category>keras</category>
+  <category>tensorflow</category>
+  <guid>https://geekyrakshit.dev/reports/dreambooth-keras.html</guid>
+  <pubDate>Thu, 16 Mar 2023 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/dreambooth-keras.jpeg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Low-Light Image Enhancement: Lighting up Images in the Deep Learning Era</title>
+  <dc:creator>[GeekyRakshit](../../), [Saurav Maheshkar](https://twitter.com/MaheshkarSaurav), [Samarendra Dash](https://twitter.com/samarendra109), [Aritra Roy Gosthipaty](https://twitter.com/ariG23498)</dc:creator>
+  <link>https://geekyrakshit.dev/reports/lighting-up-images.html</link>
+  <description><![CDATA[ 
+
+
+
+<iframe src="https://wandb.ai/ml-colabs/low-light-enhancement/reports/Low-Light-Image-Enhancement-Lighting-up-Images-in-the-Deep-Learning-Era--VmlldzozNzE4Njkz" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>deeplearning</category>
+  <category>tensorflow</category>
+  <category>keras</category>
+  <category>computervision</category>
+  <guid>https://geekyrakshit.dev/reports/lighting-up-images.html</guid>
+  <pubDate>Thu, 09 Mar 2023 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/lighting.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Digging Into the ShapeNetCore Dataset</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/shapenetcore.html</link>
+  <description><![CDATA[ 
+
+
+
+<iframe src="https://wandb.ai/wandb/point-cloud-segmentation/reports/Digging-Into-the-ShapeNetCore-Dataset--VmlldzozMTY1ODA2" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>pytorch</category>
+  <category>geometric-deeplearning</category>
+  <category>point-cloud</category>
+  <guid>https://geekyrakshit.dev/reports/shapenetcore.html</guid>
+  <pubDate>Thu, 19 Jan 2023 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/dgcnn.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
   <title>Point Cloud Segmentation Using Dynamic Graph CNNs</title>
@@ -314,181 +477,6 @@
   <guid>https://geekyrakshit.dev/reports/game-characters.html</guid>
   <pubDate>Mon, 18 Jul 2022 18:30:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/reports/assets/game-characters.png" medium="image" type="image/png" height="121" width="144"/>
-</item>
-<item>
-  <title>Robotic Telekinesis in the Wild</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/robotic-telekinesis.html</link>
-  <description><![CDATA[ 
-
-
-
-<details>
-<summary>
-<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
-</summary>
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/fVrcBY0lOWw?si=hcJo5CaGlWHeyMpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</details>
-<iframe src="https://wandb.ai/geekyrakshit/robotic-telekinesis/reports/Robotic-Telekinesis-in-the-Wild--VmlldzoyMjY1NDAw" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>computervision</category>
-  <category>deeplearning</category>
-  <category>robotics</category>
-  <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/reports/robotic-telekinesis.html</guid>
-  <pubDate>Mon, 11 Jul 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/robotic-telekinesis.png" medium="image" type="image/png" height="69" width="144"/>
-</item>
-<item>
-  <title>Digging Into StyleGAN-NADA for CLIP-Guided Domain Adaptation</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/stylegan-nada.html</link>
-  <description><![CDATA[ 
-
-
-
-<details>
-<summary>
-<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
-</summary>
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/MO2K0JXAedM?si=SQ8fY8rA9cjTPOmz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</details>
-<iframe src="https://wandb.ai/geekyrakshit/stylegan-nada/reports/Digging-Into-StyleGAN-NADA-for-CLIP-Guided-Domain-Adaptation--VmlldzoyMjA5MDU1" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>computervision</category>
-  <category>deeplearning</category>
-  <category>generative</category>
-  <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/reports/stylegan-nada.html</guid>
-  <pubDate>Thu, 07 Jul 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/nada.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Modern Evolution Strategies for Creativity</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/modern-evolution-strategies.html</link>
-  <description><![CDATA[ 
-
-
-
-<iframe src="https://wandb.ai/geekyrakshit/es-clip/reports/Modern-Evolution-Strategies-for-Creativity--VmlldzoyMDU3NTQ2?galleryTag=tmp" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>computervision</category>
-  <category>deeplearning</category>
-  <category>generative</category>
-  <category>jax</category>
-  <guid>https://geekyrakshit.dev/reports/modern-evolution-strategies.html</guid>
-  <pubDate>Sat, 30 Apr 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/modern-evolution-startegies.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/mip-nerf-360.html</link>
-  <description><![CDATA[ 
-
-
-
-<iframe src="https://wandb.ai/geekyrakshit/mip-nerf-360/reports/Mip-NeRF-360-Unbounded-Anti-Aliased-Neural-Radiance-Fields--VmlldzoxOTc4Mjk4" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>computervision</category>
-  <category>deeplearning</category>
-  <category>nerf</category>
-  <guid>https://geekyrakshit.dev/reports/mip-nerf-360.html</guid>
-  <pubDate>Fri, 29 Apr 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/mip-nerf-360.png" medium="image" type="image/png" height="88" width="144"/>
-</item>
-<item>
-  <title>Extracting Triangular 3D Models, Materials, and Lighting From Images</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/extracting-triangular-models.html</link>
-  <description><![CDATA[ 
-
-
-
-<details>
-<summary>
-<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
-</summary>
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/yl1jkmF7Xug?si=NUPd2T7bJqJFo0cU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</details>
-<iframe src="https://wandb.ai/geekyrakshit/Extracting%20Triangular%203D%20Models/reports/Extracting-Triangular-3D-Models-Materials-and-Lighting-From-Images--VmlldzoxOTQ2MDEy" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>deeplearning</category>
-  <category>graphics</category>
-  <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/reports/extracting-triangular-models.html</guid>
-  <pubDate>Mon, 25 Apr 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/extracting-triangular-models.png" medium="image" type="image/png" height="143" width="144"/>
-</item>
-<item>
-  <title>Barbershop: Hair Transfer with GAN-Based Image Compositing Using Segmentation Masks</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/barbershop.html</link>
-  <description><![CDATA[ 
-
-
-
-<details>
-<summary>
-<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
-</summary>
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/YNY_ZEuDncM?si=yCmERafJmazBNaYm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</details>
-<iframe src="https://wandb.ai/geekyrakshit/barbershop/reports/Barbershop-Hair-Transfer-with-GAN-Based-Image-Compositing-Using-Segmentation-Masks--VmlldzoxNzk0OTY3" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>computervision</category>
-  <category>deeplearning</category>
-  <category>generative</category>
-  <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/reports/barbershop.html</guid>
-  <pubDate>Sun, 17 Apr 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/barbershop.png" medium="image" type="image/png" height="144" width="144"/>
-</item>
-<item>
-  <title>Working with FuncTorch: An Introduction</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/reports/functorch.html</link>
-  <description><![CDATA[ 
-
-
-
-<iframe src="https://wandb.ai/functorch-examples/functorch-examples/reports/Working-with-FuncTorch-An-Introduction--VmlldzoxNzMxNDI1" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>deeplearning</category>
-  <category>pytorch</category>
-  <category>jax</category>
-  <guid>https://geekyrakshit.dev/reports/functorch.html</guid>
-  <pubDate>Thu, 31 Mar 2022 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/reports/assets/functorch.png" medium="image" type="image/png" height="146" width="144"/>
 </item>
 </channel>
 </rss>

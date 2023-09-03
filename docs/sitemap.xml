@@ -66,7 +66,7 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/wandb_reports.html</loc>
-    <lastmod>2023-09-03T01:58:51.338Z</lastmod>
+    <lastmod>2023-09-03T02:32:26.527Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/poe-gan.html</loc>
@@ -163,5 +163,33 @@
   <url>
     <loc>https://geekyrakshit.dev/reports/point-cloud-segmentation.html</loc>
     <lastmod>2023-09-03T01:58:46.768Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/dreambooth-keras.html</loc>
+    <lastmod>2023-09-03T02:07:16.182Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/shapenetcore.html</loc>
+    <lastmod>2023-09-03T02:06:50.944Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/if.html</loc>
+    <lastmod>2023-09-03T02:10:04.616Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/lighting-up-images.html</loc>
+    <lastmod>2023-09-03T02:16:28.362Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/keras-xla-benchmark.html</loc>
+    <lastmod>2023-09-03T02:24:45.519Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/ultralytics.html</loc>
+    <lastmod>2023-09-03T02:29:37.620Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/sdxl.html</loc>
+    <lastmod>2023-09-03T02:32:23.971Z</lastmod>
   </url>
 </urlset>

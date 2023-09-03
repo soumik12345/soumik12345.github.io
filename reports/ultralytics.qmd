@@ -1,0 +1,13 @@
+---
+title: "Supercharging Ultralytics with Weights & Biases"
+author: "[GeekyRakshit](../../)"
+date: "2023-08-02"
+categories: [deeplearning, pytorch, computervision, object-detection]
+image: "assets/ultralytics.png"
+description: A guide on using Weights & Biases with Ultralytics workflows for computer vision models.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/ultralytics/reports/Supercharging-Ultralytics-with-Weights-Biases--Vmlldzo0OTMyMDI4" style="border:none;height:1024px;width:100%"></iframe>

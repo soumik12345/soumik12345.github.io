@@ -1,0 +1,13 @@
+---
+title: "A Guide to Using Stable Diffusion XL with HuggingFace Diffusers and W&B"
+author: "[GeekyRakshit](../../)"
+date: "2023-08-21"
+categories: [computervision, deeplearning, diffusion, huggingface, stable-diffusion]
+image: "assets/sdxl.png"
+description: A comprehensive guide to using Stable Diffusion XL (SDXL) for generating high-quality images using HuggingFace Diffusers and managing experiments with Weights & Biases. 
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/stable-diffusion-xl/reports/A-Guide-to-Using-Stable-Diffusion-XL-with-HuggingFace-Diffusers-and-W-B--Vmlldzo1MDMxMDU4" style="border:none;height:1024px;width:100%"></iframe>

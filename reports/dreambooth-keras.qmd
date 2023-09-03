@@ -1,0 +1,13 @@
+---
+title: "Fine-Tuning Stable Diffusion Using Dreambooth in Keras"
+author: "[GeekyRakshit](../../)"
+date: "2023-03-17"
+categories: [computervision, deeplearning, generative, diffusion, stable-diffusion, keras, tensorflow]
+image: "assets/dreambooth-keras.jpeg"
+description: In this article, we quickly teach Stable Diffusion new visual concepts using Dreambooth in Keras, to produce fully-novel photorealistic images of a given subject.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/dreambooth-keras/reports/Fine-Tuning-Stable-Diffusion-Using-Dreambooth-in-Keras--VmlldzozNjMzMzQ4?galleryTag=keras" style="border:none;height:1024px;width:100%"></iframe>
