@@ -1,0 +1,52 @@
+---
+title: "Courses/Seminars"
+about:
+  template: marquee
+  links:
+    - icon: github
+      text: Github
+      href: https://github.com/soumik12345
+    - text: "{{< fa brands kaggle >}} Kaggle"
+      href: https://www.kaggle.com/soumikrakshit
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com/soumikRakshit96
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/soumikrakshit/
+    - icon: steam
+      text: Steam
+      href: https://steamcommunity.com/id/geekyRakshit/
+---
+
+## Courses
+
+<details>
+<summary>MLOps ZoomCamp</summary>
+<br>
+I have taught the section [Experiment Tracking with Weights and Biases](https://github.com/DataTalksClub/mlops-zoomcamp/blob/main/cohorts/2023/02-experiment-tracking/wandb.md) of [MLOps ZoomCamp](https://github.com/DataTalksClub/mlops-zoomcamp) by [DataTalksClub](https://github.com/DataTalksClub).
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/yNyqFMwEyL4?si=6rNKuSvbCC4M3as7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+## Videos
+
+<details>
+<summary>Enhance Low Light Images using Keras, Python and Weights & Biases</summary>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/PGOWjMCMB8I?si=7J2sBjSvvCyRtyQG" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+## Talks
+
+<details>
+<summary>Bengaluru ML Meetup (Ep. 21): A Primer into Image Restoration using Tensorflow</summary>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/cOgP2ArXy7c?si=UGnQrR0ZEDH1fML1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<details>
+<summary>Doing ML with JAX | TFUG Kolkata</summary>
+<br>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Vxn4B32zqKU?si=HYhuETJVeOB5EX-Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>

@@ -3,15 +3,17 @@ title: "About Me"
 about:
   template: marquee
   links:
+    - icon: github
+      text: Github
+      href: https://github.com/soumik12345
+    - text: "{{< fa brands kaggle >}} Kaggle"
+      href: https://www.kaggle.com/soumikrakshit
     - icon: twitter
       text: Twitter
       href: https://twitter.com/soumikRakshit96
     - icon: linkedin
       text: LinkedIn
       href: https://linkedin.com/in/soumikrakshit/
-    - icon: github
-      text: Github
-      href: https://github.com/soumik12345
     - icon: steam
       text: Steam
       href: https://steamcommunity.com/id/geekyRakshit/
