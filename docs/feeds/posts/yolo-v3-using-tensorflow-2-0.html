@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.450">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="GeekyRakshit">
+<meta name="dcterms.date" content="2020-04-13">
+<meta name="description" content="Implementation of YOLOv3 using Tensorflow 2.0">
+
+<title>Geekyrakshit - YOLOv3 using Tensorflow 2.0</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../assets/soumik_rakshit.png" rel="icon" type="image/png">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Geekyrakshit - YOLOv3 using Tensorflow 2.0">
+<meta property="og:description" content="Implementation of YOLOv3 using Tensorflow 2.0">
+<meta property="og:image" content="https://geekyrakshit.dev/feeds/posts/assets/yolo_v3_tf2.png">
+<meta property="og:site-name" content="Geekyrakshit">
+<meta property="og:image:height" content="778">
+<meta property="og:image:width" content="1159">
+<meta name="twitter:title" content="Geekyrakshit - YOLOv3 using Tensorflow 2.0">
+<meta name="twitter:description" content="Implementation of YOLOv3 using Tensorflow 2.0">
+<meta name="twitter:image" content="https://geekyrakshit.dev/feeds/posts/assets/yolo_v3_tf2.png">
+<meta name="twitter:image-height" content="778">
+<meta name="twitter:image-width" content="1159">
+<meta name="twitter:card" content="summary_large_image">
+</head>
+
+<body class="nav-fixed fullcontent">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../index.html">
+    <span class="navbar-title">Geekyrakshit</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../about.html" rel="" target="">
+ <span class="menu-text">About Me</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../courses.html" rel="" target="">
+ <span class="menu-text">Courses/Seminars</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../wandb_reports.html" rel="" target="">
+ <span class="menu-text">WandB Reports</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../posts.html" rel="" target="">
+ <span class="menu-text">Posts</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools">
+  <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">YOLOv3 using Tensorflow 2.0</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">computervision</div>
+    <div class="quarto-category">deeplearning</div>
+    <div class="quarto-category">keras</div>
+    <div class="quarto-category">python</div>
+    <div class="quarto-category">tensorflow</div>
+  </div>
+  </div>
+
+<div>
+  <div class="description">
+    Implementation of YOLOv3 using Tensorflow 2.0
+  </div>
+</div>
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p><a href="../">GeekyRakshit</a> </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">April 13, 2020</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+</header>
+
+<p><strong>Kaggle Notebook Link:</strong> <a href="https://www.kaggle.com/soumikrakshit/yolo-v3-using-tensorflow-2-0">https://www.kaggle.com/soumikrakshit/yolo-v3-using-tensorflow-2-0</a></p>
+<section id="environment-setup" class="level2">
+<h2 class="anchored" data-anchor-id="environment-setup">Environment Setup</h2>
+<div class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">--</span>upgrade tensorflow</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>mkdir data</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget wget https:<span class="op">//</span>pjreddie.com<span class="op">/</span>media<span class="op">/</span>files<span class="op">/</span>yolov3.weights <span class="op">-</span>O data<span class="op">/</span>yolov3.weights</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget https:<span class="op">//</span>pjreddie.com<span class="op">/</span>media<span class="op">/</span>files<span class="op">/</span>yolov3<span class="op">-</span>tiny.weights <span class="op">-</span>O data<span class="op">/</span>yolov3<span class="op">-</span>tiny.weights</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Collecting tensorflow
+  Downloading https://files.pythonhosted.org/packages/46/0f/7bd55361168bb32796b360ad15a25de6966c9c1beb58a8e30c01c8279862/tensorflow-2.0.0-cp36-cp36m-manylinux2010_x86_64.whl (86.3MB)
+     |████████████████████████████████| 86.3MB 41.3MB/s 
+Requirement already satisfied, skipping upgrade: grpcio&gt;=1.8.6 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (1.24.0)
+Collecting opt-einsum&gt;=2.3.2 (from tensorflow)
+  Downloading https://files.pythonhosted.org/packages/b8/83/755bd5324777875e9dff19c2e59daec837d0378c09196634524a3d7269ac/opt_einsum-3.1.0.tar.gz (69kB)
+     |████████████████████████████████| 71kB 17.3MB/s 
+Requirement already satisfied, skipping upgrade: absl-py&gt;=0.7.0 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (0.8.0)
+Requirement already satisfied, skipping upgrade: numpy&lt;2.0,&gt;=1.16.0 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (1.16.4)
+Requirement already satisfied, skipping upgrade: termcolor&gt;=1.1.0 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (1.1.0)
+Collecting gast==0.2.2 (from tensorflow)
+  Downloading https://files.pythonhosted.org/packages/4e/35/11749bf99b2d4e3cceb4d55ca22590b0d7c2c62b9de38ac4a4a7f4687421/gast-0.2.2.tar.gz
+Requirement already satisfied, skipping upgrade: keras-preprocessing&gt;=1.0.5 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (1.1.0)
+Requirement already satisfied, skipping upgrade: six&gt;=1.10.0 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (1.12.0)
+Requirement already satisfied, skipping upgrade: google-pasta&gt;=0.1.6 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (0.1.7)
+Requirement already satisfied, skipping upgrade: keras-applications&gt;=1.0.8 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (1.0.8)
+Requirement already satisfied, skipping upgrade: protobuf&gt;=3.6.1 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (3.7.1)
+Collecting tensorflow-estimator&lt;2.1.0,&gt;=2.0.0 (from tensorflow)
+  Downloading https://files.pythonhosted.org/packages/fc/08/8b927337b7019c374719145d1dceba21a8bb909b93b1ad6f8fb7d22c1ca1/tensorflow_estimator-2.0.1-py2.py3-none-any.whl (449kB)
+     |████████████████████████████████| 450kB 37.2MB/s 
+Requirement already satisfied, skipping upgrade: wheel&gt;=0.26 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (0.33.6)
+Requirement already satisfied, skipping upgrade: astor&gt;=0.6.0 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (0.8.0)
+Requirement already satisfied, skipping upgrade: wrapt&gt;=1.11.1 in /opt/conda/lib/python3.6/site-packages (from tensorflow) (1.11.2)
+Collecting tensorboard&lt;2.1.0,&gt;=2.0.0 (from tensorflow)
+  Downloading https://files.pythonhosted.org/packages/9b/a6/e8ffa4e2ddb216449d34cfcb825ebb38206bee5c4553d69e7bc8bc2c5d64/tensorboard-2.0.0-py3-none-any.whl (3.8MB)
+     |████████████████████████████████| 3.8MB 39.5MB/s 
+Requirement already satisfied, skipping upgrade: h5py in /opt/conda/lib/python3.6/site-packages (from keras-applications&gt;=1.0.8-&gt;tensorflow) (2.9.0)
+Requirement already satisfied, skipping upgrade: setuptools in /opt/conda/lib/python3.6/site-packages (from protobuf&gt;=3.6.1-&gt;tensorflow) (41.2.0)
+Requirement already satisfied, skipping upgrade: markdown&gt;=2.6.8 in /opt/conda/lib/python3.6/site-packages (from tensorboard&lt;2.1.0,&gt;=2.0.0-&gt;tensorflow) (3.1.1)
+Requirement already satisfied, skipping upgrade: werkzeug&gt;=0.11.15 in /opt/conda/lib/python3.6/site-packages (from tensorboard&lt;2.1.0,&gt;=2.0.0-&gt;tensorflow) (0.16.0)
+Building wheels for collected packages: opt-einsum, gast
+  Building wheel for opt-einsum (setup.py) ... - \ done
+  Created wheel for opt-einsum: filename=opt_einsum-3.1.0-cp36-none-any.whl size=61682 sha256=a1a7418e6419a9d3d2b03dfee221c09b5b019f1faf8d59d7b6848e864248fc03
+  Stored in directory: /tmp/.cache/pip/wheels/2c/b1/94/43d03e130b929aae7ba3f8d15cbd7bc0d1cb5bb38a5c721833
+  Building wheel for gast (setup.py) ... - \ done
+  Created wheel for gast: filename=gast-0.2.2-cp36-none-any.whl size=7540 sha256=3be33fecf95b8234e498ec55b1c366566644ac0f1742e4412a01d36199c96d9b
+  Stored in directory: /tmp/.cache/pip/wheels/5c/2e/7e/a1d4d4fcebe6c381f378ce7743a3ced3699feb89bcfbdadadd
+Successfully built opt-einsum gast
+Installing collected packages: opt-einsum, gast, tensorflow-estimator, tensorboard, tensorflow
+  Found existing installation: gast 0.3.2
+    Uninstalling gast-0.3.2:
+      Successfully uninstalled gast-0.3.2
+  Found existing installation: tensorflow-estimator 1.14.0
+    Uninstalling tensorflow-estimator-1.14.0:
+      Successfully uninstalled tensorflow-estimator-1.14.0
+  Found existing installation: tensorboard 1.14.0
+    Uninstalling tensorboard-1.14.0:
+      Successfully uninstalled tensorboard-1.14.0
+  Found existing installation: tensorflow 1.14.0
+    Uninstalling tensorflow-1.14.0:
+      Successfully uninstalled tensorflow-1.14.0
+Successfully installed gast-0.2.2 opt-einsum-3.1.0 tensorboard-2.0.0 tensorflow-2.0.0 tensorflow-estimator-2.0.1
+--2019-10-19 19:10:21--  http://wget/
+Resolving wget (wget)... failed: Name or service not known.
+wget: unable to resolve host address ‘wget’
+--2019-10-19 19:10:21--  https://pjreddie.com/media/files/yolov3.weights
+Resolving pjreddie.com (pjreddie.com)... 128.208.4.108
+Connecting to pjreddie.com (pjreddie.com)|128.208.4.108|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 248007048 (237M) [application/octet-stream]
+Saving to: ‘data/yolov3.weights’
+
+data/yolov3.weights 100%[===================&gt;] 236.52M  23.0MB/s    in 11s     
+
+2019-10-19 19:10:32 (21.3 MB/s) - ‘data/yolov3.weights’ saved [248007048/248007048]
+
+FINISHED --2019-10-19 19:10:32--
+Total wall clock time: 12s
+Downloaded: 1 files, 237M in 11s (21.3 MB/s)
+--2019-10-19 19:10:33--  https://pjreddie.com/media/files/yolov3-tiny.weights
+Resolving pjreddie.com (pjreddie.com)... 128.208.4.108
+Connecting to pjreddie.com (pjreddie.com)|128.208.4.108|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 35434956 (34M) [application/octet-stream]
+Saving to: ‘data/yolov3-tiny.weights’
+
+data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s    
+
+2019-10-19 19:10:36 (15.5 MB/s) - ‘data/yolov3-tiny.weights’ saved [35434956/35434956]
+</code></pre>
+</div>
+</div>
+</section>
+<section id="library-imports" class="level2">
+<h2 class="anchored" data-anchor-id="library-imports">Library Imports</h2>
+<p>::: {.cell _cell_guid=‘b1076dfc-b9ad-4769-8c92-a6c4dae69d19’ _uuid=‘8f2839f25d086af736a60e9eeb907d3b93b6e0e5’ execution_count=2}</p>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2, os, glob</span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> xml.etree.ElementTree <span class="im">as</span> ET</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> tensorflow <span class="im">as</span> tf</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras <span class="im">import</span> Model</span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.layers <span class="im">import</span> (</span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    Add, Concatenate, Conv2D,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    Input, Lambda, LeakyReLU,</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    MaxPool2D, UpSampling2D, ZeroPadding2D</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.regularizers <span class="im">import</span> l2</span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.losses <span class="im">import</span> (</span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    binary_crossentropy,</span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a>    sparse_categorical_crossentropy</span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> tensorflow.keras.utils <span class="im">import</span> plot_model</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+</section>
+<section id="configurations" class="level2">
+<h2 class="anchored" data-anchor-id="configurations">Configurations</h2>
+<p>::: {.cell _cell_guid=‘79c7e3d0-c299-4dcb-8224-4455121ee9b0’ _uuid=‘d629ff2d2480ee46fbb7e2d37f6b5fab8052498a’ execution_count=3}</p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>YOLOV3_LAYER_LIST <span class="op">=</span> [</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_darknet'</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_conv_0'</span>,</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_output_0'</span>,</span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_conv_1'</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_output_1'</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_conv_2'</span>,</span>
+<span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_output_2'</span>,</span>
+<span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>YOLOV3_TINY_LAYER_LIST <span class="op">=</span> [</span>
+<span id="cb4-12"><a href="#cb4-12" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_darknet'</span>,</span>
+<span id="cb4-13"><a href="#cb4-13" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_conv_0'</span>,</span>
+<span id="cb4-14"><a href="#cb4-14" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_output_0'</span>,</span>
+<span id="cb4-15"><a href="#cb4-15" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_conv_1'</span>,</span>
+<span id="cb4-16"><a href="#cb4-16" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_output_1'</span>,</span>
+<span id="cb4-17"><a href="#cb4-17" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb4-18"><a href="#cb4-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-19"><a href="#cb4-19" aria-hidden="true" tabindex="-1"></a>yolo_anchors <span class="op">=</span> np.array([</span>
+<span id="cb4-20"><a href="#cb4-20" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10</span>, <span class="dv">13</span>), (<span class="dv">16</span>, <span class="dv">30</span>), (<span class="dv">33</span>, <span class="dv">23</span>), (<span class="dv">30</span>, <span class="dv">61</span>), (<span class="dv">62</span>, <span class="dv">45</span>),</span>
+<span id="cb4-21"><a href="#cb4-21" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">59</span>, <span class="dv">119</span>), (<span class="dv">116</span>, <span class="dv">90</span>), (<span class="dv">156</span>, <span class="dv">198</span>), (<span class="dv">373</span>, <span class="dv">326</span>)],</span>
+<span id="cb4-22"><a href="#cb4-22" aria-hidden="true" tabindex="-1"></a>    np.float32) <span class="op">/</span> <span class="dv">416</span></span>
+<span id="cb4-23"><a href="#cb4-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-24"><a href="#cb4-24" aria-hidden="true" tabindex="-1"></a>yolo_anchor_masks <span class="op">=</span> np.array([[<span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>], [<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>]])</span>
+<span id="cb4-25"><a href="#cb4-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-26"><a href="#cb4-26" aria-hidden="true" tabindex="-1"></a>yolo_tiny_anchors <span class="op">=</span> np.array([</span>
+<span id="cb4-27"><a href="#cb4-27" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">10</span>, <span class="dv">14</span>), (<span class="dv">23</span>, <span class="dv">27</span>), (<span class="dv">37</span>, <span class="dv">58</span>),</span>
+<span id="cb4-28"><a href="#cb4-28" aria-hidden="true" tabindex="-1"></a>    (<span class="dv">81</span>, <span class="dv">82</span>), (<span class="dv">135</span>, <span class="dv">169</span>), (<span class="dv">344</span>, <span class="dv">319</span>)],</span>
+<span id="cb4-29"><a href="#cb4-29" aria-hidden="true" tabindex="-1"></a>    np.float32) <span class="op">/</span> <span class="dv">416</span></span>
+<span id="cb4-30"><a href="#cb4-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-31"><a href="#cb4-31" aria-hidden="true" tabindex="-1"></a>yolo_tiny_anchor_masks <span class="op">=</span> np.array([[<span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>], [<span class="dv">0</span>, <span class="dv">1</span>, <span class="dv">2</span>]])</span>
+<span id="cb4-32"><a href="#cb4-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-33"><a href="#cb4-33" aria-hidden="true" tabindex="-1"></a>class_names <span class="op">=</span> [</span>
+<span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    <span class="st">'person'</span>, <span class="st">'bicycle'</span>,<span class="st">'car'</span>,<span class="st">'motorbike'</span>,<span class="st">'aeroplane'</span>,<span class="st">'bus'</span>,<span class="st">'train'</span>,<span class="st">'truck'</span>,<span class="st">'boat'</span>,</span>
+<span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a>    <span class="st">'traffic light'</span>,<span class="st">'fire hydrant'</span>,<span class="st">'stop sign'</span>,<span class="st">'parking meter'</span>,<span class="st">'bench'</span>,</span>
+<span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a>    <span class="st">'bird'</span>,<span class="st">'cat'</span>,<span class="st">'dog'</span>,<span class="st">'horse'</span>,<span class="st">'sheep'</span>,<span class="st">'cow'</span>,<span class="st">'elephant'</span>,<span class="st">'bear'</span>,<span class="st">'zebra'</span>,</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>    <span class="st">'giraffe'</span>,<span class="st">'backpack'</span>,<span class="st">'umbrella'</span>,<span class="st">'handbag'</span>,<span class="st">'tie'</span>,<span class="st">'suitcase'</span>,<span class="st">'frisbee'</span>,</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>    <span class="st">'skis'</span>,<span class="st">'snowboard'</span>,<span class="st">'sports ball'</span>,<span class="st">'kite'</span>,<span class="st">'baseball bat'</span>,<span class="st">'baseball glove'</span>,</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>    <span class="st">'skateboard'</span>,<span class="st">'surfboard'</span>,<span class="st">'tennis racket'</span>,<span class="st">'bottle'</span>,<span class="st">'wine glass'</span>,<span class="st">'cup'</span>,</span>
+<span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a>    <span class="st">'fork'</span>,<span class="st">'knife'</span>,<span class="st">'spoon'</span>,<span class="st">'bowl'</span>,<span class="st">'banana'</span>,<span class="st">'apple'</span>,<span class="st">'sandwich'</span>,<span class="st">'orange'</span>,</span>
+<span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a>    <span class="st">'broccoli'</span>,<span class="st">'carrot'</span>,<span class="st">'hot dog'</span>,<span class="st">'pizza'</span>,<span class="st">'donut'</span>,<span class="st">'cake'</span>,<span class="st">'chair'</span>,<span class="st">'sofa'</span>,</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>    <span class="st">'pottedplant'</span>,<span class="st">'bed'</span>,<span class="st">'diningtable'</span>,<span class="st">'toilet'</span>,<span class="st">'tvmonitor'</span>,<span class="st">'laptop'</span>,<span class="st">'mouse'</span>,</span>
+<span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a>    <span class="st">'remote'</span>,<span class="st">'keyboard'</span>,<span class="st">'cell phone'</span>,<span class="st">'microwave'</span>,<span class="st">'oven'</span>,<span class="st">'toaster'</span>,<span class="st">'sink'</span>,</span>
+<span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a>    <span class="st">'refrigerator'</span>,<span class="st">'book'</span>,<span class="st">'clock'</span>,<span class="st">'vase'</span>,<span class="st">'scissors'</span>,<span class="st">'teddy bear'</span>,</span>
+<span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>    <span class="st">'hair drier'</span>,<span class="st">'toothbrush'</span></span>
+<span id="cb4-46"><a href="#cb4-46" aria-hidden="true" tabindex="-1"></a>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>:::</p>
+</section>
+<section id="utilities" class="level2">
+<h2 class="anchored" data-anchor-id="utilities">Utilities</h2>
+<div class="cell" data-execution_count="4">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_darknet_weights(model, weights_file, tiny <span class="op">=</span> <span class="va">False</span>):</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    wf <span class="op">=</span> <span class="bu">open</span>(weights_file, <span class="st">'rb'</span>)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    major, minor, revision, seen, _ <span class="op">=</span> np.fromfile(wf, dtype<span class="op">=</span>np.int32, count<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> tiny:</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>        layers <span class="op">=</span> YOLOV3_TINY_LAYER_LIST</span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>        layers <span class="op">=</span> YOLOV3_LAYER_LIST</span>
+<span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> layer_name <span class="kw">in</span> layers:</span>
+<span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>        sub_model <span class="op">=</span> model.get_layer(layer_name)</span>
+<span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> i, layer <span class="kw">in</span> <span class="bu">enumerate</span>(sub_model.layers):</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> <span class="kw">not</span> layer.name.startswith(<span class="st">'conv2d'</span>):</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>                <span class="cf">continue</span></span>
+<span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>            batch_norm <span class="op">=</span> <span class="va">None</span></span>
+<span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> i <span class="op">+</span> <span class="dv">1</span> <span class="op">&lt;</span> <span class="bu">len</span>(sub_model.layers) <span class="kw">and</span> sub_model.layers[i <span class="op">+</span> <span class="dv">1</span>].name.startswith(<span class="st">'batch_norm'</span>):</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>                batch_norm <span class="op">=</span> sub_model.layers[i <span class="op">+</span> <span class="dv">1</span>]</span>
+<span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>            filters <span class="op">=</span> layer.filters</span>
+<span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>            size <span class="op">=</span> layer.kernel_size[<span class="dv">0</span>]</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>            in_dim <span class="op">=</span> layer.input_shape[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> batch_norm <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>                conv_bias <span class="op">=</span> np.fromfile(wf, dtype<span class="op">=</span>np.float32, count<span class="op">=</span>filters)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>                <span class="co"># darknet [beta, gamma, mean, variance]</span></span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a>                bn_weights <span class="op">=</span> np.fromfile(</span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>                    wf, dtype<span class="op">=</span>np.float32, count<span class="op">=</span><span class="dv">4</span> <span class="op">*</span> filters)</span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>                <span class="co"># tf [gamma, beta, mean, variance]</span></span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a>                bn_weights <span class="op">=</span> bn_weights.reshape((<span class="dv">4</span>, filters))[[<span class="dv">1</span>, <span class="dv">0</span>, <span class="dv">2</span>, <span class="dv">3</span>]]</span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>            <span class="co"># darknet shape (out_dim, in_dim, height, width)</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>            conv_shape <span class="op">=</span> (filters, in_dim, size, size)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>            conv_weights <span class="op">=</span> np.fromfile(</span>
+<span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>                wf, dtype<span class="op">=</span>np.float32, count<span class="op">=</span>np.product(conv_shape))</span>
+<span id="cb5-31"><a href="#cb5-31" aria-hidden="true" tabindex="-1"></a>            <span class="co"># tf shape (height, width, in_dim, out_dim)</span></span>
+<span id="cb5-32"><a href="#cb5-32" aria-hidden="true" tabindex="-1"></a>            conv_weights <span class="op">=</span> conv_weights.reshape(</span>
+<span id="cb5-33"><a href="#cb5-33" aria-hidden="true" tabindex="-1"></a>                conv_shape).transpose([<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">0</span>])</span>
+<span id="cb5-34"><a href="#cb5-34" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> batch_norm <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb5-35"><a href="#cb5-35" aria-hidden="true" tabindex="-1"></a>                layer.set_weights([conv_weights, conv_bias])</span>
+<span id="cb5-36"><a href="#cb5-36" aria-hidden="true" tabindex="-1"></a>            <span class="cf">else</span>:</span>
+<span id="cb5-37"><a href="#cb5-37" aria-hidden="true" tabindex="-1"></a>                layer.set_weights([conv_weights])</span>
+<span id="cb5-38"><a href="#cb5-38" aria-hidden="true" tabindex="-1"></a>                batch_norm.set_weights(bn_weights)</span>
+<span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(wf.read()) <span class="op">==</span> <span class="dv">0</span>, <span class="st">'failed to read all data'</span></span>
+<span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    wf.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="5">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> broadcast_iou(box_1, box_2):</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    box_1: (..., (x1, y1, x2, y2))</span></span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a><span class="co">    box_2: (N, (x1, y1, x2, y2))</span></span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a><span class="co">    '''</span></span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="co"># broadcast boxes</span></span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>    box_1 <span class="op">=</span> tf.expand_dims(box_1, <span class="op">-</span><span class="dv">2</span>)</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>    box_2 <span class="op">=</span> tf.expand_dims(box_2, <span class="dv">0</span>)</span>
+<span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>    <span class="co"># new_shape: (..., N, (x1, y1, x2, y2))</span></span>
+<span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    new_shape <span class="op">=</span> tf.broadcast_dynamic_shape(tf.shape(box_1), tf.shape(box_2))</span>
+<span id="cb6-12"><a href="#cb6-12" aria-hidden="true" tabindex="-1"></a>    box_1 <span class="op">=</span> tf.broadcast_to(box_1, new_shape)</span>
+<span id="cb6-13"><a href="#cb6-13" aria-hidden="true" tabindex="-1"></a>    box_2 <span class="op">=</span> tf.broadcast_to(box_2, new_shape)</span>
+<span id="cb6-14"><a href="#cb6-14" aria-hidden="true" tabindex="-1"></a>    int_w <span class="op">=</span> tf.maximum(tf.minimum(box_1[..., <span class="dv">2</span>], box_2[..., <span class="dv">2</span>]) <span class="op">-</span> tf.maximum(box_1[..., <span class="dv">0</span>], box_2[..., <span class="dv">0</span>]), <span class="dv">0</span>)</span>
+<span id="cb6-15"><a href="#cb6-15" aria-hidden="true" tabindex="-1"></a>    int_h <span class="op">=</span> tf.maximum(tf.minimum(box_1[..., <span class="dv">3</span>], box_2[..., <span class="dv">3</span>]) <span class="op">-</span> tf.maximum(box_1[..., <span class="dv">1</span>], box_2[..., <span class="dv">1</span>]), <span class="dv">0</span>)</span>
+<span id="cb6-16"><a href="#cb6-16" aria-hidden="true" tabindex="-1"></a>    int_area <span class="op">=</span> int_w <span class="op">*</span> int_h</span>
+<span id="cb6-17"><a href="#cb6-17" aria-hidden="true" tabindex="-1"></a>    box_1_area <span class="op">=</span> (box_1[..., <span class="dv">2</span>] <span class="op">-</span> box_1[..., <span class="dv">0</span>]) <span class="op">*</span> (box_1[..., <span class="dv">3</span>] <span class="op">-</span> box_1[..., <span class="dv">1</span>])</span>
+<span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    box_2_area <span class="op">=</span> (box_2[..., <span class="dv">2</span>] <span class="op">-</span> box_2[..., <span class="dv">0</span>]) <span class="op">*</span> (box_2[..., <span class="dv">3</span>] <span class="op">-</span> box_2[..., <span class="dv">1</span>])</span>
+<span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> int_area <span class="op">/</span> (box_1_area <span class="op">+</span> box_2_area <span class="op">-</span> int_area)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="6">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> freeze_all(model, frozen <span class="op">=</span> <span class="va">True</span>):</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    model.trainable <span class="op">=</span> <span class="kw">not</span> frozen</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(model, tf.keras.Model):</span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> l <span class="kw">in</span> model.layers:</span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>            freeze_all(l, frozen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="7">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_outputs(img, outputs, class_names):</span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    boxes, objectness, classes, nums <span class="op">=</span> outputs</span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    boxes, objectness, classes, nums <span class="op">=</span> boxes[<span class="dv">0</span>], objectness[<span class="dv">0</span>], classes[<span class="dv">0</span>], nums[<span class="dv">0</span>]</span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>    wh <span class="op">=</span> np.flip(img.shape[<span class="dv">0</span>:<span class="dv">2</span>])</span>
+<span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(nums):</span>
+<span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>        x1y1 <span class="op">=</span> <span class="bu">tuple</span>((np.array(boxes[i][<span class="dv">0</span>:<span class="dv">2</span>]) <span class="op">*</span> wh).astype(np.int32))</span>
+<span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a>        x2y2 <span class="op">=</span> <span class="bu">tuple</span>((np.array(boxes[i][<span class="dv">2</span>:<span class="dv">4</span>]) <span class="op">*</span> wh).astype(np.int32))</span>
+<span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>        img <span class="op">=</span> cv2.rectangle(img, x1y1, x2y2, (<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>), <span class="dv">2</span>)</span>
+<span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>        img <span class="op">=</span> cv2.putText(img, <span class="st">'</span><span class="sc">{}</span><span class="st"> </span><span class="sc">{:.4f}</span><span class="st">'</span>.<span class="bu">format</span>(</span>
+<span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a>            class_names[<span class="bu">int</span>(classes[i])], objectness[i]),</span>
+<span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>            x1y1, cv2.FONT_HERSHEY_COMPLEX_SMALL, <span class="dv">1</span>, (<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">255</span>), <span class="dv">2</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> img</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="8">
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_labels(x, y, class_names):</span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> x.numpy()</span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    boxes, classes <span class="op">=</span> tf.split(y, (<span class="dv">4</span>, <span class="dv">1</span>), axis <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>    classes <span class="op">=</span> classes[..., <span class="dv">0</span>]</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    wh <span class="op">=</span> np.flip(img.shape[<span class="dv">0</span> : <span class="dv">2</span>])</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="bu">len</span>(boxes)):</span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>        x1y1 <span class="op">=</span> <span class="bu">tuple</span>((np.array(boxes[i][<span class="dv">0</span>:<span class="dv">2</span>]) <span class="op">*</span> wh).astype(np.int32))</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        x2y2 <span class="op">=</span> <span class="bu">tuple</span>((np.array(boxes[i][<span class="dv">2</span>:<span class="dv">4</span>]) <span class="op">*</span> wh).astype(np.int32))</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a>        img <span class="op">=</span> cv2.rectangle(img, x1y1, x2y2, (<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>), <span class="dv">2</span>)</span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>        img <span class="op">=</span> cv2.putText(</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a>            img, class_names[classes[i]],</span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>            x1y1, cv2.FONT_HERSHEY_COMPLEX_SMALL,</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>            <span class="dv">8</span>, (<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">255</span>), <span class="dv">2</span></span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        )</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> img</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="9">
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform_images(x_train, size):</span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    x_train <span class="op">=</span> tf.image.resize(x_train, (size, size))</span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    x_train <span class="op">=</span> x_train <span class="op">/</span> <span class="dv">255</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x_train</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="at">@tf.function</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform_targets_for_output(y_true, grid_size, anchor_idxs, classes):</span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> tf.shape(y_true)[<span class="dv">0</span>]</span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>    y_true_out <span class="op">=</span> tf.zeros(</span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>        (N, grid_size, grid_size, tf.shape(anchor_idxs)[<span class="dv">0</span>], <span class="dv">6</span>))</span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    anchor_idxs <span class="op">=</span> tf.cast(anchor_idxs, tf.int32)</span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    indexes <span class="op">=</span> tf.TensorArray(tf.int32, <span class="dv">1</span>, dynamic_size<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>    updates <span class="op">=</span> tf.TensorArray(tf.float32, <span class="dv">1</span>, dynamic_size<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    idx <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> i <span class="kw">in</span> tf.<span class="bu">range</span>(N):</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> j <span class="kw">in</span> tf.<span class="bu">range</span>(tf.shape(y_true)[<span class="dv">1</span>]):</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> tf.equal(y_true[i][j][<span class="dv">2</span>], <span class="dv">0</span>):</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>                <span class="cf">continue</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>            anchor_eq <span class="op">=</span> tf.equal(</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>                anchor_idxs, tf.cast(y_true[i][j][<span class="dv">5</span>], tf.int32))</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a>            <span class="cf">if</span> tf.reduce_any(anchor_eq):</span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>                box <span class="op">=</span> y_true[i][j][<span class="dv">0</span>:<span class="dv">4</span>]</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>                box_xy <span class="op">=</span> (y_true[i][j][<span class="dv">0</span>:<span class="dv">2</span>] <span class="op">+</span> y_true[i][j][<span class="dv">2</span>:<span class="dv">4</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>                anchor_idx <span class="op">=</span> tf.cast(tf.where(anchor_eq), tf.int32)</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>                grid_xy <span class="op">=</span> tf.cast(box_xy <span class="op">//</span> (<span class="dv">1</span><span class="op">/</span>grid_size), tf.int32)</span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>                indexes <span class="op">=</span> indexes.write(</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>                    idx, [i, grid_xy[<span class="dv">1</span>], grid_xy[<span class="dv">0</span>], anchor_idx[<span class="dv">0</span>][<span class="dv">0</span>]])</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a>                updates <span class="op">=</span> updates.write(</span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>                    idx, [box[<span class="dv">0</span>], box[<span class="dv">1</span>], box[<span class="dv">2</span>], box[<span class="dv">3</span>], <span class="dv">1</span>, y_true[i][j][<span class="dv">4</span>]])</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>                idx <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tf.tensor_scatter_nd_update(</span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>        y_true_out, indexes.stack(), updates.stack())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="11">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform_targets(y_train, anchors, anchor_masks, classes):</span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    y_outs <span class="op">=</span> []</span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    grid_size <span class="op">=</span> <span class="dv">13</span></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>    anchors <span class="op">=</span> tf.cast(anchors, tf.float32)</span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>    anchor_area <span class="op">=</span> anchors[..., <span class="dv">0</span>] <span class="op">*</span> anchors[..., <span class="dv">1</span>]</span>
+<span id="cb12-6"><a href="#cb12-6" aria-hidden="true" tabindex="-1"></a>    box_wh <span class="op">=</span> y_train[..., <span class="dv">2</span>:<span class="dv">4</span>] <span class="op">-</span> y_train[..., <span class="dv">0</span>:<span class="dv">2</span>]</span>
+<span id="cb12-7"><a href="#cb12-7" aria-hidden="true" tabindex="-1"></a>    box_wh <span class="op">=</span> tf.tile(tf.expand_dims(box_wh, <span class="op">-</span><span class="dv">2</span>), (<span class="dv">1</span>, <span class="dv">1</span>, tf.shape(anchors)[<span class="dv">0</span>], <span class="dv">1</span>))</span>
+<span id="cb12-8"><a href="#cb12-8" aria-hidden="true" tabindex="-1"></a>    box_area <span class="op">=</span> box_wh[..., <span class="dv">0</span>] <span class="op">*</span> box_wh[..., <span class="dv">1</span>]</span>
+<span id="cb12-9"><a href="#cb12-9" aria-hidden="true" tabindex="-1"></a>    intersection <span class="op">=</span> tf.minimum(box_wh[..., <span class="dv">0</span>], anchors[..., <span class="dv">0</span>]) <span class="op">*</span> tf.minimum(box_wh[..., <span class="dv">1</span>], anchors[..., <span class="dv">1</span>])</span>
+<span id="cb12-10"><a href="#cb12-10" aria-hidden="true" tabindex="-1"></a>    iou <span class="op">=</span> intersection <span class="op">/</span> (box_area <span class="op">+</span> anchor_area <span class="op">-</span> intersection)</span>
+<span id="cb12-11"><a href="#cb12-11" aria-hidden="true" tabindex="-1"></a>    anchor_idx <span class="op">=</span> tf.cast(tf.argmax(iou, axis<span class="op">=-</span><span class="dv">1</span>), tf.float32)</span>
+<span id="cb12-12"><a href="#cb12-12" aria-hidden="true" tabindex="-1"></a>    anchor_idx <span class="op">=</span> tf.expand_dims(anchor_idx, axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb12-13"><a href="#cb12-13" aria-hidden="true" tabindex="-1"></a>    y_train <span class="op">=</span> tf.concat([y_train, anchor_idx], axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb12-14"><a href="#cb12-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> anchor_idxs <span class="kw">in</span> anchor_masks:</span>
+<span id="cb12-15"><a href="#cb12-15" aria-hidden="true" tabindex="-1"></a>        y_outs.append(transform_targets_for_output(</span>
+<span id="cb12-16"><a href="#cb12-16" aria-hidden="true" tabindex="-1"></a>            y_train, grid_size, anchor_idxs, classes))</span>
+<span id="cb12-17"><a href="#cb12-17" aria-hidden="true" tabindex="-1"></a>        grid_size <span class="op">*=</span> <span class="dv">2</span></span>
+<span id="cb12-18"><a href="#cb12-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="bu">tuple</span>(y_outs)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="yolo-v3-model" class="level2">
+<h2 class="anchored" data-anchor-id="yolo-v3-model">YOLO V3 Model</h2>
+<div class="cell" data-execution_count="12">
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BatchNormalization(tf.keras.layers.BatchNormalization):</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> call(<span class="va">self</span>, x, training <span class="op">=</span> <span class="va">False</span>):</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> training <span class="kw">is</span> <span class="va">None</span>:</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>            traininig <span class="op">=</span> tf.constant(<span class="va">False</span>)</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        training <span class="op">=</span> tf.logical_and(training, <span class="va">self</span>.trainable)</span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">super</span>().call(x, training)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="13">
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DarknetConv(x, filters, size, strides<span class="op">=</span><span class="dv">1</span>, batch_norm<span class="op">=</span><span class="va">True</span>):</span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> strides <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        padding <span class="op">=</span> <span class="st">'same'</span></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">else</span>:</span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> ZeroPadding2D(((<span class="dv">1</span>, <span class="dv">0</span>), (<span class="dv">1</span>, <span class="dv">0</span>)))(x)  <span class="co"># top left half-padding</span></span>
+<span id="cb14-6"><a href="#cb14-6" aria-hidden="true" tabindex="-1"></a>        padding <span class="op">=</span> <span class="st">'valid'</span></span>
+<span id="cb14-7"><a href="#cb14-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> Conv2D(filters<span class="op">=</span>filters, kernel_size<span class="op">=</span>size,</span>
+<span id="cb14-8"><a href="#cb14-8" aria-hidden="true" tabindex="-1"></a>               strides<span class="op">=</span>strides, padding<span class="op">=</span>padding,</span>
+<span id="cb14-9"><a href="#cb14-9" aria-hidden="true" tabindex="-1"></a>               use_bias<span class="op">=</span><span class="kw">not</span> batch_norm, kernel_regularizer<span class="op">=</span>l2(<span class="fl">0.0005</span>))(x)</span>
+<span id="cb14-10"><a href="#cb14-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> batch_norm:</span>
+<span id="cb14-11"><a href="#cb14-11" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> BatchNormalization()(x)</span>
+<span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> LeakyReLU(alpha<span class="op">=</span><span class="fl">0.1</span>)(x)</span>
+<span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DarknetResidual(x, filters):</span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    prev <span class="op">=</span> x</span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, filters <span class="op">//</span> <span class="dv">2</span>, <span class="dv">1</span>)</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">3</span>)</span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> Add()([prev, x])</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="15">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DarknetBlock(x, filters, blocks):</span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">3</span>, strides<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(blocks):</span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetResidual(x, filters)</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="16">
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Darknet(name<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> inputs <span class="op">=</span> Input([<span class="va">None</span>, <span class="va">None</span>, <span class="dv">3</span>])</span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">32</span>, <span class="dv">3</span>)</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetBlock(x, <span class="dv">64</span>, <span class="dv">1</span>)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetBlock(x, <span class="dv">128</span>, <span class="dv">2</span>)  <span class="co"># skip connection</span></span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x_36 <span class="op">=</span> DarknetBlock(x, <span class="dv">256</span>, <span class="dv">8</span>)  <span class="co"># skip connection</span></span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x_61 <span class="op">=</span> DarknetBlock(x, <span class="dv">512</span>, <span class="dv">8</span>)</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetBlock(x, <span class="dv">1024</span>, <span class="dv">4</span>)</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tf.keras.Model(inputs, (x_36, x_61, x), name<span class="op">=</span>name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="17">
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DarknetTiny(name<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> inputs <span class="op">=</span> Input([<span class="va">None</span>, <span class="va">None</span>, <span class="dv">3</span>])</span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">16</span>, <span class="dv">3</span>)</span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> MaxPool2D(<span class="dv">2</span>, <span class="dv">2</span>, <span class="st">'same'</span>)(x)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">32</span>, <span class="dv">3</span>)</span>
+<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> MaxPool2D(<span class="dv">2</span>, <span class="dv">2</span>, <span class="st">'same'</span>)(x)</span>
+<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">64</span>, <span class="dv">3</span>)</span>
+<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> MaxPool2D(<span class="dv">2</span>, <span class="dv">2</span>, <span class="st">'same'</span>)(x)</span>
+<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">128</span>, <span class="dv">3</span>)</span>
+<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> MaxPool2D(<span class="dv">2</span>, <span class="dv">2</span>, <span class="st">'same'</span>)(x)</span>
+<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> x_8 <span class="op">=</span> DarknetConv(x, <span class="dv">256</span>, <span class="dv">3</span>)  <span class="co"># skip connection</span></span>
+<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> MaxPool2D(<span class="dv">2</span>, <span class="dv">2</span>, <span class="st">'same'</span>)(x)</span>
+<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">512</span>, <span class="dv">3</span>)</span>
+<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> MaxPool2D(<span class="dv">2</span>, <span class="dv">1</span>, <span class="st">'same'</span>)(x)</span>
+<span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">1024</span>, <span class="dv">3</span>)</span>
+<span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tf.keras.Model(inputs, (x_8, x), name<span class="op">=</span>name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="18">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloConv(filters, name<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> yolo_conv(x_in):</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(x_in, <span class="bu">tuple</span>):</span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a>            inputs <span class="op">=</span> Input(x_in[<span class="dv">0</span>].shape[<span class="dv">1</span>:]), Input(x_in[<span class="dv">1</span>].shape[<span class="dv">1</span>:])</span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a>            x, x_skip <span class="op">=</span> inputs</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a>            <span class="co"># concat with skip connection</span></span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">1</span>)</span>
+<span id="cb19-8"><a href="#cb19-8" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> UpSampling2D(<span class="dv">2</span>)(x)</span>
+<span id="cb19-9"><a href="#cb19-9" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> Concatenate()([x, x_skip])</span>
+<span id="cb19-10"><a href="#cb19-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb19-11"><a href="#cb19-11" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> inputs <span class="op">=</span> Input(x_in.shape[<span class="dv">1</span>:])</span>
+<span id="cb19-12"><a href="#cb19-12" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">1</span>)</span>
+<span id="cb19-13"><a href="#cb19-13" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetConv(x, filters <span class="op">*</span> <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb19-14"><a href="#cb19-14" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">1</span>)</span>
+<span id="cb19-15"><a href="#cb19-15" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetConv(x, filters <span class="op">*</span> <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb19-16"><a href="#cb19-16" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">1</span>)</span>
+<span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Model(inputs, x, name<span class="op">=</span>name)(x_in)</span>
+<span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> yolo_conv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="19">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloConvTiny(filters, name<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> yolo_conv(x_in):</span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(x_in, <span class="bu">tuple</span>):</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a>            inputs <span class="op">=</span> Input(x_in[<span class="dv">0</span>].shape[<span class="dv">1</span>:]), Input(x_in[<span class="dv">1</span>].shape[<span class="dv">1</span>:])</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>            x, x_skip <span class="op">=</span> inputs</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a>            <span class="co"># concat with skip connection</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">1</span>)</span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> UpSampling2D(<span class="dv">2</span>)(x)</span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> Concatenate()([x, x_skip])</span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">else</span>:</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> inputs <span class="op">=</span> Input(x_in.shape[<span class="dv">1</span>:])</span>
+<span id="cb20-12"><a href="#cb20-12" aria-hidden="true" tabindex="-1"></a>            x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">1</span>)</span>
+<span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Model(inputs, x, name<span class="op">=</span>name)(x_in)</span>
+<span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> yolo_conv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="20">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloOutput(filters, anchors, classes, name<span class="op">=</span><span class="va">None</span>):</span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> yolo_output(x_in):</span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> inputs <span class="op">=</span> Input(x_in.shape[<span class="dv">1</span>:])</span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetConv(x, filters <span class="op">*</span> <span class="dv">2</span>, <span class="dv">3</span>)</span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetConv(x, anchors <span class="op">*</span> (classes <span class="op">+</span> <span class="dv">5</span>), <span class="dv">1</span>, batch_norm<span class="op">=</span><span class="va">False</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> Lambda(<span class="kw">lambda</span> x: tf.reshape(x, (<span class="op">-</span><span class="dv">1</span>, tf.shape(x)[<span class="dv">1</span>], tf.shape(x)[<span class="dv">2</span>], anchors, classes <span class="op">+</span> <span class="dv">5</span>)))(x)</span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> tf.keras.Model(inputs, x, name<span class="op">=</span>name)(x_in)</span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> yolo_output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="21">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> yolo_boxes(pred, anchors, classes):</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''pred: (batch_size, grid, grid, anchors, (x, y, w, h, obj, ...classes))'''</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    grid_size <span class="op">=</span> tf.shape(pred)[<span class="dv">1</span>]</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>    box_xy, box_wh, objectness, class_probs <span class="op">=</span> tf.split(</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>        pred, (<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>, classes), axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>    box_xy <span class="op">=</span> tf.sigmoid(box_xy)</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>    objectness <span class="op">=</span> tf.sigmoid(objectness)</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>    class_probs <span class="op">=</span> tf.sigmoid(class_probs)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    pred_box <span class="op">=</span> tf.concat((box_xy, box_wh), axis<span class="op">=-</span><span class="dv">1</span>)  <span class="co"># original xywh for loss</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> tf.meshgrid(tf.<span class="bu">range</span>(grid_size), tf.<span class="bu">range</span>(grid_size))</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>    grid <span class="op">=</span> tf.expand_dims(tf.stack(grid, axis<span class="op">=-</span><span class="dv">1</span>), axis<span class="op">=</span><span class="dv">2</span>)  <span class="co"># [gx, gy, 1, 2]</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>    box_xy <span class="op">=</span> (box_xy <span class="op">+</span> tf.cast(grid, tf.float32)) <span class="op">/</span> <span class="op">\</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>        tf.cast(grid_size, tf.float32)</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    box_wh <span class="op">=</span> tf.exp(box_wh) <span class="op">*</span> anchors</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>    box_x1y1 <span class="op">=</span> box_xy <span class="op">-</span> box_wh <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>    box_x2y2 <span class="op">=</span> box_xy <span class="op">+</span> box_wh <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>    bbox <span class="op">=</span> tf.concat([box_x1y1, box_x2y2], axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> bbox, objectness, class_probs, pred_box</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="22">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> yolo_nms(outputs, anchors, masks, classes):</span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''boxes, conf, type'''</span></span>
+<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    b, c, t <span class="op">=</span> [], [], []</span>
+<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> o <span class="kw">in</span> outputs:</span>
+<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>        b.append(tf.reshape(o[<span class="dv">0</span>], (tf.shape(o[<span class="dv">0</span>])[<span class="dv">0</span>], <span class="op">-</span><span class="dv">1</span>, tf.shape(o[<span class="dv">0</span>])[<span class="op">-</span><span class="dv">1</span>])))</span>
+<span id="cb23-6"><a href="#cb23-6" aria-hidden="true" tabindex="-1"></a>        c.append(tf.reshape(o[<span class="dv">1</span>], (tf.shape(o[<span class="dv">1</span>])[<span class="dv">0</span>], <span class="op">-</span><span class="dv">1</span>, tf.shape(o[<span class="dv">1</span>])[<span class="op">-</span><span class="dv">1</span>])))</span>
+<span id="cb23-7"><a href="#cb23-7" aria-hidden="true" tabindex="-1"></a>        t.append(tf.reshape(o[<span class="dv">2</span>], (tf.shape(o[<span class="dv">2</span>])[<span class="dv">0</span>], <span class="op">-</span><span class="dv">1</span>, tf.shape(o[<span class="dv">2</span>])[<span class="op">-</span><span class="dv">1</span>])))</span>
+<span id="cb23-8"><a href="#cb23-8" aria-hidden="true" tabindex="-1"></a>    bbox <span class="op">=</span> tf.concat(b, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb23-9"><a href="#cb23-9" aria-hidden="true" tabindex="-1"></a>    confidence <span class="op">=</span> tf.concat(c, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb23-10"><a href="#cb23-10" aria-hidden="true" tabindex="-1"></a>    class_probs <span class="op">=</span> tf.concat(t, axis<span class="op">=</span><span class="dv">1</span>)</span>
+<span id="cb23-11"><a href="#cb23-11" aria-hidden="true" tabindex="-1"></a>    scores <span class="op">=</span> confidence <span class="op">*</span> class_probs</span>
+<span id="cb23-12"><a href="#cb23-12" aria-hidden="true" tabindex="-1"></a>    boxes, scores, classes, valid_detections <span class="op">=</span> tf.image.combined_non_max_suppression(</span>
+<span id="cb23-13"><a href="#cb23-13" aria-hidden="true" tabindex="-1"></a>        boxes<span class="op">=</span>tf.reshape(bbox, (tf.shape(bbox)[<span class="dv">0</span>], <span class="op">-</span><span class="dv">1</span>, <span class="dv">1</span>, <span class="dv">4</span>)),</span>
+<span id="cb23-14"><a href="#cb23-14" aria-hidden="true" tabindex="-1"></a>        scores<span class="op">=</span>tf.reshape(</span>
+<span id="cb23-15"><a href="#cb23-15" aria-hidden="true" tabindex="-1"></a>            scores,</span>
+<span id="cb23-16"><a href="#cb23-16" aria-hidden="true" tabindex="-1"></a>            (tf.shape(scores)[<span class="dv">0</span>], <span class="op">-</span><span class="dv">1</span>, tf.shape(scores)[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb23-17"><a href="#cb23-17" aria-hidden="true" tabindex="-1"></a>        ),</span>
+<span id="cb23-18"><a href="#cb23-18" aria-hidden="true" tabindex="-1"></a>        max_output_size_per_class<span class="op">=</span><span class="dv">100</span>,</span>
+<span id="cb23-19"><a href="#cb23-19" aria-hidden="true" tabindex="-1"></a>        max_total_size <span class="op">=</span> <span class="dv">100</span>,</span>
+<span id="cb23-20"><a href="#cb23-20" aria-hidden="true" tabindex="-1"></a>        iou_threshold <span class="op">=</span> <span class="fl">0.5</span>,</span>
+<span id="cb23-21"><a href="#cb23-21" aria-hidden="true" tabindex="-1"></a>        score_threshold <span class="op">=</span> <span class="fl">0.5</span></span>
+<span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> boxes, scores, classes, valid_detections</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="23">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloV3(size<span class="op">=</span><span class="va">None</span>, channels<span class="op">=</span><span class="dv">3</span>, anchors<span class="op">=</span>yolo_anchors, masks<span class="op">=</span>yolo_anchor_masks, classes<span class="op">=</span><span class="dv">80</span>, training<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> inputs <span class="op">=</span> Input([size, size, channels])</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    x_36, x_61, x <span class="op">=</span> Darknet(name<span class="op">=</span><span class="st">'yolo_darknet'</span>)(x)</span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> YoloConv(<span class="dv">512</span>, name<span class="op">=</span><span class="st">'yolo_conv_0'</span>)(x)</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>    output_0 <span class="op">=</span> YoloOutput(<span class="dv">512</span>, <span class="bu">len</span>(masks[<span class="dv">0</span>]), classes, name<span class="op">=</span><span class="st">'yolo_output_0'</span>)(x)</span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> YoloConv(<span class="dv">256</span>, name<span class="op">=</span><span class="st">'yolo_conv_1'</span>)((x, x_61))</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    output_1 <span class="op">=</span> YoloOutput(<span class="dv">256</span>, <span class="bu">len</span>(masks[<span class="dv">1</span>]), classes, name<span class="op">=</span><span class="st">'yolo_output_1'</span>)(x)</span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> YoloConv(<span class="dv">128</span>, name<span class="op">=</span><span class="st">'yolo_conv_2'</span>)((x, x_36))</span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>    output_2 <span class="op">=</span> YoloOutput(<span class="dv">128</span>, <span class="bu">len</span>(masks[<span class="dv">2</span>]), classes, name<span class="op">=</span><span class="st">'yolo_output_2'</span>)(x)</span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> training:</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Model(inputs, (output_0, output_1, output_2), name<span class="op">=</span><span class="st">'yolov3'</span>)</span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    boxes_0 <span class="op">=</span> Lambda(<span class="kw">lambda</span> x: yolo_boxes(x, anchors[masks[<span class="dv">0</span>]], classes),</span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>                     name<span class="op">=</span><span class="st">'yolo_boxes_0'</span>)(output_0)</span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    boxes_1 <span class="op">=</span> Lambda(<span class="kw">lambda</span> x: yolo_boxes(x, anchors[masks[<span class="dv">1</span>]], classes),</span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>                     name<span class="op">=</span><span class="st">'yolo_boxes_1'</span>)(output_1)</span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>    boxes_2 <span class="op">=</span> Lambda(<span class="kw">lambda</span> x: yolo_boxes(x, anchors[masks[<span class="dv">2</span>]], classes),</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>                     name<span class="op">=</span><span class="st">'yolo_boxes_2'</span>)(output_2)</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>    outputs <span class="op">=</span> Lambda(<span class="kw">lambda</span> x: yolo_nms(x, anchors, masks, classes),</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>                     name<span class="op">=</span><span class="st">'yolo_nms'</span>)((boxes_0[:<span class="dv">3</span>], boxes_1[:<span class="dv">3</span>], boxes_2[:<span class="dv">3</span>]))</span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Model(inputs, outputs, name<span class="op">=</span><span class="st">'yolov3'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="24">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloV3Tiny(size<span class="op">=</span><span class="va">None</span>, channels<span class="op">=</span><span class="dv">3</span>, anchors<span class="op">=</span>yolo_tiny_anchors, masks<span class="op">=</span>yolo_tiny_anchor_masks, classes<span class="op">=</span><span class="dv">80</span>, training<span class="op">=</span><span class="va">False</span>):</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> inputs <span class="op">=</span> Input([size, size, channels])</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    x_8, x <span class="op">=</span> DarknetTiny(name<span class="op">=</span><span class="st">'yolo_darknet'</span>)(x)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> YoloConvTiny(<span class="dv">256</span>, name<span class="op">=</span><span class="st">'yolo_conv_0'</span>)(x)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a>    output_0 <span class="op">=</span> YoloOutput(<span class="dv">256</span>, <span class="bu">len</span>(masks[<span class="dv">0</span>]), classes, name<span class="op">=</span><span class="st">'yolo_output_0'</span>)(x)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> YoloConvTiny(<span class="dv">128</span>, name<span class="op">=</span><span class="st">'yolo_conv_1'</span>)((x, x_8))</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    output_1 <span class="op">=</span> YoloOutput(<span class="dv">128</span>, <span class="bu">len</span>(masks[<span class="dv">1</span>]), classes, name<span class="op">=</span><span class="st">'yolo_output_1'</span>)(x)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> training:</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Model(inputs, (output_0, output_1), name<span class="op">=</span><span class="st">'yolov3'</span>)</span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>    boxes_0 <span class="op">=</span> Lambda(<span class="kw">lambda</span> x: yolo_boxes(x, anchors[masks[<span class="dv">0</span>]], classes),</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>                     name<span class="op">=</span><span class="st">'yolo_boxes_0'</span>)(output_0)</span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    boxes_1 <span class="op">=</span> Lambda(<span class="kw">lambda</span> x: yolo_boxes(x, anchors[masks[<span class="dv">1</span>]], classes),</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>                     name<span class="op">=</span><span class="st">'yolo_boxes_1'</span>)(output_1)</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    outputs <span class="op">=</span> Lambda(<span class="kw">lambda</span> x: yolo_nms(x, anchors, masks, classes),</span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>                     name<span class="op">=</span><span class="st">'yolo_nms'</span>)((boxes_0[:<span class="dv">3</span>], boxes_1[:<span class="dv">3</span>]))</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Model(inputs, outputs, name<span class="op">=</span><span class="st">'yolov3_tiny'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="yolo-loss" class="level2">
+<h2 class="anchored" data-anchor-id="yolo-loss">YOLO Loss</h2>
+<div class="cell" data-execution_count="25">
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloLoss(anchors, classes<span class="op">=</span><span class="dv">80</span>, ignore_thresh<span class="op">=</span><span class="fl">0.5</span>):</span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> yolo_loss(y_true, y_pred):</span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 1. transform all pred outputs</span></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>        <span class="co"># y_pred: (batch_size, grid, grid, anchors, (x, y, w, h, obj, ...cls))</span></span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>        pred_box, pred_obj, pred_class, pred_xywh <span class="op">=</span> yolo_boxes(y_pred, anchors, classes)</span>
+<span id="cb26-6"><a href="#cb26-6" aria-hidden="true" tabindex="-1"></a>        pred_xy <span class="op">=</span> pred_xywh[..., <span class="dv">0</span>:<span class="dv">2</span>]</span>
+<span id="cb26-7"><a href="#cb26-7" aria-hidden="true" tabindex="-1"></a>        pred_wh <span class="op">=</span> pred_xywh[..., <span class="dv">2</span>:<span class="dv">4</span>]</span>
+<span id="cb26-8"><a href="#cb26-8" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 2. transform all true outputs</span></span>
+<span id="cb26-9"><a href="#cb26-9" aria-hidden="true" tabindex="-1"></a>        <span class="co"># y_true: (batch_size, grid, grid, anchors, (x1, y1, x2, y2, obj, cls))</span></span>
+<span id="cb26-10"><a href="#cb26-10" aria-hidden="true" tabindex="-1"></a>        true_box, true_obj, true_class_idx <span class="op">=</span> tf.split(</span>
+<span id="cb26-11"><a href="#cb26-11" aria-hidden="true" tabindex="-1"></a>            y_true, (<span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">1</span>), axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb26-12"><a href="#cb26-12" aria-hidden="true" tabindex="-1"></a>        true_xy <span class="op">=</span> (true_box[..., <span class="dv">0</span>:<span class="dv">2</span>] <span class="op">+</span> true_box[..., <span class="dv">2</span>:<span class="dv">4</span>]) <span class="op">/</span> <span class="dv">2</span></span>
+<span id="cb26-13"><a href="#cb26-13" aria-hidden="true" tabindex="-1"></a>        true_wh <span class="op">=</span> true_box[..., <span class="dv">2</span>:<span class="dv">4</span>] <span class="op">-</span> true_box[..., <span class="dv">0</span>:<span class="dv">2</span>]</span>
+<span id="cb26-14"><a href="#cb26-14" aria-hidden="true" tabindex="-1"></a>        <span class="co"># give higher weights to small boxes</span></span>
+<span id="cb26-15"><a href="#cb26-15" aria-hidden="true" tabindex="-1"></a>        box_loss_scale <span class="op">=</span> <span class="dv">2</span> <span class="op">-</span> true_wh[..., <span class="dv">0</span>] <span class="op">*</span> true_wh[..., <span class="dv">1</span>]</span>
+<span id="cb26-16"><a href="#cb26-16" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 3. inverting the pred box equations</span></span>
+<span id="cb26-17"><a href="#cb26-17" aria-hidden="true" tabindex="-1"></a>        grid_size <span class="op">=</span> tf.shape(y_true)[<span class="dv">1</span>]</span>
+<span id="cb26-18"><a href="#cb26-18" aria-hidden="true" tabindex="-1"></a>        grid <span class="op">=</span> tf.meshgrid(tf.<span class="bu">range</span>(grid_size), tf.<span class="bu">range</span>(grid_size))</span>
+<span id="cb26-19"><a href="#cb26-19" aria-hidden="true" tabindex="-1"></a>        grid <span class="op">=</span> tf.expand_dims(tf.stack(grid, axis<span class="op">=-</span><span class="dv">1</span>), axis<span class="op">=</span><span class="dv">2</span>)</span>
+<span id="cb26-20"><a href="#cb26-20" aria-hidden="true" tabindex="-1"></a>        true_xy <span class="op">=</span> true_xy <span class="op">*</span> tf.cast(grid_size, tf.float32) <span class="op">-</span> <span class="op">\</span></span>
+<span id="cb26-21"><a href="#cb26-21" aria-hidden="true" tabindex="-1"></a>            tf.cast(grid, tf.float32)</span>
+<span id="cb26-22"><a href="#cb26-22" aria-hidden="true" tabindex="-1"></a>        true_wh <span class="op">=</span> tf.math.log(true_wh <span class="op">/</span> anchors)</span>
+<span id="cb26-23"><a href="#cb26-23" aria-hidden="true" tabindex="-1"></a>        true_wh <span class="op">=</span> tf.where(tf.math.is_inf(true_wh), tf.zeros_like(true_wh), true_wh)</span>
+<span id="cb26-24"><a href="#cb26-24" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 4. calculate all masks</span></span>
+<span id="cb26-25"><a href="#cb26-25" aria-hidden="true" tabindex="-1"></a>        obj_mask <span class="op">=</span> tf.squeeze(true_obj, <span class="op">-</span><span class="dv">1</span>)</span>
+<span id="cb26-26"><a href="#cb26-26" aria-hidden="true" tabindex="-1"></a>        <span class="co"># ignore false positive when iou is over threshold</span></span>
+<span id="cb26-27"><a href="#cb26-27" aria-hidden="true" tabindex="-1"></a>        true_box_flat <span class="op">=</span> tf.boolean_mask(true_box, tf.cast(obj_mask, tf.<span class="bu">bool</span>))</span>
+<span id="cb26-28"><a href="#cb26-28" aria-hidden="true" tabindex="-1"></a>        best_iou <span class="op">=</span> tf.reduce_max(broadcast_iou(</span>
+<span id="cb26-29"><a href="#cb26-29" aria-hidden="true" tabindex="-1"></a>            pred_box, true_box_flat), axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb26-30"><a href="#cb26-30" aria-hidden="true" tabindex="-1"></a>        ignore_mask <span class="op">=</span> tf.cast(best_iou <span class="op">&lt;</span> ignore_thresh, tf.float32)</span>
+<span id="cb26-31"><a href="#cb26-31" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 5. calculate all losses</span></span>
+<span id="cb26-32"><a href="#cb26-32" aria-hidden="true" tabindex="-1"></a>        xy_loss <span class="op">=</span> obj_mask <span class="op">*</span> box_loss_scale <span class="op">*</span> <span class="op">\</span></span>
+<span id="cb26-33"><a href="#cb26-33" aria-hidden="true" tabindex="-1"></a>            tf.reduce_sum(tf.square(true_xy <span class="op">-</span> pred_xy), axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb26-34"><a href="#cb26-34" aria-hidden="true" tabindex="-1"></a>        wh_loss <span class="op">=</span> obj_mask <span class="op">*</span> box_loss_scale <span class="op">*</span> <span class="op">\</span></span>
+<span id="cb26-35"><a href="#cb26-35" aria-hidden="true" tabindex="-1"></a>            tf.reduce_sum(tf.square(true_wh <span class="op">-</span> pred_wh), axis<span class="op">=-</span><span class="dv">1</span>)</span>
+<span id="cb26-36"><a href="#cb26-36" aria-hidden="true" tabindex="-1"></a>        obj_loss <span class="op">=</span> binary_crossentropy(true_obj, pred_obj)</span>
+<span id="cb26-37"><a href="#cb26-37" aria-hidden="true" tabindex="-1"></a>        obj_loss <span class="op">=</span> obj_mask <span class="op">*</span> obj_loss <span class="op">+</span> <span class="op">\</span></span>
+<span id="cb26-38"><a href="#cb26-38" aria-hidden="true" tabindex="-1"></a>            (<span class="dv">1</span> <span class="op">-</span> obj_mask) <span class="op">*</span> ignore_mask <span class="op">*</span> obj_loss</span>
+<span id="cb26-39"><a href="#cb26-39" aria-hidden="true" tabindex="-1"></a>        <span class="co"># Could also use binary_crossentropy instead</span></span>
+<span id="cb26-40"><a href="#cb26-40" aria-hidden="true" tabindex="-1"></a>        class_loss <span class="op">=</span> obj_mask <span class="op">*</span> sparse_categorical_crossentropy(</span>
+<span id="cb26-41"><a href="#cb26-41" aria-hidden="true" tabindex="-1"></a>            true_class_idx, pred_class)</span>
+<span id="cb26-42"><a href="#cb26-42" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 6. sum over (batch, gridx, gridy, anchors) =&gt; (batch, 1)</span></span>
+<span id="cb26-43"><a href="#cb26-43" aria-hidden="true" tabindex="-1"></a>        xy_loss <span class="op">=</span> tf.reduce_sum(xy_loss, axis<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span>
+<span id="cb26-44"><a href="#cb26-44" aria-hidden="true" tabindex="-1"></a>        wh_loss <span class="op">=</span> tf.reduce_sum(wh_loss, axis<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span>
+<span id="cb26-45"><a href="#cb26-45" aria-hidden="true" tabindex="-1"></a>        obj_loss <span class="op">=</span> tf.reduce_sum(obj_loss, axis<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span>
+<span id="cb26-46"><a href="#cb26-46" aria-hidden="true" tabindex="-1"></a>        class_loss <span class="op">=</span> tf.reduce_sum(class_loss, axis<span class="op">=</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>))</span>
+<span id="cb26-47"><a href="#cb26-47" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> xy_loss <span class="op">+</span> wh_loss <span class="op">+</span> obj_loss <span class="op">+</span> class_loss</span>
+<span id="cb26-48"><a href="#cb26-48" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> yolo_loss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="tiny-yolo-inference" class="level2">
+<h2 class="anchored" data-anchor-id="tiny-yolo-inference">Tiny YOLO Inference</h2>
+<div class="cell" data-execution_count="26">
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>yolo <span class="op">=</span> YoloV3(classes <span class="op">=</span> <span class="dv">80</span>)</span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>yolo.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Model: "yolov3"
+__________________________________________________________________________________________________
+Layer (type)                    Output Shape         Param #     Connected to                     
+==================================================================================================
+input_1 (InputLayer)            [(None, None, None,  0                                            
+__________________________________________________________________________________________________
+yolo_darknet (Model)            ((None, None, None,  40620640    input_1[0][0]                    
+__________________________________________________________________________________________________
+yolo_conv_0 (Model)             (None, None, None, 5 11024384    yolo_darknet[1][2]               
+__________________________________________________________________________________________________
+yolo_conv_1 (Model)             (None, None, None, 2 2957312     yolo_conv_0[1][0]                
+                                                                 yolo_darknet[1][1]               
+__________________________________________________________________________________________________
+yolo_conv_2 (Model)             (None, None, None, 1 741376      yolo_conv_1[1][0]                
+                                                                 yolo_darknet[1][0]               
+__________________________________________________________________________________________________
+yolo_output_0 (Model)           (None, None, None, 3 4984063     yolo_conv_0[1][0]                
+__________________________________________________________________________________________________
+yolo_output_1 (Model)           (None, None, None, 3 1312511     yolo_conv_1[1][0]                
+__________________________________________________________________________________________________
+yolo_output_2 (Model)           (None, None, None, 3 361471      yolo_conv_2[1][0]                
+__________________________________________________________________________________________________
+yolo_boxes_0 (Lambda)           ((None, None, None,  0           yolo_output_0[1][0]              
+__________________________________________________________________________________________________
+yolo_boxes_1 (Lambda)           ((None, None, None,  0           yolo_output_1[1][0]              
+__________________________________________________________________________________________________
+yolo_boxes_2 (Lambda)           ((None, None, None,  0           yolo_output_2[1][0]              
+__________________________________________________________________________________________________
+yolo_nms (Lambda)               ((None, 100, 4), (No 0           yolo_boxes_0[0][0]               
+                                                                 yolo_boxes_0[0][1]               
+                                                                 yolo_boxes_0[0][2]               
+                                                                 yolo_boxes_1[0][0]               
+                                                                 yolo_boxes_1[0][1]               
+                                                                 yolo_boxes_1[0][2]               
+                                                                 yolo_boxes_2[0][0]               
+                                                                 yolo_boxes_2[0][1]               
+                                                                 yolo_boxes_2[0][2]               
+==================================================================================================
+Total params: 62,001,757
+Trainable params: 61,949,149
+Non-trainable params: 52,608
+__________________________________________________________________________________________________</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="27">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>plot_model(</span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    yolo, rankdir <span class="op">=</span> <span class="st">'TB'</span>,</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    to_file <span class="op">=</span> <span class="st">'yolo_model.png'</span>,</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a>    show_shapes <span class="op">=</span> <span class="va">False</span>,</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a>    show_layer_names <span class="op">=</span> <span class="va">True</span>,</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    expand_nested <span class="op">=</span> <span class="va">True</span></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="27">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-28-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="28">
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>load_darknet_weights(yolo, <span class="st">'./data/yolov3.weights'</span>, <span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="29">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict(image_file, visualize <span class="op">=</span> <span class="va">True</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>)):</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> tf.image.decode_image(<span class="bu">open</span>(image_file, <span class="st">'rb'</span>).read(), channels<span class="op">=</span><span class="dv">3</span>)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> tf.expand_dims(img, <span class="dv">0</span>)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> transform_images(img, <span class="dv">416</span>)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a>    boxes, scores, classes, nums <span class="op">=</span> yolo.predict(img)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> cv2.cvtColor(cv2.imread(image_file), cv2.COLOR_BGR2RGB)</span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> draw_outputs(img, (boxes, scores, classes, nums), class_names)</span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> visualize:</span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>        fig, axes <span class="op">=</span> plt.subplots(figsize <span class="op">=</span> figsize)</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a>        plt.imshow(img)</span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> boxes, scores, classes, nums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell" data-execution_count="30">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>image_file <span class="op">=</span> glob.glob(<span class="st">'../input/google-ai-open-images-object-detection-track/test/challenge2018_test/*'</span>)</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(image_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display" data-execution_count="30">
+<pre><code>99999</code></pre>
+</div>
+</div>
+<div class="cell" data-execution_count="31">
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">0</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="32">
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">1</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="33">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">3</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-34-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="34">
+<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">4</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="35">
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">8</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-36-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="36">
+<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">12</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-37-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="37">
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">13</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-38-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="38">
+<div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">15</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-39-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+<div class="cell" data-execution_count="39">
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">18</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-display">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-40-output-1.png" class="img-fluid"></p>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const disableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'prefetch';
+    }
+  }
+  const enableStylesheet = (stylesheets) => {
+    for (let i=0; i < stylesheets.length; i++) {
+      const stylesheet = stylesheets[i];
+      stylesheet.rel = 'stylesheet';
+    }
+  }
+  const manageTransitions = (selector, allowTransitions) => {
+    const els = window.document.querySelectorAll(selector);
+    for (let i=0; i < els.length; i++) {
+      const el = els[i];
+      if (allowTransitions) {
+        el.classList.remove('notransition');
+      } else {
+        el.classList.add('notransition');
+      }
+    }
+  }
+  const toggleColorMode = (alternate) => {
+    // Switch the stylesheets
+    const alternateStylesheets = window.document.querySelectorAll('link.quarto-color-scheme.quarto-color-alternate');
+    manageTransitions('#quarto-margin-sidebar .nav-link', false);
+    if (alternate) {
+      enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
+    } else {
+      disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
+    }
+    manageTransitions('#quarto-margin-sidebar .nav-link', true);
+    // Switch the toggles
+    const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
+    for (let i=0; i < toggles.length; i++) {
+      const toggle = toggles[i];
+      if (toggle) {
+        if (alternate) {
+          toggle.classList.add("alternate");     
+        } else {
+          toggle.classList.remove("alternate");
+        }
+      }
+    }
+    // Hack to workaround the fact that safari doesn't
+    // properly recolor the scrollbar when toggling (#1455)
+    if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
+      manageTransitions("body", false);
+      window.scrollTo(0, 1);
+      setTimeout(() => {
+        window.scrollTo(0, 0);
+        manageTransitions("body", true);
+      }, 40);  
+    }
+  }
+  const isFileUrl = () => { 
+    return window.location.protocol === 'file:';
+  }
+  const hasAlternateSentinel = () => {  
+    let styleSentinel = getColorSchemeSentinel();
+    if (styleSentinel !== null) {
+      return styleSentinel === "alternate";
+    } else {
+      return false;
+    }
+  }
+  const setStyleSentinel = (alternate) => {
+    const value = alternate ? "alternate" : "default";
+    if (!isFileUrl()) {
+      window.localStorage.setItem("quarto-color-scheme", value);
+    } else {
+      localAlternateSentinel = value;
+    }
+  }
+  const getColorSchemeSentinel = () => {
+    if (!isFileUrl()) {
+      const storageValue = window.localStorage.getItem("quarto-color-scheme");
+      return storageValue != null ? storageValue : localAlternateSentinel;
+    } else {
+      return localAlternateSentinel;
+    }
+  }
+  let localAlternateSentinel = 'default';
+  // Dark / light mode switch
+  window.quartoToggleColorScheme = () => {
+    // Read the current dark / light value 
+    let toAlternate = !hasAlternateSentinel();
+    toggleColorMode(toAlternate);
+    setStyleSentinel(toAlternate);
+  };
+  // Ensure there is a toggle, if there isn't float one in the top right
+  if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
+    const a = window.document.createElement('a');
+    a.classList.add('top-right');
+    a.classList.add('quarto-color-scheme-toggle');
+    a.href = "";
+    a.onclick = function() { try { window.quartoToggleColorScheme(); } catch {} return false; };
+    const i = window.document.createElement("i");
+    i.classList.add('bi');
+    a.appendChild(i);
+    window.document.body.appendChild(a);
+  }
+  // Switch to dark mode if need be
+  if (hasAlternateSentinel()) {
+    toggleColorMode(true);
+  } else {
+    toggleColorMode(false);
+  }
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

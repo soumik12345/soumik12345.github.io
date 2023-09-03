@@ -8,7 +8,7 @@ listing:
   date-format: "long"
   categories: true
   contents:
-    - "reports/*.qmd"
+    - "feeds/reports/*.qmd"
 ---
 
 ## Reports published on [Fully Connected](https://wandb.ai/fully-connected)

@@ -14,7 +14,7 @@
 <item>
   <title>Efficient Graph-Based Image Segmentation</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/index.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/index.html</link>
   <description><![CDATA[ 
 
 
@@ -26,13 +26,13 @@
 <blockquote class="blockquote">
 Image Segmentation can be defined as the task of partitioning a given image into a set of disjoint regions usually with a goal of simplifying the representation of the image into something that is more meaningful and easier to analyze.
 </blockquote>
-<p><img src="https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_1.png" class="img-fluid"></p>
 <p>It has been observed from past segmentation approaches that</p>
 <ul>
 <li>It’s not adequate to assume that regions have nearly constant or slowly varying intensities.</li>
 <li>The determination of boundary between the regions cannot only use local decision criteria.</li>
 </ul>
-<p><img src="https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_2.png" class="img-fluid"></p>
 </section>
 <section id="the-idea" class="level2">
 <h2 class="anchored" data-anchor-id="the-idea">The Idea</h2>
@@ -45,7 +45,7 @@ Image Segmentation can be defined as the task of partitioning a given image into
 <blockquote class="blockquote">
 There is a boundary between two adjacent regions C<sub>i</sub> and C<sub>j</sub>, i.e, Variation across C<sub>i</sub> and C<sub>j</sub> is greater than variation within C<sub>i</sub> or C<sub>j</sub> individually.
 </blockquote>
-<p><img src="https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_3.png" class="img-fluid"></p>
 </section>
 <section id="problem-formulation" class="level2">
 <h2 class="anchored" data-anchor-id="problem-formulation">Problem Formulation</h2>
@@ -1405,10 +1405,10 @@ font-style: inherit;">2</span>)</span>
 </section>
 <section id="results" class="level2">
 <h2 class="anchored" data-anchor-id="results">Results</h2>
-<p><img src="https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/https:/raw.githubusercontent.com/soumik12345/felzenszwalb_segmentation/master/assets/sample_1.png" class="img-fluid"></p>
-<p><img src="https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/https:/raw.githubusercontent.com/soumik12345/felzenszwalb_segmentation/master/assets/sample_2.png" class="img-fluid"></p>
-<p><img src="https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/https:/raw.githubusercontent.com/soumik12345/felzenszwalb_segmentation/master/assets/sample_3.png" class="img-fluid"></p>
-<p><img src="https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/https:/raw.githubusercontent.com/soumik12345/felzenszwalb_segmentation/master/assets/sample_4.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/https:/raw.githubusercontent.com/soumik12345/felzenszwalb_segmentation/master/assets/sample_1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/https:/raw.githubusercontent.com/soumik12345/felzenszwalb_segmentation/master/assets/sample_2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/https:/raw.githubusercontent.com/soumik12345/felzenszwalb_segmentation/master/assets/sample_3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/https:/raw.githubusercontent.com/soumik12345/felzenszwalb_segmentation/master/assets/sample_4.png" class="img-fluid"></p>
 
 
 </section>
@@ -1417,14 +1417,14 @@ font-style: inherit;">2</span>)</span>
   <category>computervision</category>
   <category>algebra</category>
   <category>python</category>
-  <guid>https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/index.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/index.html</guid>
   <pubDate>Wed, 16 Sep 2020 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_logo.png" medium="image" type="image/png" height="89" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_logo.png" medium="image" type="image/png" height="89" width="144"/>
 </item>
 <item>
   <title>Enet-Camvid</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/enet-camvid.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/enet-camvid.html</link>
   <description><![CDATA[ 
 
 
@@ -1591,7 +1591,7 @@ font-style: inherit;">#collapse-hide</span></span>
 background-color: null;
 font-style: inherit;">'enet_initial_block_xc7itf.svg'</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-5-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-5-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -1718,7 +1718,7 @@ font-style: inherit;">#collapse-hide</span></span>
 background-color: null;
 font-style: inherit;">'enet_regular_bottleneck_esc4ir.svg'</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-7-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-7-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -1998,7 +1998,7 @@ font-style: inherit;">#collapse-hide</span></span>
 background-color: null;
 font-style: inherit;">'enet_downsampling_bottleneck-1_ysayci.svg'</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-9-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-9-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -2294,7 +2294,7 @@ font-style: inherit;">#collapse-hide</span></span>
 background-color: null;
 font-style: inherit;">'enet_upsampling_block_du1lmw.svg'</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-11-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-11-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -5211,7 +5211,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb27-15">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-25-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-25-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -6502,64 +6502,64 @@ Training Mean Loss: 0.667980
 Validation Mean Loss: -5.383368</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-2.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-3.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-4.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-4.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-5.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-5.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-6.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-6.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-7.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-7.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-8.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-8.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-9.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-9.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-10.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-10.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-11.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-11.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-12.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-12.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-13.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-13.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-14.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-14.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-15.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-15.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-16.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-16.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-17.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-17.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-18.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-18.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-19.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-19.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-20.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-20.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-30-output-21.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-30-output-21.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Now, let us visualize the results…</p>
@@ -6585,7 +6585,7 @@ font-style: inherit;">'Validation Loss'</span>)</span>
 <span id="cb34-3">plt.legend()</span>
 <span id="cb34-4">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-31-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-31-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-outputid="21f1c1bb-891c-44d3-f352-5e2f1bc058db">
@@ -6601,7 +6601,7 @@ font-style: inherit;">'Training Loss'</span>)</span>
 <span id="cb35-2">plt.legend()</span>
 <span id="cb35-3">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-outputid="b4fb7ae1-dffd-462e-f77c-9a3ab032e85e">
@@ -6617,7 +6617,7 @@ font-style: inherit;">'Validation Loss'</span>)</span>
 <span id="cb36-2">plt.legend()</span>
 <span id="cb36-3">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -6746,7 +6746,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb39-16">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <p>Prediction on Validation Data</p>
@@ -6858,7 +6858,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb40-16">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/enet-camvid_files/figure-html/cell-36-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/enet-camvid_files/figure-html/cell-36-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 
@@ -6871,14 +6871,14 @@ font-style: inherit;">1</span></span>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/enet-camvid.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/enet-camvid.html</guid>
   <pubDate>Mon, 04 May 2020 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/enet-camvid.png" medium="image" type="image/png" height="144" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/enet-camvid.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
   <title>Hand Detection using Faster RCNN</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/detectron-fast-rcnn.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn.html</link>
   <description><![CDATA[ 
 
 
@@ -24956,7 +24956,7 @@ background-color: null;
 font-style: inherit;">'none'</span>))</span>
 <span id="cb30-4">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-fast-rcnn_files/figure-html/cell-26-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn_files/figure-html/cell-26-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -25205,13 +25205,13 @@ font-style: inherit;">1</span>])</span></code></pre></div>
 <pre><code></code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-fast-rcnn_files/figure-html/cell-29-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn_files/figure-html/cell-29-output-3.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-fast-rcnn_files/figure-html/cell-29-output-4.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn_files/figure-html/cell-29-output-4.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-fast-rcnn_files/figure-html/cell-29-output-5.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn_files/figure-html/cell-29-output-5.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-outputid="f705d88f-ee97-4f40-eeb2-0b917f6088b2" data-execution_count="8">
@@ -25717,13 +25717,13 @@ font-style: inherit;">1</span>])</span></code></pre></div>
 <pre><code></code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-fast-rcnn_files/figure-html/cell-34-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn_files/figure-html/cell-34-output-3.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-fast-rcnn_files/figure-html/cell-34-output-4.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn_files/figure-html/cell-34-output-4.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-fast-rcnn_files/figure-html/cell-34-output-5.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn_files/figure-html/cell-34-output-5.png" class="img-fluid"></p>
 </div>
 </div>
 
@@ -25736,14 +25736,14 @@ font-style: inherit;">1</span>])</span></code></pre></div>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/detectron-fast-rcnn.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/detectron-fast-rcnn.html</guid>
   <pubDate>Sun, 12 Apr 2020 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/hand_detection.png" medium="image" type="image/png" height="81" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/hand_detection.png" medium="image" type="image/png" height="81" width="144"/>
 </item>
 <item>
   <title>Balloon Detection using Mask RCNN</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/detectron-mask-rcnn.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn.html</link>
   <description><![CDATA[ 
 
 
@@ -25991,7 +25991,7 @@ input.jpg           100%[===================&gt;] 204.32K   847KB/s    in 0.2s
 </code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-mask-rcnn_files/figure-html/cell-4-output-2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn_files/figure-html/cell-4-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-outputid="3f43929d-1421-449a-cbb1-0aa32efe4a50" data-execution_count="3">
@@ -26095,7 +26095,7 @@ font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>])</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-mask-rcnn_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -26402,13 +26402,13 @@ font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>])</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-mask-rcnn_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-mask-rcnn_files/figure-html/cell-11-output-2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn_files/figure-html/cell-11-output-2.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-mask-rcnn_files/figure-html/cell-11-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn_files/figure-html/cell-11-output-3.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-outputid="4f0d91a8-9b17-46a7-d7fc-f85212026718" data-execution_count="11">
@@ -26933,13 +26933,13 @@ font-style: inherit;">-</span><span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>])</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-mask-rcnn_files/figure-html/cell-15-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn_files/figure-html/cell-15-output-1.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-mask-rcnn_files/figure-html/cell-15-output-2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn_files/figure-html/cell-15-output-2.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/detectron-mask-rcnn_files/figure-html/cell-15-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn_files/figure-html/cell-15-output-3.png" class="img-fluid"></p>
 </div>
 </div>
 
@@ -26952,14 +26952,14 @@ font-style: inherit;">1</span>])</span></code></pre></div>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/detectron-mask-rcnn.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/detectron-mask-rcnn.html</guid>
   <pubDate>Sun, 12 Apr 2020 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/balloon.png" medium="image" type="image/png" height="192" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/balloon.png" medium="image" type="image/png" height="192" width="144"/>
 </item>
 <item>
   <title>Automatic Number Plate Recognition</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/anpr.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/anpr.html</link>
   <description><![CDATA[ 
 
 
@@ -27909,7 +27909,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb11-9">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/anpr_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/anpr_files/figure-html/cell-9-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -28652,7 +28652,7 @@ background-color: null;
 font-style: inherit;">'TB'</span></span>
 <span id="cb16-7">)</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
-<p><img src="https://geekyrakshit.dev/posts/anpr_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/anpr_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 </section>
@@ -28936,7 +28936,7 @@ background-color: null;
 font-style: inherit;">'r'</span>)</span>
 <span id="cb23-3">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/anpr_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/anpr_files/figure-html/cell-18-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell">
@@ -29383,7 +29383,7 @@ font-style: inherit;">0</span>].reshape(img_w, img_h).T)</span>
 <pre><code>Text(0.5, 1.0, 'Z16th6435')</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/anpr_files/figure-html/cell-26-output-2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/anpr_files/figure-html/cell-26-output-2.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-outputid="72632de7-f956-48e1-8ee9-8382d145121d" data-execution_count="23">
@@ -29459,7 +29459,7 @@ background-color: null;
 font-style: inherit;">1</span></span>
 <span id="cb38-11">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/anpr_files/figure-html/cell-27-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/anpr_files/figure-html/cell-27-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 
@@ -29472,14 +29472,14 @@ font-style: inherit;">1</span></span>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/anpr.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/anpr.html</guid>
   <pubDate>Sun, 12 Apr 2020 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/anpr.png" medium="image" type="image/png" height="83" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/anpr.png" medium="image" type="image/png" height="83" width="144"/>
 </item>
 <item>
   <title>YOLOv3 using Tensorflow 2.0</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0.html</link>
   <description><![CDATA[ 
 
 
@@ -32457,7 +32457,7 @@ background-color: null;
 font-style: inherit;">True</span></span>
 <span id="cb29-7">)</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-28-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-28-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="28">
@@ -32551,7 +32551,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="32">
@@ -32567,7 +32567,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="33">
@@ -32583,7 +32583,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-34-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-34-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="34">
@@ -32599,7 +32599,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="35">
@@ -32615,7 +32615,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-36-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-36-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="36">
@@ -32631,7 +32631,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-37-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-37-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="37">
@@ -32647,7 +32647,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-38-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-38-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="38">
@@ -32663,7 +32663,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-39-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-39-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="39">
@@ -32679,7 +32679,7 @@ font-style: inherit;">20</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">20</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-40-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0_files/figure-html/cell-40-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 
@@ -32692,14 +32692,14 @@ font-style: inherit;">20</span>))</span></code></pre></div>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/yolo-v3-using-tensorflow-2-0.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/yolo-v3-using-tensorflow-2-0.html</guid>
   <pubDate>Sun, 12 Apr 2020 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/yolo_v3_tf2.png" medium="image" type="image/png" height="97" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/yolo_v3_tf2.png" medium="image" type="image/png" height="97" width="144"/>
 </item>
 <item>
   <title>Depthwise Separable Convolutions in Deep Learning</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/depthwise-separable-convolution/index.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/index.html</link>
   <description><![CDATA[ 
 
 
@@ -32714,7 +32714,7 @@ font-style: inherit;">20</span>))</span></code></pre></div>
 <p>It can also be defined as the overlap of two functions f and g as one slides over the other, performing a sum of products.</p>
 <figure class="image figure">
 <center>
-<img src="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/img_1.gif" class="figure-img">
+<img src="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/img_1.gif" class="figure-img">
 <figcaption class="figure-caption">
 Source: <a href="https://en.wikipedia.org/wiki/Convolution">https://en.wikipedia.org/wiki/Convolution</a>
 </figcaption>
@@ -32722,7 +32722,7 @@ Source: <a href="https://en.wikipedia.org/wiki/Convolution">https://en.wikipedia
 </figure>
 <figure class="image figure">
 <center>
-<img src="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/img_2.gif" class="figure-img">
+<img src="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/img_2.gif" class="figure-img">
 <figcaption class="figure-caption">
 Convolution as Sum of Products. Source: <a href="https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1">https://towardsdatascience.com/intuitively-understanding-convolutions-for-deep-learning-1f6f42faee1</a>
 </figcaption>
@@ -32733,9 +32733,9 @@ Convolution as Sum of Products. Source: <a href="https://towardsdatascience.com/
 <h2 class="anchored" data-anchor-id="computational-complexity-of-convolution">Computational Complexity of Convolution</h2>
 <p>In order to decide the computational complexity of the convolutional operation, we would count the number of multiplication operations for a convolution. This is because the Binary Addition of two numbers may be performed in a single clock cycle using two registers with the inputs latched and a bunch of combinatorial logic gates. Binary multiplication, however, requires successive shift and addition operations which must be performed as many times as there are bits in the multiplier and is thus a more expensive operation.</p>
 <p>Let us consider an input volume of the dimension (<img src="https://latex.codecogs.com/png.latex?D_%7BV%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BV%7D">, N) where <img src="https://latex.codecogs.com/png.latex?D_%7BV%7D"> is the height and width of the volume and <img src="https://latex.codecogs.com/png.latex?N"> is the number of channels. In the case of a standard RGB image <img src="https://latex.codecogs.com/png.latex?N%20=%203"> and for a gray-scale image <img src="https://latex.codecogs.com/png.latex?N%20=%201">.</p>
-<p><img src="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/img_3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/img_3.png" class="img-fluid"></p>
 <p>Let us convolve V with a tensor of shape (<img src="https://latex.codecogs.com/png.latex?D_%7BV%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BV%7D">, N) or N tensors with the shape (<img src="https://latex.codecogs.com/png.latex?D_%7Bk%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7Bk%7D">) which results in a volume <img src="https://latex.codecogs.com/png.latex?G"> of shape (<img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, N).</p>
-<p><img src="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/img_4.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/img_4.png" class="img-fluid"></p>
 <p>Let us count the number of multiplication operations for this operation.</p>
 <p>Number of multiplication operations for a single stride across a single channel = <img src="https://latex.codecogs.com/png.latex?D_%7Bk%7D%20*%20D_%7Bk%7D">.</p>
 <p>For M channels in the initial volume, the number of multiplication operations = <img src="https://latex.codecogs.com/png.latex?(D_%7Bk%7D)%5E%7B2%7D%20*%20M">.</p>
@@ -32753,9 +32753,9 @@ Convolution as Sum of Products. Source: <a href="https://towardsdatascience.com/
 <section id="depthwise-convolutions" class="level3">
 <h3 class="anchored" data-anchor-id="depthwise-convolutions">Depthwise Convolutions</h3>
 <p>Let us consider the same input volume (<img src="https://latex.codecogs.com/png.latex?D_%7BV%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BV%7D">, M) convolving with M (<img src="https://latex.codecogs.com/png.latex?D_%7BK%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BK%7D">) kernels. A single convolution with a single kernel gives a volume of (<img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, 1). Repeating this N times, we get N such tensors and stacking them up channel-wise, we get a single tensor of shape (<img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, M).</p>
-<p><img src="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/img_5.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/img_5.png" class="img-fluid"></p>
 <p>Now, the number of multiplication operations for a single kernel convolving over a single input channel = <img src="https://latex.codecogs.com/png.latex?D_%7BK%7D%20*%20D_%7BK%7D">. When the convolution is applied over an entire input volume</p>
-<p><img src="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/img_6.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/img_6.png" class="img-fluid"></p>
 <p>Let us now find the computational complexity for Depthwise Convolution.</p>
 <p>The number of multiplication operations for the convolution of a single (<img src="https://latex.codecogs.com/png.latex?D_%7BK%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BK%7D">) kernel over a single stride over the input volume = <img src="https://latex.codecogs.com/png.latex?(D_%7BK%7D)%5E%7B2%7D">.</p>
 <p>Since the output shape is (<img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">), the number of multiplication operations for convolving over a single channel of the input image = <img src="https://latex.codecogs.com/png.latex?(D_%7BG%7D)%5E%7B2%7D%20*%20(D_%7BK%7D)%5E%7B2%7D">.</p>
@@ -32765,7 +32765,7 @@ Convolution as Sum of Products. Source: <a href="https://towardsdatascience.com/
 <section id="pointwise-convolution" class="level2">
 <h2 class="anchored" data-anchor-id="pointwise-convolution">Pointwise Convolution</h2>
 <p>For Pointwise Convolution, we convolve the (<img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, M) volume with <img src="https://latex.codecogs.com/png.latex?N"> kernels of (1, 1, <img src="https://latex.codecogs.com/png.latex?M">) producing the desired output of shape (<img src="https://latex.codecogs.com/png.latex?D_%7BV%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BV%7D">, N).</p>
-<p><img src="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/img_7.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/img_7.png" class="img-fluid"></p>
 <p>We will now find the computational complexity of the Pointwise Convolution operation.</p>
 <p>For convolving a single kernel over a single stride of the input image, the number of multiplication operations = <img src="https://latex.codecogs.com/png.latex?1%20*%201%20*%20M"> = <img src="https://latex.codecogs.com/png.latex?M">.</p>
 <p>For convolving a single kernel over a single channel of the input tensor producing a shape of (<img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">, <img src="https://latex.codecogs.com/png.latex?D_%7BG%7D">), the number of multiplication operations = <img src="https://latex.codecogs.com/png.latex?M%20*%20(D_%7BG%7D)%5E%7B2%7D">.</p>
@@ -32780,7 +32780,7 @@ Convolution as Sum of Products. Source: <a href="https://towardsdatascience.com/
 <p>or,</p>
 <p><img src="https://latex.codecogs.com/png.latex?%5Cfrac%7Bconv_%7Bvanilla%7D%7D%7Bconv_%7Bdsc%7D%7D%20=%20%5Cfrac%7B1%7D%7B(D_%7BK%7D)%5E%7B2%7D%7D%20+%20%5Cfrac%7B1%7D%7BN%7D"></p>
 <p>Now, let us consider <img src="https://latex.codecogs.com/png.latex?N%20=%203"> and <code>DK = [2 ** i for i in range(5, 11)]</code> and visualize how the ratio varies.</p>
-<p><img src="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/img_8.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/img_8.png" class="img-fluid"></p>
 <p>Note that the ratio of Time Complexity of Vanilla Convolution to that of Depthwise Separable Convolution is always much less than 1 and it decreases with increasing Kernel Dimension, making it much faster compared to Vanilla Convolution.</p>
 <p>Depthwise Separable Convolutions are widely used in building fast CNN architectures such as <strong>Xception</strong>, <strong>Mobilenet</strong> and <a href="https://arxiv.org/abs/1808.04456"><strong>Multi-modal Neural Networks</strong></a>. In the upcoming articles, we would discuss these two articles in detail.</p>
 
@@ -32791,14 +32791,14 @@ Convolution as Sum of Products. Source: <a href="https://towardsdatascience.com/
   <category>computervision</category>
   <category>deeplearning</category>
   <category>keras</category>
-  <guid>https://geekyrakshit.dev/posts/depthwise-separable-convolution/index.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/index.html</guid>
   <pubDate>Fri, 18 Oct 2019 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/depthwise-separable-convolution/assets/chart-preview.png" medium="image" type="image/png" height="78" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/depthwise-separable-convolution/assets/chart-preview.png" medium="image" type="image/png" height="78" width="144"/>
 </item>
 <item>
   <title>Nearest Celebrity Face using Deep Learning</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/nearest-celebrity-face/index.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/index.html</link>
   <description><![CDATA[ 
 
 
@@ -32808,7 +32808,7 @@ Convolution as Sum of Products. Source: <a href="https://towardsdatascience.com/
 <p>Face Recognition is one of the more interesting applications of Deep Learning i. At a single glance, it may seem like a simple classification problem; classify if this photo shows Soumik’s face or Souranil’s. You might be quick to jump to the conclusion, oh, the handsome face on the right belongs to Soumik and the ugly face on the left belongs to Souranil but, Ahem!!! We beg to differ.</p>
 <figure class="image figure">
 <center>
-<img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_1.jpg" class="figure-img">
+<img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_1.jpg" class="figure-img">
 <figcaption class="figure-caption">
 Dear ConvNet, which of these is Soumik and which one is Souranil???
 </figcaption>
@@ -32822,7 +32822,7 @@ Dear ConvNet, which of these is Soumik and which one is Souranil???
 <p>Let’s focus a bit more light on the problem discussed earlier with an example. Our dear friend Atul is supposed to appear for a video interview for a company and he wants to remain undisturbed during the interview, so he won’t allow anyone into his room other than Abhik who speaks a lot of Crox English and would help him with the interview (from behind the laptop of course). So, he wants sets up a system using his phone camera which would verify if the person who wants to enter his room is Abhik or not. Now, Atul can simply design a ConvNet with convolutional layers followed by a couple of fully connected layers ending in a softmax activation with 3 outputs corresponding to the three of us.</p>
 <figure class="image figure">
 <center>
-<img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_2.jpg" class="figure-img">
+<img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_2.jpg" class="figure-img">
 <figcaption class="figure-caption">
 Which of us speaks the best Crox will be decided upon by Atul’s algorithm!!!
 </figcaption>
@@ -32841,7 +32841,7 @@ Which of us speaks the best Crox will be decided upon by Atul’s algorithm!!!
 <section id="siamese-networks" class="level2">
 <h2 class="anchored" data-anchor-id="siamese-networks">Siamese Networks</h2>
 <p>The job of the function D is to learn the level of difference between two different images of faces. A nice way to do this is by using Siamese Networks. While a traditional ConvNet consists of Convolutional layers followed by Fully Connected or Dense Layers which are then fed into a Softmax function to perform classification, in case of a Siamese Network, there is no Softmax unit, instead the last Dense layer acts as the output layers which gives a list or vector of numbers. Let us call the outputs for images <code>x_1</code> and <code>x_2</code>, <code>f(x_1)</code> and <code>f(x_2)</code> respectively. Let’s say that the output layer has 128 fully connected units, hence, <code>f(x_1)</code> and <code>f(x_2)</code> will each be a vector of <code>128</code> numbers. <code>f(x_1)</code> and <code>f(x_2)</code> are called the Encoding of <code>x_1</code> and <code>x_2</code> respectively.</p>
-<p><img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_3.png" class="img-fluid"></p>
 <p>If we believe the encodings to be a good enough representation of the input images, we can define the function D as the square of norm of the difference between the Encodings.</p>
 <p><img src="https://latex.codecogs.com/png.latex?D(x_%7B1%7D,%20x_%7B2%7D)%20=%20%7C%7Cf(x_%7B1%7D)%20-%20f(x_%7B2%7D)%7C%7C%5E%7B2%7D"></p>
 <p>Now the question comes that how do we train such a network. Since the same network is used to compute the Encodings from two different images, we have to train the parameters so that the trained network defines as accurate Encoding.</p>
@@ -32849,7 +32849,7 @@ Which of us speaks the best Crox will be decided upon by Atul’s algorithm!!!
 <section id="training-a-siamese-network" class="level2">
 <h2 class="anchored" data-anchor-id="training-a-siamese-network">Training a Siamese Network</h2>
 <p>One way to learn the parameters of the neural network so that it gives you an accurate enough encoding for the images is to define an applied gradient descent on the <strong>Triplet Loss Function</strong>. In this case, we will have an anchor image, a positive image (the same person as the anchor image) and a negative image (a different person from the anchor image). Now we train the Siamese Network so that the distance between the anchor and the positive image is minimized. This also increases the distance between the anchor and the negative image is maximized. The fact that at each instance, we are looking at three images gives rise to the terminology Triplet Loss. The dataset, in this case, should consist of multiple triplets of Anchor, Positive and Negative Images.</p>
-<p><img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_4.jpg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_4.jpg" class="img-fluid"></p>
 </section>
 <section id="learning-objective" class="level2">
 <h2 class="anchored" data-anchor-id="learning-objective">Learning Objective</h2>
@@ -32868,7 +32868,7 @@ Which of us speaks the best Crox will be decided upon by Atul’s algorithm!!!
 <section id="extending-the-idea-to-nearest-celebrity-face" class="level2">
 <h2 class="anchored" data-anchor-id="extending-the-idea-to-nearest-celebrity-face">Extending the Idea to Nearest Celebrity Face</h2>
 <p>I always wondered about those Facebook applications which used to predict stuff like which Celebrity or Footballer you look like. I tried building a similar application using the idea of FaceNet. Instead of keeping images of existing people to be verified in the database, I collected images of famous celebrities from Google Images, closely cropped their faces and stored their Encodings in the database. The Encodings were generated by a pre-trained FaceNet with an Inception backbone. Now theoretically, if I input some of my friends’ faces, they should ideally match the closest image in the database. Well, I tried implementing it and the results were hilarious 😂</p>
-<p><img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_0.png" class="img-fluid"> <img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_5.png" class="img-fluid"> <img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_6.png" class="img-fluid"> <img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_7.png" class="img-fluid"> <img src="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_8.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_0.png" class="img-fluid"> <img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_5.png" class="img-fluid"> <img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_6.png" class="img-fluid"> <img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_7.png" class="img-fluid"> <img src="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_8.png" class="img-fluid"></p>
 <p>The project can be found at <a href="https://github.com/soumik12345/Nearest-Celebrity-Face">https://github.com/soumik12345/Nearest-Celebrity-Face</a>. If you like the project and found the results to be hilarious, please leave a star on the Github repository. For more such exciting articles, stay tuned at <a href="http://geekyrakshit.dev">http://geekyrakshit.dev</a>.</p>
 
 
@@ -32878,14 +32878,14 @@ Which of us speaks the best Crox will be decided upon by Atul’s algorithm!!!
   <category>computervision</category>
   <category>deeplearning</category>
   <category>keras</category>
-  <guid>https://geekyrakshit.dev/posts/nearest-celebrity-face/index.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/index.html</guid>
   <pubDate>Tue, 06 Aug 2019 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/nearest-celebrity-face/assets/img_0.png" medium="image" type="image/png" height="56" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/nearest-celebrity-face/assets/img_0.png" medium="image" type="image/png" height="56" width="144"/>
 </item>
 <item>
   <title>Relativistic AnimeGAN</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/relativistic-anime-gan.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan.html</link>
   <description><![CDATA[ 
 
 
@@ -33645,7 +33645,7 @@ font-style: inherit;">/</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span>)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-8-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="8">
@@ -33995,7 +33995,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 [25/300][337/674] Loss_D: 0.0862 Loss_G: 1.1176</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-3.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34003,7 +34003,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-5.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-5.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34011,7 +34011,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-7.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-7.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34019,7 +34019,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-9.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-9.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34027,7 +34027,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-11.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-11.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34035,7 +34035,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-13.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-13.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34043,7 +34043,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-15.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-15.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34051,7 +34051,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-17.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-17.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34059,7 +34059,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-19.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-19.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34067,7 +34067,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-21.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-21.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34075,7 +34075,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-23.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-23.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34083,7 +34083,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-25.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-25.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34091,7 +34091,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-27.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-27.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34099,7 +34099,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-29.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-29.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34107,7 +34107,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-31.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-31.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34115,7 +34115,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-33.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-33.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34123,7 +34123,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-35.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-35.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34131,7 +34131,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-37.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-37.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34139,7 +34139,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-39.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-39.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34147,7 +34147,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-41.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-41.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34155,7 +34155,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-43.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-43.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34163,7 +34163,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-45.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-45.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34171,7 +34171,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-47.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-47.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34179,7 +34179,7 @@ font-style: inherit;">len</span>(train_loader),</span>
 </script>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-11-output-49.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-11-output-49.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
 <script type="application/vnd.jupyter.widget-view+json">
@@ -34258,7 +34258,7 @@ background-color: null;
 font-style: inherit;">=</span>[])</span>
 <span id="cb13-4">    plt.imshow(img)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/relativistic-anime-gan_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan_files/figure-html/cell-13-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 
@@ -34270,14 +34270,14 @@ font-style: inherit;">=</span>[])</span>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/relativistic-anime-gan.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/relativistic-anime-gan.html</guid>
   <pubDate>Sun, 21 Jul 2019 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/ragan.png" medium="image" type="image/png" height="86" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/ragan.png" medium="image" type="image/png" height="86" width="144"/>
 </item>
 <item>
   <title>Deep Convolutional AnimeGAN</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/animegan.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/animegan.html</link>
   <description><![CDATA[ 
 
 
@@ -34442,7 +34442,7 @@ background-color: null;
 font-style: inherit;">'gray'</span>)</span>
 <span id="cb6-6">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-6-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="6">
@@ -35042,7 +35042,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-11-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-11-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="11">
@@ -35121,7 +35121,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="12">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-13-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-13-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="13">
@@ -35173,7 +35173,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="14">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-15-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-15-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="15">
@@ -35444,46 +35444,46 @@ Instructions for updating:
 Use tf.cast instead.</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-3.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-4.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-4.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-5.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-5.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-6.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-6.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-7.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-7.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-8.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-8.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-9.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-9.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-10.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-10.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-11.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-11.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-12.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-12.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-13.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-13.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-14.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-14.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-18-output-15.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-18-output-15.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="18">
@@ -35500,7 +35500,7 @@ background-color: null;
 font-style: inherit;">'Generator Loss History'</span>)</span>
 <span id="cb23-4">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="19">
@@ -35517,7 +35517,7 @@ background-color: null;
 font-style: inherit;">'Discriminator Loss History'</span>)</span>
 <span id="cb24-4">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-20-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="20">
@@ -35531,7 +35531,7 @@ font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">16</span>), generator)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/animegan_files/figure-html/cell-21-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/animegan_files/figure-html/cell-21-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="21">
@@ -35548,14 +35548,14 @@ font-style: inherit;">'./generator.h5'</span>)</span></code></pre></div>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/animegan.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/animegan.html</guid>
   <pubDate>Sat, 20 Jul 2019 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/animegan.png" medium="image" type="image/png" height="141" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/animegan.png" medium="image" type="image/png" height="141" width="144"/>
 </item>
 <item>
   <title>Conditional DCGAN</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/conditional-dcgan.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/conditional-dcgan.html</link>
   <description><![CDATA[ 
 
 
@@ -36140,7 +36140,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
-<p><img src="https://geekyrakshit.dev/posts/conditional-dcgan_files/figure-html/cell-9-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/conditional-dcgan_files/figure-html/cell-9-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="10">
@@ -36175,7 +36175,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
-<p><img src="https://geekyrakshit.dev/posts/conditional-dcgan_files/figure-html/cell-10-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/conditional-dcgan_files/figure-html/cell-10-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="11">
@@ -36210,7 +36210,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
-<p><img src="https://geekyrakshit.dev/posts/conditional-dcgan_files/figure-html/cell-11-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/conditional-dcgan_files/figure-html/cell-11-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="12">
@@ -36543,7 +36543,7 @@ background-color: null;
 font-style: inherit;">str</span>(i))</span>
 <span id="cb16-9">plt.show()</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/conditional-dcgan_files/figure-html/cell-15-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/conditional-dcgan_files/figure-html/cell-15-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="16">
@@ -36560,14 +36560,14 @@ font-style: inherit;">'./generator.h5'</span>)</span></code></pre></div>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/conditional-dcgan.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/conditional-dcgan.html</guid>
   <pubDate>Sat, 20 Jul 2019 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/cgan.png" medium="image" type="image/png" height="54" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/cgan.png" medium="image" type="image/png" height="54" width="144"/>
 </item>
 <item>
   <title>DCGAN</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/dcgan-mnist.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/dcgan-mnist.html</link>
   <description><![CDATA[ 
 
 
@@ -36993,7 +36993,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-12-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-12-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="12">
@@ -37046,7 +37046,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-14-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-14-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="14">
@@ -37091,7 +37091,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-16-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-16-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="16">
@@ -37266,28 +37266,28 @@ Instructions for updating:
 Use tf.cast instead.</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-18-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-18-output-3.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-18-output-4.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-18-output-4.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-18-output-5.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-18-output-5.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-18-output-6.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-18-output-6.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-18-output-7.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-18-output-7.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-18-output-8.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-18-output-8.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-18-output-9.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-18-output-9.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="18">
@@ -37301,7 +37301,7 @@ font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">6</span>), generator)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/dcgan-mnist_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/dcgan-mnist_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="19">
@@ -37318,14 +37318,14 @@ font-style: inherit;">'./generator.h5'</span>)</span></code></pre></div>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/dcgan-mnist.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/dcgan-mnist.html</guid>
   <pubDate>Fri, 19 Jul 2019 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/dcgan.png" medium="image" type="image/png" height="46" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/dcgan.png" medium="image" type="image/png" height="46" width="144"/>
 </item>
 <item>
   <title>MLP-GAN</title>
   <dc:creator>[GeekyRakshit](../) </dc:creator>
-  <link>https://geekyrakshit.dev/posts/mlp-gan.html</link>
+  <link>https://geekyrakshit.dev/feeds/posts/mlp-gan.html</link>
   <description><![CDATA[ 
 
 
@@ -37679,7 +37679,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-12-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-12-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="12">
@@ -37739,7 +37739,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-14-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-14-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="14">
@@ -37784,7 +37784,7 @@ font-style: inherit;">=</span> <span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">'svg'</span>))</span></code></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="15">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-16-output-1.svg" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-16-output-1.svg" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="16">
@@ -37961,34 +37961,34 @@ Instructions for updating:
 Use tf.cast instead.</code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-2.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-3.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-3.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-4.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-4.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-5.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-5.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-6.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-6.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-7.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-7.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-8.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-8.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-9.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-9.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-10.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-10.png" class="img-fluid"></p>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-18-output-11.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-18-output-11.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="18">
@@ -38002,7 +38002,7 @@ font-style: inherit;">16</span>, <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">6</span>), generator)</span></code></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="https://geekyrakshit.dev/posts/mlp-gan_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
+<p><img src="https://geekyrakshit.dev/feeds/posts/mlp-gan_files/figure-html/cell-19-output-1.png" class="img-fluid"></p>
 </div>
 </div>
 <div class="cell" data-execution_count="19">
@@ -38019,9 +38019,9 @@ font-style: inherit;">'./generator.h5'</span>)</span></code></pre></div>
   <category>keras</category>
   <category>python</category>
   <category>tensorflow</category>
-  <guid>https://geekyrakshit.dev/posts/mlp-gan.html</guid>
+  <guid>https://geekyrakshit.dev/feeds/posts/mlp-gan.html</guid>
   <pubDate>Thu, 18 Jul 2019 18:30:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/posts/assets/mlp_gan.png" medium="image" type="image/png" height="46" width="144"/>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/mlp_gan.png" medium="image" type="image/png" height="46" width="144"/>
 </item>
 </channel>
 </rss>
