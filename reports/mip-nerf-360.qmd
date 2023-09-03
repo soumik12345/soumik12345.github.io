@@ -2,7 +2,7 @@
 title: "Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields"
 author: "[GeekyRakshit](../../)"
 date: "2022-04-30"
-categories: [computervision, deeplearning, graphics, 2-minute-papers]
+categories: [computervision, deeplearning, nerf]
 image: "assets/mip-nerf-360.png"
 description: In this article, we explore how to achieve photorealistic rendering of large unbounded 3D scenes from novel camera angles while preserving fine-grained details. 
 format: 

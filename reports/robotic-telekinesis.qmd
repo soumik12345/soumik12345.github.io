@@ -1,0 +1,23 @@
+---
+title: "Robotic Telekinesis in the Wild"
+author: "[GeekyRakshit](../../)"
+date: "2022-07-12"
+categories: [computervision, deeplearning, robotics, 2-minute-papers]
+image: "assets/robotic-telekinesis.png"
+description: In this article, we teach a robotic hand imitator by watching humans on Youtube to enable any operator in the wild with only a single uncalibrated color camera.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/fVrcBY0lOWw?si=hcJo5CaGlWHeyMpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/robotic-telekinesis/reports/Robotic-Telekinesis-in-the-Wild--VmlldzoyMjY1NDAw" style="border:none;height:1024px;width:100%"></iframe>

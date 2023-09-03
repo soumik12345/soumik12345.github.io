@@ -11,8 +11,8 @@ website:
   navbar:
     right:
       - about.qmd
-      - posts.qmd
       - wandb_reports.qmd
+      - posts.qmd
       - icon: github
         href: https://github.com/soumik12345
       - icon: twitter

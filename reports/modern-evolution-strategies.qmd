@@ -1,0 +1,13 @@
+---
+title: "Modern Evolution Strategies for Creativity"
+author: "[GeekyRakshit](../../)"
+date: "2022-05-01"
+categories: [computervision, deeplearning, generative, jax]
+image: "assets/modern-evolution-startegies.png"
+description: In this article, we revisit evolutionary strategy algorithms for computational creativity and look at how they improve quality and efficiency in generating art.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/es-clip/reports/Modern-Evolution-Strategies-for-Creativity--VmlldzoyMDU3NTQ2?galleryTag=tmp" style="border:none;height:1024px;width:100%"></iframe>

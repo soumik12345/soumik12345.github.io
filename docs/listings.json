@@ -20,6 +20,11 @@
   {
     "listing": "/wandb_reports.html",
     "items": [
+      "/reports/cross-attention-control.html",
+      "/reports/game-characters.html",
+      "/reports/robotic-telekinesis.html",
+      "/reports/stylegan-nada.html",
+      "/reports/modern-evolution-strategies.html",
       "/reports/mip-nerf-360.html",
       "/reports/extracting-triangular-models.html",
       "/reports/barbershop.html",

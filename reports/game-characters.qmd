@@ -1,0 +1,23 @@
+---
+title: "Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings"
+author: "[GeekyRakshit](../../)"
+date: "2022-07-19"
+categories: [computervision, deeplearning, reinforcement-learning, 2-minute-papers]
+image: "assets/game-characters.png"
+description: In this article, we explore using large-scale reusable adversarial skill embeddings for physically simulated characters. 
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/1kV-rZZw50Q?si=WZmPeihHTqZMwHLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/adversarial%20skill%20embeddings/reports/Building-Diverse-Skillsets-for-Video-Game-Characters-With-Adversarial-Skill-Embeddings--VmlldzoyMjc3OTU5?galleryTag=computer-vision" style="border:none;height:1024px;width:100%"></iframe>

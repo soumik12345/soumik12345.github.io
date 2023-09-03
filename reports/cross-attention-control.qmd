@@ -1,0 +1,23 @@
+---
+title: "Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control"
+author: "[GeekyRakshit](../../)"
+date: "2022-09-29"
+categories: [computervision, deeplearning, generative, stable-diffusion, 2-minute-papers]
+image: "assets/cross-attention-control.png"
+description: A primer on text-driven image editing for large-scale text-based image synthesis models like Stable Diffusion & Imagen.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/XW_nO2NMH_g?si=OAaFHjcpu2jHIdU-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/wandb/cross-attention-control/reports/Improving-Generative-Images-with-Instructions-Prompt-to-Prompt-Image-Editing-with-Cross-Attention-Control--VmlldzoyNjk2MDAy?galleryTag=stable-diffusion" style="border:none;height:1024px;width:100%"></iframe>

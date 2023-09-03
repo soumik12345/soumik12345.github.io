@@ -10,7 +10,143 @@
 <atom:link href="https://geekyrakshit.dev/wandb_reports.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Fri, 29 Apr 2022 18:30:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 28 Sep 2022 18:30:00 GMT</lastBuildDate>
+<item>
+  <title>Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/cross-attention-control.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/XW_nO2NMH_g?si=OAaFHjcpu2jHIdU-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+
+<iframe src="https://wandb.ai/wandb/cross-attention-control/reports/Improving-Generative-Images-with-Instructions-Prompt-to-Prompt-Image-Editing-with-Cross-Attention-Control--VmlldzoyNjk2MDAy?galleryTag=stable-diffusion" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>generative</category>
+  <category>stable-diffusion</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/cross-attention-control.html</guid>
+  <pubDate>Wed, 28 Sep 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/cross-attention-control.png" medium="image" type="image/png" height="96" width="144"/>
+</item>
+<item>
+  <title>Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/game-characters.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/1kV-rZZw50Q?si=WZmPeihHTqZMwHLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/adversarial%20skill%20embeddings/reports/Building-Diverse-Skillsets-for-Video-Game-Characters-With-Adversarial-Skill-Embeddings--VmlldzoyMjc3OTU5?galleryTag=computer-vision" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>reinforcement-learning</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/game-characters.html</guid>
+  <pubDate>Mon, 18 Jul 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/game-characters.png" medium="image" type="image/png" height="121" width="144"/>
+</item>
+<item>
+  <title>Robotic Telekinesis in the Wild</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/robotic-telekinesis.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/fVrcBY0lOWw?si=hcJo5CaGlWHeyMpA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/robotic-telekinesis/reports/Robotic-Telekinesis-in-the-Wild--VmlldzoyMjY1NDAw" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>robotics</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/robotic-telekinesis.html</guid>
+  <pubDate>Mon, 11 Jul 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/robotic-telekinesis.png" medium="image" type="image/png" height="69" width="144"/>
+</item>
+<item>
+  <title>Digging Into StyleGAN-NADA for CLIP-Guided Domain Adaptation</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/stylegan-nada.html</link>
+  <description><![CDATA[ 
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/MO2K0JXAedM?si=SQ8fY8rA9cjTPOmz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/stylegan-nada/reports/Digging-Into-StyleGAN-NADA-for-CLIP-Guided-Domain-Adaptation--VmlldzoyMjA5MDU1" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>generative</category>
+  <category>2-minute-papers</category>
+  <guid>https://geekyrakshit.dev/reports/stylegan-nada.html</guid>
+  <pubDate>Thu, 07 Jul 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/nada.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Modern Evolution Strategies for Creativity</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/reports/modern-evolution-strategies.html</link>
+  <description><![CDATA[ 
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/es-clip/reports/Modern-Evolution-Strategies-for-Creativity--VmlldzoyMDU3NTQ2?galleryTag=tmp" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>generative</category>
+  <category>jax</category>
+  <guid>https://geekyrakshit.dev/reports/modern-evolution-strategies.html</guid>
+  <pubDate>Sat, 30 Apr 2022 18:30:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/reports/assets/modern-evolution-startegies.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
 <item>
   <title>Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
@@ -27,8 +163,7 @@
  ]]></description>
   <category>computervision</category>
   <category>deeplearning</category>
-  <category>graphics</category>
-  <category>2-minute-papers</category>
+  <category>nerf</category>
   <guid>https://geekyrakshit.dev/reports/mip-nerf-360.html</guid>
   <pubDate>Fri, 29 Apr 2022 18:30:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/reports/assets/mip-nerf-360.png" medium="image" type="image/png" height="88" width="144"/>
@@ -140,6 +275,7 @@
   <category>computervision</category>
   <category>deeplearning</category>
   <category>reinforcement-learning</category>
+  <category>robotics</category>
   <category>2-minute-papers</category>
   <guid>https://geekyrakshit.dev/reports/robust-perceptive-locomotive.html</guid>
   <pubDate>Thu, 10 Mar 2022 18:30:00 GMT</pubDate>

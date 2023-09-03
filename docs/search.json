@@ -453,5 +453,33 @@
     "title": "Extracting Triangular 3D Models, Materials, and Lighting From Images",
     "section": "",
     "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/stylegan-nada.html",
+    "href": "reports/stylegan-nada.html",
+    "title": "Digging Into StyleGAN-NADA for CLIP-Guided Domain Adaptation",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/game-characters.html",
+    "href": "reports/game-characters.html",
+    "title": "Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/robotic-telekinesis.html",
+    "href": "reports/robotic-telekinesis.html",
+    "title": "Robotic Telekinesis in the Wild",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "reports/cross-attention-control.html",
+    "href": "reports/cross-attention-control.html",
+    "title": "Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
   }
 ]

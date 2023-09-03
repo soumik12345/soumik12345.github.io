@@ -2,7 +2,7 @@
 title: "Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild"
 author: "[GeekyRakshit](../../)"
 date: "2022-03-11"
-categories: [computervision, deeplearning, reinforcement-learning, 2-minute-papers]
+categories: [computervision, deeplearning, reinforcement-learning, robotics, 2-minute-papers]
 image: "assets/robust-perceptive-locomotive.png"
 description: Or, teaching four-legged robots to walk in the real world.
 format: 

@@ -2,11 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://geekyrakshit.dev/posts.html</loc>
-    <lastmod>2023-09-02T18:06:44.833Z</lastmod>
+    <lastmod>2023-09-03T00:49:27.034Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/index.html</loc>
-    <lastmod>2023-09-03T00:14:15.971Z</lastmod>
+    <lastmod>2023-09-03T00:49:17.617Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/posts/relativistic-anime-gan.html</loc>
@@ -62,11 +62,11 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/about.html</loc>
-    <lastmod>2023-09-03T00:02:35.128Z</lastmod>
+    <lastmod>2023-09-03T00:49:57.835Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/wandb_reports.html</loc>
-    <lastmod>2023-09-02T18:44:45.549Z</lastmod>
+    <lastmod>2023-09-03T00:49:54.564Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/poe-gan.html</loc>
@@ -74,7 +74,7 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/robust-perceptive-locomotive.html</loc>
-    <lastmod>2023-09-02T18:30:31.045Z</lastmod>
+    <lastmod>2023-09-03T00:36:41.815Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/barbershop.html</loc>
@@ -90,6 +90,26 @@
   </url>
   <url>
     <loc>https://geekyrakshit.dev/reports/mip-nerf-360.html</loc>
-    <lastmod>2023-09-02T18:44:41.741Z</lastmod>
+    <lastmod>2023-09-03T00:36:41.479Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/modern-evolution-strategies.html</loc>
+    <lastmod>2023-09-03T00:36:40.842Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/stylegan-nada.html</loc>
+    <lastmod>2023-09-03T00:30:09.237Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/robotic-telekinesis.html</loc>
+    <lastmod>2023-09-03T00:42:57.837Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/game-characters.html</loc>
+    <lastmod>2023-09-03T00:41:19.919Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/reports/cross-attention-control.html</loc>
+    <lastmod>2023-09-03T00:46:41.179Z</lastmod>
   </url>
 </urlset>
