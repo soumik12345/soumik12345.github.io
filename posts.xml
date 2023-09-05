@@ -10,7 +10,744 @@
 <atom:link href="https://geekyrakshit.dev/posts.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.3.450</generator>
-<lastBuildDate>Thu, 17 Sep 2020 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 09 Apr 2023 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Fine-tune a TorchVision Model with Keras and WandB</title>
+  <dc:creator>[GeekyRakshit](../) </dc:creator>
+  <link>https://geekyrakshit.dev/feeds/posts/torchvision_keras.html</link>
+  <description><![CDATA[ 
+
+
+
+<!--- @wandbcode{keras_core_torchvision} -->
+<p><a href="https://colab.research.google.com/github/wandb/examples/blob/master/colabs/keras/keras_core/torchvision_keras.ipynb"><img src="https://geekyrakshit.dev/feeds/posts/https:/colab.research.google.com/assets/colab-badge.svg" align="left"></a><br></p>
+This notebook demonstrates
+<ul>
+<li>
+how we can fine-tune a pre-trained model from torchvision using <a href="https://github.com/keras-team/keras-core">KerasCore</a>.
+</li>
+<li>
+how we can use the backend-agnostic Keras callbacks for <a href="https://wandb.ai/site">Weights &amp; Biases</a> to manage and track our experiment.
+</li>
+</ul>
+<section id="installing-and-importing-the-dependencies" class="level2">
+<h2 class="anchored" data-anchor-id="installing-and-importing-the-dependencies">Installing and Importing the Dependencies</h2>
+<ul>
+<li>We install the <code>main</code> branch of <a href="https://github.com/keras-team/keras-core">KerasCore</a>, this lets us use the latest feature merged in KerasCore.</li>
+<li>We also install <a href="https://github.com/soumik12345/wandb-addons">wandb-addons</a>, a library that hosts the backend-agnostic callbacks compatible with KerasCore</li>
+</ul>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># install the `main` branch of KerasCore</span></span>
+<span id="cb1-2"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>pip install <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>qq namex</span>
+<span id="cb1-3"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>apt install python3<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">.10</span><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>venv</span>
+<span id="cb1-4"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>git clone https:<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span>github.com<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>soumik12345<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>keras<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>core.git <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;&amp;</span> cd keras<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>core <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">&amp;&amp;</span> python pip_build.py <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">--</span>install</span>
+<span id="cb1-5"></span>
+<span id="cb1-6"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># install wandb-addons</span></span>
+<span id="cb1-7"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>pip install <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>qq git<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span>https:<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span>github.com<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>soumik12345<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>wandb<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>addons</span></code></pre></div>
+</div>
+<p>We specify the Keras backend to be using <code>torch</code> by explicitly specifying the environment variable <code>KERAS_BACKEND</code>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> os</span>
+<span id="cb2-2">os.environ[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"KERAS_BACKEND"</span>] <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"torch"</span></span>
+<span id="cb2-3"></span>
+<span id="cb2-4"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> numpy <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> np</span>
+<span id="cb2-5"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> matplotlib.pyplot <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> plt</span>
+<span id="cb2-6"></span>
+<span id="cb2-7"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch</span>
+<span id="cb2-8"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch.nn <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> nn</span>
+<span id="cb2-9"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torch.nn.functional <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> F</span>
+<span id="cb2-10"></span>
+<span id="cb2-11"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> torchvision</span>
+<span id="cb2-12"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> torchvision <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> datasets, models, transforms</span>
+<span id="cb2-13"></span>
+<span id="cb2-14"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> wandb</span>
+<span id="cb2-15"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> wandb_addons.keras <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> WandbMetricsLogger, WandbModelCheckpoint</span></code></pre></div>
+</div>
+<p>We initialize a <a href="https://docs.wandb.ai/guides/runs">wandb run</a> and set the configs for the experiment.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1">wandb.init(project<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"keras-torch"</span>)</span>
+<span id="cb3-2"></span>
+<span id="cb3-3">config <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> wandb.config</span>
+<span id="cb3-4">config.batch_size <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span>
+<span id="cb3-5">config.num_epochs <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">25</span></span></code></pre></div>
+</div>
+</section>
+<section id="a-pytorch-based-input-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="a-pytorch-based-input-pipeline">A PyTorch-based Input Pipeline</h2>
+<p>We will be using the <a href="https://github.com/fastai/imagenette">ImageNette</a> dataset for this experiment. Imagenette is a subset of 10 easily classified classes from <a href="https://www.image-net.org/">Imagenet</a> (tench, English springer, cassette player, chain saw, church, French horn, garbage truck, gas pump, golf ball, parachute).</p>
+<p>First, let’s download this dataset.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>wget https:<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span>s3.amazonaws.com<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>fast<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>ai<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>imageclas<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>imagenette2<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">320.</span><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">tgz</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>P imagenette</span>
+<span id="cb4-2"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>tar zxf imagenette<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>imagenette2<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">320.</span><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">tgz</span> <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>C imagenette</span>
+<span id="cb4-3"><span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">!</span>gzip <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span>d imagenette<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">/</span>imagenette2<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">-</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">320.</span><span class="er" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">tgz</span></span></code></pre></div>
+</div>
+<p>Now, we create our standard torch-based data loading pipeline.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define pre-processing and augmentation transforms for the train and validation sets</span></span>
+<span id="cb5-2">data_transforms <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb5-3">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'train'</span>: transforms.Compose([</span>
+<span id="cb5-4">        transforms.RandomResizedCrop(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">224</span>),</span>
+<span id="cb5-5">        transforms.RandomHorizontalFlip(),</span>
+<span id="cb5-6">        transforms.ToTensor(),</span>
+<span id="cb5-7">        transforms.Normalize([<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.485</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.456</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.406</span>], [<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.229</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.224</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.225</span>])</span>
+<span id="cb5-8">    ]),</span>
+<span id="cb5-9">    <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'val'</span>: transforms.Compose([</span>
+<span id="cb5-10">        transforms.Resize(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">256</span>),</span>
+<span id="cb5-11">        transforms.CenterCrop(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">224</span>),</span>
+<span id="cb5-12">        transforms.ToTensor(),</span>
+<span id="cb5-13">        transforms.Normalize([<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.485</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.456</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.406</span>], [<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.229</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.224</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.225</span>])</span>
+<span id="cb5-14">    ]),</span>
+<span id="cb5-15">}</span>
+<span id="cb5-16"></span>
+<span id="cb5-17"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define the train and validation datasets</span></span>
+<span id="cb5-18">data_dir <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'imagenette/imagenette2-320'</span></span>
+<span id="cb5-19">image_datasets <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb5-20">    x: datasets.ImageFolder(</span>
+<span id="cb5-21">        os.path.join(data_dir, x), data_transforms[x]</span>
+<span id="cb5-22">    )</span>
+<span id="cb5-23">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'train'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'val'</span>]</span>
+<span id="cb5-24">}</span>
+<span id="cb5-25"></span>
+<span id="cb5-26"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define the torch dataloaders corresponding to the train and validation dataset</span></span>
+<span id="cb5-27">dataloaders <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {</span>
+<span id="cb5-28">    x: torch.utils.data.DataLoader(</span>
+<span id="cb5-29">        image_datasets[x],</span>
+<span id="cb5-30">        batch_size<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>config.batch_size,</span>
+<span id="cb5-31">        shuffle<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span>,</span>
+<span id="cb5-32">        num_workers<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">4</span></span>
+<span id="cb5-33">    )</span>
+<span id="cb5-34">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'train'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'val'</span>]</span>
+<span id="cb5-35">}</span>
+<span id="cb5-36">dataset_sizes <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> {x: <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(image_datasets[x]) <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> [<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'train'</span>, <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'val'</span>]}</span>
+<span id="cb5-37">class_names <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> image_datasets[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'train'</span>].classes</span>
+<span id="cb5-38"></span>
+<span id="cb5-39"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Specify the global device</span></span>
+<span id="cb5-40">device <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torch.device(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cuda"</span> <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> torch.cuda.is_available() <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">else</span> <span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cpu"</span>)</span></code></pre></div>
+</div>
+<p>Let’s take a look at a few of the samples.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> imshow(inp, title<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>):</span>
+<span id="cb6-2">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">"""Display image for Tensor."""</span></span>
+<span id="cb6-3">    inp <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> inp.numpy().transpose((<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">2</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>))</span>
+<span id="cb6-4">    mean <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.485</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.456</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.406</span>])</span>
+<span id="cb6-5">    std <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.array([<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.229</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.224</span>, <span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.225</span>])</span>
+<span id="cb6-6">    inp <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> std <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> inp <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">+</span> mean</span>
+<span id="cb6-7">    inp <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> np.clip(inp, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span>
+<span id="cb6-8">    plt.imshow(inp)</span>
+<span id="cb6-9">    <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">if</span> title <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">is</span> <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">not</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">None</span>:</span>
+<span id="cb6-10">        plt.title(title)</span>
+<span id="cb6-11">    plt.pause(<span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.001</span>)  <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># pause a bit so that plots are updated</span></span>
+<span id="cb6-12"></span>
+<span id="cb6-13"></span>
+<span id="cb6-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Get a batch of training data</span></span>
+<span id="cb6-15">inputs, classes <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">next</span>(<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">iter</span>(dataloaders[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'train'</span>]))</span>
+<span id="cb6-16"><span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">print</span>(inputs.shape, classes.shape)</span>
+<span id="cb6-17"></span>
+<span id="cb6-18"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Make a grid from batch</span></span>
+<span id="cb6-19">out <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> torchvision.utils.make_grid(inputs)</span>
+<span id="cb6-20"></span>
+<span id="cb6-21">imshow(out, title<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[class_names[x] <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">for</span> x <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">in</span> classes])</span></code></pre></div>
+</div>
+</section>
+<section id="creating-and-training-our-classifier" class="level2">
+<h2 class="anchored" data-anchor-id="creating-and-training-our-classifier">Creating and Training our Classifier</h2>
+<p>We typically define a model in PyTorch using <a href="https://pytorch.org/docs/stable/notes/modules.html"><code>torch.nn.Module</code>s</a> which act as the building blocks of stateful computation. Even though Keras supports PyTorch as a backend, it does not mean that we can nest torch modules inside a <a href="https://keras.io/keras_core/api/models/"><code>keras_core.Model</code></a>, because trainable variables inside a Keras Model is tracked exclusively via <a href="https://keras.io/keras_core/api/layers/">Keras Layers</a>.</p>
+<p>KerasCore provides us with a feature called <code>TorchModuleWrapper</code> which enables us to do exactly this. The <code>TorchModuleWrapper</code> is a Keras Layer that accepts a torch module and tracks its trainable variables, essentially converting the torch module into a Keras Layer. This enables us to put any torch modules inside a Keras Model and train them with a single <code>model.fit()</code>!</p>
+<p>The idea of the <code>TorchModuleWrapper</code> was proposed by Keras’ creator <a href="https://github.com/fchollet">François Chollet</a> on <a href="https://github.com/keras-team/keras-core/issues/604">this issue thread</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb7" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> keras_core <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">as</span> keras</span>
+<span id="cb7-2"><span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">from</span> keras_core.utils <span class="im" style="color: #00769E;
+background-color: null;
+font-style: inherit;">import</span> TorchModuleWrapper</span>
+<span id="cb7-3"></span>
+<span id="cb7-4"></span>
+<span id="cb7-5"><span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">class</span> ResNet18Classifier(keras.Model):</span>
+<span id="cb7-6">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> <span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>args, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>kwargs):</span>
+<span id="cb7-7">        <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">super</span>().<span class="fu" style="color: #4758AB;
+background-color: null;
+font-style: inherit;">__init__</span>(<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span>args, <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">**</span>kwargs)</span>
+<span id="cb7-8">        </span>
+<span id="cb7-9">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define the pre-trained ResNet18 module from torchvision</span></span>
+<span id="cb7-10">        resnet_18 <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> models.resnet18(weights<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">'IMAGENET1K_V1'</span>)</span>
+<span id="cb7-11">        num_ftrs <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> resnet_18.fc.in_features</span>
+<span id="cb7-12"></span>
+<span id="cb7-13">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Set the classification head of the pre-trained ResNet18</span></span>
+<span id="cb7-14">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># module to an identity module</span></span>
+<span id="cb7-15">        resnet_18.fc <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> nn.Identity()</span>
+<span id="cb7-16">        </span>
+<span id="cb7-17">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Set the trainable ResNet18 backbone to be a Keras Layer</span></span>
+<span id="cb7-18">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># using `TorchModuleWrapper`</span></span>
+<span id="cb7-19">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.backbone <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> TorchModuleWrapper(resnet_18)</span>
+<span id="cb7-20"></span>
+<span id="cb7-21">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Set this to `False` if you want to freeze the backbone</span></span>
+<span id="cb7-22">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.backbone.trainable <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">True</span></span>
+<span id="cb7-23"></span>
+<span id="cb7-24">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Note that we don't convert nn.Dropout to a Keras Layer</span></span>
+<span id="cb7-25">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># because it doesn't consist of trainable variables.</span></span>
+<span id="cb7-26">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.dropout <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> nn.Dropout(p<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.5</span>)</span>
+<span id="cb7-27"></span>
+<span id="cb7-28">        <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># We define the classification head as a Keras Layer</span></span>
+<span id="cb7-29">        <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.fc <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> keras.layers.Dense(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">10</span>)</span>
+<span id="cb7-30"></span>
+<span id="cb7-31">    <span class="kw" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">def</span> call(<span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>, inputs):</span>
+<span id="cb7-32">        x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.backbone(inputs)</span>
+<span id="cb7-33">        x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.dropout(x)</span>
+<span id="cb7-34">        x <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> <span class="va" style="color: #111111;
+background-color: null;
+font-style: inherit;">self</span>.fc(x)</span>
+<span id="cb7-35">        <span class="cf" style="color: #003B4F;
+background-color: null;
+font-style: inherit;">return</span> keras.activations.softmax(x, axis<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>)</span></code></pre></div>
+</div>
+<p><strong>Note:</strong> It is actually possible to use torch modules inside a Keras Model without having to explicitly have them wrapped with the <code>TorchModuleWrapper</code> as evident by <a href="https://twitter.com/fchollet/status/1697381832164290754">this tweet</a> from François Chollet. However, this doesn’t seem to work at the point of time this example was created, as reported in <a href="https://github.com/keras-team/keras-core/issues/834">this issue</a>.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Now, we define the model and pass a random tensor to check the output shape</span></span>
+<span id="cb8-2">model <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> ResNet18Classifier()</span>
+<span id="cb8-3">model(torch.ones(<span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">3</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">224</span>, <span class="dv" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">224</span>).to(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"cuda"</span>)).shape</span></code></pre></div>
+</div>
+<p>Now, in standard Keras fashion, all we need to do is compile the model and call <code>model.fit()</code>!</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb9" style="background: #f1f3f5;"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Create exponential decay learning rate scheduler</span></span>
+<span id="cb9-2">decay_steps <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> config.num_epochs <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">*</span> <span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">len</span>(dataloaders[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"train"</span>]) <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">//</span> config.batch_size</span>
+<span id="cb9-3">lr_scheduler <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> keras.optimizers.schedules.ExponentialDecay(</span>
+<span id="cb9-4">    initial_learning_rate<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">1e-3</span>, decay_steps<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>decay_steps, decay_rate<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="fl" style="color: #AD0000;
+background-color: null;
+font-style: inherit;">0.1</span>,</span>
+<span id="cb9-5">)</span>
+<span id="cb9-6"></span>
+<span id="cb9-7"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Compile the model</span></span>
+<span id="cb9-8">model.<span class="bu" style="color: null;
+background-color: null;
+font-style: inherit;">compile</span>(</span>
+<span id="cb9-9">    loss<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"sparse_categorical_crossentropy"</span>,</span>
+<span id="cb9-10">    optimizer<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>keras.optimizers.Adam(lr_scheduler),</span>
+<span id="cb9-11">    metrics<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"accuracy"</span>],</span>
+<span id="cb9-12">)</span>
+<span id="cb9-13"></span>
+<span id="cb9-14"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Define the backend-agnostic WandB callbacks for KerasCore</span></span>
+<span id="cb9-15">callbacks <span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span> [</span>
+<span id="cb9-16">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Track experiment metrics</span></span>
+<span id="cb9-17">    WandbMetricsLogger(log_freq<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span><span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"batch"</span>),</span>
+<span id="cb9-18">    <span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Track and version model checkpoints</span></span>
+<span id="cb9-19">    WandbModelCheckpoint(<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"model.keras"</span>)</span>
+<span id="cb9-20">]</span>
+<span id="cb9-21"></span>
+<span id="cb9-22"><span class="co" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;"># Train the model by calling model.fit</span></span>
+<span id="cb9-23">model.fit(</span>
+<span id="cb9-24">    dataloaders[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"train"</span>],</span>
+<span id="cb9-25">    validation_data<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>dataloaders[<span class="st" style="color: #20794D;
+background-color: null;
+font-style: inherit;">"val"</span>],</span>
+<span id="cb9-26">    epochs<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>config.num_epochs,</span>
+<span id="cb9-27">    callbacks<span class="op" style="color: #5E5E5E;
+background-color: null;
+font-style: inherit;">=</span>callbacks,</span>
+<span id="cb9-28">)</span></code></pre></div>
+</div>
+<p>In order to know more about the backend-agnostic Keras callbacks for Weights &amp; Biases, check out the <a href="https://geekyrakshit.dev/wandb-addons/keras/keras_core/">docs for wandb-addons</a>.</p>
+
+
+</section>
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>keras</category>
+  <category>python</category>
+  <category>tensorflow</category>
+  <category>pytorch</category>
+  <guid>https://geekyrakshit.dev/feeds/posts/torchvision_keras.html</guid>
+  <pubDate>Sun, 09 Apr 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/feeds/posts/assets/keras_torchvision.png" medium="image" type="image/png" height="145" width="144"/>
+</item>
 <item>
   <title>Efficient Graph-Based Image Segmentation</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>

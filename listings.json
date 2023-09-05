@@ -2,6 +2,7 @@
   {
     "listing": "/posts.html",
     "items": [
+      "/feeds/posts/torchvision_keras.html",
       "/feeds/posts/efficient-graph-based-image-segmentation/index.html",
       "/feeds/posts/enet-camvid.html",
       "/feeds/posts/detectron-mask-rcnn.html",
