@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://geekyrakshit.dev/posts.html</loc>
-    <lastmod>2023-09-03T07:30:01.476Z</lastmod>
+    <lastmod>2023-09-05T07:48:23.458Z</lastmod>
   </url>
   <url>
     <loc>https://geekyrakshit.dev/feeds/reports/functorch.html</loc>
@@ -199,5 +199,9 @@
   <url>
     <loc>https://geekyrakshit.dev/about.html</loc>
     <lastmod>2023-09-03T07:30:00.392Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/feeds/posts/torchvision_keras.html</loc>
+    <lastmod>2023-09-05T07:48:22.239Z</lastmod>
   </url>
 </urlset>
