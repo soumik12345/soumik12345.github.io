@@ -175,23 +175,16 @@
     "text": "Featured on Two Minute Papers"
   },
   {
-    "objectID": "feeds/reports/block-nerf.html",
-    "href": "feeds/reports/block-nerf.html",
-    "title": "Block-NeRF: Scalable Large Scene Neural View Synthesis",
+    "objectID": "feeds/reports/vqad.html",
+    "href": "feeds/reports/vqad.html",
+    "title": "Variable Bitrate Neural Fields: Create Fast Approximations of 3D Scenes",
     "section": "",
     "text": "Featured on Two Minute Papers"
   },
   {
-    "objectID": "feeds/reports/robust-perceptive-locomotive.html",
-    "href": "feeds/reports/robust-perceptive-locomotive.html",
-    "title": "Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild",
-    "section": "",
-    "text": "Featured on Two Minute Papers"
-  },
-  {
-    "objectID": "feeds/reports/game-characters.html",
-    "href": "feeds/reports/game-characters.html",
-    "title": "Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings",
+    "objectID": "feeds/reports/cross-attention-control.html",
+    "href": "feeds/reports/cross-attention-control.html",
+    "title": "Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control",
     "section": "",
     "text": "Featured on Two Minute Papers"
   },
@@ -280,16 +273,16 @@
     "text": "Hi there 👋. I am Soumik Rakshit (সৌমিক রক্ষিত).\nI develop machine learning tools at Weights & Biases.\nYou can learn more about me here."
   },
   {
-    "objectID": "feeds/reports/cross-attention-control.html",
-    "href": "feeds/reports/cross-attention-control.html",
-    "title": "Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control",
+    "objectID": "feeds/reports/game-characters.html",
+    "href": "feeds/reports/game-characters.html",
+    "title": "Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings",
     "section": "",
     "text": "Featured on Two Minute Papers"
   },
   {
-    "objectID": "feeds/reports/vqad.html",
-    "href": "feeds/reports/vqad.html",
-    "title": "Variable Bitrate Neural Fields: Create Fast Approximations of 3D Scenes",
+    "objectID": "feeds/reports/robust-perceptive-locomotive.html",
+    "href": "feeds/reports/robust-perceptive-locomotive.html",
+    "title": "Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild",
     "section": "",
     "text": "Featured on Two Minute Papers"
   },
@@ -297,6 +290,20 @@
     "objectID": "feeds/reports/stylegan-nada.html",
     "href": "feeds/reports/stylegan-nada.html",
     "title": "Digging Into StyleGAN-NADA for CLIP-Guided Domain Adaptation",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "feeds/reports/block-nerf.html",
+    "href": "feeds/reports/block-nerf.html",
+    "title": "Block-NeRF: Scalable Large Scene Neural View Synthesis",
+    "section": "",
+    "text": "Featured on Two Minute Papers"
+  },
+  {
+    "objectID": "feeds/reports/audiocraft.html",
+    "href": "feeds/reports/audiocraft.html",
+    "title": "A Guide to Generating Music using AudioCraft",
     "section": "",
     "text": "Featured on Two Minute Papers"
   },

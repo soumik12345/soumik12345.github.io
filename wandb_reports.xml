@@ -10,7 +10,160 @@
 <atom:link href="https://geekyrakshit.dev/wandb_reports.xml" rel="self" type="application/rss+xml"/>
 <description></description>
 <generator>quarto-1.5.55</generator>
-<lastBuildDate>Mon, 21 Aug 2023 00:00:00 GMT</lastBuildDate>
+<lastBuildDate>Thu, 04 Jul 2024 00:00:00 GMT</lastBuildDate>
+<item>
+  <title>Building an AI teacher’s assistant using LlamaIndex and Groq</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/feeds/reports/ai_teacher.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/groq-rag/reports/Building-an-AI-teacher-s-assistant-using-LlamaIndex-and-Groq--Vmlldzo4NTU2NzA1" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>nlp</category>
+  <category>llm</category>
+  <category>llmops</category>
+  <category>weave</category>
+  <category>prompt</category>
+  <category>rag</category>
+  <guid>https://geekyrakshit.dev/feeds/reports/ai_teacher.html</guid>
+  <pubDate>Thu, 04 Jul 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/ai_teacher.jpg" medium="image" type="image/jpeg"/>
+</item>
+<item>
+  <title>Brain Tumor Segmentation using MONAI and WandB</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/feeds/reports/monai_brats.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/brain-tumor-segmentation/reports/Brain-Tumor-Segmentation-using-MONAI-and-WandB---Vmlldzo0MjUzODIw" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>diffusion</category>
+  <category>huggingface</category>
+  <category>pixart</category>
+  <category>prompt</category>
+  <guid>https://geekyrakshit.dev/feeds/reports/monai_brats.html</guid>
+  <pubDate>Sun, 03 Mar 2024 00:00:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/pixart_alpha.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>PIXART-α: A Diffusion Transformer Model for Text-to-Image Generation</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/feeds/reports/pixart_alpha.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/pixart-alpha/reports/PIXART-A-Diffusion-Transformer-Model-for-Text-to-Image-Generation--Vmlldzo2MTE1NzM3" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>monai</category>
+  <category>segmentation</category>
+  <category>medical</category>
+  <guid>https://geekyrakshit.dev/feeds/reports/pixart_alpha.html</guid>
+  <pubDate>Wed, 29 Nov 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/monai_brats.gif" medium="image" type="image/gif"/>
+</item>
+<item>
+  <title>A Guide to Prompt Engineering for Stable Diffusion</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/feeds/reports/diffusers_prompting.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<iframe src="https://wandb.ai/geekyrakshit/diffusers-prompt-engineering/reports/A-Guide-to-Prompt-Engineering-for-Stable-Diffusion--Vmlldzo1NzY4NzQ3" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>computervision</category>
+  <category>deeplearning</category>
+  <category>diffusion</category>
+  <category>huggingface</category>
+  <category>stable-diffusion</category>
+  <category>prompt</category>
+  <guid>https://geekyrakshit.dev/feeds/reports/diffusers_prompting.html</guid>
+  <pubDate>Tue, 24 Oct 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/sd_prompt.png" medium="image" type="image/png" height="144" width="144"/>
+</item>
+<item>
+  <title>Object Detection using YOLOv8: An End-to-End Workflow</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/feeds/reports/yolov8.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<iframe src="https://wandb.ai/reviewco/object-detection-bdd/reports/Object-Detection-using-YOLOv8-An-End-to-End-Workflow--Vmlldzo1NTAyMDQ1" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>deeplearning</category>
+  <category>pytorch</category>
+  <category>computervision</category>
+  <category>object-detection</category>
+  <category>yolo</category>
+  <guid>https://geekyrakshit.dev/feeds/reports/yolov8.html</guid>
+  <pubDate>Mon, 25 Sep 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/yolov8.png" medium="image" type="image/png" height="81" width="144"/>
+</item>
+<item>
+  <title>A Guide to Generating Music using AudioCraft</title>
+  <dc:creator>[GeekyRakshit](../../) </dc:creator>
+  <link>https://geekyrakshit.dev/feeds/reports/audiocraft.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<details>
+<summary>
+<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
+</summary>
+<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/BRWquZdEigw?si=YpcL2fN9n2W-OugL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+</details>
+<iframe src="https://wandb.ai/geekyrakshit/audiocraft/reports/A-Guide-to-Generating-Music-using-AudioCraft--Vmlldzo1MzgwOTYz" style="border:none;height:1024px;width:100%">
+</iframe>
+
+
+
+ ]]></description>
+  <category>deeplearning</category>
+  <category>generative</category>
+  <category>2-minute-papers</category>
+  <category>diffusion</category>
+  <category>audio</category>
+  <guid>https://geekyrakshit.dev/feeds/reports/audiocraft.html</guid>
+  <pubDate>Wed, 13 Sep 2023 00:00:00 GMT</pubDate>
+  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/audiocraft.jpg" medium="image" type="image/jpeg"/>
+</item>
 <item>
   <title>A Guide to Using Stable Diffusion XL with HuggingFace Diffusers and W&amp;B</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
@@ -345,155 +498,6 @@
   <guid>https://geekyrakshit.dev/feeds/reports/hazy-image-restoration.html</guid>
   <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/hazy.png" medium="image" type="image/png" height="145" width="144"/>
-</item>
-<item>
-  <title>Advanced Tensorboard Features: Tensorflow Debugger</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/feeds/reports/tensorboard-debugger.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<iframe src="https://wandb.ai/geekyrakshit/tensorboard-demo/reports/Advanced-Tensorboard-Features-Tensorflow-Debugger--VmlldzoxNjk2Mjk1?galleryTag=keras" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>deeplearning</category>
-  <category>tensorboard</category>
-  <category>tensorflow</category>
-  <category>keras</category>
-  <guid>https://geekyrakshit.dev/feeds/reports/tensorboard-debugger.html</guid>
-  <pubDate>Fri, 11 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/tensorboard-debugger.png" medium="image" type="image/png" height="88" width="144"/>
-</item>
-<item>
-  <title>Advanced Tensorboard Features: Graph Dashboard</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/feeds/reports/tensorboard-graph-dashboard.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<iframe src="https://wandb.ai/geekyrakshit/tensorboard-demo/reports/Advanced-Tensorboard-Features-Graph-Dashboard--VmlldzoxNjk0MTA1" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>deeplearning</category>
-  <category>tensorboard</category>
-  <guid>https://geekyrakshit.dev/feeds/reports/tensorboard-graph-dashboard.html</guid>
-  <pubDate>Fri, 11 Nov 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/tensorboard-graph-dashboard.png" medium="image" type="image/png" height="77" width="144"/>
-</item>
-<item>
-  <title>Object Detection for Autonomous Vehicles (A Step-by-Step Guide)</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/feeds/reports/object-detection.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<iframe src="https://wandb.ai/av-team/bdd100k-perception/reports/Object-Detection-for-Autonomous-Vehicles-A-Step-by-Step-Guide---VmlldzoyNjA3MTY0" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>computervision</category>
-  <category>deeplearning</category>
-  <category>object-detection</category>
-  <category>yolo</category>
-  <guid>https://geekyrakshit.dev/feeds/reports/object-detection.html</guid>
-  <pubDate>Fri, 30 Sep 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/object-detection.png" medium="image" type="image/png" height="128" width="144"/>
-</item>
-<item>
-  <title>Training Semantic Segmentation Models for Autonomous Vehicles (A Step-by-Step Guide)</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/feeds/reports/semnantic-segmentation.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<iframe src="https://wandb.ai/av-demo/CamVid/reports/Training-Semantic-Segmentation-Models-for-Autonomous-Vehicles-A-Step-by-Step-Guide---VmlldzoyNTMyMjc4" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>computervision</category>
-  <category>deeplearning</category>
-  <category>fastai</category>
-  <category>segmentation</category>
-  <guid>https://geekyrakshit.dev/feeds/reports/semnantic-segmentation.html</guid>
-  <pubDate>Fri, 30 Sep 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/semantic-segmentation.png" medium="image" type="image/png" height="93" width="144"/>
-</item>
-<item>
-  <title>Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/feeds/reports/cross-attention-control.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<details>
-<summary>
-<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
-</summary>
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/XW_nO2NMH_g?si=OAaFHjcpu2jHIdU-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</details>
-<iframe src="https://wandb.ai/wandb/cross-attention-control/reports/Improving-Generative-Images-with-Instructions-Prompt-to-Prompt-Image-Editing-with-Cross-Attention-Control--VmlldzoyNjk2MDAy?galleryTag=stable-diffusion" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>computervision</category>
-  <category>deeplearning</category>
-  <category>generative</category>
-  <category>diffusion</category>
-  <category>stable-diffusion</category>
-  <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/feeds/reports/cross-attention-control.html</guid>
-  <pubDate>Thu, 29 Sep 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/cross-attention-control.png" medium="image" type="image/png" height="96" width="144"/>
-</item>
-<item>
-  <title>Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings</title>
-  <dc:creator>[GeekyRakshit](../../) </dc:creator>
-  <link>https://geekyrakshit.dev/feeds/reports/game-characters.html</link>
-  <description><![CDATA[ 
-
-
-
-
-<details>
-<summary>
-<strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
-</summary>
-<br> <iframe width="560" height="315" src="https://www.youtube.com/embed/1kV-rZZw50Q?si=WZmPeihHTqZMwHLc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
-</details>
-<iframe src="https://wandb.ai/geekyrakshit/adversarial%20skill%20embeddings/reports/Building-Diverse-Skillsets-for-Video-Game-Characters-With-Adversarial-Skill-Embeddings--VmlldzoyMjc3OTU5?galleryTag=computer-vision" style="border:none;height:1024px;width:100%">
-</iframe>
-
-
-
- ]]></description>
-  <category>deeplearning</category>
-  <category>reinforcement-learning</category>
-  <category>2-minute-papers</category>
-  <guid>https://geekyrakshit.dev/feeds/reports/game-characters.html</guid>
-  <pubDate>Tue, 19 Jul 2022 00:00:00 GMT</pubDate>
-  <media:content url="https://geekyrakshit.dev/feeds/reports/assets/game-characters.png" medium="image" type="image/png" height="121" width="144"/>
 </item>
 </channel>
 </rss>
