@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Geekyrakshit - WandB Reports</title>
+<title>WandB Reports – Geekyrakshit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -49,7 +49,13 @@ ul.task-list li input[type="checkbox"] {
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -58,6 +64,7 @@ ul.task-list li input[type="checkbox"] {
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -94,64 +101,85 @@ ul.task-list li input[type="checkbox"] {
   })
   </script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Geekyrakshit" href="wandb_reports.xml"><meta property="og:title" content="Geekyrakshit - WandB Reports">
-<meta property="og:image" content="https://geekyrakshit.dev/feeds/reports/assets/sdxl.png">
-<meta property="og:site-name" content="Geekyrakshit">
-<meta property="og:image:height" content="1024">
-<meta property="og:image:width" content="1024">
-<meta name="twitter:title" content="Geekyrakshit - WandB Reports">
-<meta name="twitter:image" content="https://geekyrakshit.dev/feeds/reports/assets/sdxl.png">
-<meta name="twitter:image-height" content="1024">
-<meta name="twitter:image-width" content="1024">
-<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" type="application/rss+xml" title="Geekyrakshit" href="wandb_reports.xml" data-external="1"><meta property="og:title" content="WandB Reports – Geekyrakshit">
+<meta property="og:site_name" content="Geekyrakshit">
+<meta name="twitter:title" content="WandB Reports – Geekyrakshit">
+<meta name="twitter:card" content="summary">
 </head>
 
 <body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Geekyrakshit</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./about.html" rel="" target="">
- <span class="menu-text">About Me</span></a>
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="./projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./courses.html" rel="" target="">
- <span class="menu-text">Courses/Seminars</span></a>
+    <a class="nav-link" href="./courses.html"> 
+<span class="menu-text">Courses/Seminars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./wandb_reports.html" rel="" target="" aria-current="page">
- <span class="menu-text">WandB Reports</span></a>
+    <a class="nav-link active" href="./wandb_reports.html" aria-current="page"> 
+<span class="menu-text">WandB Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./posts.html" rel="" target="">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link" href="./posts.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -182,18 +210,19 @@ ul.task-list li input[type="checkbox"] {
 </section>
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="computervision,deeplearning,diffusion,huggingface,stable-diffusion" data-listing-date-sort="1692556200000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="0" data-categories="computervision,deeplearning,diffusion,huggingface,stable-diffusion" data-listing-date-sort="1692576000000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/sdxl.html"> <img src="./feeds/reports/assets/sdxl.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/sdxl.html" class="no-external"></a></p><a href="./feeds/reports/sdxl.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/sdxl.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/sdxl.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/sdxl.html">
 <h3 class="no-anchor listing-title">
-A Guide to Using Stable Diffusion XL with HuggingFace Diffusers and W&amp;B
+<a href="./feeds/reports/sdxl.html" class="no-external">A Guide to Using Stable Diffusion XL with HuggingFace Diffusers and W&amp;B</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/sdxl.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -211,34 +240,33 @@ huggingface
 stable-diffusion
 </div>
 </div>
-<a href="./feeds/reports/sdxl.html">
 <div class="listing-description">
-<p>A comprehensive guide to using Stable Diffusion XL (SDXL) for generating high-quality images using HuggingFace Diffusers and managing experiments with Weights &amp; Biases.</p>
+<a href="./feeds/reports/sdxl.html" class="no-external">A comprehensive guide to using Stable Diffusion XL (SDXL) for generating high-quality images using HuggingFace Diffusers and managing experiments with Weights &amp; Biases.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/sdxl.html">
+<a href="./feeds/reports/sdxl.html" class="no-external">
 <div class="listing-date">
 August 21, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/sdxl.html">
+</a><div class="listing-author"><a href="./feeds/reports/sdxl.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="deeplearning,pytorch,computervision,object-detection" data-listing-date-sort="1690914600000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="1" data-categories="deeplearning,pytorch,computervision,object-detection" data-listing-date-sort="1690934400000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/ultralytics.html"> <img src="./feeds/reports/assets/ultralytics.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/ultralytics.html" class="no-external"></a></p><a href="./feeds/reports/ultralytics.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/ultralytics.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/ultralytics.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/ultralytics.html">
 <h3 class="no-anchor listing-title">
-Supercharging Ultralytics with Weights &amp; Biases
+<a href="./feeds/reports/ultralytics.html" class="no-external">Supercharging Ultralytics with Weights &amp; Biases</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/ultralytics.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -253,34 +281,33 @@ computervision
 object-detection
 </div>
 </div>
-<a href="./feeds/reports/ultralytics.html">
 <div class="listing-description">
-<p>A guide on using Weights &amp; Biases with Ultralytics workflows for computer vision models.</p>
+<a href="./feeds/reports/ultralytics.html" class="no-external">A guide on using Weights &amp; Biases with Ultralytics workflows for computer vision models.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/ultralytics.html">
+<a href="./feeds/reports/ultralytics.html" class="no-external">
 <div class="listing-date">
 August 2, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/ultralytics.html">
+</a><div class="listing-author"><a href="./feeds/reports/ultralytics.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="deeplearning,tensorflow,keras,computervision,xla" data-listing-date-sort="1689273000000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="2" data-categories="deeplearning,tensorflow,keras,computervision,xla" data-listing-date-sort="1689292800000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/keras-xla-benchmark.html"> <img src="./feeds/reports/assets/weave-xla.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/keras-xla-benchmark.html" class="no-external"></a></p><a href="./feeds/reports/keras-xla-benchmark.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/weave-xla.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/keras-xla-benchmark.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/keras-xla-benchmark.html">
 <h3 class="no-anchor listing-title">
-XLA Compatibility of Vision Models in Keras
+<a href="./feeds/reports/keras-xla-benchmark.html" class="no-external">XLA Compatibility of Vision Models in Keras</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/keras-xla-benchmark.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -298,34 +325,33 @@ computervision
 xla
 </div>
 </div>
-<a href="./feeds/reports/keras-xla-benchmark.html">
 <div class="listing-description">
-<p>A set of comprehensive benchmarks around XLA compatibility of computer vision models implemented in Keras.</p>
+<a href="./feeds/reports/keras-xla-benchmark.html" class="no-external">A set of comprehensive benchmarks around XLA compatibility of computer vision models implemented in Keras.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/keras-xla-benchmark.html">
+<a href="./feeds/reports/keras-xla-benchmark.html" class="no-external">
 <div class="listing-date">
 July 14, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/keras-xla-benchmark.html">
+</a><div class="listing-author"><a href="./feeds/reports/keras-xla-benchmark.html" class="no-external">
 </a><a href="https://twitter.com/RisingSayak">Sayak Paul</a>, <a href="../../">GeekyRakshit</a>, <a href="https://twitter.com/ayushthakur0">Ayush Thakur</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="multi-task-learning,deeplearning,pytorch" data-listing-date-sort="1683829800000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="3" data-categories="multi-task-learning,deeplearning,pytorch" data-listing-date-sort="1683849600000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/multi-task-learning.html"> <img src="./feeds/reports/assets/bargain.webp" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/multi-task-learning.html" class="no-external"></a></p><a href="./feeds/reports/multi-task-learning.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/bargain.webp" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/multi-task-learning.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/multi-task-learning.html">
 <h3 class="no-anchor listing-title">
-Multi-Task Learning as a Bargaining Game
+<a href="./feeds/reports/multi-task-learning.html" class="no-external">Multi-Task Learning as a Bargaining Game</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/multi-task-learning.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('multi-task-learning'); return false;">
 multi-task-learning
@@ -337,34 +363,33 @@ deeplearning
 pytorch
 </div>
 </div>
-<a href="./feeds/reports/multi-task-learning.html">
 <div class="listing-description">
-<p>In this article, we explore gradient combination in multi-task learning (MTL) as a cooperative bargaining game, and discuss Nash MTL — a novel approach — in detail.</p>
+<a href="./feeds/reports/multi-task-learning.html" class="no-external">In this article, we explore gradient combination in multi-task learning (MTL) as a cooperative bargaining game, and discuss Nash MTL — a novel approach — in detail.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/multi-task-learning.html">
+<a href="./feeds/reports/multi-task-learning.html" class="no-external">
 <div class="listing-date">
 May 12, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/multi-task-learning.html">
+</a><div class="listing-author"><a href="./feeds/reports/multi-task-learning.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="computervision,deeplearning,generative,diffusion,huggingface" data-listing-date-sort="1682965800000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="4" data-categories="computervision,deeplearning,generative,diffusion,huggingface" data-listing-date-sort="1682985600000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/if.html"> <img src="./feeds/reports/assets/if.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/if.html" class="no-external"></a></p><a href="./feeds/reports/if.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/if.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/if.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/if.html">
 <h3 class="no-anchor listing-title">
-DeepFloydAI: A New Breakthrough in Text-Guided Image Generation
+<a href="./feeds/reports/if.html" class="no-external">DeepFloydAI: A New Breakthrough in Text-Guided Image Generation</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/if.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -382,34 +407,33 @@ diffusion
 huggingface
 </div>
 </div>
-<a href="./feeds/reports/if.html">
 <div class="listing-description">
-<p>In this article, we explore DeepFloydAI — an AI Research Band which is working with StabilityAI to make AI open again.</p>
+<a href="./feeds/reports/if.html" class="no-external">In this article, we explore DeepFloydAI — an AI Research Band which is working with StabilityAI to make AI open again.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/if.html">
+<a href="./feeds/reports/if.html" class="no-external">
 <div class="listing-date">
 May 2, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/if.html">
+</a><div class="listing-author"><a href="./feeds/reports/if.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="computervision,deeplearning,generative" data-listing-date-sort="1681324200000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="5" data-categories="computervision,deeplearning,generative" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/paella.html"> <img src="./feeds/reports/assets/paella.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/paella.html" class="no-external"></a></p><a href="./feeds/reports/paella.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/paella.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/paella.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/paella.html">
 <h3 class="no-anchor listing-title">
-Paella: Fast Text-Conditional Image Generation
+<a href="./feeds/reports/paella.html" class="no-external">Paella: Fast Text-Conditional Image Generation</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/paella.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -421,34 +445,33 @@ deeplearning
 generative
 </div>
 </div>
-<a href="./feeds/reports/paella.html">
 <div class="listing-description">
-<p>In this article, we explore the paper “Fast Text-Conditional Discrete Denoising on Vector-Quantized Latent Spaces” which introduces Paella, a novel text-to-image model.</p>
+<a href="./feeds/reports/paella.html" class="no-external">In this article, we explore the paper “Fast Text-Conditional Discrete Denoising on Vector-Quantized Latent Spaces” which introduces Paella, a novel text-to-image model.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/paella.html">
+<a href="./feeds/reports/paella.html" class="no-external">
 <div class="listing-date">
 April 13, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/paella.html">
+</a><div class="listing-author"><a href="./feeds/reports/paella.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="computervision,deeplearning,generative,diffusion,stable-diffusion,keras,tensorflow" data-listing-date-sort="1678991400000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="6" data-categories="computervision,deeplearning,generative,diffusion,stable-diffusion,keras,tensorflow" data-listing-date-sort="1679011200000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/dreambooth-keras.html"> <img src="./feeds/reports/assets/dreambooth-keras.jpeg" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/dreambooth-keras.html" class="no-external"></a></p><a href="./feeds/reports/dreambooth-keras.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/dreambooth-keras.jpeg" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/dreambooth-keras.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/dreambooth-keras.html">
 <h3 class="no-anchor listing-title">
-Fine-Tuning Stable Diffusion Using Dreambooth in Keras
+<a href="./feeds/reports/dreambooth-keras.html" class="no-external">Fine-Tuning Stable Diffusion Using Dreambooth in Keras</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/dreambooth-keras.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -472,34 +495,33 @@ keras
 tensorflow
 </div>
 </div>
-<a href="./feeds/reports/dreambooth-keras.html">
 <div class="listing-description">
-<p>In this article, we quickly teach Stable Diffusion new visual concepts using Dreambooth in Keras, to produce fully-novel photorealistic images of a given subject.</p>
+<a href="./feeds/reports/dreambooth-keras.html" class="no-external">In this article, we quickly teach Stable Diffusion new visual concepts using Dreambooth in Keras, to produce fully-novel photorealistic images of a given subject.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/dreambooth-keras.html">
+<a href="./feeds/reports/dreambooth-keras.html" class="no-external">
 <div class="listing-date">
 March 17, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/dreambooth-keras.html">
+</a><div class="listing-author"><a href="./feeds/reports/dreambooth-keras.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="deeplearning,tensorflow,keras,computervision" data-listing-date-sort="1678386600000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="7" data-categories="deeplearning,tensorflow,keras,computervision" data-listing-date-sort="1678406400000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/lighting-up-images.html"> <img src="./feeds/reports/assets/lighting.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/lighting-up-images.html" class="no-external"></a></p><a href="./feeds/reports/lighting-up-images.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/lighting.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/lighting-up-images.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/lighting-up-images.html">
 <h3 class="no-anchor listing-title">
-Low-Light Image Enhancement: Lighting up Images in the Deep Learning Era
+<a href="./feeds/reports/lighting-up-images.html" class="no-external">Low-Light Image Enhancement: Lighting up Images in the Deep Learning Era</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/lighting-up-images.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -514,34 +536,33 @@ keras
 computervision
 </div>
 </div>
-<a href="./feeds/reports/lighting-up-images.html">
 <div class="listing-description">
-<p>In this article, we explore some deep learning techniques for low-light image enhancement, so that you can enhance images taken under sub-optimal conditions.</p>
+<a href="./feeds/reports/lighting-up-images.html" class="no-external">In this article, we explore some deep learning techniques for low-light image enhancement, so that you can enhance images taken under sub-optimal conditions.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/lighting-up-images.html">
+<a href="./feeds/reports/lighting-up-images.html" class="no-external">
 <div class="listing-date">
 March 10, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/lighting-up-images.html">
+</a><div class="listing-author"><a href="./feeds/reports/lighting-up-images.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>, <a href="https://twitter.com/MaheshkarSaurav">Saurav Maheshkar</a>, <a href="https://twitter.com/samarendra109">Samarendra Dash</a>, <a href="https://twitter.com/ariG23498">Aritra Roy Gosthipaty</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1674153000000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="8" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/shapenetcore.html"> <img src="./feeds/reports/assets/dgcnn.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/shapenetcore.html" class="no-external"></a></p><a href="./feeds/reports/shapenetcore.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/dgcnn.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/shapenetcore.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/shapenetcore.html">
 <h3 class="no-anchor listing-title">
-Digging Into the ShapeNetCore Dataset
+<a href="./feeds/reports/shapenetcore.html" class="no-external">Digging Into the ShapeNetCore Dataset</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/shapenetcore.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -559,34 +580,33 @@ geometric-deeplearning
 point-cloud
 </div>
 </div>
-<a href="./feeds/reports/shapenetcore.html">
 <div class="listing-description">
-<p>In this article, we dive into the ShapeNetCore Dataset for the classification and segmentation of point cloud data and explore how to use it using Weights &amp; Biases.</p>
+<a href="./feeds/reports/shapenetcore.html" class="no-external">In this article, we dive into the ShapeNetCore Dataset for the classification and segmentation of point cloud data and explore how to use it using Weights &amp; Biases.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/shapenetcore.html">
+<a href="./feeds/reports/shapenetcore.html" class="no-external">
 <div class="listing-date">
 January 20, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/shapenetcore.html">
+</a><div class="listing-author"><a href="./feeds/reports/shapenetcore.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1673980200000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="9" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1674000000000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/point-cloud-segmentation.html"> <img src="./feeds/reports/assets/dgcnn.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/point-cloud-segmentation.html" class="no-external"></a></p><a href="./feeds/reports/point-cloud-segmentation.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/dgcnn.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/point-cloud-segmentation.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/point-cloud-segmentation.html">
 <h3 class="no-anchor listing-title">
-Point Cloud Segmentation Using Dynamic Graph CNNs
+<a href="./feeds/reports/point-cloud-segmentation.html" class="no-external">Point Cloud Segmentation Using Dynamic Graph CNNs</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/point-cloud-segmentation.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -604,34 +624,33 @@ geometric-deeplearning
 point-cloud
 </div>
 </div>
-<a href="./feeds/reports/point-cloud-segmentation.html">
 <div class="listing-description">
-<p>In this article, we explore a simple point cloud segmentation pipeline using Dynamic Graph CNNs, implemented using PyTorch Geometric along with Weights &amp; Biases.</p>
+<a href="./feeds/reports/point-cloud-segmentation.html" class="no-external">In this article, we explore a simple point cloud segmentation pipeline using Dynamic Graph CNNs, implemented using PyTorch Geometric along with Weights &amp; Biases.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/point-cloud-segmentation.html">
+<a href="./feeds/reports/point-cloud-segmentation.html" class="no-external">
 <div class="listing-date">
 January 18, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/point-cloud-segmentation.html">
+</a><div class="listing-author"><a href="./feeds/reports/point-cloud-segmentation.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1673893800000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="10" data-categories="computervision,deeplearning,pytorch,geometric-deeplearning,point-cloud" data-listing-date-sort="1673913600000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/point-cloud-classification.html"> <img src="./feeds/reports/assets/point-cloud-classification.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/point-cloud-classification.html" class="no-external"></a></p><a href="./feeds/reports/point-cloud-classification.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/point-cloud-classification.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/point-cloud-classification.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/point-cloud-classification.html">
 <h3 class="no-anchor listing-title">
-Point Cloud Classification Using PyTorch Geometric
+<a href="./feeds/reports/point-cloud-classification.html" class="no-external">Point Cloud Classification Using PyTorch Geometric</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/point-cloud-classification.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -649,34 +668,33 @@ geometric-deeplearning
 point-cloud
 </div>
 </div>
-<a href="./feeds/reports/point-cloud-classification.html">
 <div class="listing-description">
-<p>In this article, we explore how to classify point cloud data from 3D CAD Models, implementing the PointNet++ architecture and using PyTorch Geometric and W&amp;B.</p>
+<a href="./feeds/reports/point-cloud-classification.html" class="no-external">In this article, we explore how to classify point cloud data from 3D CAD Models, implementing the PointNet++ architecture and using PyTorch Geometric and W&amp;B.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/point-cloud-classification.html">
+<a href="./feeds/reports/point-cloud-classification.html" class="no-external">
 <div class="listing-date">
 January 17, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/point-cloud-classification.html">
+</a><div class="listing-author"><a href="./feeds/reports/point-cloud-classification.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="computervision,deeplearning,diffusion,huggingface" data-listing-date-sort="1673893800000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="11" data-categories="computervision,deeplearning,diffusion,huggingface" data-listing-date-sort="1673913600000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/unconditional-diffusion.html"> <img src="./feeds/reports/assets/unconditional-diffusion.jpg" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/unconditional-diffusion.html" class="no-external"></a></p><a href="./feeds/reports/unconditional-diffusion.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/unconditional-diffusion.jpg" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/unconditional-diffusion.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/unconditional-diffusion.html">
 <h3 class="no-anchor listing-title">
-Unconditional Image Generation Using HuggingFace Diffusers
+<a href="./feeds/reports/unconditional-diffusion.html" class="no-external">Unconditional Image Generation Using HuggingFace Diffusers</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/unconditional-diffusion.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -691,34 +709,33 @@ diffusion
 huggingface
 </div>
 </div>
-<a href="./feeds/reports/unconditional-diffusion.html">
 <div class="listing-description">
-<p>In this article, we explore how to train unconditional image generation models using HuggingFace Diffusers and we will track these experiments and compare the results usingWeights &amp; Biases.</p>
+<a href="./feeds/reports/unconditional-diffusion.html" class="no-external">In this article, we explore how to train unconditional image generation models using HuggingFace Diffusers and we will track these experiments and compare the results usingWeights &amp; Biases.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/unconditional-diffusion.html">
+<a href="./feeds/reports/unconditional-diffusion.html" class="no-external">
 <div class="listing-date">
 January 17, 2023
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/unconditional-diffusion.html">
+</a><div class="listing-author"><a href="./feeds/reports/unconditional-diffusion.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="computervision,deeplearning,nerf,2-minute-papers" data-listing-date-sort="1670005800000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="12" data-categories="computervision,deeplearning,nerf,2-minute-papers" data-listing-date-sort="1670025600000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/vqad.html"> <img src="./feeds/reports/assets/vqad.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/vqad.html" class="no-external"></a></p><a href="./feeds/reports/vqad.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/vqad.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/vqad.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/vqad.html">
 <h3 class="no-anchor listing-title">
-Variable Bitrate Neural Fields: Create Fast Approximations of 3D Scenes
+<a href="./feeds/reports/vqad.html" class="no-external">Variable Bitrate Neural Fields: Create Fast Approximations of 3D Scenes</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/vqad.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -733,34 +750,33 @@ nerf
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/vqad.html">
 <div class="listing-description">
-<p>This article explores creating accurate, fast approximations of complex 3D scenes with a low memory footprint, as outlined in Variable Bitrate Neural Fields.</p>
+<a href="./feeds/reports/vqad.html" class="no-external">This article explores creating accurate, fast approximations of complex 3D scenes with a low memory footprint, as outlined in Variable Bitrate Neural Fields.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/vqad.html">
+<a href="./feeds/reports/vqad.html" class="no-external">
 <div class="listing-date">
 December 3, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/vqad.html">
+</a><div class="listing-author"><a href="./feeds/reports/vqad.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="deeplearning,tensorflow,keras,computervision" data-listing-date-sort="1668709800000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="13" data-categories="deeplearning,tensorflow,keras,computervision" data-listing-date-sort="1668729600000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/hazy-image-restoration.html"> <img src="./feeds/reports/assets/hazy.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/hazy-image-restoration.html" class="no-external"></a></p><a href="./feeds/reports/hazy-image-restoration.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/hazy.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/hazy-image-restoration.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/hazy-image-restoration.html">
 <h3 class="no-anchor listing-title">
-Hazy Image Restoration Using Keras
+<a href="./feeds/reports/hazy-image-restoration.html" class="no-external">Hazy Image Restoration Using Keras</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/hazy-image-restoration.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -775,34 +791,33 @@ keras
 computervision
 </div>
 </div>
-<a href="./feeds/reports/hazy-image-restoration.html">
 <div class="listing-description">
-<p>An introduction to building an Image Restoration model using Tensorflow, Keras, and Weights &amp; Biases.</p>
+<a href="./feeds/reports/hazy-image-restoration.html" class="no-external">An introduction to building an Image Restoration model using Tensorflow, Keras, and Weights &amp; Biases.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/hazy-image-restoration.html">
+<a href="./feeds/reports/hazy-image-restoration.html" class="no-external">
 <div class="listing-date">
 November 18, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/hazy-image-restoration.html">
+</a><div class="listing-author"><a href="./feeds/reports/hazy-image-restoration.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="deeplearning,tensorboard,tensorflow,keras" data-listing-date-sort="1668105000000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="14" data-categories="deeplearning,tensorboard,tensorflow,keras" data-listing-date-sort="1668124800000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/tensorboard-debugger.html"> <img src="./feeds/reports/assets/tensorboard-debugger.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/tensorboard-debugger.html" class="no-external"></a></p><a href="./feeds/reports/tensorboard-debugger.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/tensorboard-debugger.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/tensorboard-debugger.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/tensorboard-debugger.html">
 <h3 class="no-anchor listing-title">
-Advanced Tensorboard Features: Tensorflow Debugger
+<a href="./feeds/reports/tensorboard-debugger.html" class="no-external">Advanced Tensorboard Features: Tensorflow Debugger</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/tensorboard-debugger.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -817,34 +832,33 @@ tensorflow
 keras
 </div>
 </div>
-<a href="./feeds/reports/tensorboard-debugger.html">
 <div class="listing-description">
-<p>An introduction to Machine Learning workflows written in Tensorflow using the Tensorboard Debugger.</p>
+<a href="./feeds/reports/tensorboard-debugger.html" class="no-external">An introduction to Machine Learning workflows written in Tensorflow using the Tensorboard Debugger.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/tensorboard-debugger.html">
+<a href="./feeds/reports/tensorboard-debugger.html" class="no-external">
 <div class="listing-date">
 November 11, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/tensorboard-debugger.html">
+</a><div class="listing-author"><a href="./feeds/reports/tensorboard-debugger.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="deeplearning,tensorboard" data-listing-date-sort="1668105000000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="15" data-categories="deeplearning,tensorboard" data-listing-date-sort="1668124800000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/tensorboard-graph-dashboard.html"> <img src="./feeds/reports/assets/tensorboard-graph-dashboard.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external"></a></p><a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/tensorboard-graph-dashboard.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/tensorboard-graph-dashboard.html">
 <h3 class="no-anchor listing-title">
-Advanced Tensorboard Features: Graph Dashboard
+<a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external">Advanced Tensorboard Features: Graph Dashboard</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -853,34 +867,33 @@ deeplearning
 tensorboard
 </div>
 </div>
-<a href="./feeds/reports/tensorboard-graph-dashboard.html">
 <div class="listing-description">
-<p>An introduction to exploring Computation Graphs of our Machine Learning workflows with Tensorboard.</p>
+<a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external">An introduction to exploring Computation Graphs of our Machine Learning workflows with Tensorboard.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/tensorboard-graph-dashboard.html">
+<a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external">
 <div class="listing-date">
 November 11, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/tensorboard-graph-dashboard.html">
+</a><div class="listing-author"><a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="computervision,deeplearning,object-detection,yolo" data-listing-date-sort="1664476200000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="16" data-categories="computervision,deeplearning,object-detection,yolo" data-listing-date-sort="1664496000000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/object-detection.html"> <img src="./feeds/reports/assets/object-detection.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/object-detection.html" class="no-external"></a></p><a href="./feeds/reports/object-detection.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/object-detection.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/object-detection.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/object-detection.html">
 <h3 class="no-anchor listing-title">
-Object Detection for Autonomous Vehicles (A Step-by-Step Guide)
+<a href="./feeds/reports/object-detection.html" class="no-external">Object Detection for Autonomous Vehicles (A Step-by-Step Guide)</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/object-detection.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -895,34 +908,33 @@ object-detection
 yolo
 </div>
 </div>
-<a href="./feeds/reports/object-detection.html">
 <div class="listing-description">
-<p>Digging into object detection and perception for autonomous vehicles using YOLOv5 and Weights &amp; Biases.</p>
+<a href="./feeds/reports/object-detection.html" class="no-external">Digging into object detection and perception for autonomous vehicles using YOLOv5 and Weights &amp; Biases.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/object-detection.html">
+<a href="./feeds/reports/object-detection.html" class="no-external">
 <div class="listing-date">
 September 30, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/object-detection.html">
+</a><div class="listing-author"><a href="./feeds/reports/object-detection.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="computervision,deeplearning,fastai,segmentation" data-listing-date-sort="1664476200000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="17" data-categories="computervision,deeplearning,fastai,segmentation" data-listing-date-sort="1664496000000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/semnantic-segmentation.html"> <img src="./feeds/reports/assets/semantic-segmentation.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/semnantic-segmentation.html" class="no-external"></a></p><a href="./feeds/reports/semnantic-segmentation.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/semantic-segmentation.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/semnantic-segmentation.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/semnantic-segmentation.html">
 <h3 class="no-anchor listing-title">
-Training Semantic Segmentation Models for Autonomous Vehicles (A Step-by-Step Guide)
+<a href="./feeds/reports/semnantic-segmentation.html" class="no-external">Training Semantic Segmentation Models for Autonomous Vehicles (A Step-by-Step Guide)</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/semnantic-segmentation.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -937,34 +949,33 @@ fastai
 segmentation
 </div>
 </div>
-<a href="./feeds/reports/semnantic-segmentation.html">
 <div class="listing-description">
-<p>A short tutorial on leveraging Weights &amp; Biases to train a semantic segmentation model for autonomous vehicles.</p>
+<a href="./feeds/reports/semnantic-segmentation.html" class="no-external">A short tutorial on leveraging Weights &amp; Biases to train a semantic segmentation model for autonomous vehicles.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/semnantic-segmentation.html">
+<a href="./feeds/reports/semnantic-segmentation.html" class="no-external">
 <div class="listing-date">
 September 30, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/semnantic-segmentation.html">
+</a><div class="listing-author"><a href="./feeds/reports/semnantic-segmentation.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="computervision,deeplearning,generative,diffusion,stable-diffusion,2-minute-papers" data-listing-date-sort="1664389800000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="18" data-categories="computervision,deeplearning,generative,diffusion,stable-diffusion,2-minute-papers" data-listing-date-sort="1664409600000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/cross-attention-control.html"> <img src="./feeds/reports/assets/cross-attention-control.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/cross-attention-control.html" class="no-external"></a></p><a href="./feeds/reports/cross-attention-control.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/cross-attention-control.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/cross-attention-control.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/cross-attention-control.html">
 <h3 class="no-anchor listing-title">
-Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control
+<a href="./feeds/reports/cross-attention-control.html" class="no-external">Improving Generative Images with Instructions: Prompt-to-Prompt Image Editing with Cross Attention Control</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/cross-attention-control.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -985,34 +996,33 @@ stable-diffusion
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/cross-attention-control.html">
 <div class="listing-description">
-<p>A primer on text-driven image editing for large-scale text-based image synthesis models like Stable Diffusion &amp; Imagen.</p>
+<a href="./feeds/reports/cross-attention-control.html" class="no-external">A primer on text-driven image editing for large-scale text-based image synthesis models like Stable Diffusion &amp; Imagen.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/cross-attention-control.html">
+<a href="./feeds/reports/cross-attention-control.html" class="no-external">
 <div class="listing-date">
 September 29, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/cross-attention-control.html">
+</a><div class="listing-author"><a href="./feeds/reports/cross-attention-control.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="deeplearning,reinforcement-learning,2-minute-papers" data-listing-date-sort="1658169000000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="19" data-categories="deeplearning,reinforcement-learning,2-minute-papers" data-listing-date-sort="1658188800000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/game-characters.html"> <img src="./feeds/reports/assets/game-characters.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/game-characters.html" class="no-external"></a></p><a href="./feeds/reports/game-characters.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/game-characters.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/game-characters.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/game-characters.html">
 <h3 class="no-anchor listing-title">
-Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings
+<a href="./feeds/reports/game-characters.html" class="no-external">Building Diverse Skillsets for Video Game Characters With Adversarial Skill Embeddings</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/game-characters.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -1024,34 +1034,33 @@ reinforcement-learning
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/game-characters.html">
 <div class="listing-description">
-<p>In this article, we explore using large-scale reusable adversarial skill embeddings for physically simulated characters.</p>
+<a href="./feeds/reports/game-characters.html" class="no-external">In this article, we explore using large-scale reusable adversarial skill embeddings for physically simulated characters.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/game-characters.html">
+<a href="./feeds/reports/game-characters.html" class="no-external">
 <div class="listing-date">
 July 19, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/game-characters.html">
+</a><div class="listing-author"><a href="./feeds/reports/game-characters.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="computervision,deeplearning,robotics,2-minute-papers" data-listing-date-sort="1657564200000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="20" data-categories="computervision,deeplearning,robotics,2-minute-papers" data-listing-date-sort="1657584000000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/robotic-telekinesis.html"> <img src="./feeds/reports/assets/robotic-telekinesis.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/robotic-telekinesis.html" class="no-external"></a></p><a href="./feeds/reports/robotic-telekinesis.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/robotic-telekinesis.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/robotic-telekinesis.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/robotic-telekinesis.html">
 <h3 class="no-anchor listing-title">
-Robotic Telekinesis in the Wild
+<a href="./feeds/reports/robotic-telekinesis.html" class="no-external">Robotic Telekinesis in the Wild</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/robotic-telekinesis.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1066,34 +1075,33 @@ robotics
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/robotic-telekinesis.html">
 <div class="listing-description">
-<p>In this article, we teach a robotic hand imitator by watching humans on Youtube to enable any operator in the wild with only a single uncalibrated color camera.</p>
+<a href="./feeds/reports/robotic-telekinesis.html" class="no-external">In this article, we teach a robotic hand imitator by watching humans on Youtube to enable any operator in the wild with only a single uncalibrated color camera.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/robotic-telekinesis.html">
+<a href="./feeds/reports/robotic-telekinesis.html" class="no-external">
 <div class="listing-date">
 July 12, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/robotic-telekinesis.html">
+</a><div class="listing-author"><a href="./feeds/reports/robotic-telekinesis.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1657218600000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="21" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1657238400000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/stylegan-nada.html"> <img src="./feeds/reports/assets/nada.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/stylegan-nada.html" class="no-external"></a></p><a href="./feeds/reports/stylegan-nada.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/nada.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/stylegan-nada.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/stylegan-nada.html">
 <h3 class="no-anchor listing-title">
-Digging Into StyleGAN-NADA for CLIP-Guided Domain Adaptation
+<a href="./feeds/reports/stylegan-nada.html" class="no-external">Digging Into StyleGAN-NADA for CLIP-Guided Domain Adaptation</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/stylegan-nada.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1108,34 +1116,33 @@ generative
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/stylegan-nada.html">
 <div class="listing-description">
-<p>In this article, we take a deep dive into how StyleGAN-NADA achieved the task of CLIP-guided domain adaptation and explore how we can use the model itself.</p>
+<a href="./feeds/reports/stylegan-nada.html" class="no-external">In this article, we take a deep dive into how StyleGAN-NADA achieved the task of CLIP-guided domain adaptation and explore how we can use the model itself.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/stylegan-nada.html">
+<a href="./feeds/reports/stylegan-nada.html" class="no-external">
 <div class="listing-date">
 July 8, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/stylegan-nada.html">
+</a><div class="listing-author"><a href="./feeds/reports/stylegan-nada.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="computervision,deeplearning,generative,jax" data-listing-date-sort="1651343400000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="22" data-categories="computervision,deeplearning,generative,jax" data-listing-date-sort="1651363200000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/modern-evolution-strategies.html"> <img src="./feeds/reports/assets/modern-evolution-startegies.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/modern-evolution-strategies.html" class="no-external"></a></p><a href="./feeds/reports/modern-evolution-strategies.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/modern-evolution-startegies.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/modern-evolution-strategies.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/modern-evolution-strategies.html">
 <h3 class="no-anchor listing-title">
-Modern Evolution Strategies for Creativity
+<a href="./feeds/reports/modern-evolution-strategies.html" class="no-external">Modern Evolution Strategies for Creativity</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/modern-evolution-strategies.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1150,34 +1157,33 @@ generative
 jax
 </div>
 </div>
-<a href="./feeds/reports/modern-evolution-strategies.html">
 <div class="listing-description">
-<p>In this article, we revisit evolutionary strategy algorithms for computational creativity and look at how they improve quality and efficiency in generating art.</p>
+<a href="./feeds/reports/modern-evolution-strategies.html" class="no-external">In this article, we revisit evolutionary strategy algorithms for computational creativity and look at how they improve quality and efficiency in generating art.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/modern-evolution-strategies.html">
+<a href="./feeds/reports/modern-evolution-strategies.html" class="no-external">
 <div class="listing-date">
 May 1, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/modern-evolution-strategies.html">
+</a><div class="listing-author"><a href="./feeds/reports/modern-evolution-strategies.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="computervision,deeplearning,nerf" data-listing-date-sort="1651257000000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="23" data-categories="computervision,deeplearning,nerf" data-listing-date-sort="1651276800000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/mip-nerf-360.html"> <img src="./feeds/reports/assets/mip-nerf-360.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/mip-nerf-360.html" class="no-external"></a></p><a href="./feeds/reports/mip-nerf-360.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/mip-nerf-360.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/mip-nerf-360.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/mip-nerf-360.html">
 <h3 class="no-anchor listing-title">
-Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields
+<a href="./feeds/reports/mip-nerf-360.html" class="no-external">Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/mip-nerf-360.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1189,34 +1195,33 @@ deeplearning
 nerf
 </div>
 </div>
-<a href="./feeds/reports/mip-nerf-360.html">
 <div class="listing-description">
-<p>In this article, we explore how to achieve photorealistic rendering of large unbounded 3D scenes from novel camera angles while preserving fine-grained details.</p>
+<a href="./feeds/reports/mip-nerf-360.html" class="no-external">In this article, we explore how to achieve photorealistic rendering of large unbounded 3D scenes from novel camera angles while preserving fine-grained details.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/mip-nerf-360.html">
+<a href="./feeds/reports/mip-nerf-360.html" class="no-external">
 <div class="listing-date">
 April 30, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/mip-nerf-360.html">
+</a><div class="listing-author"><a href="./feeds/reports/mip-nerf-360.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="deeplearning,graphics,2-minute-papers" data-listing-date-sort="1650911400000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="24" data-categories="deeplearning,graphics,2-minute-papers" data-listing-date-sort="1650931200000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/extracting-triangular-models.html"> <img src="./feeds/reports/assets/extracting-triangular-models.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/extracting-triangular-models.html" class="no-external"></a></p><a href="./feeds/reports/extracting-triangular-models.html" class="no-external">
+<p><img loading="lazy" src="./feeds/reports/assets/extracting-triangular-models.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/extracting-triangular-models.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/extracting-triangular-models.html">
 <h3 class="no-anchor listing-title">
-Extracting Triangular 3D Models, Materials, and Lighting From Images
+<a href="./feeds/reports/extracting-triangular-models.html" class="no-external">Extracting Triangular 3D Models, Materials, and Lighting From Images</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/extracting-triangular-models.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -1228,34 +1233,33 @@ graphics
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/extracting-triangular-models.html">
 <div class="listing-description">
-<p>In this article, we’ll explore a novel and efficient approach for joint optimization of topology, materials, and lighting from multi-view image observations.</p>
+<a href="./feeds/reports/extracting-triangular-models.html" class="no-external">In this article, we’ll explore a novel and efficient approach for joint optimization of topology, materials, and lighting from multi-view image observations.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/extracting-triangular-models.html">
+<a href="./feeds/reports/extracting-triangular-models.html" class="no-external">
 <div class="listing-date">
 April 26, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/extracting-triangular-models.html">
+</a><div class="listing-author"><a href="./feeds/reports/extracting-triangular-models.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1650220200000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="25" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1650240000000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/barbershop.html"> <img data-src="./feeds/reports/assets/barbershop.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/barbershop.html" class="no-external"></a></p><a href="./feeds/reports/barbershop.html" class="no-external">
+<p><img loading="lazy" data-src="./feeds/reports/assets/barbershop.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/barbershop.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/barbershop.html">
 <h3 class="no-anchor listing-title">
-Barbershop: Hair Transfer with GAN-Based Image Compositing Using Segmentation Masks
+<a href="./feeds/reports/barbershop.html" class="no-external">Barbershop: Hair Transfer with GAN-Based Image Compositing Using Segmentation Masks</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/barbershop.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1270,34 +1274,33 @@ generative
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/barbershop.html">
 <div class="listing-description">
-<p>A novel GAN-based optimization method for photo-realistic hairstyle transfer.</p>
+<a href="./feeds/reports/barbershop.html" class="no-external">A novel GAN-based optimization method for photo-realistic hairstyle transfer.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/barbershop.html">
+<a href="./feeds/reports/barbershop.html" class="no-external">
 <div class="listing-date">
 April 18, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/barbershop.html">
+</a><div class="listing-author"><a href="./feeds/reports/barbershop.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="deeplearning,pytorch,jax" data-listing-date-sort="1648751400000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="26" data-categories="deeplearning,pytorch,jax" data-listing-date-sort="1648771200000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/functorch.html"> <img data-src="./feeds/reports/assets/functorch.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/functorch.html" class="no-external"></a></p><a href="./feeds/reports/functorch.html" class="no-external">
+<p><img loading="lazy" data-src="./feeds/reports/assets/functorch.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/functorch.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/functorch.html">
 <h3 class="no-anchor listing-title">
-Working with FuncTorch: An Introduction
+<a href="./feeds/reports/functorch.html" class="no-external">Working with FuncTorch: An Introduction</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/functorch.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('deeplearning'); return false;">
 deeplearning
@@ -1309,34 +1312,33 @@ pytorch
 jax
 </div>
 </div>
-<a href="./feeds/reports/functorch.html">
 <div class="listing-description">
-<p>Working with JAX-like composable function transforms in PyTorch.</p>
+<a href="./feeds/reports/functorch.html" class="no-external">Working with JAX-like composable function transforms in PyTorch.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/functorch.html">
+<a href="./feeds/reports/functorch.html" class="no-external">
 <div class="listing-date">
 April 1, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/functorch.html">
+</a><div class="listing-author"><a href="./feeds/reports/functorch.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="computervision,deeplearning,nerf,jax" data-listing-date-sort="1647714600000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="27" data-categories="computervision,deeplearning,nerf,jax" data-listing-date-sort="1647734400000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail">
-<p><a href="./feeds/reports/nerf-jax.html"> <img data-src="./feeds/reports/assets/nerf-jax.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/nerf-jax.html" class="no-external"></a></p><a href="./feeds/reports/nerf-jax.html" class="no-external">
+<p><img loading="lazy" data-src="./feeds/reports/assets/nerf-jax.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/nerf-jax.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/nerf-jax.html">
 <h3 class="no-anchor listing-title">
-Implementing NeRF in JAX
+<a href="./feeds/reports/nerf-jax.html" class="no-external">Implementing NeRF in JAX</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/nerf-jax.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1351,34 +1353,33 @@ nerf
 jax
 </div>
 </div>
-<a href="./feeds/reports/nerf-jax.html">
 <div class="listing-description">
-<p>This article uses JAX to create a minimal implementation of 3D volumetric rendering of scenes represented by Neural Radiance Fields, using W&amp;B to track all metrics.</p>
+<a href="./feeds/reports/nerf-jax.html" class="no-external">This article uses JAX to create a minimal implementation of 3D volumetric rendering of scenes represented by Neural Radiance Fields, using W&amp;B to track all metrics.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/nerf-jax.html">
+<a href="./feeds/reports/nerf-jax.html" class="no-external">
 <div class="listing-date">
 March 20, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/nerf-jax.html">
+</a><div class="listing-author"><a href="./feeds/reports/nerf-jax.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="computervision,deeplearning,nerf,2-minute-papers" data-listing-date-sort="1647196200000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="28" data-categories="computervision,deeplearning,nerf,2-minute-papers" data-listing-date-sort="1647216000000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/block-nerf.html"> <img data-src="./feeds/reports/assets/block-nerf.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/block-nerf.html" class="no-external"></a></p><a href="./feeds/reports/block-nerf.html" class="no-external">
+<p><img loading="lazy" data-src="./feeds/reports/assets/block-nerf.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/block-nerf.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/block-nerf.html">
 <h3 class="no-anchor listing-title">
-Block-NeRF: Scalable Large Scene Neural View Synthesis
+<a href="./feeds/reports/block-nerf.html" class="no-external">Block-NeRF: Scalable Large Scene Neural View Synthesis</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/block-nerf.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1393,34 +1394,33 @@ nerf
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/block-nerf.html">
 <div class="listing-description">
-<p>Representing large city-scale environments spanning multiple blocks using Neural Radiance Fields.</p>
+<a href="./feeds/reports/block-nerf.html" class="no-external">Representing large city-scale environments spanning multiple blocks using Neural Radiance Fields.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/block-nerf.html">
+<a href="./feeds/reports/block-nerf.html" class="no-external">
 <div class="listing-date">
 March 14, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/block-nerf.html">
+</a><div class="listing-author"><a href="./feeds/reports/block-nerf.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="computervision,deeplearning,reinforcement-learning,robotics,2-minute-papers" data-listing-date-sort="1646937000000" data-listing-file-modified-sort="1693708939932" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="29" data-categories="computervision,deeplearning,reinforcement-learning,robotics,2-minute-papers" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/robust-perceptive-locomotive.html"> <img data-src="./feeds/reports/assets/robust-perceptive-locomotive.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external"></a></p><a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external">
+<p><img loading="lazy" data-src="./feeds/reports/assets/robust-perceptive-locomotive.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/robust-perceptive-locomotive.html">
 <h3 class="no-anchor listing-title">
-Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild
+<a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external">Learning Robust Perceptive Locomotion for Quadrupedal Robots in the Wild</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1438,34 +1438,33 @@ robotics
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/robust-perceptive-locomotive.html">
 <div class="listing-description">
-<p>Or, teaching four-legged robots to walk in the real world.</p>
+<a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external">Or, teaching four-legged robots to walk in the real world.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/robust-perceptive-locomotive.html">
+<a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external">
 <div class="listing-date">
 March 11, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/robust-perceptive-locomotive.html">
+</a><div class="listing-author"><a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1645727400000" data-listing-file-modified-sort="1693708939931" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
+<div class="quarto-post image-right" data-index="30" data-categories="computervision,deeplearning,generative,2-minute-papers" data-listing-date-sort="1645747200000" data-listing-file-modified-sort="1721379891316" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail">
-<p><a href="./feeds/reports/poe-gan.html"> <img data-src="./feeds/reports/assets/poe-gan-banner.png" class="thumbnail-image"> </a></p>
+<p><a href="./feeds/reports/poe-gan.html" class="no-external"></a></p><a href="./feeds/reports/poe-gan.html" class="no-external">
+<p><img loading="lazy" data-src="./feeds/reports/assets/poe-gan-banner.png" class="thumbnail-image"></p>
+</a><p><a href="./feeds/reports/poe-gan.html" class="no-external"></a></p>
 </div>
 <div class="body">
-<a href="./feeds/reports/poe-gan.html">
 <h3 class="no-anchor listing-title">
-PoE-GAN: Generating Images from Multi-Modal Inputs
+<a href="./feeds/reports/poe-gan.html" class="no-external">PoE-GAN: Generating Images from Multi-Modal Inputs</a>
 </h3>
 <div class="listing-subtitle">
+<a href="./feeds/reports/poe-gan.html" class="no-external"></a>
 </div>
-</a>
 <div class="listing-categories">
 <div class="listing-category" onclick="window.quartoListingCategory('computervision'); return false;">
 computervision
@@ -1480,18 +1479,16 @@ generative
 2-minute-papers
 </div>
 </div>
-<a href="./feeds/reports/poe-gan.html">
 <div class="listing-description">
-<p>PoE-GAN is a recent, fascinating paper where the authors generate images from multiple inputs like text, style, segmentation, and sketch. We dig into the architecture, the underlying math, and of course, generate some images along the way.</p>
+<a href="./feeds/reports/poe-gan.html" class="no-external">PoE-GAN is a recent, fascinating paper where the authors generate images from multiple inputs like text, style, segmentation, and sketch. We dig into the architecture, the underlying math, and of course, generate some images along the way.</a>
 </div>
-</a>
 </div>
 <div class="metadata">
-<a href="./feeds/reports/poe-gan.html">
+<a href="./feeds/reports/poe-gan.html" class="no-external">
 <div class="listing-date">
 February 25, 2022
 </div>
-</a><div class="listing-author"><a href="./feeds/reports/poe-gan.html">
+</a><div class="listing-author"><a href="./feeds/reports/poe-gan.html" class="no-external">
 </a><a href="../../">GeekyRakshit</a>
 </div>
 </div>
@@ -1548,6 +1545,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1616,13 +1640,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1650,18 +1676,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1693,11 +1708,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/geekyrakshit\.dev");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1707,8 +1761,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1720,7 +1783,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1764,6 +1950,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1789,6 +1976,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1849,6 +2062,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

@@ -9,8 +9,8 @@
 <link>https://geekyrakshit.dev/wandb_reports.html</link>
 <atom:link href="https://geekyrakshit.dev/wandb_reports.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.3.450</generator>
-<lastBuildDate>Sun, 20 Aug 2023 18:30:00 GMT</lastBuildDate>
+<generator>quarto-1.5.55</generator>
+<lastBuildDate>Mon, 21 Aug 2023 00:00:00 GMT</lastBuildDate>
 <item>
   <title>A Guide to Using Stable Diffusion XL with HuggingFace Diffusers and W&amp;B</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
@@ -32,7 +32,7 @@
   <category>huggingface</category>
   <category>stable-diffusion</category>
   <guid>https://geekyrakshit.dev/feeds/reports/sdxl.html</guid>
-  <pubDate>Sun, 20 Aug 2023 18:30:00 GMT</pubDate>
+  <pubDate>Mon, 21 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/sdxl.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
@@ -40,6 +40,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/ultralytics.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -54,7 +55,7 @@
   <category>computervision</category>
   <category>object-detection</category>
   <guid>https://geekyrakshit.dev/feeds/reports/ultralytics.html</guid>
-  <pubDate>Tue, 01 Aug 2023 18:30:00 GMT</pubDate>
+  <pubDate>Wed, 02 Aug 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/ultralytics.png" medium="image" type="image/png" height="91" width="144"/>
 </item>
 <item>
@@ -62,6 +63,7 @@
   <dc:creator>[Sayak Paul](https://twitter.com/RisingSayak), [GeekyRakshit](../../), [Ayush Thakur](https://twitter.com/ayushthakur0)</dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/keras-xla-benchmark.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -77,7 +79,7 @@
   <category>computervision</category>
   <category>xla</category>
   <guid>https://geekyrakshit.dev/feeds/reports/keras-xla-benchmark.html</guid>
-  <pubDate>Thu, 13 Jul 2023 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 14 Jul 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/weave-xla.png" medium="image" type="image/png" height="71" width="144"/>
 </item>
 <item>
@@ -85,6 +87,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/multi-task-learning.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -98,7 +101,7 @@
   <category>deeplearning</category>
   <category>pytorch</category>
   <guid>https://geekyrakshit.dev/feeds/reports/multi-task-learning.html</guid>
-  <pubDate>Thu, 11 May 2023 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 12 May 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/bargain.webp" medium="image" type="image/webp"/>
 </item>
 <item>
@@ -106,6 +109,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/if.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -121,7 +125,7 @@
   <category>diffusion</category>
   <category>huggingface</category>
   <guid>https://geekyrakshit.dev/feeds/reports/if.html</guid>
-  <pubDate>Mon, 01 May 2023 18:30:00 GMT</pubDate>
+  <pubDate>Tue, 02 May 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/if.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -129,6 +133,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/paella.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -142,7 +147,7 @@
   <category>deeplearning</category>
   <category>generative</category>
   <guid>https://geekyrakshit.dev/feeds/reports/paella.html</guid>
-  <pubDate>Wed, 12 Apr 2023 18:30:00 GMT</pubDate>
+  <pubDate>Thu, 13 Apr 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/paella.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
@@ -168,7 +173,7 @@
   <category>keras</category>
   <category>tensorflow</category>
   <guid>https://geekyrakshit.dev/feeds/reports/dreambooth-keras.html</guid>
-  <pubDate>Thu, 16 Mar 2023 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 17 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/dreambooth-keras.jpeg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -176,6 +181,7 @@
   <dc:creator>[GeekyRakshit](../../), [Saurav Maheshkar](https://twitter.com/MaheshkarSaurav), [Samarendra Dash](https://twitter.com/samarendra109), [Aritra Roy Gosthipaty](https://twitter.com/ariG23498)</dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/lighting-up-images.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -190,7 +196,7 @@
   <category>keras</category>
   <category>computervision</category>
   <guid>https://geekyrakshit.dev/feeds/reports/lighting-up-images.html</guid>
-  <pubDate>Thu, 09 Mar 2023 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 10 Mar 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/lighting.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
@@ -198,6 +204,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/shapenetcore.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -213,7 +220,7 @@
   <category>geometric-deeplearning</category>
   <category>point-cloud</category>
   <guid>https://geekyrakshit.dev/feeds/reports/shapenetcore.html</guid>
-  <pubDate>Thu, 19 Jan 2023 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 20 Jan 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/dgcnn.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
@@ -221,6 +228,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/point-cloud-segmentation.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -236,7 +244,7 @@
   <category>geometric-deeplearning</category>
   <category>point-cloud</category>
   <guid>https://geekyrakshit.dev/feeds/reports/point-cloud-segmentation.html</guid>
-  <pubDate>Tue, 17 Jan 2023 18:30:00 GMT</pubDate>
+  <pubDate>Wed, 18 Jan 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/dgcnn.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
@@ -244,6 +252,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/point-cloud-classification.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -259,7 +268,7 @@
   <category>geometric-deeplearning</category>
   <category>point-cloud</category>
   <guid>https://geekyrakshit.dev/feeds/reports/point-cloud-classification.html</guid>
-  <pubDate>Mon, 16 Jan 2023 18:30:00 GMT</pubDate>
+  <pubDate>Tue, 17 Jan 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/point-cloud-classification.png" medium="image" type="image/png" height="105" width="144"/>
 </item>
 <item>
@@ -267,6 +276,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/unconditional-diffusion.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -281,7 +291,7 @@
   <category>diffusion</category>
   <category>huggingface</category>
   <guid>https://geekyrakshit.dev/feeds/reports/unconditional-diffusion.html</guid>
-  <pubDate>Mon, 16 Jan 2023 18:30:00 GMT</pubDate>
+  <pubDate>Tue, 17 Jan 2023 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/unconditional-diffusion.jpg" medium="image" type="image/jpeg"/>
 </item>
 <item>
@@ -289,6 +299,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/vqad.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -309,7 +320,7 @@
   <category>nerf</category>
   <category>2-minute-papers</category>
   <guid>https://geekyrakshit.dev/feeds/reports/vqad.html</guid>
-  <pubDate>Fri, 02 Dec 2022 18:30:00 GMT</pubDate>
+  <pubDate>Sat, 03 Dec 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/vqad.png" medium="image" type="image/png" height="144" width="144"/>
 </item>
 <item>
@@ -317,6 +328,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/hazy-image-restoration.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -331,7 +343,7 @@
   <category>keras</category>
   <category>computervision</category>
   <guid>https://geekyrakshit.dev/feeds/reports/hazy-image-restoration.html</guid>
-  <pubDate>Thu, 17 Nov 2022 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 18 Nov 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/hazy.png" medium="image" type="image/png" height="145" width="144"/>
 </item>
 <item>
@@ -339,6 +351,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/tensorboard-debugger.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -353,7 +366,7 @@
   <category>tensorflow</category>
   <category>keras</category>
   <guid>https://geekyrakshit.dev/feeds/reports/tensorboard-debugger.html</guid>
-  <pubDate>Thu, 10 Nov 2022 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 11 Nov 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/tensorboard-debugger.png" medium="image" type="image/png" height="88" width="144"/>
 </item>
 <item>
@@ -361,6 +374,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/tensorboard-graph-dashboard.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -373,7 +387,7 @@
   <category>deeplearning</category>
   <category>tensorboard</category>
   <guid>https://geekyrakshit.dev/feeds/reports/tensorboard-graph-dashboard.html</guid>
-  <pubDate>Thu, 10 Nov 2022 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 11 Nov 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/tensorboard-graph-dashboard.png" medium="image" type="image/png" height="77" width="144"/>
 </item>
 <item>
@@ -381,6 +395,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/object-detection.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -395,7 +410,7 @@
   <category>object-detection</category>
   <category>yolo</category>
   <guid>https://geekyrakshit.dev/feeds/reports/object-detection.html</guid>
-  <pubDate>Thu, 29 Sep 2022 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 30 Sep 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/object-detection.png" medium="image" type="image/png" height="128" width="144"/>
 </item>
 <item>
@@ -403,6 +418,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/semnantic-segmentation.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -417,7 +433,7 @@
   <category>fastai</category>
   <category>segmentation</category>
   <guid>https://geekyrakshit.dev/feeds/reports/semnantic-segmentation.html</guid>
-  <pubDate>Thu, 29 Sep 2022 18:30:00 GMT</pubDate>
+  <pubDate>Fri, 30 Sep 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/semantic-segmentation.png" medium="image" type="image/png" height="93" width="144"/>
 </item>
 <item>
@@ -428,13 +444,13 @@
 
 
 
+
 <details>
 <summary>
 <strong> Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a> </strong>
 </summary>
 <br> <iframe width="560" height="315" src="https://www.youtube.com/embed/XW_nO2NMH_g?si=OAaFHjcpu2jHIdU-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen=""></iframe>
 </details>
-
 <iframe src="https://wandb.ai/wandb/cross-attention-control/reports/Improving-Generative-Images-with-Instructions-Prompt-to-Prompt-Image-Editing-with-Cross-Attention-Control--VmlldzoyNjk2MDAy?galleryTag=stable-diffusion" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -448,7 +464,7 @@
   <category>stable-diffusion</category>
   <category>2-minute-papers</category>
   <guid>https://geekyrakshit.dev/feeds/reports/cross-attention-control.html</guid>
-  <pubDate>Wed, 28 Sep 2022 18:30:00 GMT</pubDate>
+  <pubDate>Thu, 29 Sep 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/cross-attention-control.png" medium="image" type="image/png" height="96" width="144"/>
 </item>
 <item>
@@ -456,6 +472,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/game-characters.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -475,7 +492,7 @@
   <category>reinforcement-learning</category>
   <category>2-minute-papers</category>
   <guid>https://geekyrakshit.dev/feeds/reports/game-characters.html</guid>
-  <pubDate>Mon, 18 Jul 2022 18:30:00 GMT</pubDate>
+  <pubDate>Tue, 19 Jul 2022 00:00:00 GMT</pubDate>
   <media:content url="https://geekyrakshit.dev/feeds/reports/assets/game-characters.png" medium="image" type="image/png" height="121" width="144"/>
 </item>
 </channel>
