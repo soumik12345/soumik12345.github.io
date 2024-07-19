@@ -8,16 +8,13 @@ I write about almost all of my projects, which you can find either among my [blo
 You can also follow me on Github to stay up-to-date with the numerous open-source projects I'm continuously working on. That said, I want to
 mention some specific projects I've undertaken in the past or ones that I'm still working on.
 
-### Deep Learning examples published on [keras.io](https://keras.io/)
+## Work-in-Progress Projects
 
-* [Multiclass semantic segmentation using DeepLabV3+](https://keras.io/examples/vision/deeplabv3_plus/)
-* [Low-light image enhancement using MIRNet](https://keras.io/examples/vision/mirnet/)
-* [Zero-DCE for low-light image enhancement](https://keras.io/examples/vision/zero_dce/)
-* [Large-scale multi-label text classification](https://keras.io/examples/nlp/multi_label_classification/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
-* [Point cloud segmentation with PointNet](https://keras.io/examples/vision/pointnet_segmentation/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
-* [GauGAN for conditional image generation](https://keras.io/examples/generative/gaugan/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
+### Hemm: Holistic Evaluation of Multi-modal Generative Models [[Repository](https://github.com/wandb/Hemm) | [Website](https://wandb.github.io/Hemm/)]
 
-### Weights & Biases Addons
+[Hemm](https://github.com/wandb/Hemm) is a library for performing comprehensive benchmark of text-to-image diffusion models on image quality and prompt comprehension integrated with Weights & Biases and Weave.
+
+### Weights & Biases Addons [[Repository](https://github.com/soumik12345/wandb-addons/tree/main) | [Website](https://geekyrakshit.dev/wandb-addons/)]
 
 [Weights & Biases Addons]((https://github.com/soumik12345/wandb-addons)) is a repository that provides of integrations and utilities that will supercharge your Weights & Biases workflows.
 Its a repositpry built and maintained by WandB users for WandB users. The library hosts experimental utilities and integrations built using 
@@ -29,7 +26,16 @@ Its a repositpry built and maintained by WandB users for WandB users. The librar
 models for tasks such as low-light enhancement, denoising, deblurring, super-resolution, etc. You can read more about it in
 [this WandB report](wandb.me/low-light).
 
-### Other Interesting Projects
+## Deep Learning examples published on [keras.io](https://keras.io/)
+
+* [Multiclass semantic segmentation using DeepLabV3+](https://keras.io/examples/vision/deeplabv3_plus/)
+* [Low-light image enhancement using MIRNet](https://keras.io/examples/vision/mirnet/)
+* [Zero-DCE for low-light image enhancement](https://keras.io/examples/vision/zero_dce/)
+* [Large-scale multi-label text classification](https://keras.io/examples/nlp/multi_label_classification/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
+* [Point cloud segmentation with PointNet](https://keras.io/examples/vision/pointnet_segmentation/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
+* [GauGAN for conditional image generation](https://keras.io/examples/generative/gaugan/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
+
+## Other Interesting Projects
 
 * [**Radium**](https://github.com/soumik12345/radium): A small and lightweight Ray Tracing Engine written in C++ that runs on the CPU using shared-memory multiprocessing.
 * [**Colorization using Optimization**](https://github.com/soumik12345/colorization-using-optimization): Python and C++ implementations of a user-guided image/video colorization technique as proposed by the paper [Colorization Using Optimization](https://dl.acm.org/doi/10.1145/1015706.1015780). The algorithm is based on a simple premise; neighboring pixels in space-time that have similar intensities should have similar colors. This premise is formalized using a quadratic cost function that obtains an optimization problem that can be solved efficiently using standard techniques. While using this alogorithm, an artist only needs to annotate the image with a few color scribbles or visual clues, and the indicated colors are automatically propagated in both space and time to produce a fully colorized image or sequence. The annotation can be done using any drawing tool such as [JSPaint](https://jspaint.app/) or [Gimp](https://www.gimp.org/).
