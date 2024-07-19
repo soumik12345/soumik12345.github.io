@@ -228,7 +228,21 @@
     "href": "about.html",
     "title": "About Me",
     "section": "",
-    "text": "I am generally interested in the field of computer vision, particularly in foundation models for computer vision, generative models for images, implicit representation and representation learning.\nI work on developing tools for Machine Learning parctioners at Weights & Biases. My day-to-day tasks include\n\ndeveloping and maintaining integrations with open-source libraries such as keras, ultralytics, super-gradients, kaolin-wisp, etc.\nprototyping experimental tools in the Weights & Biases ecosystem as part of wandb-addons.\nwriting exciting and beautiful blog posts on machine learning using W&B Reports.\ntalk about my work at different webinars.\n\nI’m fairly active in terms of open-source contributions. Besides wandb, I regularly contribute to Keras, KerasCV, and Keras Examples. Thanks to my job, I get to contribute to a lot of other open-source repositories including Ultralytics, Super-Gradients, Kaolin-Wisp, PyTorch Geometric, and many more. I have also developed and am maintaining the integrations of Weights & Biases with many of these repositories. I am also actively working on wandb-addons which hosts a set of experimental utilities and integrations for Weights & Biases.\nMy Career Timeline:\n\nMachine Learning Engineer at Weights & Biases (Jan 2022 - Present)\nGoogle Developer Expert for Machine Learning (JAX) (Jun 2022 - Present)\nStaff Machine Learning Engineer at Ignitarium (Jul 2021 - Dec 2021)\nSoftware Development Engineer at IBM (Jan 2020 - Jul 2021)\nSoftware Development Engineer at HighRadius (Jun 2019 - Dec 2019)\nFailed entrepreneur and Machine Learning Researcher at DeepWrex Technologies\n\nIn my free time, I watch anime, read books and manga, play video games, write poetry, sketch on ProCreate, and ocassionally dabble in the dark arts of computational graphics."
+    "text": "I work on developing tools for Machine Learning parctioners and LLMOps at Weights & Biases.\nI am generally interested in the field of computer vision, particularly in foundation models for computer vision, computer graphics, generative models for images, implicit representation and representation learning.\nBesides my work, I’m an amateur musician (trained in violin, guitar, and Indian classical vocal) and a veteran of the soulsbourne genre of video games."
+  },
+  {
+    "objectID": "about.html#my-day-to-day-work",
+    "href": "about.html#my-day-to-day-work",
+    "title": "About Me",
+    "section": "My day-to-day Work",
+    "text": "My day-to-day Work\n\ndeveloping and maintaining integrations with open-source libraries such as keras, 🤗 diffusers, MONAI, etc.\ndeveloping and maintaining Weave integrations with open-source LLMOps libraries such as DSPy, and GenAI vendors like Groq.\nprototyping experimental tools in the Weights & Biases and Weave ecosystem.\nwriting exciting and beautiful blog posts on machine learning using W&B Reports.\ntalk about my work at different seminars, webinars, and events.\n\nI’m fairly active in terms of open-source contributions. Besides wandb and Weave, I have contributed to Keras, KerasCV, and Keras Examples. Thanks to my job, I get to contribute to a lot of other open-source repositories including Ultralytics, Super-Gradients, Kaolin-Wisp, PyTorch Geometric, and many more. I have also developed and am maintaining the integrations of Weights & Biases with many of these repositories. I am also actively working on wandb-addons which hosts a set of experimental utilities and integrations for Weights & Biases."
+  },
+  {
+    "objectID": "about.html#my-career-timeline",
+    "href": "about.html#my-career-timeline",
+    "title": "About Me",
+    "section": "My Career Timeline",
+    "text": "My Career Timeline\n\n\n\nPosition\nOrganization\nDuration\n\n\n\n\nMachine Learning Engineer\nWeights & Biases\nJul 2021 - Dec 2021\n\n\nStaff Machine Learning Engineer\nIgnitarium\nJul 2021 - Dec 2021\n\n\nSoftware Development Engineer\nIBM\nJan 2020 - Jul 2021\n\n\nSoftware Development Engineer\nHighRadius\nJun 2019 - Dec 2019\n\n\nFailed entrepreneur and Machine Learning Researcher\nDeepWrex Technologies\nNov 2018 - Dec 2019\n\n\n\nAdditionally, I’ve been a Google Developer Expert for Machine Learning (JAX) since Jun 2022."
   },
   {
     "objectID": "courses.html",
