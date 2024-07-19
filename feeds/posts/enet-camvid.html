@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2020-05-05">
 <meta name="description" content="Pytorch Implementation of ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation trained on the CamVid Dataset">
 
-<title>Geekyrakshit - Enet-Camvid</title>
+<title>Enet-Camvid – Geekyrakshit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -94,23 +100,51 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
   }
 }</script>
 
-  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
+
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Geekyrakshit - Enet-Camvid">
+<meta property="og:title" content="Enet-Camvid – Geekyrakshit">
 <meta property="og:description" content="Pytorch Implementation of ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation trained on the CamVid Dataset">
 <meta property="og:image" content="https://geekyrakshit.dev/feeds/posts/assets/enet-camvid.png">
-<meta property="og:site-name" content="Geekyrakshit">
+<meta property="og:site_name" content="Geekyrakshit">
 <meta property="og:image:height" content="899">
 <meta property="og:image:width" content="900">
-<meta name="twitter:title" content="Geekyrakshit - Enet-Camvid">
+<meta name="twitter:title" content="Enet-Camvid – Geekyrakshit">
 <meta name="twitter:description" content="Pytorch Implementation of ENet: A Deep Neural Network Architecture for Real-Time Semantic Segmentation trained on the CamVid Dataset">
 <meta name="twitter:image" content="https://geekyrakshit.dev/feeds/posts/assets/enet-camvid.png">
 <meta name="twitter:image-height" content="899">
@@ -122,44 +156,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Geekyrakshit</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About Me</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../courses.html" rel="" target="">
- <span class="menu-text">Courses/Seminars</span></a>
+    <a class="nav-link" href="../../courses.html"> 
+<span class="menu-text">Courses/Seminars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../wandb_reports.html" rel="" target="">
- <span class="menu-text">WandB Reports</span></a>
+    <a class="nav-link" href="../../wandb_reports.html"> 
+<span class="menu-text">WandB Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html" rel="" target="">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -210,12 +244,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p><strong>Project Repository:</strong> <a href="https://github.com/soumik12345/enet">https://github.com/soumik12345/enet</a></p>
 <section id="network-architecture" class="level2">
 <h2 class="anchored" data-anchor-id="network-architecture">Network Architecture</h2>
-<div class="cell">
+<div id="cell-3" class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Imports for Model Creation</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.nn <span class="im">import</span> functional <span class="im">as</span> F</span>
@@ -231,8 +267,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Inspired by <strong>Swish</strong> Activation Function (Paper), <strong>Mish</strong> is a Self Regularized Non-Monotonic Neural Activation Function. Mish Activation Function can be mathematically represented by the following formula:</p>
 <p><span class="math inline">\(f(x) = x * tanh(ln(1 + e^{x}))\)</span></p>
 <p>It can also be represented using the <strong>Softplus</strong> Activation Function: <span class="math inline">\(f(x) = x * tanh( \varsigma (x))\)</span></p>
-<p>where, <span class="math inline">\(\varsigma (x) = ln(1 + e^{x})\)</span></p>
-<div class="cell">
+<p>where, <span class="math inline">\(\varsigma (x)  = ln(1 + e^{x})\)</span></p>
+<div id="cell-6" class="cell">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Mish(Module):</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> __init(<span class="va">self</span>):</span>
@@ -242,7 +278,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">input</span> <span class="op">*</span> torch.tanh(F.softplus(<span class="bu">input</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Since Pytorch does not explicitly have any Module for Activation unlike Tensorflow, we can easily implement it. The following Module could be modified to incorporate for any number of activation functions, each of which can be accessed with a string label.</p>
-<div class="cell">
+<div id="cell-8" class="cell">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Activation(Module):</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, name<span class="op">=</span><span class="st">'relu'</span>):</span>
@@ -262,14 +298,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="enet-initial-block" class="level3">
 <h3 class="anchored" data-anchor-id="enet-initial-block">Enet Initial Block</h3>
 <p>The Initial Block is the first block of the Enet Model. It consists of 2 branches, a convolutional layer (<code>out_channels=13, kernel_size=3, stride=2</code>) which we would call the main branch in our implementation and a MaxPooling layer which is performed with non-overlapping 2x2 windows which is a secondary block. We would perform BatchNormalization and a Non-linear Activation on the concatenation of the two branches. The Input block would have 16 output channels.</p>
-<div class="cell" data-outputid="7ec2c389-26a4-40f4-811c-45e8992c07ac" data-execution_count="7">
+<div id="cell-10" class="cell" data-outputid="7ec2c389-26a4-40f4-811c-45e8992c07ac" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>SVG(<span class="st">'enet_initial_block_xc7itf.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="7">
-<p><img src="enet-camvid_files/figure-html/cell-5-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-5-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell">
+</div>
+<div id="cell-11" class="cell">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> InitialBlock(Module):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, in_channels, out_channels, bias<span class="op">=</span><span class="va">False</span>, activation<span class="op">=</span><span class="st">'relu'</span>):</span>
@@ -295,14 +335,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="regular-bottleneck-block" class="level3">
 <h3 class="anchored" data-anchor-id="regular-bottleneck-block">Regular Bottleneck Block</h3>
 <p>In case of the Regular Bottleneck Block which is the most widely used block in the ENet architecture, the secondary block has no operations. The middle convolution blocks are either <code>3x3</code> regular convolutional block or a <code>5x5</code> asymmetric convolutional block. All the convolutional blocks in the main branch have Batchnormalization and respective Activation after them. The main branch is regularized by a Dropout operation.</p>
-<div class="cell" data-outputid="c22b1460-d900-40f9-9e9a-4f91debeb33e" data-execution_count="9">
+<div id="cell-13" class="cell" data-outputid="c22b1460-d900-40f9-9e9a-4f91debeb33e" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>SVG(<span class="st">'enet_regular_bottleneck_esc4ir.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="9">
-<p><img src="enet-camvid_files/figure-html/cell-7-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-7-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell">
+</div>
+<div id="cell-14" class="cell">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> RegularBottleneckBlock(Module):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(</span>
@@ -383,14 +427,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="downsample-bottleneck-block" class="level3">
 <h3 class="anchored" data-anchor-id="downsample-bottleneck-block">Downsample Bottleneck Block</h3>
 <p>This block is used in the Encoder stages of the Enet Architecture. In this block, the main branch is <code>Conv 1x1 -&gt; Conv 3x3 -&gt; Conv 1x1 -&gt; Dropout</code>. The secondary branch consists of a Maxpooling operation performed with non-overlapping 2x2 windows.</p>
-<div class="cell" data-outputid="0e4c4640-69a2-4bc7-ccce-9f63264bb954" data-execution_count="11">
+<div id="cell-16" class="cell" data-outputid="0e4c4640-69a2-4bc7-ccce-9f63264bb954" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>SVG(<span class="st">'enet_downsampling_bottleneck-1_ysayci.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
-<p><img src="enet-camvid_files/figure-html/cell-9-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-9-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell">
+</div>
+<div id="cell-17" class="cell">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> DownsampleBottleneckBlock(Module):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(</span>
@@ -475,14 +523,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="upsampling-bottleneck-block" class="level3">
 <h3 class="anchored" data-anchor-id="upsampling-bottleneck-block">Upsampling Bottleneck Block</h3>
 <p>This block is used in the Decoder stages of the Enet Architecture. In this block, the main branch is <code>Conv 1x1 -&gt; ConvTranspose2d 3x3 -&gt; Conv 1x1 -&gt; Dropout</code>. The Secondary branch consists of <code>Conv 1x1</code> block followed by a <code>MaxUnpooling2d</code> (Inverse of MaxPooling2d) Block.</p>
-<div class="cell" data-outputid="b925eb09-53b1-465b-fc36-8b8c66186913" data-execution_count="13">
+<div id="cell-19" class="cell" data-outputid="b925eb09-53b1-465b-fc36-8b8c66186913" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>SVG(<span class="st">'enet_upsampling_block_du1lmw.svg'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="13">
-<p><img src="enet-camvid_files/figure-html/cell-11-output-1.svg" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-11-output-1.svg" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell">
+</div>
+<div id="cell-20" class="cell">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> UpsampleBottleneckBlock(Module):</span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(</span>
@@ -563,7 +615,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <section id="building-enet" class="level3">
 <h3 class="anchored" data-anchor-id="building-enet">Building Enet</h3>
 <p>The overall architecture of Enet is summarized in the following table. The whole architecture is divided into 6 parts or stages. Stage <code>0</code> consists of the Initial Block only. Stages <code>1-3</code> make up the encoder part of the network which downsamples the input. Stages <code>4-5</code> makes up the decoder, which upsamples the input to create the output.</p>
-<table class="table">
+<table class="caption-top table">
 <thead>
 <tr class="header">
 <th>Name</th>
@@ -749,7 +801,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tr>
 </tbody>
 </table>
-<div class="cell">
+<div id="cell-22" class="cell">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> Enet(Module):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, num_classes, encoder_activation<span class="op">=</span><span class="st">'mish'</span>, decoder_activation<span class="op">=</span><span class="st">'relu'</span>):</span>
@@ -929,7 +981,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb12-177"><a href="#cb12-177" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.transposed_conv(x)</span>
 <span id="cb12-178"><a href="#cb12-178" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-outputid="c85120a6-1302-4d0b-e585-05273309f146">
+<div id="cell-23" class="cell" data-outputid="c85120a6-1302-4d0b-e585-05273309f146">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'GPU:'</span>, torch.cuda.get_device_name(<span class="dv">0</span>))</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>device <span class="op">=</span> torch.device(<span class="st">'cuda:0'</span> <span class="cf">if</span> torch.cuda.is_available() <span class="cf">else</span> <span class="st">'cpu'</span>)</span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>enet <span class="op">=</span> Enet(<span class="dv">12</span>, encoder_activation<span class="op">=</span><span class="st">'prelu'</span>, decoder_activation<span class="op">=</span><span class="st">'relu'</span>)</span>
@@ -1713,7 +1765,7 @@ Enet(
 <h2 class="anchored" data-anchor-id="pipeline-for-camvid-dataset">Pipeline for Camvid Dataset</h2>
 <section id="download-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="download-dataset">Download Dataset</h3>
-<div class="cell" data-outputid="ef1749a6-5109-4911-e2bb-c45f77a65f41">
+<div id="cell-26" class="cell" data-outputid="ef1749a6-5109-4911-e2bb-c45f77a65f41">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>mkdir camvid</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="op">%</span>cd camvid</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget https:<span class="op">//</span>www.dropbox.com<span class="op">/</span>s<span class="op">/</span>ej1gx48bxqbtwd2<span class="op">/</span>CamVid.<span class="bu">zip</span>?dl<span class="op">=</span><span class="dv">0</span> <span class="op">-</span>O CamVid.<span class="bu">zip</span></span>
@@ -1749,7 +1801,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 /notebooks</code></pre>
 </div>
 </div>
-<div class="cell">
+<div id="cell-27" class="cell">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> torch, os</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> glob <span class="im">import</span> glob</span>
@@ -1769,7 +1821,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <section id="camvid-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="camvid-dataset">Camvid Dataset</h3>
 <p>The <code>CamVidDataset</code> characterizes the key features of the dataset that we want to generate on the fly. inherits from <code>torch.utils.data.Dataset</code> in order to leverage the multiprocessing functionalities of Pytorch.</p>
-<div class="cell">
+<div id="cell-30" class="cell">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> CamVidDataset(Dataset):</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> <span class="fu">__init__</span>(<span class="va">self</span>, images, labels, height, width):</span>
@@ -1796,7 +1848,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb18-24"><a href="#cb18-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x.squeeze(), y.squeeze()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Get the image file lists</p>
-<div class="cell">
+<div id="cell-32" class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>train_images <span class="op">=</span> <span class="bu">sorted</span>(glob(<span class="st">'./camvid/train/*'</span>))</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>train_labels <span class="op">=</span> <span class="bu">sorted</span>(glob(<span class="st">'./camvid/trainannot/*'</span>))</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>val_images <span class="op">=</span> <span class="bu">sorted</span>(glob(<span class="st">'./camvid/val/*'</span>))</span>
@@ -1806,7 +1858,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a>batch_size <span class="op">=</span> <span class="dv">10</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Define the <code>CamVidDataset</code> Objects</p>
-<div class="cell">
+<div id="cell-34" class="cell">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>train_dataset <span class="op">=</span> CamVidDataset(train_images, train_labels, <span class="dv">512</span>, <span class="dv">512</span>)</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>val_dataset <span class="op">=</span> CamVidDataset(val_images, val_labels, <span class="dv">512</span>, <span class="dv">512</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>test_dataset <span class="op">=</span> CamVidDataset(test_images, test_labels, <span class="dv">512</span>, <span class="dv">512</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -1817,13 +1869,13 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <li><code>shuffle</code>: If set to <code>True</code>, we will get a new order of exploration at each pass (or just keep a linear exploration scheme otherwise). Shuffling the order in which examples are fed to the classifier is helpful so that batches between epochs do not look alike. Doing so will eventually make our model more robust.</li>
 <li><code>num_workers</code>: this denotes the number of processes that generate batches in parallel. A high enough number of workers assures that CPU computations are efficiently managed, i.e.&nbsp;that the bottleneck is indeed the neural network’s forward and backward operations on the GPU (and not data generation).</li>
 </ul>
-<div class="cell">
+<div id="cell-36" class="cell">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>train_loader <span class="op">=</span> DataLoader(train_dataset, batch_size<span class="op">=</span>batch_size, shuffle<span class="op">=</span><span class="va">True</span>, num_workers<span class="op">=</span><span class="dv">4</span>)</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>val_loader <span class="op">=</span> DataLoader(val_dataset, batch_size<span class="op">=</span>batch_size, shuffle<span class="op">=</span><span class="va">True</span>, num_workers<span class="op">=</span><span class="dv">4</span>)</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>test_loader <span class="op">=</span> DataLoader(test_dataset, batch_size<span class="op">=</span>batch_size, shuffle<span class="op">=</span><span class="va">True</span>, num_workers<span class="op">=</span><span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>decode_segmap</code> function accepts an image of shape <code>(H, W)</code> and a color dictionary denoting the <code>BGR</code> color codes to various objects in order for us to visualize the segmentation Masks.</p>
-<div class="cell">
+<div id="cell-38" class="cell">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> decode_segmap(image, color_dict):</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    label_colours <span class="op">=</span> np.array([</span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>        color_dict[<span class="st">'obj0'</span>], color_dict[<span class="st">'obj1'</span>],</span>
@@ -1847,7 +1899,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> rgb</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>predict_rgb</code> function takes the model(enet in our case), a tensor denoting a single image in the form <code>(1, C, H, W)</code> and the color_dict and gives us the visualizable prediction</p>
-<div class="cell">
+<div id="cell-40" class="cell">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict_rgb(model, tensor, color_dict):</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> torch.no_grad():</span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>        out <span class="op">=</span> model(tensor.<span class="bu">float</span>()).squeeze(<span class="dv">0</span>)</span>
@@ -1855,7 +1907,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> decode_segmap(out, color_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>The <code>color_dict</code> is a dictionary where each object is mapped to its respective color code.</p>
-<div class="cell">
+<div id="cell-42" class="cell">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>color_dict <span class="op">=</span> {</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'obj0'</span> : [<span class="dv">255</span>, <span class="dv">0</span>, <span class="dv">0</span>], <span class="co"># Sky</span></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'obj1'</span> : [<span class="dv">0</span>, <span class="dv">51</span>, <span class="dv">204</span>], <span class="co"># Building</span></span>
@@ -1872,14 +1924,14 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Let us generate a batch from the train dataloader and visualize them along with their prediction using an untrained Enet.</p>
-<div class="cell" data-outputid="dfae1928-748c-4326-a724-5a76cab9bfc5">
+<div id="cell-44" class="cell" data-outputid="dfae1928-748c-4326-a724-5a76cab9bfc5">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>x_batch, y_batch <span class="op">=</span> <span class="bu">next</span>(<span class="bu">iter</span>(train_loader))</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>x_batch.shape, y_batch.shape</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="19">
 <pre><code>(torch.Size([10, 3, 360, 480]), torch.Size([10, 360, 480]))</code></pre>
 </div>
 </div>
-<div class="cell" data-outputid="e4340f9b-2ef3-43f9-c27e-9e32aed0591c">
+<div id="cell-45" class="cell" data-outputid="e4340f9b-2ef3-43f9-c27e-9e32aed0591c">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">4</span>, ncols <span class="op">=</span> <span class="dv">3</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>))</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>plt.setp(axes.flat, xticks <span class="op">=</span> [], yticks <span class="op">=</span> [])</span>
 <span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">1</span></span>
@@ -1896,19 +1948,23 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a>        c <span class="op">+=</span> <span class="dv">1</span></span>
 <span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-25-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-25-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 </section>
 <section id="training" class="level2">
 <h2 class="anchored" data-anchor-id="training">Training</h2>
-<div class="cell">
+<div id="cell-47" class="cell">
 <div class="sourceCode cell-code" id="cb28"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.optim <span class="im">import</span> Adam</span>
 <span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> torch.nn <span class="im">import</span> CrossEntropyLoss</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>The authors make use of a custom class weighing scheme defined as <span class="math inline">\(w_{class} = \frac{1}{ln(c + p_{class})}\)</span>, where <code>c</code> is an additional hyper-parameter set to <code>1.02</code>. The advantage of this weighing strategy is that in contrast to the inverse class probability weighing strategy, the weights are bounded as the probability approaches 0.</p>
-<div class="cell">
+<p>The authors make use of a custom class weighing scheme defined as <span class="math inline">\(w_{class} =   \frac{1}{ln(c + p_{class})}\)</span>, where <code>c</code> is an additional hyper-parameter set to <code>1.02</code>. The advantage of this weighing strategy is that in contrast to the inverse class probability weighing strategy, the weights are bounded as the probability approaches 0.</p>
+<div id="cell-49" class="cell">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_class_weights(loader, num_classes, c<span class="op">=</span><span class="fl">1.02</span>):</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    _, y<span class="op">=</span> <span class="bu">next</span>(<span class="bu">iter</span>(loader))</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    y_flat <span class="op">=</span> y.flatten()</span>
@@ -1917,7 +1973,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">1</span> <span class="op">/</span> (np.log(c <span class="op">+</span> p_class))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Now, we will set up the Criterion and Optimizer. The learning rate is set to <code>5e-4</code> with a weight decay of <code>2e-4</code> as mentioned in the paper.</p>
-<div class="cell">
+<div id="cell-51" class="cell">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>class_weights <span class="op">=</span> get_class_weights(train_loader, <span class="dv">12</span>)</span>
 <span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a>criterion <span class="op">=</span> CrossEntropyLoss(</span>
 <span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a>    weight<span class="op">=</span>torch.FloatTensor(class_weights).to(device)</span>
@@ -1940,7 +1996,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <li>Log the validation results (optional).</li>
 <li>Save the model states and results after several epochs (optional).</li>
 </ol>
-<div class="cell">
+<div id="cell-53" class="cell">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> train(</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    model, train_dataloader, val_dataloader,</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    device, criterion, optimizer, train_step_size, val_step_size,</span>
@@ -2026,7 +2082,7 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb31-83"><a href="#cb31-83" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb31-84"><a href="#cb31-84" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> train_loss_history, val_loss_history</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-outputid="cd86c412-00e9-4942-8bec-2a9fd2386c26">
+<div id="cell-54" class="cell" data-outputid="cd86c412-00e9-4942-8bec-2a9fd2386c26">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>train_loss_history, val_loss_history <span class="op">=</span> train(</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>    enet, train_loader, val_loader,</span>
 <span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>    device, criterion, optimizer,</span>
@@ -2036,870 +2092,1410 @@ CamVid.zip          100%[===================&gt;] 178.38M  25.0MB/s    in 8.3s
 <span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Epoch 1
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 2.3736738430129156
-Training Time: 36.622546672821045 seconds
-
+Training Time: 36.622546672821045 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: 2.495696544647217
 Epoch 2
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 2.066100193394555
-Training Time: 37.32582426071167 seconds
-
+Training Time: 37.32582426071167 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: 1.0354421138763428
 Epoch 3
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.819241699245241
-Training Time: 37.225857734680176 seconds
-
+Training Time: 37.225857734680176 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.462801933288574
 Epoch 4
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.6384391950236425
-Training Time: 37.67400813102722 seconds
-
+Training Time: 37.67400813102722 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.796051502227783
 Epoch 5
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.5421283278200362
-Training Time: 37.320696115493774 seconds
-
-Validation Loss: -4.719521522521973
-Checkpoint saved
+Training Time: 37.320696115493774 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -4.719521522521973</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-12.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 6
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.4267812801731958
-Training Time: 36.2429084777832 seconds
-
+Training Time: 36.2429084777832 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.382036209106445
 Epoch 7
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.3556759390566084
-Training Time: 37.677775144577026 seconds
-
+Training Time: 37.677775144577026 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -7.395351886749268
 Epoch 8
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.3103740215301514
-Training Time: 37.39039158821106 seconds
-
+Training Time: 37.39039158821106 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.370512008666992
 Epoch 9
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.2682642042636871
-Training Time: 37.26855731010437 seconds
-
+Training Time: 37.26855731010437 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -8.429301261901855
 Epoch 10
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.2029826508627997
-Training Time: 37.28497934341431 seconds
-
-Validation Loss: -6.792354106903076
-Checkpoint saved
+Training Time: 37.28497934341431 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -6.792354106903076</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-24.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 11
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.1570831570360396
-Training Time: 37.477909326553345 seconds
-
+Training Time: 37.477909326553345 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.195928573608398
 Epoch 12
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.1395491758982341
-Training Time: 37.90213441848755 seconds
-
+Training Time: 37.90213441848755 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.173197269439697
 Epoch 13
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.1266514195336237
-Training Time: 37.404568910598755 seconds
-
+Training Time: 37.404568910598755 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.771578311920166
 Epoch 14
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.0894614275958803
-Training Time: 37.46945667266846 seconds
-
+Training Time: 37.46945667266846 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.576180934906006
 Epoch 15
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.0793888171513875
-Training Time: 36.50749087333679 seconds
-
-Validation Loss: -6.073637962341309
-Checkpoint saved
+Training Time: 36.50749087333679 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -6.073637962341309</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-36.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 16
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.0256218943330977
-Training Time: 37.52659511566162 seconds
-
+Training Time: 37.52659511566162 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -8.707944869995117
 Epoch 17
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.0208994067377515
-Training Time: 37.60098838806152 seconds
-
+Training Time: 37.60098838806152 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.784101963043213
 Epoch 18
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 1.00802077849706
-Training Time: 37.67285490036011 seconds
-
+Training Time: 37.67285490036011 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -8.1976957321167
 Epoch 19
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.9760349442561468
-Training Time: 37.02203035354614 seconds
-
+Training Time: 37.02203035354614 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.932909965515137
 Epoch 20
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.9686084638039271
-Training Time: 36.49009346961975 seconds
-
-Validation Loss: -10.035560607910156
-Checkpoint saved
+Training Time: 36.49009346961975 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -10.035560607910156</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-48.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 21
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.9232347259918848
-Training Time: 36.40699481964111 seconds
-
+Training Time: 36.40699481964111 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.618765830993652
 Epoch 22
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.9214804338084327
-Training Time: 37.64718818664551 seconds
-
+Training Time: 37.64718818664551 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.437498569488525
 Epoch 23
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.8775700446632173
-Training Time: 36.491459608078 seconds
-
+Training Time: 36.491459608078 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -7.585930824279785
 Epoch 24
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.8676599446270201
-Training Time: 37.75159788131714 seconds
-
+Training Time: 37.75159788131714 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.8291826248168945
 Epoch 25
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.8542953348822064
-Training Time: 38.35563540458679 seconds
-
-Validation Loss: -10.226922988891602
-Checkpoint saved
+Training Time: 38.35563540458679 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -10.226922988891602</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-60.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 26
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.8472818914386961
-Training Time: 36.00928783416748 seconds
-
+Training Time: 36.00928783416748 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -8.36304759979248
 Epoch 27
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.821869295504358
-Training Time: 36.77352595329285 seconds
-
+Training Time: 36.77352595329285 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -9.58829402923584
 Epoch 28
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.7889702585008409
-Training Time: 38.61393928527832 seconds
-
+Training Time: 38.61393928527832 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.412705421447754
 Epoch 29
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.7545491208632787
-Training Time: 38.38607335090637 seconds
-
+Training Time: 38.38607335090637 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -8.005655288696289
 Epoch 30
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.7702976332770454
-Training Time: 36.71100616455078 seconds
-
-Validation Loss: -4.231881141662598
-Checkpoint saved
+Training Time: 36.71100616455078 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -4.231881141662598</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-72.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 31
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.7379177262385687
-Training Time: 35.90049076080322 seconds
-
+Training Time: 35.90049076080322 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -7.388115406036377
 Epoch 32
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.7093521191014184
-Training Time: 37.23017859458923 seconds
-
+Training Time: 37.23017859458923 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.115187168121338
 Epoch 33
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.6929942336347368
-Training Time: 38.1418399810791 seconds
-
+Training Time: 38.1418399810791 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.854228496551514
 Epoch 34
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.6660703635878034
-Training Time: 38.218461751937866 seconds
-
+Training Time: 38.218461751937866 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.8958330154418945
 Epoch 35
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.6632857289579179
-Training Time: 37.43135929107666 seconds
-
-Validation Loss: -5.267255783081055
-Checkpoint saved
+Training Time: 37.43135929107666 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -5.267255783081055</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-84.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 36
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.6700823141468896
-Training Time: 39.75525879859924 seconds
-
+Training Time: 39.75525879859924 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.932151794433594
 Epoch 37
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.6306778772009743
-Training Time: 37.12487030029297 seconds
-
+Training Time: 37.12487030029297 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.434138774871826
 Epoch 38
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.6451671355300479
-Training Time: 36.77497148513794 seconds
-
+Training Time: 36.77497148513794 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -7.195463180541992
 Epoch 39
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.6210144890679253
-Training Time: 37.950018882751465 seconds
-
+Training Time: 37.950018882751465 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -7.6000566482543945
 Epoch 40
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.6190666158994039
-Training Time: 38.053221702575684 seconds
-
-Validation Loss: -5.544920444488525
-Checkpoint saved
+Training Time: 38.053221702575684 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -5.544920444488525</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-96.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 41
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5928388577368524
-Training Time: 37.63972759246826 seconds
-
+Training Time: 37.63972759246826 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.879909992218018
 Epoch 42
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5870317411091592
-Training Time: 37.024226903915405 seconds
-
+Training Time: 37.024226903915405 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.742264270782471
 Epoch 43
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5675398872958289
-Training Time: 37.81453609466553 seconds
-
+Training Time: 37.81453609466553 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.535061359405518
 Epoch 44
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5501133882337146
-Training Time: 36.879273414611816 seconds
-
+Training Time: 36.879273414611816 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.253548622131348
 Epoch 45
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5503247496154573
-Training Time: 37.58225345611572 seconds
-
-Validation Loss: -5.902456283569336
-Checkpoint saved
+Training Time: 37.58225345611572 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -5.902456283569336</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-108.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 46
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5512463673949242
-Training Time: 36.606677532196045 seconds
-
+Training Time: 36.606677532196045 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.735024452209473
 Epoch 47
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.544807703130775
-Training Time: 38.517911434173584 seconds
-
+Training Time: 38.517911434173584 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.34906005859375
 Epoch 48
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5279948107070394
-Training Time: 36.94304895401001 seconds
-
+Training Time: 36.94304895401001 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.252256393432617
 Epoch 49
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5191673007276323
-Training Time: 37.99461269378662 seconds
-
+Training Time: 37.99461269378662 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -7.820833206176758
 Epoch 50
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.49875519176324207
-Training Time: 39.174588203430176 seconds
-
-Validation Loss: -4.738555431365967
-Checkpoint saved
+Training Time: 39.174588203430176 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -4.738555431365967</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-120.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 51
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5172228713830312
-Training Time: 37.38908004760742 seconds
-
+Training Time: 37.38908004760742 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.111539840698242
 Epoch 52
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5180092445678182
-Training Time: 37.96890068054199 seconds
-
+Training Time: 37.96890068054199 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -7.410361289978027
 Epoch 53
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.5053947452041838
-Training Time: 38.50911474227905 seconds
-
+Training Time: 38.50911474227905 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.627304553985596
 Epoch 54
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4888179575403531
-Training Time: 38.64139103889465 seconds
-
+Training Time: 38.64139103889465 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.422050952911377
 Epoch 55
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4791935044858191
-Training Time: 37.589763879776 seconds
-
-Validation Loss: -5.576418876647949
-Checkpoint saved
+Training Time: 37.589763879776 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -5.576418876647949</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-132.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 56
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.45455337150229347
-Training Time: 40.3157172203064 seconds
-
+Training Time: 40.3157172203064 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.987201690673828
 Epoch 57
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4661391567852762
-Training Time: 36.715943336486816 seconds
-
+Training Time: 36.715943336486816 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.632068157196045
 Epoch 58
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4665369697742992
-Training Time: 36.19537806510925 seconds
-
+Training Time: 36.19537806510925 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.786327838897705
 Epoch 59
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.45907818608813816
-Training Time: 38.01468300819397 seconds
-
+Training Time: 38.01468300819397 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -6.478023529052734
 Epoch 60
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4500412220756213
-Training Time: 37.21549987792969 seconds
-
-Validation Loss: -5.177182674407959
-Checkpoint saved
+Training Time: 37.21549987792969 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -5.177182674407959</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-144.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 61
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.45753948307699627
-Training Time: 38.74998998641968 seconds
-
+Training Time: 38.74998998641968 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.799277305603027
 Epoch 62
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.42691650407181847
-Training Time: 37.344823598861694 seconds
-
+Training Time: 37.344823598861694 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.130724906921387
 Epoch 63
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4300544717245632
-Training Time: 37.420971632003784 seconds
-
+Training Time: 37.420971632003784 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.042947769165039
 Epoch 64
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.42879077792167664
-Training Time: 37.66694641113281 seconds
-
+Training Time: 37.66694641113281 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.180288314819336
 Epoch 65
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4272735383775499
-Training Time: 37.58568787574768 seconds
-
-Validation Loss: -4.429321765899658
-Checkpoint saved
+Training Time: 37.58568787574768 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -4.429321765899658</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-156.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 66
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.42417974604500663
-Training Time: 37.05702567100525 seconds
-
+Training Time: 37.05702567100525 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.533682346343994
 Epoch 67
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4159412756562233
-Training Time: 37.56980299949646 seconds
-
+Training Time: 37.56980299949646 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.018970012664795
 Epoch 68
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.4148317939705319
-Training Time: 37.138564348220825 seconds
-
+Training Time: 37.138564348220825 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -3.9047155380249023
 Epoch 69
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3963303491473198
-Training Time: 37.7933931350708 seconds
-
+Training Time: 37.7933931350708 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.635763168334961
 Epoch 70
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.40438303930891883
-Training Time: 37.2310631275177 seconds
-
-Validation Loss: -4.414734363555908
-Checkpoint saved
+Training Time: 37.2310631275177 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -4.414734363555908</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-168.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 71
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.39953534967369503
-Training Time: 36.96225690841675 seconds
-
+Training Time: 36.96225690841675 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -3.7862653732299805
 Epoch 72
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.39342257877190906
-Training Time: 38.77004361152649 seconds
-
+Training Time: 38.77004361152649 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.276852130889893
 Epoch 73
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3897610389524036
-Training Time: 38.38589859008789 seconds
-
+Training Time: 38.38589859008789 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.030964374542236
 Epoch 74
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.405379969212744
-Training Time: 36.81379222869873 seconds
-
+Training Time: 36.81379222869873 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.7940850257873535
 Epoch 75
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.377888491584195
-Training Time: 37.3532612323761 seconds
-
-Validation Loss: -3.9622135162353516
-Checkpoint saved
+Training Time: 37.3532612323761 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -3.9622135162353516</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-180.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 76
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.37682998263173634
-Training Time: 36.6818642616272 seconds
-
+Training Time: 36.6818642616272 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -5.148308753967285
 Epoch 77
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.371006368762917
-Training Time: 38.503026723861694 seconds
-
+Training Time: 38.503026723861694 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -3.861609935760498
 Epoch 78
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3602796254886521
-Training Time: 38.01511263847351 seconds
-
+Training Time: 38.01511263847351 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -3.9753198623657227
 Epoch 79
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3653753134939406
-Training Time: 37.917211055755615 seconds
-
+Training Time: 37.917211055755615 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -2.8377439975738525
 Epoch 80
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.37505776186784107
-Training Time: 38.310165882110596 seconds
-
-Validation Loss: -5.334249973297119
-Checkpoint saved
+Training Time: 38.310165882110596 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -5.334249973297119</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-192.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 81
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.36951222353511387
-Training Time: 38.20164632797241 seconds
-
+Training Time: 38.20164632797241 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.66939640045166
 Epoch 82
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.35576848520172966
-Training Time: 37.462151527404785 seconds
-
+Training Time: 37.462151527404785 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.722535610198975
 Epoch 83
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.36002279900842243
-Training Time: 37.20385551452637 seconds
-
+Training Time: 37.20385551452637 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.74808406829834
 Epoch 84
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3489703999625312
-Training Time: 38.138071060180664 seconds
-
+Training Time: 38.138071060180664 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.982658386230469
 Epoch 85
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.34990982214609784
-Training Time: 37.759665727615356 seconds
-
-Validation Loss: -4.157069683074951
-Checkpoint saved
+Training Time: 37.759665727615356 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -4.157069683074951</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-204.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 86
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.35239921179082656
-Training Time: 37.88401412963867 seconds
-
+Training Time: 37.88401412963867 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.5902533531188965
 Epoch 87
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.34805963353978264
-Training Time: 37.58679533004761 seconds
-
+Training Time: 37.58679533004761 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.319746971130371
 Epoch 88
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3448881424135632
-Training Time: 37.084150552749634 seconds
-
+Training Time: 37.084150552749634 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -3.250303268432617
 Epoch 89
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3393386834197574
-Training Time: 38.44252109527588 seconds
-
+Training Time: 38.44252109527588 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -3.880829334259033
 Epoch 90
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3295273143384192
-Training Time: 37.59496545791626 seconds
-
-Validation Loss: -4.594930648803711
-Checkpoint saved
+Training Time: 37.59496545791626 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -4.594930648803711</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-216.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 91
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3464961921175321
-Training Time: 36.96203589439392 seconds
-
+Training Time: 36.96203589439392 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -3.407609224319458
 Epoch 92
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.34060925907558864
-Training Time: 38.37405014038086 seconds
-
+Training Time: 38.37405014038086 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.496046543121338
 Epoch 93
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3336273547675874
-Training Time: 36.53633213043213 seconds
-
+Training Time: 36.53633213043213 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -2.9917984008789062
 Epoch 94
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3360065817832947
-Training Time: 37.400681495666504 seconds
-
+Training Time: 37.400681495666504 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.259033679962158
 Epoch 95
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.33179697228802574
-Training Time: 37.88106441497803 seconds
-
-Validation Loss: -6.045409202575684
-Checkpoint saved
+Training Time: 37.88106441497803 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -6.045409202575684</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-228.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 Epoch 96
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.329134587612417
-Training Time: 38.55759382247925 seconds
-
+Training Time: 38.55759382247925 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.940917015075684
 Epoch 97
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3220530201991399
-Training Time: 37.08751201629639 seconds
-
+Training Time: 37.08751201629639 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -4.636651992797852
 Epoch 98
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.31848980320824516
-Training Time: 37.68484568595886 seconds
-
+Training Time: 37.68484568595886 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -2.7739005088806152
 Epoch 99
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.32071789933575523
-Training Time: 37.38284635543823 seconds
-
+Training Time: 37.38284635543823 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Validation Loss: -3.3696560859680176
 Epoch 100
-
-
+</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
 Training Loss: 0.3072536442842748
-Training Time: 36.655545473098755 seconds
-
-Validation Loss: -3.19159197807312
-Checkpoint saved
+Training Time: 36.655545473098755 seconds</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+Validation Loss: -3.19159197807312</code></pre>
+</div>
+<div class="cell-output cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-30-output-240.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Checkpoint saved
 
 Training Done.
 Training Mean Loss: 0.667980
 Validation Mean Loss: -5.383368</code></pre>
 </div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-2.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-3.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-4.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-5.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-6.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-7.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-8.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-9.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-10.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-11.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-12.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-13.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-14.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-15.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-16.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-17.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-18.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-19.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-20.png" class="img-fluid"></p>
-</div>
-<div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-30-output-21.png" class="img-fluid"></p>
-</div>
 </div>
 <p>Now, let us visualize the results…</p>
-<div class="cell" data-outputid="c1c14bdb-c795-4eaa-e6c7-723611d1aa07">
-<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>plt.plot(train_loss_history, color <span class="op">=</span> <span class="st">'b'</span>, label <span class="op">=</span> <span class="st">'Training Loss'</span>)</span>
-<span id="cb34-2"><a href="#cb34-2" aria-hidden="true" tabindex="-1"></a>plt.plot(val_loss_history, color <span class="op">=</span> <span class="st">'r'</span>, label <span class="op">=</span> <span class="st">'Validation Loss'</span>)</span>
-<span id="cb34-3"><a href="#cb34-3" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb34-4"><a href="#cb34-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-56" class="cell" data-outputid="c1c14bdb-c795-4eaa-e6c7-723611d1aa07">
+<div class="sourceCode cell-code" id="cb254"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb254-1"><a href="#cb254-1" aria-hidden="true" tabindex="-1"></a>plt.plot(train_loss_history, color <span class="op">=</span> <span class="st">'b'</span>, label <span class="op">=</span> <span class="st">'Training Loss'</span>)</span>
+<span id="cb254-2"><a href="#cb254-2" aria-hidden="true" tabindex="-1"></a>plt.plot(val_loss_history, color <span class="op">=</span> <span class="st">'r'</span>, label <span class="op">=</span> <span class="st">'Validation Loss'</span>)</span>
+<span id="cb254-3"><a href="#cb254-3" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb254-4"><a href="#cb254-4" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-31-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-31-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-outputid="21f1c1bb-891c-44d3-f352-5e2f1bc058db">
-<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>plt.plot(train_loss_history, color <span class="op">=</span> <span class="st">'b'</span>, label <span class="op">=</span> <span class="st">'Training Loss'</span>)</span>
-<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-57" class="cell" data-outputid="21f1c1bb-891c-44d3-f352-5e2f1bc058db">
+<div class="sourceCode cell-code" id="cb255"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb255-1"><a href="#cb255-1" aria-hidden="true" tabindex="-1"></a>plt.plot(train_loss_history, color <span class="op">=</span> <span class="st">'b'</span>, label <span class="op">=</span> <span class="st">'Training Loss'</span>)</span>
+<span id="cb255-2"><a href="#cb255-2" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb255-3"><a href="#cb255-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-32-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-outputid="b4fb7ae1-dffd-462e-f77c-9a3ab032e85e">
-<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>plt.plot(val_loss_history, color <span class="op">=</span> <span class="st">'r'</span>, label <span class="op">=</span> <span class="st">'Validation Loss'</span>)</span>
-<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
-<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div id="cell-58" class="cell" data-outputid="b4fb7ae1-dffd-462e-f77c-9a3ab032e85e">
+<div class="sourceCode cell-code" id="cb256"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb256-1"><a href="#cb256-1" aria-hidden="true" tabindex="-1"></a>plt.plot(val_loss_history, color <span class="op">=</span> <span class="st">'r'</span>, label <span class="op">=</span> <span class="st">'Validation Loss'</span>)</span>
+<span id="cb256-2"><a href="#cb256-2" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb256-3"><a href="#cb256-3" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-33-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="prediction" class="level2">
 <h2 class="anchored" data-anchor-id="prediction">Prediction</h2>
 <p>We will be predicting with the weights at epoch 65 where both training and validation loss seems to be stable. This is done in order to avoid overfitting.</p>
-<div class="cell" data-outputid="a357e1b7-7d55-41fc-86bc-e8a66dc123bf">
-<div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>state_dict <span class="op">=</span> torch.load(<span class="st">'./checkpoints/enet-model-65-14.726004391908646--3.9436190128326416.pth'</span>)[<span class="st">'state_dict'</span>]</span>
-<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>enet.load_state_dict(state_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-61" class="cell" data-outputid="a357e1b7-7d55-41fc-86bc-e8a66dc123bf">
+<div class="sourceCode cell-code" id="cb257"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb257-1"><a href="#cb257-1" aria-hidden="true" tabindex="-1"></a>state_dict <span class="op">=</span> torch.load(<span class="st">'./checkpoints/enet-model-65-14.726004391908646--3.9436190128326416.pth'</span>)[<span class="st">'state_dict'</span>]</span>
+<span id="cb257-2"><a href="#cb257-2" aria-hidden="true" tabindex="-1"></a>enet.load_state_dict(state_dict)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="33">
 <pre><code>&lt;All keys matched successfully&gt;</code></pre>
 </div>
 </div>
 <p>Prediction on Training Data</p>
-<div class="cell" data-outputid="4923d086-7730-4e46-869a-76fb871c669f">
-<div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>x_batch, y_batch <span class="op">=</span> <span class="bu">next</span>(<span class="bu">iter</span>(train_loader))</span>
-<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">4</span>, ncols <span class="op">=</span> <span class="dv">3</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>))</span>
-<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a>plt.setp(axes.flat, xticks <span class="op">=</span> [], yticks <span class="op">=</span> [])</span>
-<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes.flat):</span>
-<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>        ax.imshow(ToPILImage()(x_batch[c]))</span>
-<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Image_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
-<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>        ax.imshow(decode_segmap(y_batch[c], color_dict))</span>
-<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Ground_Truth_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
-<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>        ax.imshow(predict_rgb(enet, x_batch[c].unsqueeze(<span class="dv">0</span>).to(device), color_dict))</span>
-<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Predicted_Mask_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
-<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>        c <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-63" class="cell" data-outputid="4923d086-7730-4e46-869a-76fb871c669f">
+<div class="sourceCode cell-code" id="cb259"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb259-1"><a href="#cb259-1" aria-hidden="true" tabindex="-1"></a>x_batch, y_batch <span class="op">=</span> <span class="bu">next</span>(<span class="bu">iter</span>(train_loader))</span>
+<span id="cb259-2"><a href="#cb259-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">4</span>, ncols <span class="op">=</span> <span class="dv">3</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>))</span>
+<span id="cb259-3"><a href="#cb259-3" aria-hidden="true" tabindex="-1"></a>plt.setp(axes.flat, xticks <span class="op">=</span> [], yticks <span class="op">=</span> [])</span>
+<span id="cb259-4"><a href="#cb259-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb259-5"><a href="#cb259-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes.flat):</span>
+<span id="cb259-6"><a href="#cb259-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb259-7"><a href="#cb259-7" aria-hidden="true" tabindex="-1"></a>        ax.imshow(ToPILImage()(x_batch[c]))</span>
+<span id="cb259-8"><a href="#cb259-8" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Image_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
+<span id="cb259-9"><a href="#cb259-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb259-10"><a href="#cb259-10" aria-hidden="true" tabindex="-1"></a>        ax.imshow(decode_segmap(y_batch[c], color_dict))</span>
+<span id="cb259-11"><a href="#cb259-11" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Ground_Truth_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
+<span id="cb259-12"><a href="#cb259-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb259-13"><a href="#cb259-13" aria-hidden="true" tabindex="-1"></a>        ax.imshow(predict_rgb(enet, x_batch[c].unsqueeze(<span class="dv">0</span>).to(device), color_dict))</span>
+<span id="cb259-14"><a href="#cb259-14" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Predicted_Mask_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
+<span id="cb259-15"><a href="#cb259-15" aria-hidden="true" tabindex="-1"></a>        c <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb259-16"><a href="#cb259-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-35-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 <p>Prediction on Validation Data</p>
-<div class="cell" data-outputid="f2092bc8-df43-4c1e-83df-4150ce1b4ac4">
-<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>x_batch, y_batch <span class="op">=</span> <span class="bu">next</span>(<span class="bu">iter</span>(val_loader))</span>
-<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">4</span>, ncols <span class="op">=</span> <span class="dv">3</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>))</span>
-<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a>plt.setp(axes.flat, xticks <span class="op">=</span> [], yticks <span class="op">=</span> [])</span>
-<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes.flat):</span>
-<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
-<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>        ax.imshow(ToPILImage()(x_batch[c]))</span>
-<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Image_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
-<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">1</span>:</span>
-<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a>        ax.imshow(decode_segmap(y_batch[c], color_dict))</span>
-<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Ground_Truth_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
-<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">2</span>:</span>
-<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a>        ax.imshow(predict_rgb(enet, x_batch[c].unsqueeze(<span class="dv">0</span>).to(device), color_dict))</span>
-<span id="cb40-14"><a href="#cb40-14" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Predicted_Mask_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
-<span id="cb40-15"><a href="#cb40-15" aria-hidden="true" tabindex="-1"></a>        c <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb40-16"><a href="#cb40-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-65" class="cell" data-outputid="f2092bc8-df43-4c1e-83df-4150ce1b4ac4">
+<div class="sourceCode cell-code" id="cb260"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb260-1"><a href="#cb260-1" aria-hidden="true" tabindex="-1"></a>x_batch, y_batch <span class="op">=</span> <span class="bu">next</span>(<span class="bu">iter</span>(val_loader))</span>
+<span id="cb260-2"><a href="#cb260-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">4</span>, ncols <span class="op">=</span> <span class="dv">3</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>))</span>
+<span id="cb260-3"><a href="#cb260-3" aria-hidden="true" tabindex="-1"></a>plt.setp(axes.flat, xticks <span class="op">=</span> [], yticks <span class="op">=</span> [])</span>
+<span id="cb260-4"><a href="#cb260-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb260-5"><a href="#cb260-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes.flat):</span>
+<span id="cb260-6"><a href="#cb260-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">0</span>:</span>
+<span id="cb260-7"><a href="#cb260-7" aria-hidden="true" tabindex="-1"></a>        ax.imshow(ToPILImage()(x_batch[c]))</span>
+<span id="cb260-8"><a href="#cb260-8" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Image_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
+<span id="cb260-9"><a href="#cb260-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">1</span>:</span>
+<span id="cb260-10"><a href="#cb260-10" aria-hidden="true" tabindex="-1"></a>        ax.imshow(decode_segmap(y_batch[c], color_dict))</span>
+<span id="cb260-11"><a href="#cb260-11" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Ground_Truth_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
+<span id="cb260-12"><a href="#cb260-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">elif</span> i <span class="op">%</span> <span class="dv">3</span> <span class="op">==</span> <span class="dv">2</span>:</span>
+<span id="cb260-13"><a href="#cb260-13" aria-hidden="true" tabindex="-1"></a>        ax.imshow(predict_rgb(enet, x_batch[c].unsqueeze(<span class="dv">0</span>).to(device), color_dict))</span>
+<span id="cb260-14"><a href="#cb260-14" aria-hidden="true" tabindex="-1"></a>        ax.set_xlabel(<span class="st">'Predicted_Mask_'</span> <span class="op">+</span> <span class="bu">str</span>(c))</span>
+<span id="cb260-15"><a href="#cb260-15" aria-hidden="true" tabindex="-1"></a>        c <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb260-16"><a href="#cb260-16" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="enet-camvid_files/figure-html/cell-36-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="enet-camvid_files/figure-html/cell-36-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 
@@ -2948,6 +3544,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -3016,13 +3639,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -3057,18 +3682,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -3100,11 +3714,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/geekyrakshit\.dev");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -3114,8 +3767,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -3127,7 +3789,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -3171,6 +3956,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -3196,6 +3982,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -3256,6 +4068,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

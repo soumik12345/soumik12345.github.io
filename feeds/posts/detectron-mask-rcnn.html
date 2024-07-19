@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2020-04-13">
 <meta name="description" content="Instance Segmentation with Mask RCNN using Detectron2 and Pytorch">
 
-<title>Geekyrakshit - Balloon Detection using Mask RCNN</title>
+<title>Balloon Detection using Mask RCNN – Geekyrakshit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -94,6 +100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -102,13 +109,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Geekyrakshit - Balloon Detection using Mask RCNN">
+<meta property="og:title" content="Balloon Detection using Mask RCNN – Geekyrakshit">
 <meta property="og:description" content="Instance Segmentation with Mask RCNN using Detectron2 and Pytorch">
 <meta property="og:image" content="https://geekyrakshit.dev/feeds/posts/assets/balloon.png">
-<meta property="og:site-name" content="Geekyrakshit">
+<meta property="og:site_name" content="Geekyrakshit">
 <meta property="og:image:height" content="1638">
 <meta property="og:image:width" content="1228">
-<meta name="twitter:title" content="Geekyrakshit - Balloon Detection using Mask RCNN">
+<meta name="twitter:title" content="Balloon Detection using Mask RCNN – Geekyrakshit">
 <meta name="twitter:description" content="Instance Segmentation with Mask RCNN using Detectron2 and Pytorch">
 <meta name="twitter:image" content="https://geekyrakshit.dev/feeds/posts/assets/balloon.png">
 <meta name="twitter:image-height" content="1638">
@@ -120,44 +127,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Geekyrakshit</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About Me</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../courses.html" rel="" target="">
- <span class="menu-text">Courses/Seminars</span></a>
+    <a class="nav-link" href="../../courses.html"> 
+<span class="menu-text">Courses/Seminars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../wandb_reports.html" rel="" target="">
- <span class="menu-text">WandB Reports</span></a>
+    <a class="nav-link" href="../../wandb_reports.html"> 
+<span class="menu-text">WandB Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html" rel="" target="">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -208,10 +215,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
 
+
 <p><strong>Project Repository:</strong> <a href="https://github.com/soumik12345/Detectron-Notebooks">https://github.com/soumik12345/Detectron-Notebooks</a></p>
-<div class="cell" data-outputid="6fa12b9a-20a2-4d05-a5dc-1d3acc5909ad" data-execution_count="1">
+<div id="cell-2" class="cell" data-outputid="6fa12b9a-20a2-4d05-a5dc-1d3acc5909ad" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">-</span>U torch torchvision</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install git<span class="op">+</span>https:<span class="op">//</span>github.com<span class="op">/</span>facebookresearch<span class="op">/</span>fvcore.git</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>git clone https:<span class="op">//</span>github.com<span class="op">/</span>facebookresearch<span class="op">/</span>detectron2 detectron2_repo</span>
@@ -306,7 +315,7 @@ Successfully installed detectron2 tqdm-4.36.1</code></pre>
 <pre><code>Unable to display output for mime type(s): application/vnd.colab-display-data+json</code></pre>
 </div>
 </div>
-<div class="cell" data-outputid="0004fc5d-f0d3-4c77-c851-2853d3904919" data-execution_count="1">
+<div id="cell-3" class="cell" data-outputid="0004fc5d-f0d3-4c77-c851-2853d3904919" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> detectron2, cv2, random</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> os, json, itertools</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -330,7 +339,7 @@ Successfully installed detectron2 tqdm-4.36.1</code></pre>
 </div>
 <section id="inference-with-pre-trained-model" class="level2">
 <h2 class="anchored" data-anchor-id="inference-with-pre-trained-model">Inference With Pre-Trained Model</h2>
-<div class="cell" data-outputid="5b7f6fe6-f884-492a-c7e5-ef737da0ee2f" data-execution_count="2">
+<div id="cell-5" class="cell" data-outputid="5b7f6fe6-f884-492a-c7e5-ef737da0ee2f" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget http:<span class="op">//</span>images.cocodataset.org<span class="op">/</span>val2017<span class="op">/</span><span class="ot">000000439715.j</span><span class="er">pg</span> <span class="op">-</span>O <span class="bu">input</span>.jpg</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>im <span class="op">=</span> cv2.imread(<span class="st">"./input.jpg"</span>)</span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>cv2_imshow(im)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -351,10 +360,14 @@ input.jpg           100%[===================&gt;] 204.32K   847KB/s    in 0.2s
 </code></pre>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="detectron-mask-rcnn_files/figure-html/cell-4-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="detectron-mask-rcnn_files/figure-html/cell-4-output-2.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-outputid="3f43929d-1421-449a-cbb1-0aa32efe4a50" data-execution_count="3">
+</div>
+<div id="cell-6" class="cell" data-outputid="3f43929d-1421-449a-cbb1-0aa32efe4a50" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>cfg <span class="op">=</span> get_cfg()</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a><span class="co"># get model from https://github.com/facebookresearch/detectron2/tree/master/configs</span></span>
@@ -369,7 +382,7 @@ input.jpg           100%[===================&gt;] 204.32K   847KB/s    in 0.2s
 <pre><code>WARNING [10/11 09:46:54 d2.config.compat]: Config './detectron2_repo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml' has no VERSION. Assuming it to be compatible with latest v2.</code></pre>
 </div>
 </div>
-<div class="cell" data-outputid="418ed508-34ae-439c-9cde-b77002ca1579" data-execution_count="4">
+<div id="cell-7" class="cell" data-outputid="418ed508-34ae-439c-9cde-b77002ca1579" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># look at the outputs</span></span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Classes of instances:'</span>, outputs[<span class="st">"instances"</span>].pred_classes)</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(<span class="st">'Bboxes of instances:'</span>, outputs[<span class="st">"instances"</span>].pred_boxes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -393,19 +406,23 @@ Bboxes of instances: Boxes(tensor([[126.6035, 244.8977, 459.8291, 480.0000],
         [594.5663, 283.4820, 609.0577, 311.4124]], device='cuda:0'))</code></pre>
 </div>
 </div>
-<div class="cell" data-outputid="e7db1a32-f5f4-4e22-a6f5-4adff7fe4963" data-execution_count="5">
+<div id="cell-8" class="cell" data-outputid="e7db1a32-f5f4-4e22-a6f5-4adff7fe4963" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># They also have visualization utils :P</span></span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> Visualizer(im, MetadataCatalog.get(<span class="st">"coco_2017_val"</span>), scale <span class="op">=</span> <span class="fl">1.5</span>)</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>v <span class="op">=</span> v.draw_instance_predictions(outputs[<span class="st">"instances"</span>].to(<span class="st">"cpu"</span>))</span>
 <span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>cv2_imshow(v.get_image()[:, :, ::<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="detectron-mask-rcnn_files/figure-html/cell-7-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="detectron-mask-rcnn_files/figure-html/cell-7-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 </section>
 <section id="training-on-custom-dataset" class="level2">
 <h2 class="anchored" data-anchor-id="training-on-custom-dataset">Training on Custom Dataset</h2>
-<div class="cell" data-outputid="b9442e96-65bf-4a2e-c431-a3f7a2b8aebb" data-execution_count="6">
+<div id="cell-10" class="cell" data-outputid="b9442e96-65bf-4a2e-c431-a3f7a2b8aebb" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget https:<span class="op">//</span>github.com<span class="op">/</span>matterport<span class="op">/</span>Mask_RCNN<span class="op">/</span>releases<span class="op">/</span>download<span class="op">/</span>v2<span class="fl">.1</span><span class="op">/</span>balloon_dataset.<span class="bu">zip</span></span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>unzip balloon_dataset.<span class="bu">zip</span> <span class="op">&gt;</span> <span class="op">/</span>dev<span class="op">/</span>null</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -431,7 +448,7 @@ replace balloon/train/53500107_d24b11b3c2_b.jpg? [y]es, [n]o, [A]ll, [N]one, [r]
 replace __MACOSX/balloon/train/._53500107_d24b11b3c2_b.jpg? [y]es, [n]o, [A]ll, [N]one, [r]ename: </code></pre>
 </div>
 </div>
-<div class="cell">
+<div id="cell-11" class="cell">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_balloon_dicts(img_dir):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    json_file <span class="op">=</span> os.path.join(img_dir, <span class="st">"via_region_data.json"</span>)</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">with</span> <span class="bu">open</span>(json_file) <span class="im">as</span> f:</span>
@@ -470,14 +487,14 @@ replace __MACOSX/balloon/train/._53500107_d24b11b3c2_b.jpg? [y]es, [n]o, [A]ll, 
 <span id="cb15-36"><a href="#cb15-36" aria-hidden="true" tabindex="-1"></a>        dataset_dicts.append(record)</span>
 <span id="cb15-37"><a href="#cb15-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> dataset_dicts</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell">
+<div id="cell-12" class="cell">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Register Balloon Dataset</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d <span class="kw">in</span> [<span class="st">"train"</span>, <span class="st">"val"</span>]:</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    DatasetCatalog.register(<span class="st">"balloon/"</span> <span class="op">+</span> d, <span class="kw">lambda</span> d<span class="op">=</span>d: get_balloon_dicts(<span class="st">"balloon/"</span> <span class="op">+</span> d))</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>    MetadataCatalog.get(<span class="st">"balloon/"</span> <span class="op">+</span> d).<span class="bu">set</span>(thing_classes<span class="op">=</span>[<span class="st">"balloon"</span>])</span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>balloon_metadata <span class="op">=</span> MetadataCatalog.get(<span class="st">"balloon/train"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-outputid="f560f202-fd0f-459f-8ee9-b9cfa45076fc" data-execution_count="10">
+<div id="cell-13" class="cell" data-outputid="f560f202-fd0f-459f-8ee9-b9cfa45076fc" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Visualize Dataset</span></span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>dataset_dicts <span class="op">=</span> get_balloon_dicts(<span class="st">"balloon/train"</span>)</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d <span class="kw">in</span> random.sample(dataset_dicts, <span class="dv">3</span>):</span>
@@ -486,16 +503,28 @@ replace __MACOSX/balloon/train/._53500107_d24b11b3c2_b.jpg? [y]es, [n]o, [A]ll, 
 <span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a>    vis <span class="op">=</span> visualizer.draw_dataset_dict(d)</span>
 <span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a>    cv2_imshow(vis.get_image()[:, :, ::<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="detectron-mask-rcnn_files/figure-html/cell-11-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="detectron-mask-rcnn_files/figure-html/cell-11-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="detectron-mask-rcnn_files/figure-html/cell-11-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="detectron-mask-rcnn_files/figure-html/cell-11-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="detectron-mask-rcnn_files/figure-html/cell-11-output-3.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="detectron-mask-rcnn_files/figure-html/cell-11-output-3.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-outputid="4f0d91a8-9b17-46a7-d7fc-f85212026718" data-execution_count="11">
+</div>
+<div id="cell-14" class="cell" data-outputid="4f0d91a8-9b17-46a7-d7fc-f85212026718" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Set the training Configs</span></span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>cfg <span class="op">=</span> get_cfg()</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>cfg.merge_from_file(<span class="st">"./detectron2_repo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml"</span>)</span>
@@ -512,7 +541,7 @@ replace __MACOSX/balloon/train/._53500107_d24b11b3c2_b.jpg? [y]es, [n]o, [A]ll, 
 <pre><code>WARNING [10/11 09:48:44 d2.config.compat]: Config './detectron2_repo/configs/COCO-InstanceSegmentation/mask_rcnn_R_50_FPN_3x.yaml' has no VERSION. Assuming it to be compatible with latest v2.</code></pre>
 </div>
 </div>
-<div class="cell" data-outputid="0c865882-5df7-4411-8db3-1ffb579d26e0" data-execution_count="12">
+<div id="cell-15" class="cell" data-outputid="0c865882-5df7-4411-8db3-1ffb579d26e0" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Trainer</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>os.makedirs(cfg.OUTPUT_DIR, exist_ok <span class="op">=</span> <span class="va">True</span>)</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>trainer <span class="op">=</span> DefaultTrainer(cfg) </span>
@@ -840,8 +869,10 @@ GeneralizedRCNN(
 |  balloon   | 255          |
 |            |              |
 [10/11 09:48:57 d2.data.detection_utils]: TransformGens used in training: [ResizeShortestEdge(short_edge_length=(640, 672, 704, 736, 768, 800), max_size=1333, sample_style='choice'), RandomFlip()]
-[10/11 09:48:57 d2.data.build]: Using training sampler TrainingSampler
-[10/11 09:49:01 d2.engine.train_loop]: Starting training from iteration 0
+[10/11 09:48:57 d2.data.build]: Using training sampler TrainingSampler</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[10/11 09:49:01 d2.engine.train_loop]: Starting training from iteration 0
 [10/11 09:49:25 d2.utils.events]: eta: 0:05:35  iter: 19  total_loss: 2.006  loss_cls: 0.685  loss_box_reg: 0.608  loss_mask: 0.692  loss_rpn_cls: 0.021  loss_rpn_loc: 0.005  time: 1.2004  data_time: 0.0035  lr: 0.000005  max_mem: 2725M
 [10/11 09:49:49 d2.utils.events]: eta: 0:05:07  iter: 39  total_loss: 2.141  loss_cls: 0.650  loss_box_reg: 0.658  loss_mask: 0.663  loss_rpn_cls: 0.040  loss_rpn_loc: 0.010  time: 1.2014  data_time: 0.0038  lr: 0.000010  max_mem: 2726M
 [10/11 09:50:14 d2.utils.events]: eta: 0:04:53  iter: 59  total_loss: 1.734  loss_cls: 0.581  loss_box_reg: 0.583  loss_mask: 0.603  loss_rpn_cls: 0.018  loss_rpn_loc: 0.005  time: 1.2228  data_time: 0.0035  lr: 0.000015  max_mem: 2850M
@@ -864,36 +895,48 @@ GeneralizedRCNN(
 <pre><code>OrderedDict()</code></pre>
 </div>
 </div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save model for testing</span></span>
-<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>cfg.MODEL.WEIGHTS <span class="op">=</span> os.path.join(cfg.OUTPUT_DIR, <span class="st">"model_final.pth"</span>)</span>
-<span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST <span class="op">=</span> <span class="fl">0.7</span>   <span class="co"># set the testing threshold for this model</span></span>
-<span id="cb23-4"><a href="#cb23-4" aria-hidden="true" tabindex="-1"></a>cfg.DATASETS.TEST <span class="op">=</span> (<span class="st">"balloon_val"</span>, )</span>
-<span id="cb23-5"><a href="#cb23-5" aria-hidden="true" tabindex="-1"></a>predictor <span class="op">=</span> DefaultPredictor(cfg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-16" class="cell">
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save model for testing</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>cfg.MODEL.WEIGHTS <span class="op">=</span> os.path.join(cfg.OUTPUT_DIR, <span class="st">"model_final.pth"</span>)</span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>cfg.MODEL.ROI_HEADS.SCORE_THRESH_TEST <span class="op">=</span> <span class="fl">0.7</span>   <span class="co"># set the testing threshold for this model</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>cfg.DATASETS.TEST <span class="op">=</span> (<span class="st">"balloon_val"</span>, )</span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>predictor <span class="op">=</span> DefaultPredictor(cfg)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-outputid="ea0863d1-5b94-4200-b65a-27bb431876f3" data-execution_count="14">
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inference on Validation Set</span></span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> detectron2.utils.visualizer <span class="im">import</span> ColorMode</span>
-<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>dataset_dicts <span class="op">=</span> get_balloon_dicts(<span class="st">"balloon/val"</span>)</span>
-<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d <span class="kw">in</span> random.sample(dataset_dicts, <span class="dv">3</span>):    </span>
-<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>    im <span class="op">=</span> cv2.imread(d[<span class="st">"file_name"</span>])</span>
-<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a>    outputs <span class="op">=</span> predictor(im)</span>
-<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> Visualizer(im[:, :, ::<span class="op">-</span><span class="dv">1</span>],</span>
-<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>                   metadata<span class="op">=</span>MetadataCatalog.get(<span class="st">"balloon_val"</span>), </span>
-<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>                   scale<span class="op">=</span><span class="fl">0.8</span>, </span>
-<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a>                   instance_mode<span class="op">=</span>ColorMode.IMAGE_BW   <span class="co"># remove the colors of unsegmented pixels</span></span>
-<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a>    )</span>
-<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> v.draw_instance_predictions(outputs[<span class="st">"instances"</span>].to(<span class="st">"cpu"</span>))</span>
-<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>    cv2_imshow(v.get_image()[:, :, ::<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="cell-17" class="cell" data-outputid="ea0863d1-5b94-4200-b65a-27bb431876f3" data-execution_count="14">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Inference on Validation Set</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> detectron2.utils.visualizer <span class="im">import</span> ColorMode</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a>dataset_dicts <span class="op">=</span> get_balloon_dicts(<span class="st">"balloon/val"</span>)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> d <span class="kw">in</span> random.sample(dataset_dicts, <span class="dv">3</span>):    </span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a>    im <span class="op">=</span> cv2.imread(d[<span class="st">"file_name"</span>])</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a>    outputs <span class="op">=</span> predictor(im)</span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> Visualizer(im[:, :, ::<span class="op">-</span><span class="dv">1</span>],</span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>                   metadata<span class="op">=</span>MetadataCatalog.get(<span class="st">"balloon_val"</span>), </span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>                   scale<span class="op">=</span><span class="fl">0.8</span>, </span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a>                   instance_mode<span class="op">=</span>ColorMode.IMAGE_BW   <span class="co"># remove the colors of unsegmented pixels</span></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a>    )</span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>    v <span class="op">=</span> v.draw_instance_predictions(outputs[<span class="st">"instances"</span>].to(<span class="st">"cpu"</span>))</span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>    cv2_imshow(v.get_image()[:, :, ::<span class="op">-</span><span class="dv">1</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="detectron-mask-rcnn_files/figure-html/cell-15-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="detectron-mask-rcnn_files/figure-html/cell-15-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="detectron-mask-rcnn_files/figure-html/cell-15-output-2.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="detectron-mask-rcnn_files/figure-html/cell-15-output-2.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 <div class="cell-output cell-output-display">
-<p><img src="detectron-mask-rcnn_files/figure-html/cell-15-output-3.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="detectron-mask-rcnn_files/figure-html/cell-15-output-3.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 
@@ -942,6 +985,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1010,13 +1080,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1051,18 +1123,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1094,11 +1155,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/geekyrakshit\.dev");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1108,8 +1208,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1121,7 +1230,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1165,6 +1397,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1190,6 +1423,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1250,6 +1509,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 

@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.3.450">
+<meta name="generator" content="quarto-1.5.55">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -10,7 +10,7 @@
 <meta name="dcterms.date" content="2020-04-13">
 <meta name="description" content="Implementation of YOLOv3 using Tensorflow 2.0">
 
-<title>Geekyrakshit - YOLOv3 using Tensorflow 2.0</title>
+<title>YOLOv3 using Tensorflow 2.0 – Geekyrakshit</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,7 +25,7 @@ ul.task-list li input[type="checkbox"] {
 }
 /* CSS for syntax highlighting */
 pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span { line-height: 1.25; }
 pre > code.sourceCode > span:empty { height: 1.2em; }
 .sourceCode { overflow: visible; }
 code.sourceCode > span { color: inherit; text-decoration: inherit; }
@@ -36,7 +36,7 @@ div.sourceCode { overflow: auto; }
 }
 @media print {
 pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
 }
 pre.numberSource code
   { counter-reset: source-line 0; }
@@ -85,7 +85,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   "collapse-after": 3,
   "panel-placement": "end",
   "type": "overlay",
-  "limit": 20,
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
   "language": {
     "search-no-results-text": "No results",
     "search-matching-documents-text": "matching documents",
@@ -94,6 +100,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-more-match-text": "more match in this document",
     "search-more-matches-text": "more matches in this document",
     "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
     "search-detached-cancel-button-title": "Cancel",
     "search-submit-button-title": "Submit",
     "search-label": "Search"
@@ -102,13 +109,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Geekyrakshit - YOLOv3 using Tensorflow 2.0">
+<meta property="og:title" content="YOLOv3 using Tensorflow 2.0 – Geekyrakshit">
 <meta property="og:description" content="Implementation of YOLOv3 using Tensorflow 2.0">
 <meta property="og:image" content="https://geekyrakshit.dev/feeds/posts/assets/yolo_v3_tf2.png">
-<meta property="og:site-name" content="Geekyrakshit">
+<meta property="og:site_name" content="Geekyrakshit">
 <meta property="og:image:height" content="778">
 <meta property="og:image:width" content="1159">
-<meta name="twitter:title" content="Geekyrakshit - YOLOv3 using Tensorflow 2.0">
+<meta name="twitter:title" content="YOLOv3 using Tensorflow 2.0 – Geekyrakshit">
 <meta name="twitter:description" content="Implementation of YOLOv3 using Tensorflow 2.0">
 <meta name="twitter:image" content="https://geekyrakshit.dev/feeds/posts/assets/yolo_v3_tf2.png">
 <meta name="twitter:image-height" content="778">
@@ -120,44 +127,44 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
-    <nav class="navbar navbar-expand-lg navbar-dark ">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
-      <div class="navbar-brand-container">
+      <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Geekyrakshit</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../about.html" rel="" target="">
- <span class="menu-text">About Me</span></a>
+    <a class="nav-link" href="../../about.html"> 
+<span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../projects.html" rel="" target="">
- <span class="menu-text">Projects</span></a>
+    <a class="nav-link" href="../../projects.html"> 
+<span class="menu-text">Projects</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../courses.html" rel="" target="">
- <span class="menu-text">Courses/Seminars</span></a>
+    <a class="nav-link" href="../../courses.html"> 
+<span class="menu-text">Courses/Seminars</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../wandb_reports.html" rel="" target="">
- <span class="menu-text">WandB Reports</span></a>
+    <a class="nav-link" href="../../wandb_reports.html"> 
+<span class="menu-text">WandB Reports</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../../posts.html" rel="" target="">
- <span class="menu-text">Posts</span></a>
+    <a class="nav-link" href="../../posts.html"> 
+<span class="menu-text">Posts</span></a>
   </li>  
 </ul>
+          </div> <!-- /navcollapse -->
             <div class="quarto-navbar-tools">
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
-          </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
 </header>
@@ -208,12 +215,14 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   </div>
   
 
+
 </header>
+
 
 <p><strong>Kaggle Notebook Link:</strong> <a href="https://www.kaggle.com/soumikrakshit/yolo-v3-using-tensorflow-2-0">https://www.kaggle.com/soumikrakshit/yolo-v3-using-tensorflow-2-0</a></p>
 <section id="environment-setup" class="level2">
 <h2 class="anchored" data-anchor-id="environment-setup">Environment Setup</h2>
-<div class="cell" data-execution_count="1">
+<div id="cell-3" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install <span class="op">--</span>upgrade tensorflow</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>mkdir data</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>wget wget https:<span class="op">//</span>pjreddie.com<span class="op">/</span>media<span class="op">/</span>files<span class="op">/</span>yolov3.weights <span class="op">-</span>O data<span class="op">/</span>yolov3.weights</span>
@@ -304,7 +313,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 </section>
 <section id="library-imports" class="level2">
 <h2 class="anchored" data-anchor-id="library-imports">Library Imports</h2>
-<p>::: {.cell _cell_guid=‘b1076dfc-b9ad-4769-8c92-a6c4dae69d19’ _uuid=‘8f2839f25d086af736a60e9eeb907d3b93b6e0e5’ execution_count=2}</p>
+<p>::: {#cell-5 .cell _cell_guid=‘b1076dfc-b9ad-4769-8c92-a6c4dae69d19’ _uuid=‘8f2839f25d086af736a60e9eeb907d3b93b6e0e5’ execution_count=2}</p>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> cv2, os, glob</span>
@@ -327,7 +336,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 </section>
 <section id="configurations" class="level2">
 <h2 class="anchored" data-anchor-id="configurations">Configurations</h2>
-<p>::: {.cell _cell_guid=‘79c7e3d0-c299-4dcb-8224-4455121ee9b0’ _uuid=‘d629ff2d2480ee46fbb7e2d37f6b5fab8052498a’ execution_count=3}</p>
+<p>::: {#cell-7 .cell _cell_guid=‘79c7e3d0-c299-4dcb-8224-4455121ee9b0’ _uuid=‘d629ff2d2480ee46fbb7e2d37f6b5fab8052498a’ execution_count=3}</p>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>YOLOV3_LAYER_LIST <span class="op">=</span> [</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_darknet'</span>,</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">'yolo_conv_0'</span>,</span>
@@ -378,7 +387,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 </section>
 <section id="utilities" class="level2">
 <h2 class="anchored" data-anchor-id="utilities">Utilities</h2>
-<div class="cell" data-execution_count="4">
+<div id="cell-9" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> load_darknet_weights(model, weights_file, tiny <span class="op">=</span> <span class="va">False</span>):</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>    wf <span class="op">=</span> <span class="bu">open</span>(weights_file, <span class="st">'rb'</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    major, minor, revision, seen, _ <span class="op">=</span> np.fromfile(wf, dtype<span class="op">=</span>np.int32, count<span class="op">=</span><span class="dv">5</span>)</span>
@@ -420,7 +429,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb5-39"><a href="#cb5-39" aria-hidden="true" tabindex="-1"></a>    <span class="cf">assert</span> <span class="bu">len</span>(wf.read()) <span class="op">==</span> <span class="dv">0</span>, <span class="st">'failed to read all data'</span></span>
 <span id="cb5-40"><a href="#cb5-40" aria-hidden="true" tabindex="-1"></a>    wf.close()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="5">
+<div id="cell-10" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> broadcast_iou(box_1, box_2):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    box_1: (..., (x1, y1, x2, y2))</span></span>
@@ -441,14 +450,14 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb6-18"><a href="#cb6-18" aria-hidden="true" tabindex="-1"></a>    box_2_area <span class="op">=</span> (box_2[..., <span class="dv">2</span>] <span class="op">-</span> box_2[..., <span class="dv">0</span>]) <span class="op">*</span> (box_2[..., <span class="dv">3</span>] <span class="op">-</span> box_2[..., <span class="dv">1</span>])</span>
 <span id="cb6-19"><a href="#cb6-19" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> int_area <span class="op">/</span> (box_1_area <span class="op">+</span> box_2_area <span class="op">-</span> int_area)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="6">
+<div id="cell-11" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> freeze_all(model, frozen <span class="op">=</span> <span class="va">True</span>):</span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>    model.trainable <span class="op">=</span> <span class="kw">not</span> frozen</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="bu">isinstance</span>(model, tf.keras.Model):</span>
 <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="cf">for</span> l <span class="kw">in</span> model.layers:</span>
 <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>            freeze_all(l, frozen)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="7">
+<div id="cell-12" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_outputs(img, outputs, class_names):</span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>    boxes, objectness, classes, nums <span class="op">=</span> outputs</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>    boxes, objectness, classes, nums <span class="op">=</span> boxes[<span class="dv">0</span>], objectness[<span class="dv">0</span>], classes[<span class="dv">0</span>], nums[<span class="dv">0</span>]</span>
@@ -462,7 +471,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>            x1y1, cv2.FONT_HERSHEY_COMPLEX_SMALL, <span class="dv">1</span>, (<span class="dv">0</span>, <span class="dv">0</span>, <span class="dv">255</span>), <span class="dv">2</span>)</span>
 <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> img</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="8">
+<div id="cell-13" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> draw_labels(x, y, class_names):</span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> x.numpy()</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    boxes, classes <span class="op">=</span> tf.split(y, (<span class="dv">4</span>, <span class="dv">1</span>), axis <span class="op">=</span> <span class="op">-</span><span class="dv">1</span>)</span>
@@ -479,13 +488,13 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>        )</span>
 <span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> img</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="9">
+<div id="cell-14" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform_images(x_train, size):</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    x_train <span class="op">=</span> tf.image.resize(x_train, (size, size))</span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>    x_train <span class="op">=</span> x_train <span class="op">/</span> <span class="dv">255</span></span>
 <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x_train</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="10">
+<div id="cell-15" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="at">@tf.function</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform_targets_for_output(y_true, grid_size, anchor_idxs, classes):</span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>    N <span class="op">=</span> tf.shape(y_true)[<span class="dv">0</span>]</span>
@@ -514,7 +523,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tf.tensor_scatter_nd_update(</span>
 <span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a>        y_true_out, indexes.stack(), updates.stack())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="11">
+<div id="cell-16" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> transform_targets(y_train, anchors, anchor_masks, classes):</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>    y_outs <span class="op">=</span> []</span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a>    grid_size <span class="op">=</span> <span class="dv">13</span></span>
@@ -537,7 +546,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 </section>
 <section id="yolo-v3-model" class="level2">
 <h2 class="anchored" data-anchor-id="yolo-v3-model">YOLO V3 Model</h2>
-<div class="cell" data-execution_count="12">
+<div id="cell-18" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> BatchNormalization(tf.keras.layers.BatchNormalization):</span>
 <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> call(<span class="va">self</span>, x, training <span class="op">=</span> <span class="va">False</span>):</span>
@@ -546,7 +555,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a>        training <span class="op">=</span> tf.logical_and(training, <span class="va">self</span>.trainable)</span>
 <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="bu">super</span>().call(x, training)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="13">
+<div id="cell-19" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DarknetConv(x, filters, size, strides<span class="op">=</span><span class="dv">1</span>, batch_norm<span class="op">=</span><span class="va">True</span>):</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> strides <span class="op">==</span> <span class="dv">1</span>:</span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a>        padding <span class="op">=</span> <span class="st">'same'</span></span>
@@ -561,7 +570,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb14-12"><a href="#cb14-12" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> LeakyReLU(alpha<span class="op">=</span><span class="fl">0.1</span>)(x)</span>
 <span id="cb14-13"><a href="#cb14-13" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="14">
+<div id="cell-20" class="cell" data-execution_count="14">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DarknetResidual(x, filters):</span>
 <span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a>    prev <span class="op">=</span> x</span>
 <span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, filters <span class="op">//</span> <span class="dv">2</span>, <span class="dv">1</span>)</span>
@@ -569,14 +578,14 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> Add()([prev, x])</span>
 <span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="15">
+<div id="cell-21" class="cell" data-execution_count="15">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DarknetBlock(x, filters, blocks):</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, filters, <span class="dv">3</span>, strides<span class="op">=</span><span class="dv">2</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> _ <span class="kw">in</span> <span class="bu">range</span>(blocks):</span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> DarknetResidual(x, filters)</span>
 <span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> x</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="16">
+<div id="cell-22" class="cell" data-execution_count="16">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> Darknet(name<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> inputs <span class="op">=</span> Input([<span class="va">None</span>, <span class="va">None</span>, <span class="dv">3</span>])</span>
 <span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">32</span>, <span class="dv">3</span>)</span>
@@ -587,7 +596,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetBlock(x, <span class="dv">1024</span>, <span class="dv">4</span>)</span>
 <span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tf.keras.Model(inputs, (x_36, x_61, x), name<span class="op">=</span>name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="17">
+<div id="cell-23" class="cell" data-execution_count="17">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> DarknetTiny(name<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> inputs <span class="op">=</span> Input([<span class="va">None</span>, <span class="va">None</span>, <span class="dv">3</span>])</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">16</span>, <span class="dv">3</span>)</span>
@@ -605,7 +614,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb18-15"><a href="#cb18-15" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> DarknetConv(x, <span class="dv">1024</span>, <span class="dv">3</span>)</span>
 <span id="cb18-16"><a href="#cb18-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> tf.keras.Model(inputs, (x_8, x), name<span class="op">=</span>name)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="18">
+<div id="cell-24" class="cell" data-execution_count="18">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloConv(filters, name<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> yolo_conv(x_in):</span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(x_in, <span class="bu">tuple</span>):</span>
@@ -625,7 +634,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb19-17"><a href="#cb19-17" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Model(inputs, x, name<span class="op">=</span>name)(x_in)</span>
 <span id="cb19-18"><a href="#cb19-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> yolo_conv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="19">
+<div id="cell-25" class="cell" data-execution_count="19">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloConvTiny(filters, name<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> yolo_conv(x_in):</span>
 <span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> <span class="bu">isinstance</span>(x_in, <span class="bu">tuple</span>):</span>
@@ -641,7 +650,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb20-13"><a href="#cb20-13" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> Model(inputs, x, name<span class="op">=</span>name)(x_in)</span>
 <span id="cb20-14"><a href="#cb20-14" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> yolo_conv</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="20">
+<div id="cell-26" class="cell" data-execution_count="20">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloOutput(filters, anchors, classes, name<span class="op">=</span><span class="va">None</span>):</span>
 <span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> yolo_output(x_in):</span>
 <span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> inputs <span class="op">=</span> Input(x_in.shape[<span class="dv">1</span>:])</span>
@@ -651,7 +660,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> tf.keras.Model(inputs, x, name<span class="op">=</span>name)(x_in)</span>
 <span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> yolo_output</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="21">
+<div id="cell-27" class="cell" data-execution_count="21">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> yolo_boxes(pred, anchors, classes):</span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''pred: (batch_size, grid, grid, anchors, (x, y, w, h, obj, ...classes))'''</span></span>
 <span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a>    grid_size <span class="op">=</span> tf.shape(pred)[<span class="dv">1</span>]</span>
@@ -671,7 +680,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>    bbox <span class="op">=</span> tf.concat([box_x1y1, box_x2y2], axis<span class="op">=-</span><span class="dv">1</span>)</span>
 <span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> bbox, objectness, class_probs, pred_box</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="22">
+<div id="cell-28" class="cell" data-execution_count="22">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> yolo_nms(outputs, anchors, masks, classes):</span>
 <span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''boxes, conf, type'''</span></span>
 <span id="cb23-3"><a href="#cb23-3" aria-hidden="true" tabindex="-1"></a>    b, c, t <span class="op">=</span> [], [], []</span>
@@ -696,7 +705,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb23-22"><a href="#cb23-22" aria-hidden="true" tabindex="-1"></a>    )</span>
 <span id="cb23-23"><a href="#cb23-23" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> boxes, scores, classes, valid_detections</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="23">
+<div id="cell-29" class="cell" data-execution_count="23">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloV3(size<span class="op">=</span><span class="va">None</span>, channels<span class="op">=</span><span class="dv">3</span>, anchors<span class="op">=</span>yolo_anchors, masks<span class="op">=</span>yolo_anchor_masks, classes<span class="op">=</span><span class="dv">80</span>, training<span class="op">=</span><span class="va">False</span>):</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> inputs <span class="op">=</span> Input([size, size, channels])</span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>    x_36, x_61, x <span class="op">=</span> Darknet(name<span class="op">=</span><span class="st">'yolo_darknet'</span>)(x)</span>
@@ -718,7 +727,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 <span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>                     name<span class="op">=</span><span class="st">'yolo_nms'</span>)((boxes_0[:<span class="dv">3</span>], boxes_1[:<span class="dv">3</span>], boxes_2[:<span class="dv">3</span>]))</span>
 <span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> Model(inputs, outputs, name<span class="op">=</span><span class="st">'yolov3'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="24">
+<div id="cell-30" class="cell" data-execution_count="24">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloV3Tiny(size<span class="op">=</span><span class="va">None</span>, channels<span class="op">=</span><span class="dv">3</span>, anchors<span class="op">=</span>yolo_tiny_anchors, masks<span class="op">=</span>yolo_tiny_anchor_masks, classes<span class="op">=</span><span class="dv">80</span>, training<span class="op">=</span><span class="va">False</span>):</span>
 <span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a>    x <span class="op">=</span> inputs <span class="op">=</span> Input([size, size, channels])</span>
 <span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a>    x_8, x <span class="op">=</span> DarknetTiny(name<span class="op">=</span><span class="st">'yolo_darknet'</span>)(x)</span>
@@ -739,7 +748,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 </section>
 <section id="yolo-loss" class="level2">
 <h2 class="anchored" data-anchor-id="yolo-loss">YOLO Loss</h2>
-<div class="cell" data-execution_count="25">
+<div id="cell-32" class="cell" data-execution_count="25">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> YoloLoss(anchors, classes<span class="op">=</span><span class="dv">80</span>, ignore_thresh<span class="op">=</span><span class="fl">0.5</span>):</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> yolo_loss(y_true, y_pred):</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a>        <span class="co"># 1. transform all pred outputs</span></span>
@@ -792,7 +801,7 @@ data/yolov3-tiny.we 100%[===================&gt;]  33.79M  15.5MB/s    in 2.2s
 </section>
 <section id="tiny-yolo-inference" class="level2">
 <h2 class="anchored" data-anchor-id="tiny-yolo-inference">Tiny YOLO Inference</h2>
-<div class="cell" data-execution_count="26">
+<div id="cell-34" class="cell" data-execution_count="26">
 <div class="sourceCode cell-code" id="cb27"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>yolo <span class="op">=</span> YoloV3(classes <span class="op">=</span> <span class="dv">80</span>)</span>
 <span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>yolo.summary()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
@@ -840,7 +849,7 @@ Non-trainable params: 52,608
 __________________________________________________________________________________________________</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="27">
+<div id="cell-35" class="cell" data-execution_count="27">
 <div class="sourceCode cell-code" id="cb29"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>plot_model(</span>
 <span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a>    yolo, rankdir <span class="op">=</span> <span class="st">'TB'</span>,</span>
 <span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a>    to_file <span class="op">=</span> <span class="st">'yolo_model.png'</span>,</span>
@@ -849,13 +858,17 @@ ________________________________________________________________________________
 <span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a>    expand_nested <span class="op">=</span> <span class="va">True</span></span>
 <span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="27">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-28-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-28-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="28">
+</div>
+<div id="cell-36" class="cell" data-execution_count="28">
 <div class="sourceCode cell-code" id="cb30"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>load_darknet_weights(yolo, <span class="st">'./data/yolov3.weights'</span>, <span class="va">False</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="29">
+<div id="cell-37" class="cell" data-execution_count="29">
 <div class="sourceCode cell-code" id="cb31"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> predict(image_file, visualize <span class="op">=</span> <span class="va">True</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>)):</span>
 <span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> tf.image.decode_image(<span class="bu">open</span>(image_file, <span class="st">'rb'</span>).read(), channels<span class="op">=</span><span class="dv">3</span>)</span>
 <span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a>    img <span class="op">=</span> tf.expand_dims(img, <span class="dv">0</span>)</span>
@@ -869,65 +882,101 @@ ________________________________________________________________________________
 <span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a>        plt.show()</span>
 <span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> boxes, scores, classes, nums</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell" data-execution_count="30">
+<div id="cell-38" class="cell" data-execution_count="30">
 <div class="sourceCode cell-code" id="cb32"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>image_file <span class="op">=</span> glob.glob(<span class="st">'../input/google-ai-open-images-object-detection-track/test/challenge2018_test/*'</span>)</span>
 <span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="bu">len</span>(image_file)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="30">
 <pre><code>99999</code></pre>
 </div>
 </div>
-<div class="cell" data-execution_count="31">
+<div id="cell-39" class="cell" data-execution_count="31">
 <div class="sourceCode cell-code" id="cb34"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">0</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-32-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-32-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="32">
+</div>
+<div id="cell-40" class="cell" data-execution_count="32">
 <div class="sourceCode cell-code" id="cb35"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">1</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-33-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-33-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="33">
+</div>
+<div id="cell-41" class="cell" data-execution_count="33">
 <div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">3</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-34-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-34-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="34">
+</div>
+<div id="cell-42" class="cell" data-execution_count="34">
 <div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">4</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-35-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-35-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="35">
+</div>
+<div id="cell-43" class="cell" data-execution_count="35">
 <div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">8</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-36-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-36-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="36">
+</div>
+<div id="cell-44" class="cell" data-execution_count="36">
 <div class="sourceCode cell-code" id="cb39"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">12</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-37-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-37-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="37">
+</div>
+<div id="cell-45" class="cell" data-execution_count="37">
 <div class="sourceCode cell-code" id="cb40"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">13</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-38-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-38-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="38">
+</div>
+<div id="cell-46" class="cell" data-execution_count="38">
 <div class="sourceCode cell-code" id="cb41"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">15</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-39-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-39-output-1.png" class="img-fluid figure-img"></p>
+</figure>
 </div>
 </div>
-<div class="cell" data-execution_count="39">
+</div>
+<div id="cell-47" class="cell" data-execution_count="39">
 <div class="sourceCode cell-code" id="cb42"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a>boxes, scores, classes, nums <span class="op">=</span> predict(image_file[<span class="dv">18</span>], figsize <span class="op">=</span> (<span class="dv">20</span>, <span class="dv">20</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display">
-<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-40-output-1.png" class="img-fluid"></p>
+<div>
+<figure class="figure">
+<p><img src="yolo-v3-using-tensorflow-2-0_files/figure-html/cell-40-output-1.png" class="img-fluid figure-img"></p>
+</figure>
+</div>
 </div>
 </div>
 
@@ -976,6 +1025,33 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       } else {
         el.classList.add('notransition');
       }
+    }
+  }
+  const toggleGiscusIfUsed = (isAlternate, darkModeDefault) => {
+    const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
+    const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
+    let newTheme = '';
+    if(darkModeDefault) {
+      newTheme = isAlternate ? baseTheme : alternateTheme;
+    } else {
+      newTheme = isAlternate ? alternateTheme : baseTheme;
+    }
+    const changeGiscusTheme = () => {
+      // From: https://github.com/giscus/giscus/issues/336
+      const sendMessage = (message) => {
+        const iframe = document.querySelector('iframe.giscus-frame');
+        if (!iframe) return;
+        iframe.contentWindow.postMessage({ giscus: message }, 'https://giscus.app');
+      }
+      sendMessage({
+        setConfig: {
+          theme: newTheme
+        }
+      });
+    }
+    const isGiscussLoaded = window.document.querySelector('iframe.giscus-frame') !== null;
+    if (isGiscussLoaded) {
+      changeGiscusTheme();
     }
   }
   const toggleColorMode = (alternate) => {
@@ -1044,13 +1120,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return localAlternateSentinel;
     }
   }
-  let localAlternateSentinel = 'default';
+  const darkModeDefault = false;
+  let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
   // Dark / light mode switch
   window.quartoToggleColorScheme = () => {
     // Read the current dark / light value 
     let toAlternate = !hasAlternateSentinel();
     toggleColorMode(toAlternate);
     setStyleSentinel(toAlternate);
+    toggleGiscusIfUsed(toAlternate, darkModeDefault);
   };
   // Ensure there is a toggle, if there isn't float one in the top right
   if (window.document.querySelector('.quarto-color-scheme-toggle') === null) {
@@ -1085,18 +1163,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -1128,11 +1195,50 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
-  function tippyHover(el, contentFn) {
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    // For code content inside modals, clipBoardJS needs to be initialized with a container option
+    // TODO: Check when it could be a function (https://github.com/zenorocha/clipboard.js/issues/860)
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+    var mailtoRegex = new RegExp(/^mailto:/);
+      var filterRegex = new RegExp("https:\/\/geekyrakshit\.dev");
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+        // undo the damage that might have been done by quarto-nav.js in the case of
+        // links that we want to consider external
+        if (link.dataset.originalHref !== undefined) {
+          link.href = link.dataset.originalHref;
+        }
+      }
+    }
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
     const config = {
       allowHTML: true,
-      content: contentFn,
       maxWidth: 500,
       delay: 100,
       arrow: false,
@@ -1142,8 +1248,17 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       interactive: true,
       interactiveBorder: 10,
       theme: 'quarto',
-      placement: 'bottom-start'
+      placement: 'bottom-start',
     };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
     window.tippy(el, config); 
   }
   const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
@@ -1155,7 +1270,130 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       try { href = new URL(href).hash; } catch {}
       const id = href.replace(/^#\/?/, "");
       const note = window.document.getElementById(id);
-      return note.innerHTML;
+      if (note) {
+        return note.innerHTML;
+      } else {
+        return "";
+      }
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
     });
   }
       let selectedAnnoteEl;
@@ -1199,6 +1437,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
             }
             div.style.top = top - 2 + "px";
             div.style.height = height + 4 + "px";
+            div.style.left = 0;
             let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
             if (gutterDiv === null) {
               gutterDiv = window.document.createElement("div");
@@ -1224,6 +1463,32 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         });
         selectedAnnoteEl = undefined;
       };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
       // Attach click handler to the DT
       const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
       for (const annoteDlNode of annoteDls) {
@@ -1284,6 +1549,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 });
 </script>
 </div> <!-- /content -->
+
 
 
 
