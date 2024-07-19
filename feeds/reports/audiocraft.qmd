@@ -1,0 +1,23 @@
+---
+title: "A Guide to Generating Music using AudioCraft"
+author: "[GeekyRakshit](../../)"
+date: "2023-09-13"
+categories: [deeplearning, generative, 2-minute-papers, diffusion, audio]
+image: "assets/audiocraft.jpg"
+description: This article provides a comprehensive guide to using state-of-the-art music and audio generation models using AudioCraft from Meta, along with Weights & Biases. This article provides a comprehensive guide to using state-of-the-art music and audio generation models using AudioCraft from Meta, along with Weights & Biases.
+format: 
+  html:
+    page-layout: full
+---
+
+<details>
+    <summary>
+        <strong>
+            Featured on <a href="https://www.youtube.com/@TwoMinutePapers">Two Minute Papers</a>
+        </strong>
+    </summary>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/BRWquZdEigw?si=YpcL2fN9n2W-OugL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+</details>
+
+<iframe src="https://wandb.ai/geekyrakshit/audiocraft/reports/A-Guide-to-Generating-Music-using-AudioCraft--Vmlldzo1MzgwOTYz" style="border:none;height:1024px;width:100%"></iframe>

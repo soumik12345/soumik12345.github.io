@@ -21,6 +21,12 @@
   {
     "listing": "/wandb_reports.html",
     "items": [
+      "/feeds/reports/ai_teacher.html",
+      "/feeds/reports/monai_brats.html",
+      "/feeds/reports/pixart_alpha.html",
+      "/feeds/reports/diffusers_prompting.html",
+      "/feeds/reports/yolov8.html",
+      "/feeds/reports/audiocraft.html",
       "/feeds/reports/sdxl.html",
       "/feeds/reports/ultralytics.html",
       "/feeds/reports/keras-xla-benchmark.html",

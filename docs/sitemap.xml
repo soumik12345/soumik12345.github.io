@@ -204,4 +204,28 @@
     <loc>https://geekyrakshit.dev/feeds/posts/torchvision_keras.html</loc>
     <lastmod>2024-07-19T09:04:51.128Z</lastmod>
   </url>
+  <url>
+    <loc>https://geekyrakshit.dev/feeds/reports/audiocraft.html</loc>
+    <lastmod>2024-07-19T11:32:01.991Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/feeds/reports/yolov8.html</loc>
+    <lastmod>2024-07-19T11:40:59.191Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/feeds/reports/diffusers_prompting.html</loc>
+    <lastmod>2024-07-19T11:45:27.611Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/feeds/reports/pixart_alpha.html</loc>
+    <lastmod>2024-07-19T11:55:58.251Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/feeds/reports/monai_brats.html</loc>
+    <lastmod>2024-07-19T11:53:36.579Z</lastmod>
+  </url>
+  <url>
+    <loc>https://geekyrakshit.dev/feeds/reports/ai_teacher.html</loc>
+    <lastmod>2024-07-19T12:02:23.983Z</lastmod>
+  </url>
 </urlset>

@@ -1,0 +1,13 @@
+---
+title: "Object Detection using YOLOv8: An End-to-End Workflow"
+author: "[GeekyRakshit](../../)"
+date: "2023-09-25"
+categories: [deeplearning, pytorch, computervision, object-detection, yolo]
+image: "assets/yolov8.png"
+description: A comprehensive guide to building an object detection workflow using Ultralytics YOLOv8  and Weights & Biases.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/reviewco/object-detection-bdd/reports/Object-Detection-using-YOLOv8-An-End-to-End-Workflow--Vmlldzo1NTAyMDQ1" style="border:none;height:1024px;width:100%"></iframe>

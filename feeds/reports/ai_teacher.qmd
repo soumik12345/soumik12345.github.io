@@ -1,0 +1,13 @@
+---
+title: "Building an AI teacher's assistant using LlamaIndex and Groq"
+author: "[GeekyRakshit](../../)"
+date: "2024-07-04"
+categories: [nlp, llm, llmops, weave, prompt, rag]
+image: "assets/ai_teacher.jpg"
+description: Today, we're going to leverage a RAG pipeline to create an AI TA capable of helping out with grading, questions about a class syllabus, and more.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/groq-rag/reports/Building-an-AI-teacher-s-assistant-using-LlamaIndex-and-Groq--Vmlldzo4NTU2NzA1" style="border:none;height:1024px;width:100%"></iframe>

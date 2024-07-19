@@ -1,0 +1,13 @@
+---
+title: "PIXART-α: A Diffusion Transformer Model for Text-to-Image Generation"
+author: "[GeekyRakshit](../../)"
+date: "2023-11-29"
+categories: [computervision, deeplearning, monai, segmentation, medical]
+image: "assets/monai_brats.gif"
+description: This article provides a short tutorial on how to run experiments with Pixart-α — the new transformer-based Diffusion model for generating photorealistic images from text.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/pixart-alpha/reports/PIXART-A-Diffusion-Transformer-Model-for-Text-to-Image-Generation--Vmlldzo2MTE1NzM3" style="border:none;height:1024px;width:100%"></iframe>

@@ -1,0 +1,13 @@
+---
+title: "Brain Tumor Segmentation using MONAI and WandB"
+author: "[GeekyRakshit](../../)"
+date: "2024-03-03"
+categories: [computervision, deeplearning, diffusion, huggingface, pixart, prompt]
+image: "assets/pixart_alpha.png"
+description: Supercharging your Deep Learning workflows for Medical Imaging using MonAI and Weights & Biases.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/brain-tumor-segmentation/reports/Brain-Tumor-Segmentation-using-MONAI-and-WandB---Vmlldzo0MjUzODIw" style="border:none;height:1024px;width:100%"></iframe>

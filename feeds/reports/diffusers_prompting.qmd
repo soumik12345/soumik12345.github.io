@@ -1,0 +1,13 @@
+---
+title: "A Guide to Prompt Engineering for Stable Diffusion"
+author: "[GeekyRakshit](../../)"
+date: "2023-10-24"
+categories: [computervision, deeplearning, diffusion, huggingface, stable-diffusion, prompt]
+image: "assets/sd_prompt.png"
+description: A comprehensive guide to prompt engineering for generating images using Stable Diffusion, HuggingFace Diffusers and Weights & Biases.
+format: 
+  html:
+    page-layout: full
+---
+
+<iframe src="https://wandb.ai/geekyrakshit/diffusers-prompt-engineering/reports/A-Guide-to-Prompt-Engineering-for-Stable-Diffusion--Vmlldzo1NzY4NzQ3" style="border:none;height:1024px;width:100%"></iframe>
