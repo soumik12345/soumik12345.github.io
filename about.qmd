@@ -1,5 +1,8 @@
 ---
 title: "About Me"
+format: 
+  html:
+    code-fold: true
 about:
   template: marquee
   links:
@@ -19,18 +22,37 @@ about:
       href: https://steamcommunity.com/id/geekyRakshit/
 ---
 
-I am generally interested in the field of computer vision, particularly in foundation models for computer vision, generative models
+:::: {.columns}
+
+::: {.column width="50%"}
+I work on developing tools for Machine Learning parctioners and LLMOps at [Weights & Biases](https://wandb.ai/site).
+
+I am generally interested in the field of computer vision, particularly in foundation models for computer vision, computer graphics, generative models
 for images, implicit representation and representation learning.
 
-I work on developing tools for Machine Learning parctioners at [Weights & Biases](https://wandb.ai/site). My day-to-day tasks include
+Besides my work, I'm an amateur musician (trained in violin, guitar, and Indian classical vocal) and a veteran of the soulsbourne genre of video games.
+:::
 
-* developing and maintaining integrations with open-source libraries such as keras, ultralytics, super-gradients, kaolin-wisp, etc.
-* prototyping experimental tools in the Weights & Biases ecosystem as part of [wandb-addons](https://github.com/soumik12345/wandb-addons).
+::: {.column width="10%"}
+<!-- empty column to create gap -->
+:::
+
+::: {.column width="40%"}
+![](./assets/soumik_rakshit.png)
+:::
+
+::::
+
+## My day-to-day Work
+
+* developing and maintaining integrations with open-source libraries such as [keras](keras.io), [🤗 diffusers](https://huggingface.co/docs/diffusers/en/index), [MONAI](https://monai.io/), etc.
+* developing and maintaining [Weave](wandb.me/weave) integrations with open-source LLMOps libraries such as [DSPy](https://dspy-docs.vercel.app/), and GenAI vendors like [Groq](https://groq.com/).
+* prototyping experimental tools in the [Weights & Biases](wandb.ai/site) and [Weave](wandb.me/weave) ecosystem.
 * writing exciting and beautiful blog posts on machine learning using [W&B Reports](https://docs.wandb.ai/guides/reports).
-* talk about my work at different webinars.
+* talk about my work at different seminars, webinars, and events.
 
-I'm fairly active in terms of open-source contributions. Besides [wandb](https://github.com/wandb/wandb), I regularly contribute to
-[Keras](https://github.com/keras-team/keras-core), [KerasCV](https://github.com/keras-team/keras-cv), and
+I'm fairly active in terms of open-source contributions. Besides [wandb](https://github.com/wandb/wandb) and [Weave](https://github.com/wandb/weave), I have contributed to
+[Keras](https://github.com/keras-team/keras), [KerasCV](https://github.com/keras-team/keras-cv), and
 [Keras Examples](https://github.com/keras-team/keras-io). Thanks to my job, I get to contribute to a lot of other open-source repositories
 including [Ultralytics](https://github.com/ultralytics/ultralytics), [Super-Gradients](https://github.com/Deci-AI/super-gradients),
 [Kaolin-Wisp](https://github.com/NVIDIAGameWorks/kaolin-wisp), [PyTorch Geometric](https://github.com/pyg-team/pytorch_geometric),
@@ -38,14 +60,14 @@ and many more. I have also developed and am maintaining the integrations of Weig
 I am also actively working on [wandb-addons](https://github.com/soumik12345/wandb-addons) which hosts a set of experimental utilities
 and integrations for Weights & Biases.
 
-My Career Timeline:
+## My Career Timeline
 
-* Machine Learning Engineer at [Weights & Biases](https://wandb.ai/site) (Jan 2022 - Present)
-* [Google Developer Expert for Machine Learning (JAX)](https://g.dev/geekyrakshit) (Jun 2022 - Present)
-* Staff Machine Learning Engineer at [Ignitarium](https://ignitarium.com/) (Jul 2021 - Dec 2021)
-* Software Development Engineer at [IBM](https://www.ibm.com/in-en) (Jan 2020 - Jul 2021)
-* Software Development Engineer at [HighRadius](https://www.highradius.com/) (Jun 2019 - Dec 2019)
-* Failed entrepreneur and Machine Learning Researcher at [DeepWrex Technologies](https://www.linkedin.com/company/14586161/)
+|Position|Organization|Duration|
+|---|---|---|
+|Machine Learning Engineer|[Weights & Biases](https://wandb.ai/site)|Jul 2021 - Dec 2021|
+|Staff Machine Learning Engineer|[Ignitarium](https://ignitarium.com/)|Jul 2021 - Dec 2021|
+|Software Development Engineer|[IBM](https://www.ibm.com/in-en)|Jan 2020 - Jul 2021|
+|Software Development Engineer|[HighRadius](https://www.highradius.com/)|Jun 2019 - Dec 2019|
+|Failed entrepreneur and Machine Learning Researcher|[DeepWrex Technologies](https://www.linkedin.com/company/14586161/)|Nov 2018 - Dec 2019|
 
-In my free time, I watch anime, read books and manga, play video games, write poetry, sketch on ProCreate, and ocassionally dabble in the
-dark arts of computational graphics.
+Additionally, I've been a [Google Developer Expert for Machine Learning (JAX)](https://g.dev/geekyrakshit) since Jun 2022.
