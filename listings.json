@@ -1,24 +1,5 @@
 [
   {
-    "listing": "/posts.html",
-    "items": [
-      "/feeds/posts/torchvision_keras.html",
-      "/feeds/posts/efficient-graph-based-image-segmentation/index.html",
-      "/feeds/posts/enet-camvid.html",
-      "/feeds/posts/detectron-fast-rcnn.html",
-      "/feeds/posts/anpr.html",
-      "/feeds/posts/yolo-v3-using-tensorflow-2-0.html",
-      "/feeds/posts/detectron-mask-rcnn.html",
-      "/feeds/posts/depthwise-separable-convolution/index.html",
-      "/feeds/posts/nearest-celebrity-face/index.html",
-      "/feeds/posts/relativistic-anime-gan.html",
-      "/feeds/posts/conditional-dcgan.html",
-      "/feeds/posts/animegan.html",
-      "/feeds/posts/dcgan-mnist.html",
-      "/feeds/posts/mlp-gan.html"
-    ]
-  },
-  {
     "listing": "/wandb_reports.html",
     "items": [
       "/feeds/reports/ai_teacher.html",
@@ -58,6 +39,25 @@
       "/feeds/reports/block-nerf.html",
       "/feeds/reports/robust-perceptive-locomotive.html",
       "/feeds/reports/poe-gan.html"
+    ]
+  },
+  {
+    "listing": "/posts.html",
+    "items": [
+      "/feeds/posts/torchvision_keras.html",
+      "/feeds/posts/efficient-graph-based-image-segmentation/index.html",
+      "/feeds/posts/enet-camvid.html",
+      "/feeds/posts/anpr.html",
+      "/feeds/posts/detectron-mask-rcnn.html",
+      "/feeds/posts/detectron-fast-rcnn.html",
+      "/feeds/posts/yolo-v3-using-tensorflow-2-0.html",
+      "/feeds/posts/depthwise-separable-convolution/index.html",
+      "/feeds/posts/nearest-celebrity-face/index.html",
+      "/feeds/posts/relativistic-anime-gan.html",
+      "/feeds/posts/conditional-dcgan.html",
+      "/feeds/posts/animegan.html",
+      "/feeds/posts/dcgan-mnist.html",
+      "/feeds/posts/mlp-gan.html"
     ]
   }
 ]

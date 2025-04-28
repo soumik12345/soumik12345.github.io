@@ -9,13 +9,14 @@
 <link>https://geekyrakshit.dev/wandb_reports.html</link>
 <atom:link href="https://geekyrakshit.dev/wandb_reports.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.5.55</generator>
+<generator>quarto-1.7.29</generator>
 <lastBuildDate>Thu, 04 Jul 2024 00:00:00 GMT</lastBuildDate>
 <item>
   <title>Building an AI teacher’s assistant using LlamaIndex and Groq</title>
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/ai_teacher.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -45,6 +46,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/geekyrakshit/brain-tumor-segmentation/reports/Brain-Tumor-Segmentation-using-MONAI-and-WandB---Vmlldzo0MjUzODIw" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -70,6 +72,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/geekyrakshit/pixart-alpha/reports/PIXART-A-Diffusion-Transformer-Model-for-Text-to-Image-Generation--Vmlldzo2MTE1NzM3" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -90,6 +93,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/diffusers_prompting.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -119,6 +123,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/reviewco/object-detection-bdd/reports/Object-Detection-using-YOLOv8-An-End-to-End-Workflow--Vmlldzo1NTAyMDQ1" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -139,6 +144,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/audiocraft.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -173,6 +179,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/geekyrakshit/stable-diffusion-xl/reports/A-Guide-to-Using-Stable-Diffusion-XL-with-HuggingFace-Diffusers-and-W-B--Vmlldzo1MDMxMDU4" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -197,6 +204,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/geekyrakshit/ultralytics/reports/Supercharging-Ultralytics-with-Weights-Biases--Vmlldzo0OTMyMDI4" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -216,6 +224,7 @@
   <dc:creator>[Sayak Paul](https://twitter.com/RisingSayak), [GeekyRakshit](../../), [Ayush Thakur](https://twitter.com/ayushthakur0)</dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/keras-xla-benchmark.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -244,6 +253,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/geekyrakshit/multi-task-learning/reports/Multi-Task-Learning-as-a-Bargaining-Game--VmlldzoyMDgzNjI2" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -262,6 +272,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/if.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -290,6 +301,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/geekyrakshit/paella/reports/Paella-Fast-Text-Conditional-Image-Generation--VmlldzozMDAyNjg2" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -308,6 +320,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/dreambooth-keras.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -338,6 +351,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/ml-colabs/low-light-enhancement/reports/Low-Light-Image-Enhancement-Lighting-up-Images-in-the-Deep-Learning-Era--VmlldzozNzE4Njkz" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -357,6 +371,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/shapenetcore.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -385,6 +400,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/wandb/point-cloud-segmentation/reports/Point-Cloud-Segmentation-Using-Dynamic-Graph-CNNs--VmlldzozMTk5MDcy?galleryTag=pyg" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -405,6 +421,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/point-cloud-classification.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -433,6 +450,7 @@
 
 
 
+
 <iframe src="https://wandb.ai/geekyrakshit/diffusers-image-generation/reports/Unconditional-Image-Generation-Using-HuggingFace-Diffusers--VmlldzoyOTM5NjA1" style="border:none;height:1024px;width:100%">
 </iframe>
 
@@ -452,6 +470,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/vqad.html</link>
   <description><![CDATA[ 
+
 
 
 
@@ -481,6 +500,7 @@
   <dc:creator>[GeekyRakshit](../../) </dc:creator>
   <link>https://geekyrakshit.dev/feeds/reports/hazy-image-restoration.html</link>
   <description><![CDATA[ 
+
 
 
 
