@@ -4,29 +4,16 @@ about:
   template: marquee
 ---
 
-I write about almost all of my projects, which you can find either among my [blog posts](posts.html) or in my [WandB reports](wandb_reports.html).
-You can also follow me on Github to stay up-to-date with the numerous open-source projects I'm continuously working on. That said, I want to
-mention some specific projects I've undertaken in the past or ones that I'm still working on.
+### Major Projects
 
-## Work-in-Progress Projects
+* [**Trackers**](https://github.com/roboflow/trackers): Trackers is a unified library for object tracking featuring clean room re-implementations of leading multi-object tracking algorithms. I am one of the core maintainers actively implementing SoTA multi-object trackering techniques, Re-ID models, training, and fine-tuning pipelines. Check out the [docs](https://roboflow.github.io/trackers) for more information.
+* [**WandB Models**](https://github.com/wandb/wandb): WandB Models is the AI developer platform used to train and fine-tune models, and manage models from experimentation to production. I have contributed mojor integrations of WandB Models with open-source ML libraries like [Hugging Face Diffusers](https://docs.wandb.ai/guides/integrations/diffusers/), [Hugging Face AutoTrain](https://docs.wandb.ai/guides/integrations/autotrain/), [Keras](https://docs.wandb.ai/guides/integrations/keras/), [MMEngine](https://docs.wandb.ai/guides/integrations/mmengine/), [PyTorch Geometric](https://docs.wandb.ai/guides/integrations/pytorch-geometric/), [Ultralytics](https://docs.wandb.ai/guides/integrations/ultralytics/), [YOLOv5](https://docs.wandb.ai/guides/integrations/yolov5/), [MONAI](https://docs.wandb.ai/tutorials/monai_3d_segmentation/), etc. I have also authored numerous [technical reports](https://wandb.ai/geekyrakshit) and developed [experimental tooling](https://github.com/soumik12345/wandb-addons) for ML practitioners.
+* [**WandB Weave**](https://github.com/wandb/weave): WandB Weave is a toolkit for developing Generative AI applications, built by [Weights & Biases](https://wandb.ai/site). I have contributed mojor integrations of Weave with LLM SDKs like [Groq](https://weave-docs.wandb.ai/guides/integrations/groq), [Hugging Face Hub](https://weave-docs.wandb.ai/guides/integrations/huggingface), [Google](https://weave-docs.wandb.ai/guides/integrations/google); and LLMOps frameworks like [DSPy](https://weave-docs.wandb.ai/guides/integrations/dspy), [Instructor](https://weave-docs.wandb.ai/guides/integrations/instructor), and [SmolAgents](https://weave-docs.wandb.ai/guides/integrations/smolagents).
+* [**Hemm: Holistic Evaluation of Multi-modal Generative Models**](https://github.com/wandb/Hemm): Hemm is a library for performing comprehensive benchmark of text-to-image diffusion models on image quality and prompt comprehension integrated with Weights & Biases and Weave.I am currently actively working on this project. Check out the [docs](https://wandb.github.io/Hemm/) for more information.
+* [**Weights & Biases Addons**](https://github.com/soumik12345/wandb-addons): Weights & Biases Addons is a repository that provides of integrations and utilities that will supercharge your Weights & Biases workflows. Its a repositpry built and maintained by WandB users for WandB users. The library hosts experimental utilities and integrations built using [Weights & Biases](https://wandb.ai/site). I am currently actively working on this project. Check out the [docs](https://geekyrakshit.dev/wandb-addons) for more information.
+* [**Restorers**](https://github.com/TrystAI/restorers): Restorers is a library provide out-of-the-box TensorFlow implementations of SoTA image and video restoration models for tasks such as low-light enhancement, denoising, deblurring, super-resolution, etc. You can read more about it in [this WandB report](wandb.me/low-light).
 
-### Hemm: Holistic Evaluation of Multi-modal Generative Models [[Repository](https://github.com/wandb/Hemm) | [Website](https://wandb.github.io/Hemm/)]
-
-[Hemm](https://github.com/wandb/Hemm) is a library for performing comprehensive benchmark of text-to-image diffusion models on image quality and prompt comprehension integrated with Weights & Biases and Weave.
-
-### Weights & Biases Addons [[Repository](https://github.com/soumik12345/wandb-addons/tree/main) | [Website](https://geekyrakshit.dev/wandb-addons/)]
-
-[Weights & Biases Addons]((https://github.com/soumik12345/wandb-addons)) is a repository that provides of integrations and utilities that will supercharge your Weights & Biases workflows.
-Its a repositpry built and maintained by WandB users for WandB users. The library hosts experimental utilities and integrations built using 
-[Weights & Biases](https://wandb.ai/site). I am currently actively working on this project.
-
-### Restorers
-
-[Restorers]((https://github.com/TrystAI/restorers)) is a library provide out-of-the-box TensorFlow implementations of SoTA image and video restoration
-models for tasks such as low-light enhancement, denoising, deblurring, super-resolution, etc. You can read more about it in
-[this WandB report](wandb.me/low-light).
-
-## Deep Learning examples published on [keras.io](https://keras.io/)
+### Deep Learning examples published on [keras.io](https://keras.io/)
 
 * [Multiclass semantic segmentation using DeepLabV3+](https://keras.io/examples/vision/deeplabv3_plus/)
 * [Low-light image enhancement using MIRNet](https://keras.io/examples/vision/mirnet/)
@@ -35,7 +22,7 @@ models for tasks such as low-light enhancement, denoising, deblurring, super-res
 * [Point cloud segmentation with PointNet](https://keras.io/examples/vision/pointnet_segmentation/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
 * [GauGAN for conditional image generation](https://keras.io/examples/generative/gaugan/) in colaboration with [Sayak Paul](https://twitter.com/RisingSayak)
 
-## Other Interesting Projects
+### Other Interesting Projects
 
 * [**Radium**](https://github.com/soumik12345/radium): A small and lightweight Ray Tracing Engine written in C++ that runs on the CPU using shared-memory multiprocessing.
 * [**Colorization using Optimization**](https://github.com/soumik12345/colorization-using-optimization): Python and C++ implementations of a user-guided image/video colorization technique as proposed by the paper [Colorization Using Optimization](https://dl.acm.org/doi/10.1145/1015706.1015780). The algorithm is based on a simple premise; neighboring pixels in space-time that have similar intensities should have similar colors. This premise is formalized using a quadratic cost function that obtains an optimization problem that can be solved efficiently using standard techniques. While using this alogorithm, an artist only needs to annotate the image with a few color scribbles or visual clues, and the indicated colors are automatically propagated in both space and time to produce a fully colorized image or sequence. The annotation can be done using any drawing tool such as [JSPaint](https://jspaint.app/) or [Gimp](https://www.gimp.org/).

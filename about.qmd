@@ -25,12 +25,9 @@ about:
 :::: {.columns}
 
 ::: {.column width="50%"}
-I work on developing tools for Machine Learning parctioners and LLMOps at [Weights & Biases](https://wandb.ai/site).
+I am actively working at [Roboflow](https://roboflow.com/) towards the long-term goal of merging the physical and digital worlds for greater by democratizing computer vision for every industry.
 
-I am generally interested in the field of computer vision, particularly in foundation models for computer vision, computer graphics, generative models
-for images, implicit representation and representation learning.
-
-Besides my work, I'm an amateur musician (trained in violin, guitar, and Indian classical vocal) and a veteran of the soulsbourne genre of video games.
+I believe that AGI is going to be a collection of smaller neural networks specialized towards a particular type of task or modality controlled by a large foundation model for cognition rather than a single insanely large foundation model for everything. My motivation is to build the [visual cortex](https://en.wikipedia.org/wiki/Visual_cortex) of this AGI system and bless our AI companions with a sense of sight.
 :::
 
 ::: {.column width="10%"}
@@ -45,26 +42,17 @@ Besides my work, I'm an amateur musician (trained in violin, guitar, and Indian 
 
 ## My day-to-day Work
 
-* developing and maintaining integrations with open-source libraries such as [keras](keras.io), [🤗 diffusers](https://huggingface.co/docs/diffusers/en/index), [MONAI](https://monai.io/), etc.
-* developing and maintaining [Weave](wandb.me/weave) integrations with open-source LLMOps libraries such as [DSPy](https://dspy-docs.vercel.app/), and GenAI vendors like [Groq](https://groq.com/).
-* prototyping experimental tools in the [Weights & Biases](wandb.ai/site) and [Weave](wandb.me/weave) ecosystem.
-* writing exciting and beautiful blog posts on machine learning using [W&B Reports](https://docs.wandb.ai/guides/reports).
-* talk about my work at different seminars, webinars, and events.
-
-I'm fairly active in terms of open-source contributions. Besides [wandb](https://github.com/wandb/wandb) and [Weave](https://github.com/wandb/weave), I have contributed to
-[Keras](https://github.com/keras-team/keras), [KerasCV](https://github.com/keras-team/keras-cv), and
-[Keras Examples](https://github.com/keras-team/keras-io). Thanks to my job, I get to contribute to a lot of other open-source repositories
-including [Ultralytics](https://github.com/ultralytics/ultralytics), [Super-Gradients](https://github.com/Deci-AI/super-gradients),
-[Kaolin-Wisp](https://github.com/NVIDIAGameWorks/kaolin-wisp), [PyTorch Geometric](https://github.com/pyg-team/pytorch_geometric),
-and many more. I have also developed and am maintaining the integrations of Weights & Biases with many of these repositories.
-I am also actively working on [wandb-addons](https://github.com/soumik12345/wandb-addons) which hosts a set of experimental utilities
-and integrations for Weights & Biases.
+* actively maintain the [trackers](https://github.com/roboflow/trackers) project, which is an open-source plug-and-play Python toolkit for multi-object-tracking.
+* research on object tracking techniques and paradigms and implement them in trackers.
+* research on the applications of computer vision and real-time video analytics systems in various industries.
+* write blog posts on tutorializing different computer vision usecases.
 
 ## My Career Timeline
 
 |Position|Organization|Duration|
 |---|---|---|
-|Machine Learning Engineer|[Weights & Biases](https://wandb.ai/site)|Jul 2021 - Dec 2021|
+|Machine Learning Engineer|[Roboflow](https://roboflow.com/)|Apr 2025 - Present|
+|Machine Learning Engineer|[Weights & Biases](https://wandb.ai/site)|Jul 2021 - Mar 2025|
 |Staff Machine Learning Engineer|[Ignitarium](https://ignitarium.com/)|Jul 2021 - Dec 2021|
 |Software Development Engineer|[IBM](https://www.ibm.com/in-en)|Jan 2020 - Jul 2021|
 |Software Development Engineer|[HighRadius](https://www.highradius.com/)|Jun 2019 - Dec 2019|
