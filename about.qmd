@@ -52,7 +52,7 @@ I believe that AGI is going to be a collection of smaller neural networks specia
 |Position|Organization|Duration|
 |---|---|---|
 |Machine Learning Engineer|[Roboflow](https://roboflow.com/)|Apr 2025 - Present|
-|Machine Learning Engineer|[Weights & Biases](https://wandb.ai/site)|Jul 2021 - Mar 2025|
+|Machine Learning Engineer|[Weights & Biases](https://wandb.ai/site)|Jan 2022 - Mar 2025|
 |Staff Machine Learning Engineer|[Ignitarium](https://ignitarium.com/)|Jul 2021 - Dec 2021|
 |Software Development Engineer|[IBM](https://www.ibm.com/in-en)|Jan 2020 - Jul 2021|
 |Software Development Engineer|[HighRadius](https://www.highradius.com/)|Jun 2019 - Dec 2019|
