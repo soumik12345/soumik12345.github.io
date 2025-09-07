@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.29">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,14 +36,14 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-748b535e376f14d4692bf2b2e5fd6380.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-0815c480559380816a4d1ea211a47e91.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-1136ac59113c822e2a403ae9522e66fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-39017ca276f174ce8ea5a4ccd8dd1b5a.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-1136ac59113c822e2a403ae9522e66fe.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-33857d8fa23aa118b5dbe9d2315a3cf5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-3824aa816de5134366ccfe78104cf7a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-33857d8fa23aa118b5dbe9d2315a3cf5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
 <link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
@@ -244,6 +244,7 @@ ul.task-list li input[type="checkbox"] {
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
     if (hasAlternateSentinel()) {
@@ -316,23 +317,13 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>I am actively working at <a href="https://roboflow.com/">Roboflow</a> towards the long-term goal of merging the physical and digital worlds for greater by democratizing computer vision for every industry.</p>
-<p>I believe that AGI is going to be a collection of smaller neural networks specialized towards a particular type of task or modality controlled by a large foundation model for cognition rather than a single insanely large foundation model for everything. My motivation is to build the <a href="https://en.wikipedia.org/wiki/Visual_cortex">visual cortex</a> of this AGI system and bless our AI companions with a sense of sight.</p>
+<p>I am actively working at <a href="https://athenaagent.com/">AthenaAgent</a> towards the long-term goal of the development of reliable and scalable ANI (Artificial Narrow Intelligence) agents. My research areas are focused on the development of robust and scalable visual agentic systems for niche and impactful businesses.</p>
 </div><div class="column" style="width:10%;">
 <!-- empty column to create gap -->
 </div><div class="column" style="width:40%;">
 <p><img src="./assets/soumik_rakshit.png" class="img-fluid"></p>
 </div>
 </div>
-<section id="my-day-to-day-work" class="level2">
-<h2 data-anchor-id="my-day-to-day-work">My day-to-day Work</h2>
-<ul>
-<li>actively maintain the <a href="https://github.com/roboflow/trackers">trackers</a> project, which is an open-source plug-and-play Python toolkit for multi-object-tracking.</li>
-<li>research on object tracking techniques and paradigms and implement them in trackers.</li>
-<li>research on the applications of computer vision and real-time video analytics systems in various industries.</li>
-<li>write blog posts on tutorializing different computer vision usecases.</li>
-</ul>
-</section>
 <section id="my-career-timeline" class="level2">
 <h2 data-anchor-id="my-career-timeline">My Career Timeline</h2>
 <table class="caption-top table">
@@ -345,31 +336,36 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Machine Learning Engineer</td>
-<td><a href="https://roboflow.com/">Roboflow</a></td>
-<td>Apr 2025 - Present</td>
+<td>Machine Learning Researcher</td>
+<td><a href="https://athenaagent.com/">AthenaAgent</a></td>
+<td>July 2025 - Present</td>
 </tr>
 <tr class="even">
+<td>Machine Learning Engineer</td>
+<td><a href="https://roboflow.com/">Roboflow</a></td>
+<td>Apr 2025 - July 2025</td>
+</tr>
+<tr class="odd">
 <td>Machine Learning Engineer</td>
 <td><a href="https://wandb.ai/site">Weights &amp; Biases</a></td>
 <td>Jan 2022 - Mar 2025</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Staff Machine Learning Engineer</td>
 <td><a href="https://ignitarium.com/">Ignitarium</a></td>
 <td>Jul 2021 - Dec 2021</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Software Development Engineer</td>
 <td><a href="https://www.ibm.com/in-en">IBM</a></td>
 <td>Jan 2020 - Jul 2021</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Software Development Engineer</td>
 <td><a href="https://www.highradius.com/">HighRadius</a></td>
 <td>Jun 2019 - Dec 2019</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Failed entrepreneur and Machine Learning Researcher</td>
 <td><a href="https://www.linkedin.com/company/14586161/">DeepWrex Technologies</a></td>
 <td>Nov 2018 - Dec 2019</td>
