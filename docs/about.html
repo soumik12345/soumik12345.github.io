@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.28">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -36,9 +36,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-c8b544e1eab81f7563542c0a8b71d1e9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-d64559d910ec87c4ee681e1e2f97436f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -108,7 +108,7 @@ ul.task-list li input[type="checkbox"] {
         toggleBodyColorMode(bsSheetEl);
       }
     }
-    window.setColorSchemeToggle = (alternate) => {
+    const setColorSchemeToggle = (alternate) => {
       const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
@@ -141,7 +141,7 @@ ul.task-list li input[type="checkbox"] {
       }
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
-      window.setColorSchemeToggle(alternate)
+      setColorSchemeToggle(alternate)
       // Hack to workaround the fact that safari doesn't
       // properly recolor the scrollbar when toggling (#1455)
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
@@ -181,7 +181,7 @@ ul.task-list li input[type="checkbox"] {
     const isFileUrl = () => {
       return window.location.protocol === 'file:';
     }
-    window.hasAlternateSentinel = () => {
+    const hasAlternateSentinel = () => {
       let styleSentinel = getColorSchemeSentinel();
       if (styleSentinel !== null) {
         return styleSentinel === "alternate";
@@ -209,7 +209,7 @@ ul.task-list li input[type="checkbox"] {
       const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
       const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
       let newTheme = '';
-      if(darkModeDefault) {
+      if(authorPrefersDark) {
         newTheme = isAlternate ? baseTheme : alternateTheme;
       } else {
         newTheme = isAlternate ? alternateTheme : baseTheme;
@@ -232,20 +232,22 @@ ul.task-list li input[type="checkbox"] {
         changeGiscusTheme();
       }
     };
-    const darkModeDefault = false;
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
       // Read the current dark / light value
-      let toAlternate = !window.hasAlternateSentinel();
+      let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
-    if (window.hasAlternateSentinel()) {
+    if (hasAlternateSentinel()) {
       toggleColorMode(true);
     } else {
       toggleColorMode(false);
@@ -315,23 +317,13 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="columns">
 <div class="column" style="width:50%;">
-<p>I am actively working at <a href="https://roboflow.com/">Roboflow</a> towards the long-term goal of merging the physical and digital worlds for greater by democratizing computer vision for every industry.</p>
-<p>I believe that AGI is going to be a collection of smaller neural networks specialized towards a particular type of task or modality controlled by a large foundation model for cognition rather than a single insanely large foundation model for everything. My motivation is to build the <a href="https://en.wikipedia.org/wiki/Visual_cortex">visual cortex</a> of this AGI system and bless our AI companions with a sense of sight.</p>
+<p>I am actively working at <a href="https://athenaagent.com/">AthenaAgent</a> towards the long-term goal of the development of reliable and scalable ANI (Artificial Narrow Intelligence) agents. My research areas are focused on the development of robust and scalable visual agentic systems for niche and impactful businesses.</p>
 </div><div class="column" style="width:10%;">
 <!-- empty column to create gap -->
 </div><div class="column" style="width:40%;">
 <p><img src="./assets/soumik_rakshit.png" class="img-fluid"></p>
 </div>
 </div>
-<section id="my-day-to-day-work" class="level2">
-<h2 data-anchor-id="my-day-to-day-work">My day-to-day Work</h2>
-<ul>
-<li>actively maintain the <a href="https://github.com/roboflow/trackers">trackers</a> project, which is an open-source plug-and-play Python toolkit for multi-object-tracking.</li>
-<li>research on object tracking techniques and paradigms and implement them in trackers.</li>
-<li>research on the applications of computer vision and real-time video analytics systems in various industries.</li>
-<li>write blog posts on tutorializing different computer vision usecases.</li>
-</ul>
-</section>
 <section id="my-career-timeline" class="level2">
 <h2 data-anchor-id="my-career-timeline">My Career Timeline</h2>
 <table class="caption-top table">
@@ -344,31 +336,36 @@ ul.task-list li input[type="checkbox"] {
 </thead>
 <tbody>
 <tr class="odd">
-<td>Machine Learning Engineer</td>
-<td><a href="https://roboflow.com/">Roboflow</a></td>
-<td>Apr 2025 - Present</td>
+<td>Machine Learning Researcher</td>
+<td><a href="https://athenaagent.com/">AthenaAgent</a></td>
+<td>July 2025 - Present</td>
 </tr>
 <tr class="even">
 <td>Machine Learning Engineer</td>
-<td><a href="https://wandb.ai/site">Weights &amp; Biases</a></td>
-<td>Jul 2021 - Mar 2025</td>
+<td><a href="https://roboflow.com/">Roboflow</a></td>
+<td>Apr 2025 - July 2025</td>
 </tr>
 <tr class="odd">
+<td>Machine Learning Engineer</td>
+<td><a href="https://wandb.ai/site">Weights &amp; Biases</a></td>
+<td>Jan 2022 - Mar 2025</td>
+</tr>
+<tr class="even">
 <td>Staff Machine Learning Engineer</td>
 <td><a href="https://ignitarium.com/">Ignitarium</a></td>
 <td>Jul 2021 - Dec 2021</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Software Development Engineer</td>
 <td><a href="https://www.ibm.com/in-en">IBM</a></td>
 <td>Jan 2020 - Jul 2021</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td>Software Development Engineer</td>
 <td><a href="https://www.highradius.com/">HighRadius</a></td>
 <td>Jun 2019 - Dec 2019</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td>Failed entrepreneur and Machine Learning Researcher</td>
 <td><a href="https://www.linkedin.com/company/14586161/">DeepWrex Technologies</a></td>
 <td>Nov 2018 - Dec 2019</td>
@@ -419,7 +416,7 @@ ul.task-list li input[type="checkbox"] {
       a.appendChild(i);
       window.document.body.appendChild(a);
     }
-    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    setColorSchemeToggle(hasAlternateSentinel())
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

@@ -9,7 +9,7 @@
 <link>https://geekyrakshit.dev/wandb_reports.html</link>
 <atom:link href="https://geekyrakshit.dev/wandb_reports.xml" rel="self" type="application/rss+xml"/>
 <description></description>
-<generator>quarto-1.7.28</generator>
+<generator>quarto-1.7.34</generator>
 <lastBuildDate>Wed, 03 Jul 2024 18:30:00 GMT</lastBuildDate>
 <item>
   <title>Building an AI teacher’s assistant using LlamaIndex and Groq</title>

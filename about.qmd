@@ -25,9 +25,8 @@ about:
 :::: {.columns}
 
 ::: {.column width="50%"}
-I am actively working at [Roboflow](https://roboflow.com/) towards the long-term goal of merging the physical and digital worlds for greater by democratizing computer vision for every industry.
+I am actively working at [AthenaAgent](https://athenaagent.com/) towards the long-term goal of the development of reliable and scalable ANI (Artificial Narrow Intelligence) agents. My research areas are focused on the development of robust and scalable visual agentic systems for niche and impactful businesses.
 
-I believe that AGI is going to be a collection of smaller neural networks specialized towards a particular type of task or modality controlled by a large foundation model for cognition rather than a single insanely large foundation model for everything. My motivation is to build the [visual cortex](https://en.wikipedia.org/wiki/Visual_cortex) of this AGI system and bless our AI companions with a sense of sight.
 :::
 
 ::: {.column width="10%"}
@@ -40,18 +39,12 @@ I believe that AGI is going to be a collection of smaller neural networks specia
 
 ::::
 
-## My day-to-day Work
-
-* actively maintain the [trackers](https://github.com/roboflow/trackers) project, which is an open-source plug-and-play Python toolkit for multi-object-tracking.
-* research on object tracking techniques and paradigms and implement them in trackers.
-* research on the applications of computer vision and real-time video analytics systems in various industries.
-* write blog posts on tutorializing different computer vision usecases.
-
 ## My Career Timeline
 
 |Position|Organization|Duration|
 |---|---|---|
-|Machine Learning Engineer|[Roboflow](https://roboflow.com/)|Apr 2025 - Present|
+|Machine Learning Researcher|[AthenaAgent](https://athenaagent.com/)|July 2025 - Present|
+|Machine Learning Engineer|[Roboflow](https://roboflow.com/)|Apr 2025 - July 2025|
 |Machine Learning Engineer|[Weights & Biases](https://wandb.ai/site)|Jan 2022 - Mar 2025|
 |Staff Machine Learning Engineer|[Ignitarium](https://ignitarium.com/)|Jul 2021 - Dec 2021|
 |Software Development Engineer|[IBM](https://www.ibm.com/in-en)|Jan 2020 - Jul 2021|

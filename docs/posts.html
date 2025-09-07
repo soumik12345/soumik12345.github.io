@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.28">
+<meta name="generator" content="quarto-1.7.34">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -39,9 +39,9 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-c8b544e1eab81f7563542c0a8b71d1e9.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-b719d3d4935f2b08311a76135e2bf442.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
 <link href="site_libs/bootstrap/bootstrap-d64559d910ec87c4ee681e1e2f97436f.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
@@ -165,7 +165,7 @@ window.Quarto = {
         toggleBodyColorMode(bsSheetEl);
       }
     }
-    window.setColorSchemeToggle = (alternate) => {
+    const setColorSchemeToggle = (alternate) => {
       const toggles = window.document.querySelectorAll('.quarto-color-scheme-toggle');
       for (let i=0; i < toggles.length; i++) {
         const toggle = toggles[i];
@@ -198,7 +198,7 @@ window.Quarto = {
       }
       manageTransitions('#quarto-margin-sidebar .nav-link', true);
       // Switch the toggles
-      window.setColorSchemeToggle(alternate)
+      setColorSchemeToggle(alternate)
       // Hack to workaround the fact that safari doesn't
       // properly recolor the scrollbar when toggling (#1455)
       if (navigator.userAgent.indexOf('Safari') > 0 && navigator.userAgent.indexOf('Chrome') == -1) {
@@ -238,7 +238,7 @@ window.Quarto = {
     const isFileUrl = () => {
       return window.location.protocol === 'file:';
     }
-    window.hasAlternateSentinel = () => {
+    const hasAlternateSentinel = () => {
       let styleSentinel = getColorSchemeSentinel();
       if (styleSentinel !== null) {
         return styleSentinel === "alternate";
@@ -266,7 +266,7 @@ window.Quarto = {
       const baseTheme = document.querySelector('#giscus-base-theme')?.value ?? 'light';
       const alternateTheme = document.querySelector('#giscus-alt-theme')?.value ?? 'dark';
       let newTheme = '';
-      if(darkModeDefault) {
+      if(authorPrefersDark) {
         newTheme = isAlternate ? baseTheme : alternateTheme;
       } else {
         newTheme = isAlternate ? alternateTheme : baseTheme;
@@ -289,20 +289,22 @@ window.Quarto = {
         changeGiscusTheme();
       }
     };
-    const darkModeDefault = false;
+    const authorPrefersDark = false;
+    const darkModeDefault = authorPrefersDark;
       document.querySelector('link#quarto-text-highlighting-styles.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
       document.querySelector('link#quarto-bootstrap.quarto-color-scheme-extra').rel = 'disabled-stylesheet';
     let localAlternateSentinel = darkModeDefault ? 'alternate' : 'default';
     // Dark / light mode switch
     window.quartoToggleColorScheme = () => {
       // Read the current dark / light value
-      let toAlternate = !window.hasAlternateSentinel();
+      let toAlternate = !hasAlternateSentinel();
       toggleColorMode(toAlternate);
       setStyleSentinel(toAlternate);
       toggleGiscusIfUsed(toAlternate, darkModeDefault);
+      window.dispatchEvent(new Event('resize'));
     };
     // Switch to dark mode if need be
-    if (window.hasAlternateSentinel()) {
+    if (hasAlternateSentinel()) {
       toggleColorMode(true);
     } else {
       toggleColorMode(false);
@@ -389,7 +391,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3clMkNweXRvcmNo" data-listing-date-sort="1680978600000" data-listing-file-modified-sort="1745487314949" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371">
+<div class="quarto-post image-right" data-index="0" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3clMkNweXRvcmNo" data-listing-date-sort="1680978600000" data-listing-file-modified-sort="1757278900039" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371">
 <div class="thumbnail"><a href="./feeds/posts/torchvision_keras.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/keras_torchvision.png" class="thumbnail-image">
@@ -429,7 +431,7 @@ April 9, 2023
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNhbGdlYnJhJTJDcHl0aG9u" data-listing-date-sort="1600281000000" data-listing-file-modified-sort="1745487314906" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="42" data-listing-word-count-sort="8206">
+<div class="quarto-post image-right" data-index="1" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNhbGdlYnJhJTJDcHl0aG9u" data-listing-date-sort="1600281000000" data-listing-file-modified-sort="1757278899998" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="42" data-listing-word-count-sort="8206">
 <div class="thumbnail"><a href="./feeds/posts/efficient-graph-based-image-segmentation/index.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_logo.png" class="thumbnail-image">
@@ -463,7 +465,7 @@ September 17, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1588617000000" data-listing-file-modified-sort="1745487314934" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="949">
+<div class="quarto-post image-right" data-index="2" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1588617000000" data-listing-file-modified-sort="1757278900024" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="949">
 <div class="thumbnail"><a href="./feeds/posts/enet-camvid.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/enet-camvid.png" class="thumbnail-image">
@@ -501,7 +503,7 @@ May 5, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586716200000" data-listing-file-modified-sort="1745487314870" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<div class="quarto-post image-right" data-index="3" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586716200000" data-listing-file-modified-sort="1757278899966" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <div class="thumbnail"><a href="./feeds/posts/detectron-fast-rcnn.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/hand_detection.png" class="thumbnail-image">
@@ -539,7 +541,7 @@ April 13, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586716200000" data-listing-file-modified-sort="1745487314900" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="quarto-post image-right" data-index="4" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586716200000" data-listing-file-modified-sort="1757278899994" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <div class="thumbnail"><a href="./feeds/posts/detectron-mask-rcnn.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/balloon.png" class="thumbnail-image">
@@ -577,7 +579,7 @@ April 13, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586716200000" data-listing-file-modified-sort="1745487314843" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="quarto-post image-right" data-index="5" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586716200000" data-listing-file-modified-sort="1757278899942" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
 <div class="thumbnail"><a href="./feeds/posts/anpr.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/anpr.png" class="thumbnail-image">
@@ -615,7 +617,7 @@ April 13, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586716200000" data-listing-file-modified-sort="1745487314974" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
+<div class="quarto-post image-right" data-index="6" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586716200000" data-listing-file-modified-sort="1757278900063" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
 <div class="thumbnail"><a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/yolo_v3_tf2.png" class="thumbnail-image">
@@ -653,7 +655,7 @@ April 13, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcw==" data-listing-date-sort="1571423400000" data-listing-file-modified-sort="1745487314860" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="992">
+<div class="quarto-post image-right" data-index="7" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcw==" data-listing-date-sort="1571423400000" data-listing-file-modified-sort="1757278899958" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="992">
 <div class="thumbnail"><a href="./feeds/posts/depthwise-separable-convolution/index.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/depthwise-separable-convolution/assets/chart-preview.png" class="thumbnail-image">
@@ -687,7 +689,7 @@ October 19, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcw==" data-listing-date-sort="1565116200000" data-listing-file-modified-sort="1745487314944" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1254">
+<div class="quarto-post image-right" data-index="8" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcw==" data-listing-date-sort="1565116200000" data-listing-file-modified-sort="1757278900035" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1254">
 <div class="thumbnail"><a href="./feeds/posts/nearest-celebrity-face/index.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/nearest-celebrity-face/assets/img_0.png" class="thumbnail-image">
@@ -721,7 +723,7 @@ August 7, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563733800000" data-listing-file-modified-sort="1745487314948" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="quarto-post image-right" data-index="9" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563733800000" data-listing-file-modified-sort="1757278900039" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <div class="thumbnail"><a href="./feeds/posts/relativistic-anime-gan.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/ragan.png" class="thumbnail-image">
@@ -759,7 +761,7 @@ July 22, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563647400000" data-listing-file-modified-sort="1745487314841" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="10" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563647400000" data-listing-file-modified-sort="1757278899940" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/posts/animegan.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/animegan.png" class="thumbnail-image">
@@ -797,7 +799,7 @@ July 21, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563647400000" data-listing-file-modified-sort="1745487314857" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="11" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563647400000" data-listing-file-modified-sort="1757278899954" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/posts/conditional-dcgan.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/cgan.png" class="thumbnail-image">
@@ -835,7 +837,7 @@ July 21, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563561000000" data-listing-file-modified-sort="1745487314858" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="12" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563561000000" data-listing-file-modified-sort="1757278899955" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/posts/dcgan-mnist.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/dcgan.png" class="thumbnail-image">
@@ -873,7 +875,7 @@ July 20, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563474600000" data-listing-file-modified-sort="1745487314937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="13" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563474600000" data-listing-file-modified-sort="1757278900027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/posts/mlp-gan.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/mlp_gan.png" class="thumbnail-image">
@@ -928,7 +930,7 @@ July 19, 2019
       a.appendChild(i);
       window.document.body.appendChild(a);
     }
-    window.setColorSchemeToggle(window.hasAlternateSentinel())
+    setColorSchemeToggle(hasAlternateSentinel())
     const icon = "";
     const anchorJS = new window.AnchorJS();
     anchorJS.options = {
