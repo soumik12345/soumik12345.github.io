@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,18 +35,19 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="site_libs/quarto-html/anchor.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-33857d8fa23aa118b5dbe9d2315a3cf5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-3824aa816de5134366ccfe78104cf7a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-33857d8fa23aa118b5dbe9d2315a3cf5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -118,7 +119,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -331,10 +332,6 @@ window.Quarto = {
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./courses.html"> 
 <span class="menu-text">Courses/Seminars</span></a>
   </li>  
@@ -391,7 +388,7 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3clMkNweXRvcmNo" data-listing-date-sort="1680998400000" data-listing-file-modified-sort="1757533186105" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371">
+<div class="quarto-post image-right" data-index="0" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3clMkNweXRvcmNo" data-listing-date-sort="1680998400000" data-listing-file-modified-sort="1767806878873" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="371">
 <div class="thumbnail"><a href="./feeds/posts/torchvision_keras.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/keras_torchvision.png" class="thumbnail-image">
@@ -431,7 +428,7 @@ April 9, 2023
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNhbGdlYnJhJTJDcHl0aG9u" data-listing-date-sort="1600300800000" data-listing-file-modified-sort="1757533186027" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="42" data-listing-word-count-sort="8206">
+<div class="quarto-post image-right" data-index="1" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNhbGdlYnJhJTJDcHl0aG9u" data-listing-date-sort="1600300800000" data-listing-file-modified-sort="1767806878794" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="42" data-listing-word-count-sort="8206">
 <div class="thumbnail"><a href="./feeds/posts/efficient-graph-based-image-segmentation/index.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/efficient-graph-based-image-segmentation/assets/felzenszwalb_logo.png" class="thumbnail-image">
@@ -465,7 +462,7 @@ September 17, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1588636800000" data-listing-file-modified-sort="1757533186086" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="949">
+<div class="quarto-post image-right" data-index="2" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1588636800000" data-listing-file-modified-sort="1767806878854" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="949">
 <div class="thumbnail"><a href="./feeds/posts/enet-camvid.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/enet-camvid.png" class="thumbnail-image">
@@ -503,83 +500,7 @@ May 5, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586736000000" data-listing-file-modified-sort="1757533185913" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
-<div class="thumbnail"><a href="./feeds/posts/anpr.html" class="no-external">
-
-<img loading="lazy" src="./feeds/posts/assets/anpr.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./feeds/posts/anpr.html" class="no-external">Automatic Number Plate Recognition</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXJ2aXNpb24='); return false;">computervision</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVlcGxlYXJuaW5n'); return false;">deeplearning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('a2VyYXM='); return false;">keras</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGVuc29yZmxvdw=='); return false;">tensorflow</div>
-
-</div>
-<div class="delink listing-description"><a href="./feeds/posts/anpr.html" class="no-external">
-<p>Automatic Number Plate Recognition in Hangul using Convolutional Recurrent Neural Network</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./feeds/posts/anpr.html" class="no-external">
-<div class="listing-date">
-April 13, 2020
-</div>
-</a><div class="listing-author"><a href="./feeds/posts/anpr.html" class="no-external">
-</a><a href="../">GeekyRakshit</a>
-</div>
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586736000000" data-listing-file-modified-sort="1757533186161" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
-<div class="thumbnail"><a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
-
-<img loading="lazy" src="./feeds/posts/assets/yolo_v3_tf2.png" class="thumbnail-image">
-
-</a></div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">YOLOv3 using Tensorflow 2.0</a>
-</h3>
-<div class="listing-categories">
-
-<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXJ2aXNpb24='); return false;">computervision</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('ZGVlcGxlYXJuaW5n'); return false;">deeplearning</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('a2VyYXM='); return false;">keras</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
-
-<div class="listing-category" onclick="window.quartoListingCategory('dGVuc29yZmxvdw=='); return false;">tensorflow</div>
-
-</div>
-<div class="delink listing-description"><a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
-<p>Implementation of YOLOv3 using Tensorflow 2.0</p>
-</a></div>
-</div>
-<div class="metadata">
-<a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
-<div class="listing-date">
-April 13, 2020
-</div>
-</a><div class="listing-author"><a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
-</a><a href="../">GeekyRakshit</a>
-</div>
-
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586736000000" data-listing-file-modified-sort="1757533186023" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
+<div class="quarto-post image-right" data-index="3" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586736000000" data-listing-file-modified-sort="1767806878790" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="7">
 <div class="thumbnail"><a href="./feeds/posts/detectron-mask-rcnn.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/balloon.png" class="thumbnail-image">
@@ -617,7 +538,7 @@ April 13, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586736000000" data-listing-file-modified-sort="1757533185961" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
+<div class="quarto-post image-right" data-index="4" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586736000000" data-listing-file-modified-sort="1767806878728" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="9">
 <div class="thumbnail"><a href="./feeds/posts/detectron-fast-rcnn.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/hand_detection.png" class="thumbnail-image">
@@ -655,7 +576,83 @@ April 13, 2020
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcw==" data-listing-date-sort="1571443200000" data-listing-file-modified-sort="1757533185941" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="992">
+<div class="quarto-post image-right" data-index="5" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586736000000" data-listing-file-modified-sort="1767806878680" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="15">
+<div class="thumbnail"><a href="./feeds/posts/anpr.html" class="no-external">
+
+<img loading="lazy" src="./feeds/posts/assets/anpr.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./feeds/posts/anpr.html" class="no-external">Automatic Number Plate Recognition</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXJ2aXNpb24='); return false;">computervision</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGVlcGxlYXJuaW5n'); return false;">deeplearning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('a2VyYXM='); return false;">keras</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGVuc29yZmxvdw=='); return false;">tensorflow</div>
+
+</div>
+<div class="delink listing-description"><a href="./feeds/posts/anpr.html" class="no-external">
+<p>Automatic Number Plate Recognition in Hangul using Convolutional Recurrent Neural Network</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./feeds/posts/anpr.html" class="no-external">
+<div class="listing-date">
+April 13, 2020
+</div>
+</a><div class="listing-author"><a href="./feeds/posts/anpr.html" class="no-external">
+</a><a href="../">GeekyRakshit</a>
+</div>
+
+</div>
+</div>
+<div class="quarto-post image-right" data-index="6" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1586736000000" data-listing-file-modified-sort="1767806878929" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="16">
+<div class="thumbnail"><a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
+
+<img loading="lazy" src="./feeds/posts/assets/yolo_v3_tf2.png" class="thumbnail-image">
+
+</a></div>
+<div class="body">
+<h3 class="no-anchor listing-title">
+<a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">YOLOv3 using Tensorflow 2.0</a>
+</h3>
+<div class="listing-categories">
+
+<div class="listing-category" onclick="window.quartoListingCategory('Y29tcHV0ZXJ2aXNpb24='); return false;">computervision</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('ZGVlcGxlYXJuaW5n'); return false;">deeplearning</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('a2VyYXM='); return false;">keras</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('cHl0aG9u'); return false;">python</div>
+
+<div class="listing-category" onclick="window.quartoListingCategory('dGVuc29yZmxvdw=='); return false;">tensorflow</div>
+
+</div>
+<div class="delink listing-description"><a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
+<p>Implementation of YOLOv3 using Tensorflow 2.0</p>
+</a></div>
+</div>
+<div class="metadata">
+<a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
+<div class="listing-date">
+April 13, 2020
+</div>
+</a><div class="listing-author"><a href="./feeds/posts/yolo-v3-using-tensorflow-2-0.html" class="no-external">
+</a><a href="../">GeekyRakshit</a>
+</div>
+
+</div>
+</div>
+<div class="quarto-post image-right" data-index="7" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcw==" data-listing-date-sort="1571443200000" data-listing-file-modified-sort="1767806878708" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="5" data-listing-word-count-sort="992">
 <div class="thumbnail"><a href="./feeds/posts/depthwise-separable-convolution/index.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/depthwise-separable-convolution/assets/chart-preview.png" class="thumbnail-image">
@@ -689,7 +686,7 @@ October 19, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcw==" data-listing-date-sort="1565136000000" data-listing-file-modified-sort="1757533186096" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1254">
+<div class="quarto-post image-right" data-index="8" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcw==" data-listing-date-sort="1565136000000" data-listing-file-modified-sort="1767806878864" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1254">
 <div class="thumbnail"><a href="./feeds/posts/nearest-celebrity-face/index.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/nearest-celebrity-face/assets/img_0.png" class="thumbnail-image">
@@ -723,7 +720,7 @@ August 7, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563753600000" data-listing-file-modified-sort="1757533186105" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
+<div class="quarto-post image-right" data-index="9" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563753600000" data-listing-file-modified-sort="1767806878873" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="1">
 <div class="thumbnail"><a href="./feeds/posts/relativistic-anime-gan.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/ragan.png" class="thumbnail-image">
@@ -761,7 +758,7 @@ July 22, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563667200000" data-listing-file-modified-sort="1757533185937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="10" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563667200000" data-listing-file-modified-sort="1767806878704" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/posts/conditional-dcgan.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/cgan.png" class="thumbnail-image">
@@ -799,7 +796,7 @@ July 21, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563667200000" data-listing-file-modified-sort="1757533185909" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="11" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563667200000" data-listing-file-modified-sort="1767806878676" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/posts/animegan.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/animegan.png" class="thumbnail-image">
@@ -837,7 +834,7 @@ July 21, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563580800000" data-listing-file-modified-sort="1757533185937" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="12" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563580800000" data-listing-file-modified-sort="1767806878704" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/posts/dcgan-mnist.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/dcgan.png" class="thumbnail-image">
@@ -875,7 +872,7 @@ July 20, 2019
 
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563494400000" data-listing-file-modified-sort="1757533186087" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="13" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNrZXJhcyUyQ3B5dGhvbiUyQ3RlbnNvcmZsb3c=" data-listing-date-sort="1563494400000" data-listing-file-modified-sort="1767806878855" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/posts/mlp-gan.html" class="no-external">
 
 <img loading="lazy" src="./feeds/posts/assets/mlp_gan.png" class="thumbnail-image">
@@ -980,13 +977,14 @@ July 19, 2019
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy

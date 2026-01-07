@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.7.34">
+<meta name="generator" content="quarto-1.8.26">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,17 +35,18 @@ ul.task-list li input[type="checkbox"] {
 <script src="site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-befe23ebd2f54d8af2c8a89d1a1611f1.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-c8ad9e5dbd60b7b70b38521ab19b7da4.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-33857d8fa23aa118b5dbe9d2315a3cf5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-3824aa816de5134366ccfe78104cf7a8.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-33857d8fa23aa118b5dbe9d2315a3cf5.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -118,7 +119,7 @@ const typesetMath = (el) => {
     var macros = [];
     for (var i = 0; i < mathElements.length; i++) {
       var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
         window.katex.render(texText.data, mathElements[i], {
           displayMode: mathElements[i].classList.contains('display'),
           throwOnError: false,
@@ -327,10 +328,6 @@ window.Quarto = {
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./projects.html"> 
-<span class="menu-text">Projects</span></a>
-  </li>  
-  <li class="nav-item">
     <a class="nav-link" href="./courses.html"> 
 <span class="menu-text">Courses/Seminars</span></a>
   </li>  
@@ -378,7 +375,7 @@ window.Quarto = {
 </section>
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="bmxwJTJDbGxtJTJDbGxtb3BzJTJDd2VhdmUlMkNwcm9tcHQlMkNyYWc=" data-listing-date-sort="1720051200000" data-listing-file-modified-sort="1757533186161" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="0" data-categories="bmxwJTJDbGxtJTJDbGxtb3BzJTJDd2VhdmUlMkNwcm9tcHQlMkNyYWc=" data-listing-date-sort="1720051200000" data-listing-file-modified-sort="1767806878929" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/ai_teacher.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/ai_teacher.jpg" class="thumbnail-image">
 </a></div>
@@ -408,7 +405,7 @@ July 4, 2024
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="1" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNkaWZmdXNpb24lMkNodWdnaW5nZmFjZSUyQ3BpeGFydCUyQ3Byb21wdA==" data-listing-date-sort="1709424000000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="1" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNkaWZmdXNpb24lMkNodWdnaW5nZmFjZSUyQ3BpeGFydCUyQ3Byb21wdA==" data-listing-date-sort="1709424000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/monai_brats.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/pixart_alpha.png" class="thumbnail-image">
 </a></div>
@@ -438,7 +435,7 @@ March 3, 2024
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="2" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNtb25haSUyQ3NlZ21lbnRhdGlvbiUyQ21lZGljYWw=" data-listing-date-sort="1701216000000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="2" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNtb25haSUyQ3NlZ21lbnRhdGlvbiUyQ21lZGljYWw=" data-listing-date-sort="1701216000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/pixart_alpha.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/monai_brats.gif" class="thumbnail-image">
 </a></div>
@@ -467,7 +464,7 @@ November 29, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="3" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNkaWZmdXNpb24lMkNodWdnaW5nZmFjZSUyQ3N0YWJsZS1kaWZmdXNpb24lMkNwcm9tcHQ=" data-listing-date-sort="1698105600000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="3" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNkaWZmdXNpb24lMkNodWdnaW5nZmFjZSUyQ3N0YWJsZS1kaWZmdXNpb24lMkNwcm9tcHQ=" data-listing-date-sort="1698105600000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/diffusers_prompting.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/sd_prompt.png" class="thumbnail-image">
 </a></div>
@@ -497,7 +494,7 @@ October 24, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="4" data-categories="ZGVlcGxlYXJuaW5nJTJDcHl0b3JjaCUyQ2NvbXB1dGVydmlzaW9uJTJDb2JqZWN0LWRldGVjdGlvbiUyQ3lvbG8=" data-listing-date-sort="1695600000000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="4" data-categories="ZGVlcGxlYXJuaW5nJTJDcHl0b3JjaCUyQ2NvbXB1dGVydmlzaW9uJTJDb2JqZWN0LWRldGVjdGlvbiUyQ3lvbG8=" data-listing-date-sort="1695600000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/yolov8.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/yolov8.png" class="thumbnail-image">
 </a></div>
@@ -526,7 +523,7 @@ September 25, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="5" data-categories="ZGVlcGxlYXJuaW5nJTJDZ2VuZXJhdGl2ZSUyQzItbWludXRlLXBhcGVycyUyQ2RpZmZ1c2lvbiUyQ2F1ZGlv" data-listing-date-sort="1694563200000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
+<div class="quarto-post image-right" data-index="5" data-categories="ZGVlcGxlYXJuaW5nJTJDZ2VuZXJhdGl2ZSUyQzItbWludXRlLXBhcGVycyUyQ2RpZmZ1c2lvbiUyQ2F1ZGlv" data-listing-date-sort="1694563200000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="68">
 <div class="thumbnail"><a href="./feeds/reports/audiocraft.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/audiocraft.jpg" class="thumbnail-image">
 </a></div>
@@ -555,7 +552,7 @@ September 13, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="6" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNkaWZmdXNpb24lMkNodWdnaW5nZmFjZSUyQ3N0YWJsZS1kaWZmdXNpb24=" data-listing-date-sort="1692576000000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="6" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNkaWZmdXNpb24lMkNodWdnaW5nZmFjZSUyQ3N0YWJsZS1kaWZmdXNpb24=" data-listing-date-sort="1692576000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/sdxl.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/sdxl.png" class="thumbnail-image">
 </a></div>
@@ -584,7 +581,7 @@ August 21, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="7" data-categories="ZGVlcGxlYXJuaW5nJTJDcHl0b3JjaCUyQ2NvbXB1dGVydmlzaW9uJTJDb2JqZWN0LWRldGVjdGlvbg==" data-listing-date-sort="1690934400000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="7" data-categories="ZGVlcGxlYXJuaW5nJTJDcHl0b3JjaCUyQ2NvbXB1dGVydmlzaW9uJTJDb2JqZWN0LWRldGVjdGlvbg==" data-listing-date-sort="1690934400000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/ultralytics.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/ultralytics.png" class="thumbnail-image">
 </a></div>
@@ -612,7 +609,7 @@ August 2, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="8" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yZmxvdyUyQ2tlcmFzJTJDY29tcHV0ZXJ2aXNpb24lMkN4bGE=" data-listing-date-sort="1689292800000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="8" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yZmxvdyUyQ2tlcmFzJTJDY29tcHV0ZXJ2aXNpb24lMkN4bGE=" data-listing-date-sort="1689292800000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/keras-xla-benchmark.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/weave-xla.png" class="thumbnail-image">
 </a></div>
@@ -641,7 +638,7 @@ July 14, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="9" data-categories="bXVsdGktdGFzay1sZWFybmluZyUyQ2RlZXBsZWFybmluZyUyQ3B5dG9yY2g=" data-listing-date-sort="1683849600000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="9" data-categories="bXVsdGktdGFzay1sZWFybmluZyUyQ2RlZXBsZWFybmluZyUyQ3B5dG9yY2g=" data-listing-date-sort="1683849600000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/multi-task-learning.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/bargain.webp" class="thumbnail-image">
 </a></div>
@@ -668,7 +665,7 @@ May 12, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="10" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDZGlmZnVzaW9uJTJDaHVnZ2luZ2ZhY2U=" data-listing-date-sort="1682985600000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="10" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDZGlmZnVzaW9uJTJDaHVnZ2luZ2ZhY2U=" data-listing-date-sort="1682985600000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/if.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/if.jpeg" class="thumbnail-image">
 </a></div>
@@ -697,7 +694,7 @@ May 2, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="11" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZl" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="11" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZl" data-listing-date-sort="1681344000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/paella.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/paella.png" class="thumbnail-image">
 </a></div>
@@ -724,7 +721,7 @@ April 13, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="12" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDZGlmZnVzaW9uJTJDc3RhYmxlLWRpZmZ1c2lvbiUyQ2tlcmFzJTJDdGVuc29yZmxvdw==" data-listing-date-sort="1679011200000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="12" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDZGlmZnVzaW9uJTJDc3RhYmxlLWRpZmZ1c2lvbiUyQ2tlcmFzJTJDdGVuc29yZmxvdw==" data-listing-date-sort="1679011200000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/dreambooth-keras.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/dreambooth-keras.jpeg" class="thumbnail-image">
 </a></div>
@@ -755,7 +752,7 @@ March 17, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="13" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yZmxvdyUyQ2tlcmFzJTJDY29tcHV0ZXJ2aXNpb24=" data-listing-date-sort="1678406400000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="13" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yZmxvdyUyQ2tlcmFzJTJDY29tcHV0ZXJ2aXNpb24=" data-listing-date-sort="1678406400000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/lighting-up-images.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/lighting.png" class="thumbnail-image">
 </a></div>
@@ -783,7 +780,7 @@ March 10, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="14" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNweXRvcmNoJTJDZ2VvbWV0cmljLWRlZXBsZWFybmluZyUyQ3BvaW50LWNsb3Vk" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="14" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNweXRvcmNoJTJDZ2VvbWV0cmljLWRlZXBsZWFybmluZyUyQ3BvaW50LWNsb3Vk" data-listing-date-sort="1674172800000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/shapenetcore.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/dgcnn.png" class="thumbnail-image">
 </a></div>
@@ -812,7 +809,7 @@ January 20, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="15" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNweXRvcmNoJTJDZ2VvbWV0cmljLWRlZXBsZWFybmluZyUyQ3BvaW50LWNsb3Vk" data-listing-date-sort="1674000000000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="15" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNweXRvcmNoJTJDZ2VvbWV0cmljLWRlZXBsZWFybmluZyUyQ3BvaW50LWNsb3Vk" data-listing-date-sort="1674000000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/point-cloud-segmentation.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/dgcnn.png" class="thumbnail-image">
 </a></div>
@@ -841,7 +838,7 @@ January 18, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="16" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNweXRvcmNoJTJDZ2VvbWV0cmljLWRlZXBsZWFybmluZyUyQ3BvaW50LWNsb3Vk" data-listing-date-sort="1673913600000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="16" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNweXRvcmNoJTJDZ2VvbWV0cmljLWRlZXBsZWFybmluZyUyQ3BvaW50LWNsb3Vk" data-listing-date-sort="1673913600000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/point-cloud-classification.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/point-cloud-classification.png" class="thumbnail-image">
 </a></div>
@@ -870,7 +867,7 @@ January 17, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="17" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNkaWZmdXNpb24lMkNodWdnaW5nZmFjZQ==" data-listing-date-sort="1673913600000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="17" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNkaWZmdXNpb24lMkNodWdnaW5nZmFjZQ==" data-listing-date-sort="1673913600000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/unconditional-diffusion.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/unconditional-diffusion.jpg" class="thumbnail-image">
 </a></div>
@@ -898,7 +895,7 @@ January 17, 2023
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="18" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNuZXJmJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1670025600000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="18" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNuZXJmJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1670025600000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/vqad.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/vqad.png" class="thumbnail-image">
 </a></div>
@@ -926,7 +923,7 @@ December 3, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="19" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yZmxvdyUyQ2tlcmFzJTJDY29tcHV0ZXJ2aXNpb24=" data-listing-date-sort="1668729600000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="19" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yZmxvdyUyQ2tlcmFzJTJDY29tcHV0ZXJ2aXNpb24=" data-listing-date-sort="1668729600000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/hazy-image-restoration.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/hazy.png" class="thumbnail-image">
 </a></div>
@@ -954,7 +951,7 @@ November 18, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="20" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yYm9hcmQlMkN0ZW5zb3JmbG93JTJDa2VyYXM=" data-listing-date-sort="1668124800000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="20" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yYm9hcmQlMkN0ZW5zb3JmbG93JTJDa2VyYXM=" data-listing-date-sort="1668124800000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/tensorboard-debugger.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/tensorboard-debugger.png" class="thumbnail-image">
 </a></div>
@@ -982,7 +979,7 @@ November 11, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="21" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yYm9hcmQ=" data-listing-date-sort="1668124800000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="21" data-categories="ZGVlcGxlYXJuaW5nJTJDdGVuc29yYm9hcmQ=" data-listing-date-sort="1668124800000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/tensorboard-graph-dashboard.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/tensorboard-graph-dashboard.png" class="thumbnail-image">
 </a></div>
@@ -1008,7 +1005,7 @@ November 11, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="22" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNvYmplY3QtZGV0ZWN0aW9uJTJDeW9sbw==" data-listing-date-sort="1664496000000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="22" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNvYmplY3QtZGV0ZWN0aW9uJTJDeW9sbw==" data-listing-date-sort="1664496000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/object-detection.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/object-detection.png" class="thumbnail-image">
 </a></div>
@@ -1036,7 +1033,7 @@ September 30, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="23" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNmYXN0YWklMkNzZWdtZW50YXRpb24=" data-listing-date-sort="1664496000000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="23" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNmYXN0YWklMkNzZWdtZW50YXRpb24=" data-listing-date-sort="1664496000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/semnantic-segmentation.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/semantic-segmentation.png" class="thumbnail-image">
 </a></div>
@@ -1064,7 +1061,7 @@ September 30, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="24" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDZGlmZnVzaW9uJTJDc3RhYmxlLWRpZmZ1c2lvbiUyQzItbWludXRlLXBhcGVycw==" data-listing-date-sort="1664409600000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="24" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDZGlmZnVzaW9uJTJDc3RhYmxlLWRpZmZ1c2lvbiUyQzItbWludXRlLXBhcGVycw==" data-listing-date-sort="1664409600000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/cross-attention-control.html" class="no-external">
 <img loading="lazy" src="./feeds/reports/assets/cross-attention-control.png" class="thumbnail-image">
 </a></div>
@@ -1094,7 +1091,7 @@ September 29, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="25" data-categories="ZGVlcGxlYXJuaW5nJTJDcmVpbmZvcmNlbWVudC1sZWFybmluZyUyQzItbWludXRlLXBhcGVycw==" data-listing-date-sort="1658188800000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="25" data-categories="ZGVlcGxlYXJuaW5nJTJDcmVpbmZvcmNlbWVudC1sZWFybmluZyUyQzItbWludXRlLXBhcGVycw==" data-listing-date-sort="1658188800000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/game-characters.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/game-characters.png" class="thumbnail-image">
 </a></div>
@@ -1121,7 +1118,7 @@ July 19, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="26" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNyb2JvdGljcyUyQzItbWludXRlLXBhcGVycw==" data-listing-date-sort="1657584000000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="26" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNyb2JvdGljcyUyQzItbWludXRlLXBhcGVycw==" data-listing-date-sort="1657584000000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/robotic-telekinesis.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/robotic-telekinesis.png" class="thumbnail-image">
 </a></div>
@@ -1149,7 +1146,7 @@ July 12, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="27" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1657238400000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="27" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1657238400000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/stylegan-nada.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/nada.png" class="thumbnail-image">
 </a></div>
@@ -1177,7 +1174,7 @@ July 8, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="28" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDamF4" data-listing-date-sort="1651363200000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="28" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDamF4" data-listing-date-sort="1651363200000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/modern-evolution-strategies.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/modern-evolution-startegies.png" class="thumbnail-image">
 </a></div>
@@ -1205,7 +1202,7 @@ May 1, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="29" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNuZXJm" data-listing-date-sort="1651276800000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="29" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNuZXJm" data-listing-date-sort="1651276800000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/mip-nerf-360.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/mip-nerf-360.png" class="thumbnail-image">
 </a></div>
@@ -1232,7 +1229,7 @@ April 30, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="30" data-categories="ZGVlcGxlYXJuaW5nJTJDZ3JhcGhpY3MlMkMyLW1pbnV0ZS1wYXBlcnM=" data-listing-date-sort="1650931200000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="30" data-categories="ZGVlcGxlYXJuaW5nJTJDZ3JhcGhpY3MlMkMyLW1pbnV0ZS1wYXBlcnM=" data-listing-date-sort="1650931200000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/extracting-triangular-models.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/extracting-triangular-models.png" class="thumbnail-image">
 </a></div>
@@ -1259,7 +1256,7 @@ April 26, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="31" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1650240000000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="31" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1650240000000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/barbershop.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/barbershop.png" class="thumbnail-image">
 </a></div>
@@ -1287,7 +1284,7 @@ April 18, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="32" data-categories="ZGVlcGxlYXJuaW5nJTJDcHl0b3JjaCUyQ2pheA==" data-listing-date-sort="1648771200000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="32" data-categories="ZGVlcGxlYXJuaW5nJTJDcHl0b3JjaCUyQ2pheA==" data-listing-date-sort="1648771200000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/functorch.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/functorch.png" class="thumbnail-image">
 </a></div>
@@ -1314,7 +1311,7 @@ April 1, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="33" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNuZXJmJTJDamF4" data-listing-date-sort="1647734400000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
+<div class="quarto-post image-right" data-index="33" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNuZXJmJTJDamF4" data-listing-date-sort="1647734400000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="3">
 <div class="thumbnail"><a href="./feeds/reports/nerf-jax.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/nerf-jax.png" class="thumbnail-image">
 </a></div>
@@ -1342,7 +1339,7 @@ March 20, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="34" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNuZXJmJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1647216000000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="34" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNuZXJmJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1647216000000" data-listing-file-modified-sort="1767806879015" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/block-nerf.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/block-nerf.png" class="thumbnail-image">
 </a></div>
@@ -1370,7 +1367,7 @@ March 14, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="35" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNyZWluZm9yY2VtZW50LWxlYXJuaW5nJTJDcm9ib3RpY3MlMkMyLW1pbnV0ZS1wYXBlcnM=" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1757533186248" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="35" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNyZWluZm9yY2VtZW50LWxlYXJuaW5nJTJDcm9ib3RpY3MlMkMyLW1pbnV0ZS1wYXBlcnM=" data-listing-date-sort="1646956800000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/robust-perceptive-locomotive.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/robust-perceptive-locomotive.png" class="thumbnail-image">
 </a></div>
@@ -1399,7 +1396,7 @@ March 11, 2022
 </div>
 </div>
 </div>
-<div class="quarto-post image-right" data-index="36" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1645747200000" data-listing-file-modified-sort="1757533186247" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
+<div class="quarto-post image-right" data-index="36" data-categories="Y29tcHV0ZXJ2aXNpb24lMkNkZWVwbGVhcm5pbmclMkNnZW5lcmF0aXZlJTJDMi1taW51dGUtcGFwZXJz" data-listing-date-sort="1645747200000" data-listing-file-modified-sort="1767806879016" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="67">
 <div class="thumbnail"><a href="./feeds/reports/poe-gan.html" class="no-external">
 <img loading="lazy" data-src="./feeds/reports/assets/poe-gan-banner.png" class="thumbnail-image">
 </a></div>
@@ -1493,13 +1490,14 @@ February 25, 2022
       e.clearSelection();
     }
     const getTextToCopy = function(trigger) {
-        const codeEl = trigger.previousElementSibling.cloneNode(true);
-        for (const childEl of codeEl.children) {
-          if (isCodeAnnotation(childEl)) {
-            childEl.remove();
-          }
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
         }
-        return codeEl.innerText;
+      }
+      return codeEl.innerText;
     }
     const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
       text: getTextToCopy
