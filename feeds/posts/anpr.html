@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.8.26">
+<meta name="generator" content="quarto-1.10.19">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -12,10 +12,16 @@
 
 <title>Automatic Number Plate Recognition – Geekyrakshit</title>
 <style>
-code{white-space: pre-wrap;}
+/* Default styles provided by pandoc.
+** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
+*/
 span.smallcaps{font-variant: small-caps;}
-div.columns{display: flex; gap: min(4vw, 1.5em);}
-div.column{flex: auto; overflow-x: auto;}
+div.columns{display: flex; gap: 1.5em;}
+div.column{flex: auto;}
+@media screen {
+div.columns{gap: min(4vw, 1.5em);}
+div.column{overflow-x: auto;}
+}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
 ul.task-list li input[type="checkbox"] {
@@ -71,19 +77,18 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="../../assets/soumik_rakshit.png" rel="icon" type="image/png">
 <script src="../../site_libs/quarto-html/quarto.js" type="module"></script>
 <script src="../../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="../../site_libs/quarto-html/axe/axe-check.js" type="module"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b758ccaa5987ceb1b75504551e579abf.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-b626d73c4c936ccc3cb08be7d45d1df6.css" rel="stylesheet" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-bf27225e3a48a9273f3daa8f8e829971.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../site_libs/bootstrap/bootstrap-dark-e7f4145358ce1d0cd37d8d374dbb44f9.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="../../site_libs/bootstrap/bootstrap-a074b3e8914223beb79d52c55ba55bce.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-51b67bf8ade3772cce0e14bd95827d94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-90b0ccabdf50233fb893b00cd6e33405.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/bootstrap/bootstrap-51b67bf8ade3772cce0e14bd95827d94.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -1128,29 +1133,26 @@ Use tf.where in 2.0, which has the same broadcast rule as np.where</code></pre>
 <div id="cell-33" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:249}}" data-outputid="875664e8-9017-492d-d4f4-a63546fc9a9a" data-execution_count="20">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>plt.imshow(images[<span class="dv">0</span>].reshape(img_w, img_h).T)</span>
 <span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>plt.title(pred_texts)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-display" data-execution_count="20">
-<pre><code>Text(0.5, 1.0, 'Z16th6435')</code></pre>
-</div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="anpr_files/figure-html/cell-26-output-2.png" class="img-fluid figure-img"></p>
+<p><img src="anpr_files/figure-html/cell-26-output-1.png" class="img-fluid figure-img"></p>
 </figure>
 </div>
 </div>
 </div>
 <div id="cell-34" class="cell" data-quarto-private-1="{&quot;key&quot;:&quot;colab&quot;,&quot;value&quot;:{&quot;base_uri&quot;:&quot;https://localhost:8080/&quot;,&quot;height&quot;:930}}" data-outputid="72632de7-f956-48e1-8ee9-8382d145121d" data-execution_count="23">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
-<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">4</span>, ncols <span class="op">=</span> <span class="dv">2</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>))</span>
-<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>plt.setp(axes.flat, xticks <span class="op">=</span> [], yticks <span class="op">=</span> [])</span>
-<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">1</span></span>
-<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes.flat):</span>
-<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    image <span class="op">=</span> inp[<span class="st">'the_input'</span>][c].reshape(<span class="dv">1</span>, img_w, img_h, <span class="dv">1</span>)</span>
-<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    prediction <span class="op">=</span> model.predict(image)</span>
-<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>    ax.imshow(image.reshape(img_w, img_h).T)</span>
-<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(decode_label(prediction) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span> <span class="op">+</span> <span class="st">'Hangul: '</span> <span class="op">+</span> label_to_hangul(decode_label(prediction)))</span>
-<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>    c <span class="op">+=</span> <span class="dv">1</span></span>
-<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">#collapse-hide</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a>fig, axes <span class="op">=</span> plt.subplots(nrows <span class="op">=</span> <span class="dv">4</span>, ncols <span class="op">=</span> <span class="dv">2</span>, figsize <span class="op">=</span> (<span class="dv">16</span>, <span class="dv">16</span>))</span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a>plt.setp(axes.flat, xticks <span class="op">=</span> [], yticks <span class="op">=</span> [])</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> <span class="dv">1</span></span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, ax <span class="kw">in</span> <span class="bu">enumerate</span>(axes.flat):</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>    image <span class="op">=</span> inp[<span class="st">'the_input'</span>][c].reshape(<span class="dv">1</span>, img_w, img_h, <span class="dv">1</span>)</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a>    prediction <span class="op">=</span> model.predict(image)</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a>    ax.imshow(image.reshape(img_w, img_h).T)</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>    ax.set_xlabel(decode_label(prediction) <span class="op">+</span> <span class="st">'</span><span class="ch">\n</span><span class="st">'</span> <span class="op">+</span> <span class="st">'Hangul: '</span> <span class="op">+</span> label_to_hangul(decode_label(prediction)))</span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a>    c <span class="op">+=</span> <span class="dv">1</span></span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
