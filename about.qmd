@@ -25,7 +25,7 @@ about:
 :::: {.columns}
 
 ::: {.column width="50%"}
-I am a Machine Learning Engineer with 7 years of experience in LLM post-training and computer vision research. I have previously built tools used by ML practitioners around the world at **Weights & Biases**, led a team of applied scientists on agentic AI post-training at **Eternal** for India’s biggest mega-apps ranging from food delivery, to quick commerce, and AI powered wearables.
+I am a Machine Learning Engineer with 7 years of experience in LLM post-training and computer vision research. I have previously built tools used by ML practitioners around the world at **Weights & Biases**, led a team of applied scientists on agentic AI post-training at **Eternal** for India’s biggest mega-apps ranging from food delivery, to quick commerce, and AI-powered wearables.
 
 :::
 
