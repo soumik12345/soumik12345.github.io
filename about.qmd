@@ -25,7 +25,7 @@ about:
 :::: {.columns}
 
 ::: {.column width="50%"}
-I am actively working at [AthenaAgent](https://athenaagent.com/) towards the long-term goal of the development of reliable and scalable ANI (Artificial Narrow Intelligence) agents. My research areas are focused on the development of robust and scalable visual agentic systems for niche and impactful businesses.
+I am a Machine Learning Engineer with 7 years of experience in LLM post-training and computer vision research. I have previously built tools used by ML practitioners around the world at **Weights & Biases**, led a team of applied scientists on agentic AI post-training at **Eternal** for India’s biggest mega-apps ranging from food delivery, to quick commerce, and AI-powered wearables.
 
 :::
 
@@ -43,13 +43,14 @@ I am actively working at [AthenaAgent](https://athenaagent.com/) towards the lon
 
 |Position|Organization|Duration|
 |---|---|---|
-|Machine Learning Researcher|[AthenaAgent](https://athenaagent.com/)|July 2025 - Present|
-|Machine Learning Engineer|[Roboflow](https://roboflow.com/)|Apr 2025 - July 2025|
-|Machine Learning Engineer|[Weights & Biases](https://wandb.ai/site)|Jan 2022 - Mar 2025|
-|Staff Machine Learning Engineer|[Ignitarium](https://ignitarium.com/)|Jul 2021 - Dec 2021|
-|Software Development Engineer|[IBM](https://www.ibm.com/in-en)|Jan 2020 - Jul 2021|
-|Software Development Engineer|[HighRadius](https://www.highradius.com/)|Jun 2019 - Dec 2019|
-|Failed entrepreneur and Machine Learning Researcher|[DeepWrex Technologies](https://www.linkedin.com/company/14586161/)|Nov 2018 - Dec 2019|
+|Lead Machine Learning Researcher|[Eternal](https://www.eternal.com/)|March 2026 - September 2026|
+|Machine Learning Researcher|[AthenaAgent](https://athenaagent.com/)|July 2025 - February 2026|
+|Machine Learning Engineer|[Roboflow](https://roboflow.com/)|April 2025 - July 2025|
+|Machine Learning Engineer|[Weights & Biases](https://wandb.ai/site)|January 2022 - March 2025|
+|Staff Machine Learning Engineer|[Ignitarium](https://ignitarium.com/)|July 2021 - December 2021|
+|Software Development Engineer|[IBM](https://www.ibm.com/in-en)|January 2020 - July 2021|
+|Software Development Engineer|[HighRadius](https://www.highradius.com/)|June 2019 - December 2019|
+|Failed entrepreneur and Machine Learning Researcher|[DeepWrex Technologies](https://www.linkedin.com/company/14586161/)|November 2018 - December 2019|
 
 Additionally, I've been a [Google Developer Expert for Machine Learning (JAX)](https://g.dev/geekyrakshit) since Jun 2022.
 
